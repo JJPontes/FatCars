@@ -38,16 +38,18 @@
 			this.NomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.RgCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.CPFCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(240, 20);
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+			this.label1.Location = new System.Drawing.Point(287, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(254, 33);
+			this.label1.Size = new System.Drawing.Size(188, 20);
 			this.label1.TabIndex = 2;
 			this.label1.Text = "Consultar Clientes";
 			// 
@@ -55,7 +57,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			this.label2.Location = new System.Drawing.Point(59, 86);
+			this.label2.Location = new System.Drawing.Point(3, 40);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(44, 20);
 			this.label2.TabIndex = 3;
@@ -63,19 +65,20 @@
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(361, 86);
+			this.textBox1.Location = new System.Drawing.Point(287, 43);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(100, 20);
+			this.textBox1.Size = new System.Drawing.Size(180, 20);
 			this.textBox1.TabIndex = 4;
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(486, 86);
+			this.button1.Location = new System.Drawing.Point(481, 43);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 5;
 			this.button1.Text = "Pesquisar...";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// ComboFiltro
 			// 
@@ -84,7 +87,7 @@
             "Nome",
             "RG",
             "CPF"});
-			this.ComboFiltro.Location = new System.Drawing.Point(123, 86);
+			this.ComboFiltro.Location = new System.Drawing.Point(77, 43);
 			this.ComboFiltro.Name = "ComboFiltro";
 			this.ComboFiltro.Size = new System.Drawing.Size(121, 21);
 			this.ComboFiltro.TabIndex = 6;
@@ -100,11 +103,13 @@
             this.NomeCliente,
             this.RgCliente,
             this.CPFCliente});
-			this.dataGridView1.Location = new System.Drawing.Point(63, 163);
+			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.dataGridView1.Location = new System.Drawing.Point(0, 110);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(654, 150);
+			this.dataGridView1.Size = new System.Drawing.Size(800, 340);
 			this.dataGridView1.TabIndex = 7;
+			this.dataGridView1.Visible = false;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
 			// IdCliente
@@ -133,6 +138,30 @@
 			this.CPFCliente.Name = "CPFCliente";
 			this.CPFCliente.ReadOnly = true;
 			// 
+			// tableLayoutPanel1
+			// 
+			this.tableLayoutPanel1.ColumnCount = 5;
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.22982F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.7697F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.3488F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.65168F));
+			this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
+			this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
+			this.tableLayoutPanel1.Controls.Add(this.ComboFiltro, 1, 2);
+			this.tableLayoutPanel1.Controls.Add(this.textBox1, 2, 2);
+			this.tableLayoutPanel1.Controls.Add(this.button1, 3, 2);
+			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+			this.tableLayoutPanel1.RowCount = 4;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 86);
+			this.tableLayoutPanel1.TabIndex = 8;
+			// 
 			// FormConsultarCliente
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,18 +170,15 @@
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.ControlBox = false;
+			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.dataGridView1);
-			this.Controls.Add(this.ComboFiltro);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.textBox1);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
 			this.Name = "FormConsultarCliente";
 			this.Text = "Consultar Clientes";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			this.tableLayoutPanel1.ResumeLayout(false);
+			this.tableLayoutPanel1.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
@@ -168,5 +194,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn NomeCliente;
 		private System.Windows.Forms.DataGridViewTextBoxColumn RgCliente;
 		private System.Windows.Forms.DataGridViewTextBoxColumn CPFCliente;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 	}
 }

@@ -36,7 +36,13 @@ namespace WindowsFormsApp1
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			Environment.Exit(0);
+			if
+				(MessageBox.Show("Tem certeza que deseja sair da aplicação?", "Confirmação", MessageBoxButtons.YesNo,
+				MessageBoxIcon.Question) == DialogResult.Yes)
+			{
+				Environment.Exit(0);
+
+			}
 
 		}
 

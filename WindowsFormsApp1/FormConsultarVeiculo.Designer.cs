@@ -31,15 +31,15 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.label3 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.ComboFiltro = new System.Windows.Forms.ComboBox();
 			this.MarcaCarro = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ModeloCarro = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.CorCarro = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.PlacaCarro = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ChassiCarro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.label3 = new System.Windows.Forms.Label();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.button1 = new System.Windows.Forms.Button();
+			this.ComboFiltro = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -47,18 +47,19 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(214, 68);
+			this.label1.Location = new System.Drawing.Point(190, 65);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(0, 42);
 			this.label1.TabIndex = 2;
 			// 
 			// label2
 			// 
+			this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(240, 20);
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+			this.label2.Location = new System.Drawing.Point(265, 24);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(259, 33);
+			this.label2.Size = new System.Drawing.Size(192, 25);
 			this.label2.TabIndex = 3;
 			this.label2.Text = "Consultar Veiculos";
 			// 
@@ -73,49 +74,13 @@
             this.CorCarro,
             this.PlacaCarro,
             this.ChassiCarro});
-			this.dataGridView1.Location = new System.Drawing.Point(93, 167);
+			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.dataGridView1.Location = new System.Drawing.Point(0, 194);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(651, 150);
+			this.dataGridView1.Size = new System.Drawing.Size(800, 256);
 			this.dataGridView1.TabIndex = 13;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			this.label3.Location = new System.Drawing.Point(89, 90);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(44, 20);
-			this.label3.TabIndex = 9;
-			this.label3.Text = "Filtro";
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(350, 90);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(141, 20);
-			this.textBox1.TabIndex = 10;
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(516, 90);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 11;
-			this.button1.Text = "Pesquisar...";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// ComboFiltro
-			// 
-			this.ComboFiltro.FormattingEnabled = true;
-			this.ComboFiltro.Items.AddRange(new object[] {
-            "Marca",
-            "Modelo",
-            "Placa"});
-			this.ComboFiltro.Location = new System.Drawing.Point(153, 90);
-			this.ComboFiltro.Name = "ComboFiltro";
-			this.ComboFiltro.Size = new System.Drawing.Size(121, 21);
-			this.ComboFiltro.TabIndex = 12;
+			this.dataGridView1.Visible = false;
 			// 
 			// MarcaCarro
 			// 
@@ -147,6 +112,45 @@
 			this.ChassiCarro.HeaderText = "Chassi";
 			this.ChassiCarro.Name = "ChassiCarro";
 			this.ChassiCarro.ReadOnly = true;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+			this.label3.Location = new System.Drawing.Point(59, 86);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(44, 20);
+			this.label3.TabIndex = 9;
+			this.label3.Text = "Filtro";
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(281, 86);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(180, 20);
+			this.textBox1.TabIndex = 10;
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(486, 86);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 11;
+			this.button1.Text = "Pesquisar...";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// ComboFiltro
+			// 
+			this.ComboFiltro.FormattingEnabled = true;
+			this.ComboFiltro.Items.AddRange(new object[] {
+            "Marca",
+            "Modelo",
+            "Placa"});
+			this.ComboFiltro.Location = new System.Drawing.Point(123, 86);
+			this.ComboFiltro.Name = "ComboFiltro";
+			this.ComboFiltro.Size = new System.Drawing.Size(121, 21);
+			this.ComboFiltro.TabIndex = 12;
 			// 
 			// FormConsultarVeiculo
 			// 

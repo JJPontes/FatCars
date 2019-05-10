@@ -61,7 +61,12 @@ namespace WindowsFormsApp1
 
 		private void sairToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			Environment.Exit(0);
+
+			if (MessageBox.Show("Tem certeza que deseja sair da aplicação?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+			{
+				Environment.Exit(0);
+			}
+
 		}
 
 		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -79,9 +84,14 @@ namespace WindowsFormsApp1
 
 		private void efetuarLogoffToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			FormLogin login = new FormLogin();
-			login.Show();
-			this.Hide();
+			if (MessageBox.Show("Tem certeza que deseja sair da aplicação?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+			{
+				FormLogin login = new FormLogin();
+				login.Show();
+				this.Hide();
+			}
+	
+			
 		}
 
 		private void cadastrarNovoVeículoToolStripMenuItem_Click(object sender, EventArgs e)
