@@ -29,21 +29,21 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSobre));
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.LogoFat = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.LogoFat)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// pictureBox1
+			// LogoFat
 			// 
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(56, 12);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+			this.LogoFat.Image = ((System.Drawing.Image)(resources.GetObject("LogoFat.Image")));
+			this.LogoFat.Location = new System.Drawing.Point(56, 12);
+			this.LogoFat.Name = "LogoFat";
+			this.LogoFat.Size = new System.Drawing.Size(100, 50);
+			this.LogoFat.TabIndex = 0;
+			this.LogoFat.TabStop = false;
+			this.LogoFat.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// label1
 			// 
@@ -63,17 +63,18 @@
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Todos os direitos reservados";
 			// 
-			// Sobre
+			// FormSobre
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(251, 288);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.pictureBox1);
-			this.Name = "Sobre";
+			this.Controls.Add(this.LogoFat);
+			this.Name = "FormSobre";
 			this.Text = "Sobre";
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.Load += new System.EventHandler(this.FormSobre_Load);
+			((System.ComponentModel.ISupportInitialize)(this.LogoFat)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -81,7 +82,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox LogoFat;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 	}

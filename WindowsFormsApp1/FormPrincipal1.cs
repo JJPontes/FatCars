@@ -16,5 +16,12 @@ namespace WindowsFormsApp1
 		{
 			InitializeComponent();
 		}
+
+		private void FormPrincipal1_Load(object sender, EventArgs e)
+		{
+			//Centralizando
+			LogoFat.Left = (Width - LogoFat.Width) / 2;
+			label1.Left = (Width - label1.Width) / 2;
+		}
 	}
 }

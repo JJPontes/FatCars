@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.button1 = new System.Windows.Forms.Button();
+			this.Btn_Salvar = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -44,25 +44,25 @@
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.tableLayoutPanel1.SuspendLayout();
+			this.LayoutCadastro = new System.Windows.Forms.TableLayoutPanel();
+			this.LayoutCadastro.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// button1
+			// Btn_Salvar
 			// 
-			this.button1.Location = new System.Drawing.Point(333, 344);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(110, 30);
-			this.button1.TabIndex = 8;
-			this.button1.Text = "Salvar";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.Btn_Salvar.Location = new System.Drawing.Point(332, 360);
+			this.Btn_Salvar.Name = "Btn_Salvar";
+			this.Btn_Salvar.Size = new System.Drawing.Size(110, 30);
+			this.Btn_Salvar.TabIndex = 8;
+			this.Btn_Salvar.Text = "Salvar";
+			this.Btn_Salvar.UseVisualStyleBackColor = true;
+			this.Btn_Salvar.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-			this.label1.Location = new System.Drawing.Point(265, 24);
+			this.label1.Location = new System.Drawing.Point(298, 22);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(217, 25);
 			this.label1.TabIndex = 1;
@@ -107,7 +107,7 @@
 			// 
 			// TextModelo
 			// 
-			this.TextModelo.Location = new System.Drawing.Point(79, 42);
+			this.TextModelo.Location = new System.Drawing.Point(72, 42);
 			this.TextModelo.MaxLength = 30;
 			this.TextModelo.Name = "TextModelo";
 			this.TextModelo.Size = new System.Drawing.Size(213, 20);
@@ -115,7 +115,7 @@
 			// 
 			// TextAno
 			// 
-			this.TextAno.Location = new System.Drawing.Point(79, 198);
+			this.TextAno.Location = new System.Drawing.Point(72, 198);
 			this.TextAno.MaxLength = 4;
 			this.TextAno.Name = "TextAno";
 			this.TextAno.Size = new System.Drawing.Size(67, 20);
@@ -132,7 +132,7 @@
 			// 
 			// TextMarca
 			// 
-			this.TextMarca.Location = new System.Drawing.Point(79, 3);
+			this.TextMarca.Location = new System.Drawing.Point(72, 3);
 			this.TextMarca.MaxLength = 30;
 			this.TextMarca.Name = "TextMarca";
 			this.TextMarca.Size = new System.Drawing.Size(213, 20);
@@ -150,7 +150,7 @@
 			// 
 			// TextChassi
 			// 
-			this.TextChassi.Location = new System.Drawing.Point(79, 81);
+			this.TextChassi.Location = new System.Drawing.Point(72, 81);
 			this.TextChassi.MaxLength = 15;
 			this.TextChassi.Name = "TextChassi";
 			this.TextChassi.Size = new System.Drawing.Size(213, 20);
@@ -167,7 +167,7 @@
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(79, 237);
+			this.textBox1.Location = new System.Drawing.Point(72, 237);
 			this.textBox1.MaxLength = 4;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(67, 20);
@@ -175,7 +175,7 @@
 			// 
 			// maskedTextBox1
 			// 
-			this.maskedTextBox1.Location = new System.Drawing.Point(79, 120);
+			this.maskedTextBox1.Location = new System.Drawing.Point(72, 120);
 			this.maskedTextBox1.Mask = "???-0000";
 			this.maskedTextBox1.Name = "maskedTextBox1";
 			this.maskedTextBox1.Size = new System.Drawing.Size(67, 20);
@@ -190,45 +190,43 @@
             "VERMELHO",
             "VERDE",
             "AZUL"});
-			this.comboBox1.Location = new System.Drawing.Point(79, 159);
+			this.comboBox1.Location = new System.Drawing.Point(72, 159);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(92, 21);
 			this.comboBox1.TabIndex = 5;
 			// 
-			// tableLayoutPanel1
+			// LayoutCadastro
 			// 
-			this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.tableLayoutPanel1.ColumnCount = 2;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.35537F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.64463F));
-			this.tableLayoutPanel1.Controls.Add(this.label6, 0, 0);
-			this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 6);
-			this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 4);
-			this.tableLayoutPanel1.Controls.Add(this.TextAno, 1, 5);
-			this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
-			this.tableLayoutPanel1.Controls.Add(this.maskedTextBox1, 1, 3);
-			this.tableLayoutPanel1.Controls.Add(this.label7, 0, 2);
-			this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
-			this.tableLayoutPanel1.Controls.Add(this.TextChassi, 1, 2);
-			this.tableLayoutPanel1.Controls.Add(this.label8, 0, 6);
-			this.tableLayoutPanel1.Controls.Add(this.TextMarca, 1, 0);
-			this.tableLayoutPanel1.Controls.Add(this.TextModelo, 1, 1);
-			this.tableLayoutPanel1.Controls.Add(this.label2, 0, 4);
-			this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(161, 80);
-			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 7;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(438, 274);
-			this.tableLayoutPanel1.TabIndex = 15;
+			this.LayoutCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.LayoutCadastro.ColumnCount = 2;
+			this.LayoutCadastro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.47719F));
+			this.LayoutCadastro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.5228F));
+			this.LayoutCadastro.Controls.Add(this.label6, 0, 0);
+			this.LayoutCadastro.Controls.Add(this.textBox1, 1, 6);
+			this.LayoutCadastro.Controls.Add(this.comboBox1, 1, 4);
+			this.LayoutCadastro.Controls.Add(this.TextAno, 1, 5);
+			this.LayoutCadastro.Controls.Add(this.label4, 0, 1);
+			this.LayoutCadastro.Controls.Add(this.maskedTextBox1, 1, 3);
+			this.LayoutCadastro.Controls.Add(this.label7, 0, 2);
+			this.LayoutCadastro.Controls.Add(this.label3, 0, 3);
+			this.LayoutCadastro.Controls.Add(this.TextChassi, 1, 2);
+			this.LayoutCadastro.Controls.Add(this.label8, 0, 6);
+			this.LayoutCadastro.Controls.Add(this.TextMarca, 1, 0);
+			this.LayoutCadastro.Controls.Add(this.TextModelo, 1, 1);
+			this.LayoutCadastro.Controls.Add(this.label2, 0, 4);
+			this.LayoutCadastro.Controls.Add(this.label5, 0, 5);
+			this.LayoutCadastro.Location = new System.Drawing.Point(270, 80);
+			this.LayoutCadastro.Name = "LayoutCadastro";
+			this.LayoutCadastro.RowCount = 7;
+			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+			this.LayoutCadastro.Size = new System.Drawing.Size(294, 274);
+			this.LayoutCadastro.TabIndex = 15;
 			// 
 			// FormCadastrarNovoVeiculo
 			// 
@@ -236,15 +234,16 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(826, 457);
 			this.ControlBox = false;
-			this.Controls.Add(this.tableLayoutPanel1);
+			this.Controls.Add(this.LayoutCadastro);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.Btn_Salvar);
 			this.Name = "FormCadastrarNovoVeiculo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
 			this.Text = "Cadastro de Veículos";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-			this.tableLayoutPanel1.ResumeLayout(false);
-			this.tableLayoutPanel1.PerformLayout();
+			this.Load += new System.EventHandler(this.FormCadastrarNovoVeiculo_Load);
+			this.LayoutCadastro.ResumeLayout(false);
+			this.LayoutCadastro.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -252,7 +251,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button Btn_Salvar;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
@@ -268,6 +267,6 @@
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.MaskedTextBox maskedTextBox1;
 		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.TableLayoutPanel LayoutCadastro;
 	}
 }

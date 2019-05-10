@@ -31,6 +31,10 @@ namespace WindowsFormsApp1
 		}
 		private void FormCadastrarUsuario_Load(object sender, EventArgs e)
 		{
+			//Centralizando
+			label4.Left = (Width - label4.Width) / 2;
+			LayoutCadastrar.Left = (Width - LayoutCadastrar.Width) / 2;
+			Btn_Salvar.Left = (Width - Btn_Salvar.Width) / 2;
 
 		}
 
@@ -44,5 +48,11 @@ namespace WindowsFormsApp1
 		{
 
 		}
+
+		private void label4_Click(object sender, EventArgs e)
+		{
+
+		}
+		
 	}
 }

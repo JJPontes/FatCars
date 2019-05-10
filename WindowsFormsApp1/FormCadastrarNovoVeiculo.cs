@@ -57,5 +57,14 @@ namespace WindowsFormsApp1
 		{
 
 		}
+
+		private void FormCadastrarNovoVeiculo_Load(object sender, EventArgs e)
+		{
+			//centralizando
+			label1.Left = (Width - label1.Width) / 2;
+			LayoutCadastro.Left = (Width - LayoutCadastro.Width) / 2;
+			Btn_Salvar.Left = (Width - Btn_Salvar.Width) / 2;
+
+		}
 	}
 }

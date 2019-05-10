@@ -31,6 +31,11 @@ namespace WindowsFormsApp1
 
 		private void Login_Load(object sender, EventArgs e)
 		{
+			//Centralizando
+			LogoFat.Left = (Width - LogoFat.Width) / 2;
+			LayoutLogin.Left = (Width - LayoutLogin.Width) / 2;
+			LayoutBotoes.Left = (Width - LayoutBotoes.Width) / 2;
+			linkLabel1.Left = (Width - linkLabel1.Width) / 2;
 
 		}
 
@@ -58,6 +63,11 @@ namespace WindowsFormsApp1
 			{
 				Environment.Exit(0);
 			}
+
+		}
+
+		private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+		{
 
 		}
 	}

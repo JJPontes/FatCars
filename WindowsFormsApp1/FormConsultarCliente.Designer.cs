@@ -39,6 +39,7 @@
 			this.RgCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.CPFCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.button2 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
@@ -47,9 +48,9 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-			this.label1.Location = new System.Drawing.Point(287, 0);
+			this.label1.Location = new System.Drawing.Point(284, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(188, 20);
+			this.label1.Size = new System.Drawing.Size(188, 25);
 			this.label1.TabIndex = 2;
 			this.label1.Text = "Consultar Clientes";
 			// 
@@ -57,7 +58,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			this.label2.Location = new System.Drawing.Point(3, 40);
+			this.label2.Location = new System.Drawing.Point(3, 45);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(44, 20);
 			this.label2.TabIndex = 3;
@@ -65,14 +66,14 @@
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(287, 43);
+			this.textBox1.Location = new System.Drawing.Point(284, 48);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(180, 20);
 			this.textBox1.TabIndex = 4;
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(481, 43);
+			this.button1.Location = new System.Drawing.Point(478, 48);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 5;
@@ -87,7 +88,7 @@
             "Nome",
             "RG",
             "CPF"});
-			this.ComboFiltro.Location = new System.Drawing.Point(77, 43);
+			this.ComboFiltro.Location = new System.Drawing.Point(72, 48);
 			this.ComboFiltro.Name = "ComboFiltro";
 			this.ComboFiltro.Size = new System.Drawing.Size(121, 21);
 			this.ComboFiltro.TabIndex = 6;
@@ -104,10 +105,10 @@
             this.RgCliente,
             this.CPFCliente});
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.dataGridView1.Location = new System.Drawing.Point(0, 110);
+			this.dataGridView1.Location = new System.Drawing.Point(0, 101);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(800, 340);
+			this.dataGridView1.Size = new System.Drawing.Size(800, 355);
 			this.dataGridView1.TabIndex = 7;
 			this.dataGridView1.Visible = false;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -141,26 +142,36 @@
 			// tableLayoutPanel1
 			// 
 			this.tableLayoutPanel1.ColumnCount = 5;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.22982F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.7697F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.50443F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.05706F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.3488F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.65168F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.59136F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.84715F));
 			this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
-			this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
 			this.tableLayoutPanel1.Controls.Add(this.ComboFiltro, 1, 2);
 			this.tableLayoutPanel1.Controls.Add(this.textBox1, 2, 2);
 			this.tableLayoutPanel1.Controls.Add(this.button1, 3, 2);
+			this.tableLayoutPanel1.Controls.Add(this.button2, 3, 3);
+			this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 4;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 86);
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 107);
 			this.tableLayoutPanel1.TabIndex = 8;
+			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(478, 77);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.TabIndex = 7;
+			this.button2.Text = "Editar...";
+			this.button2.UseVisualStyleBackColor = true;
 			// 
 			// FormConsultarCliente
 			// 
@@ -168,7 +179,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(800, 456);
 			this.ControlBox = false;
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.dataGridView1);
@@ -195,5 +206,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn RgCliente;
 		private System.Windows.Forms.DataGridViewTextBoxColumn CPFCliente;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.Button button2;
 	}
 }
