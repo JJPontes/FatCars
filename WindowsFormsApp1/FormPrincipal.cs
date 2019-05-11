@@ -167,6 +167,13 @@ namespace WindowsFormsApp1
 			principal1.MdiParent = this;
 			principal1.Show();
 		}
+
+		private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			FormCadastrarCliente cadastrarCliente = new FormCadastrarCliente();
+			cadastrarCliente.MdiParent = this;
+			cadastrarCliente.Show();
+		}
 	}
 	}
 

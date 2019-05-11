@@ -50,6 +50,7 @@
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarNovoCarroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.cadastrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -97,7 +98,8 @@
 			// 
 			this.cadastrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarNovoVeículoToolStripMenuItem,
-            this.cadastrarNovoUsuárioToolStripMenuItem});
+            this.cadastrarNovoUsuárioToolStripMenuItem,
+            this.cadastrarClienteToolStripMenuItem});
 			this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
 			this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
 			this.cadastrarToolStripMenuItem.Text = "Cadastrar";
@@ -152,14 +154,14 @@
 			// clientesToolStripMenuItem1
 			// 
 			this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-			this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+			this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
 			this.clientesToolStripMenuItem1.Text = "Clientes...";
 			this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
 			// 
 			// veiculosToolStripMenuItem
 			// 
 			this.veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-			this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
 			this.veiculosToolStripMenuItem.Text = "Veiculos...";
 			this.veiculosToolStripMenuItem.Click += new System.EventHandler(this.veiculosToolStripMenuItem_Click);
 			// 
@@ -231,6 +233,13 @@
 			this.cadastrarNovoCarroToolStripMenuItem.Text = "Cadastrar novo veículo...";
 			this.cadastrarNovoCarroToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoCarroToolStripMenuItem_Click);
 			// 
+			// cadastrarClienteToolStripMenuItem
+			// 
+			this.cadastrarClienteToolStripMenuItem.Name = "cadastrarClienteToolStripMenuItem";
+			this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+			this.cadastrarClienteToolStripMenuItem.Text = "Cadastrar Cliente...";
+			this.cadastrarClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClienteToolStripMenuItem_Click);
+			// 
 			// FormPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,6 +284,7 @@
 		private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem efetuarLogoffToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem cadastrarClienteToolStripMenuItem;
 	}
 }
 

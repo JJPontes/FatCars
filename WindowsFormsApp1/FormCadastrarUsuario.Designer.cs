@@ -64,14 +64,14 @@
 			this.label1.AutoSize = true;
 			this.label1.Location = new System.Drawing.Point(3, 136);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(43, 13);
+			this.label1.Size = new System.Drawing.Size(89, 13);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "Usuário";
+			this.label1.Text = "Nome de Usuário";
 			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// TextUsuario
 			// 
-			this.TextUsuario.Location = new System.Drawing.Point(94, 3);
+			this.TextUsuario.Location = new System.Drawing.Point(98, 3);
 			this.TextUsuario.Name = "TextUsuario";
 			this.TextUsuario.Size = new System.Drawing.Size(266, 20);
 			this.TextUsuario.TabIndex = 1;
@@ -96,14 +96,14 @@
 			// 
 			// TextSenha
 			// 
-			this.TextSenha.Location = new System.Drawing.Point(94, 37);
+			this.TextSenha.Location = new System.Drawing.Point(98, 37);
 			this.TextSenha.Name = "TextSenha";
 			this.TextSenha.Size = new System.Drawing.Size(266, 20);
 			this.TextSenha.TabIndex = 2;
 			// 
 			// TextConfirmarSenha
 			// 
-			this.TextConfirmarSenha.Location = new System.Drawing.Point(94, 71);
+			this.TextConfirmarSenha.Location = new System.Drawing.Point(98, 71);
 			this.TextConfirmarSenha.Name = "TextConfirmarSenha";
 			this.TextConfirmarSenha.Size = new System.Drawing.Size(266, 20);
 			this.TextConfirmarSenha.TabIndex = 3;
@@ -164,28 +164,28 @@
             "Usuário",
             "Supervisor",
             "Administrador"});
-			this.ComboNivelAcesso.Location = new System.Drawing.Point(94, 105);
+			this.ComboNivelAcesso.Location = new System.Drawing.Point(98, 105);
 			this.ComboNivelAcesso.Name = "ComboNivelAcesso";
 			this.ComboNivelAcesso.Size = new System.Drawing.Size(121, 21);
 			this.ComboNivelAcesso.TabIndex = 4;
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(94, 139);
+			this.textBox1.Location = new System.Drawing.Point(98, 139);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(266, 20);
 			this.textBox1.TabIndex = 5;
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(94, 173);
+			this.textBox2.Location = new System.Drawing.Point(98, 173);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(266, 20);
 			this.textBox2.TabIndex = 6;
 			// 
 			// textBox3
 			// 
-			this.textBox3.Location = new System.Drawing.Point(94, 207);
+			this.textBox3.Location = new System.Drawing.Point(98, 207);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(266, 20);
 			this.textBox3.TabIndex = 7;
