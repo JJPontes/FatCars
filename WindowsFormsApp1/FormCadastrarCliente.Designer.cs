@@ -46,6 +46,7 @@
 			this.label16 = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.txtCep = new System.Windows.Forms.TextBox();
 			this.txtEstado = new System.Windows.Forms.TextBox();
 			this.textBox8 = new System.Windows.Forms.TextBox();
 			this.txtBairro = new System.Windows.Forms.TextBox();
@@ -65,7 +66,6 @@
 			this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
 			this.Btn_Salvar = new System.Windows.Forms.Button();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-			this.txtCep = new System.Windows.Forms.TextBox();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.LayoutDados.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
@@ -259,6 +259,15 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(453, 173);
 			this.tableLayoutPanel1.TabIndex = 26;
 			// 
+			// txtCep
+			// 
+			this.txtCep.Location = new System.Drawing.Point(91, 3);
+			this.txtCep.MaxLength = 9;
+			this.txtCep.Name = "txtCep";
+			this.txtCep.Size = new System.Drawing.Size(81, 20);
+			this.txtCep.TabIndex = 7;
+			this.txtCep.Leave += new System.EventHandler(this.txtCep_Leave_1);
+			// 
 			// txtEstado
 			// 
 			this.txtEstado.Location = new System.Drawing.Point(91, 147);
@@ -437,15 +446,6 @@
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
 			this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 77);
 			this.tableLayoutPanel2.TabIndex = 27;
-			// 
-			// txtCep
-			// 
-			this.txtCep.Location = new System.Drawing.Point(91, 3);
-			this.txtCep.MaxLength = 9;
-			this.txtCep.Name = "txtCep";
-			this.txtCep.Size = new System.Drawing.Size(81, 20);
-			this.txtCep.TabIndex = 7;
-			this.txtCep.Leave += new System.EventHandler(this.txtCep_Leave_1);
 			// 
 			// FormCadastrarCliente
 			// 
