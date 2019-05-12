@@ -37,7 +37,6 @@
 			this.TextModelo = new System.Windows.Forms.TextBox();
 			this.TextAno = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
-			this.TextMarca = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.TextChassi = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.LayoutCadastro = new System.Windows.Forms.TableLayoutPanel();
 			this.groupCadastro = new System.Windows.Forms.GroupBox();
+			this.comboBox2 = new System.Windows.Forms.ComboBox();
 			this.LayoutCadastro.SuspendLayout();
 			this.groupCadastro.SuspendLayout();
 			this.SuspendLayout();
@@ -132,14 +132,6 @@
 			this.label6.TabIndex = 10;
 			this.label6.Text = "Marca";
 			// 
-			// TextMarca
-			// 
-			this.TextMarca.Location = new System.Drawing.Point(72, 3);
-			this.TextMarca.MaxLength = 30;
-			this.TextMarca.Name = "TextMarca";
-			this.TextMarca.Size = new System.Drawing.Size(213, 20);
-			this.TextMarca.TabIndex = 1;
-			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
@@ -203,6 +195,7 @@
 			this.LayoutCadastro.ColumnCount = 2;
 			this.LayoutCadastro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.47719F));
 			this.LayoutCadastro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.5228F));
+			this.LayoutCadastro.Controls.Add(this.comboBox2, 1, 0);
 			this.LayoutCadastro.Controls.Add(this.label6, 0, 0);
 			this.LayoutCadastro.Controls.Add(this.textBox1, 1, 6);
 			this.LayoutCadastro.Controls.Add(this.comboBox1, 1, 4);
@@ -213,7 +206,6 @@
 			this.LayoutCadastro.Controls.Add(this.label3, 0, 3);
 			this.LayoutCadastro.Controls.Add(this.TextChassi, 1, 2);
 			this.LayoutCadastro.Controls.Add(this.label8, 0, 6);
-			this.LayoutCadastro.Controls.Add(this.TextMarca, 1, 0);
 			this.LayoutCadastro.Controls.Add(this.TextModelo, 1, 1);
 			this.LayoutCadastro.Controls.Add(this.label2, 0, 4);
 			this.LayoutCadastro.Controls.Add(this.label5, 0, 5);
@@ -240,6 +232,52 @@
 			this.groupCadastro.Size = new System.Drawing.Size(309, 381);
 			this.groupCadastro.TabIndex = 16;
 			this.groupCadastro.TabStop = false;
+			// 
+			// comboBox2
+			// 
+			this.comboBox2.FormattingEnabled = true;
+			this.comboBox2.Items.AddRange(new object[] {
+            "Audi",
+            "Bentley",
+            "BMW",
+            "Chevrolet",
+            "Chrysler",
+            "Citroën",
+            "Daihatsu",
+            "Dodge",
+            "Ferrari",
+            "Fiat",
+            "Ford",
+            "General Motors",
+            "Honda",
+            "Hyundai",
+            "JAC Motors",
+            "Jaguar",
+            "Jeep",
+            "KIA",
+            "Land-Rover",
+            "Lexus",
+            "Mazda",
+            "Mercedes-Bens",
+            "Mitsubish",
+            "Nissan",
+            "Peugeot",
+            "Porsche",
+            "RAM",
+            "Renault",
+            "Subaru",
+            "Suzuki",
+            "Tata Motors",
+            "Tesla",
+            "Toyota",
+            "Volkswagen",
+            "Volvo"});
+			this.comboBox2.Location = new System.Drawing.Point(72, 3);
+			this.comboBox2.Name = "comboBox2";
+			this.comboBox2.Size = new System.Drawing.Size(152, 21);
+			this.comboBox2.Sorted = true;
+			this.comboBox2.TabIndex = 1;
+			this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
 			// 
 			// FormCadastrarNovoVeiculo
 			// 
@@ -273,7 +311,6 @@
 		private System.Windows.Forms.TextBox TextModelo;
 		private System.Windows.Forms.TextBox TextAno;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TextBox TextMarca;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox TextChassi;
 		private System.Windows.Forms.Label label8;
@@ -282,5 +319,6 @@
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.TableLayoutPanel LayoutCadastro;
 		private System.Windows.Forms.GroupBox groupCadastro;
+		private System.Windows.Forms.ComboBox comboBox2;
 	}
 }

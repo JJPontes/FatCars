@@ -149,7 +149,8 @@
 			this.ComboFiltro.Items.AddRange(new object[] {
             "Marca",
             "Modelo",
-            "Placa"});
+            "Placa",
+            "Chassi"});
 			this.ComboFiltro.Location = new System.Drawing.Point(84, 48);
 			this.ComboFiltro.Name = "ComboFiltro";
 			this.ComboFiltro.Size = new System.Drawing.Size(121, 21);

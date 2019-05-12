@@ -76,5 +76,10 @@ namespace WindowsFormsApp1
 			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
 			groupCadastro.Top = ((Height - groupCadastro.Height) - 50) / 2;
 		}
+
+		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
