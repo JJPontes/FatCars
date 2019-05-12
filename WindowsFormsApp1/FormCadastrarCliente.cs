@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
 			//Centralizando
 		
 			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
-			groupCadastro.Top = (Height - groupCadastro.Height) / 2;
+			groupCadastro.Top = ((Height - groupCadastro.Height)-50) / 2;
 		}
 
 		private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
 		private void FormCadastrarCliente_Resize(object sender, EventArgs e)
 		{
 			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
-			groupCadastro.Top = (Height - groupCadastro.Height) / 2;
+			groupCadastro.Top = ((Height - groupCadastro.Height) - 50) / 2;
 		}
 	}
 }

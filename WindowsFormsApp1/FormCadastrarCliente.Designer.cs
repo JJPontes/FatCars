@@ -78,7 +78,7 @@
 			this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(306, 16);
+			this.label4.Location = new System.Drawing.Point(295, 16);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(179, 25);
 			this.label4.TabIndex = 8;
@@ -170,7 +170,7 @@
 			// label11
 			// 
 			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(445, 28);
+			this.label11.Location = new System.Drawing.Point(437, 28);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(63, 26);
 			this.label11.TabIndex = 18;
@@ -179,7 +179,7 @@
 			// label12
 			// 
 			this.label12.AutoSize = true;
-			this.label12.Location = new System.Drawing.Point(445, 0);
+			this.label12.Location = new System.Drawing.Point(437, 0);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(27, 13);
 			this.label12.TabIndex = 19;
@@ -188,7 +188,7 @@
 			// label13
 			// 
 			this.label13.AutoSize = true;
-			this.label13.Location = new System.Drawing.Point(445, 56);
+			this.label13.Location = new System.Drawing.Point(437, 56);
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(50, 13);
 			this.label13.TabIndex = 20;
@@ -248,7 +248,7 @@
 			this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
 			this.tableLayoutPanel1.Controls.Add(this.label7, 0, 4);
 			this.tableLayoutPanel1.Controls.Add(this.label18, 0, 2);
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 151);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 151);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 7;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28574F));
@@ -258,12 +258,12 @@
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28574F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28574F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28574F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(444, 201);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(437, 201);
 			this.tableLayoutPanel1.TabIndex = 200;
 			// 
 			// txtCep
 			// 
-			this.txtCep.Location = new System.Drawing.Point(89, 3);
+			this.txtCep.Location = new System.Drawing.Point(87, 3);
 			this.txtCep.MaxLength = 9;
 			this.txtCep.Name = "txtCep";
 			this.txtCep.Size = new System.Drawing.Size(81, 20);
@@ -272,14 +272,14 @@
 			// 
 			// txtEstado
 			// 
-			this.txtEstado.Location = new System.Drawing.Point(89, 171);
+			this.txtEstado.Location = new System.Drawing.Point(87, 171);
 			this.txtEstado.Name = "txtEstado";
 			this.txtEstado.Size = new System.Drawing.Size(173, 20);
 			this.txtEstado.TabIndex = 95;
 			// 
 			// textBox8
 			// 
-			this.textBox8.Location = new System.Drawing.Point(89, 59);
+			this.textBox8.Location = new System.Drawing.Point(87, 59);
 			this.textBox8.MaxLength = 5;
 			this.textBox8.Name = "textBox8";
 			this.textBox8.Size = new System.Drawing.Size(81, 20);
@@ -287,30 +287,30 @@
 			// 
 			// txtBairro
 			// 
-			this.txtBairro.Location = new System.Drawing.Point(89, 143);
+			this.txtBairro.Location = new System.Drawing.Point(87, 143);
 			this.txtBairro.Name = "txtBairro";
 			this.txtBairro.Size = new System.Drawing.Size(173, 20);
 			this.txtBairro.TabIndex = 96;
 			// 
 			// txtCidade
 			// 
-			this.txtCidade.Location = new System.Drawing.Point(89, 115);
+			this.txtCidade.Location = new System.Drawing.Point(87, 115);
 			this.txtCidade.Name = "txtCidade";
 			this.txtCidade.Size = new System.Drawing.Size(173, 20);
 			this.txtCidade.TabIndex = 97;
 			// 
 			// txtRua
 			// 
-			this.txtRua.Location = new System.Drawing.Point(89, 31);
+			this.txtRua.Location = new System.Drawing.Point(87, 31);
 			this.txtRua.Name = "txtRua";
-			this.txtRua.Size = new System.Drawing.Size(328, 20);
+			this.txtRua.Size = new System.Drawing.Size(336, 20);
 			this.txtRua.TabIndex = 99;
 			// 
 			// textBox3
 			// 
-			this.textBox3.Location = new System.Drawing.Point(89, 87);
+			this.textBox3.Location = new System.Drawing.Point(87, 87);
 			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(328, 20);
+			this.textBox3.Size = new System.Drawing.Size(336, 20);
 			this.textBox3.TabIndex = 98;
 			// 
 			// label18
@@ -341,18 +341,18 @@
 			this.LayoutDados.Controls.Add(this.textBox6, 3, 2);
 			this.LayoutDados.Controls.Add(this.txtEmail, 1, 1);
 			this.LayoutDados.Controls.Add(this.txtRG, 1, 2);
-			this.LayoutDados.Location = new System.Drawing.Point(13, 59);
+			this.LayoutDados.Location = new System.Drawing.Point(6, 59);
 			this.LayoutDados.Name = "LayoutDados";
 			this.LayoutDados.RowCount = 3;
 			this.LayoutDados.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
 			this.LayoutDados.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
 			this.LayoutDados.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.LayoutDados.Size = new System.Drawing.Size(757, 86);
+			this.LayoutDados.Size = new System.Drawing.Size(743, 86);
 			this.LayoutDados.TabIndex = 26;
 			// 
 			// maskedTextBox6
 			// 
-			this.maskedTextBox6.Location = new System.Drawing.Point(539, 31);
+			this.maskedTextBox6.Location = new System.Drawing.Point(529, 31);
 			this.maskedTextBox6.Mask = "00/00/0000";
 			this.maskedTextBox6.Name = "maskedTextBox6";
 			this.maskedTextBox6.Size = new System.Drawing.Size(63, 20);
@@ -361,7 +361,7 @@
 			// 
 			// maskedTextBox4
 			// 
-			this.maskedTextBox4.Location = new System.Drawing.Point(539, 3);
+			this.maskedTextBox4.Location = new System.Drawing.Point(529, 3);
 			this.maskedTextBox4.Mask = "000.000.000-00";
 			this.maskedTextBox4.Name = "maskedTextBox4";
 			this.maskedTextBox4.Size = new System.Drawing.Size(87, 20);
@@ -369,28 +369,28 @@
 			// 
 			// txtNome
 			// 
-			this.txtNome.Location = new System.Drawing.Point(91, 3);
+			this.txtNome.Location = new System.Drawing.Point(89, 3);
 			this.txtNome.Name = "txtNome";
 			this.txtNome.Size = new System.Drawing.Size(334, 20);
 			this.txtNome.TabIndex = 1;
 			// 
 			// textBox6
 			// 
-			this.textBox6.Location = new System.Drawing.Point(539, 59);
+			this.textBox6.Location = new System.Drawing.Point(529, 59);
 			this.textBox6.Name = "textBox6";
 			this.textBox6.Size = new System.Drawing.Size(150, 20);
 			this.textBox6.TabIndex = 6;
 			// 
 			// txtEmail
 			// 
-			this.txtEmail.Location = new System.Drawing.Point(91, 31);
+			this.txtEmail.Location = new System.Drawing.Point(89, 31);
 			this.txtEmail.Name = "txtEmail";
 			this.txtEmail.Size = new System.Drawing.Size(334, 20);
 			this.txtEmail.TabIndex = 2;
 			// 
 			// txtRG
 			// 
-			this.txtRG.Location = new System.Drawing.Point(91, 59);
+			this.txtRG.Location = new System.Drawing.Point(89, 59);
 			this.txtRG.Mask = "00.000.000-0";
 			this.txtRG.Name = "txtRG";
 			this.txtRG.Size = new System.Drawing.Size(79, 20);
@@ -440,7 +440,7 @@
 			this.tableLayoutPanel2.Controls.Add(this.label16, 0, 2);
 			this.tableLayoutPanel2.Controls.Add(this.label15, 0, 1);
 			this.tableLayoutPanel2.Controls.Add(this.label14, 0, 0);
-			this.tableLayoutPanel2.Location = new System.Drawing.Point(463, 151);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(446, 151);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
 			this.tableLayoutPanel2.RowCount = 3;
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -456,9 +456,9 @@
 			this.groupCadastro.Controls.Add(this.label4);
 			this.groupCadastro.Controls.Add(this.tableLayoutPanel1);
 			this.groupCadastro.Controls.Add(this.Btn_Salvar);
-			this.groupCadastro.Location = new System.Drawing.Point(12, 12);
+			this.groupCadastro.Location = new System.Drawing.Point(33, 12);
 			this.groupCadastro.Name = "groupCadastro";
-			this.groupCadastro.Size = new System.Drawing.Size(776, 408);
+			this.groupCadastro.Size = new System.Drawing.Size(755, 408);
 			this.groupCadastro.TabIndex = 28;
 			this.groupCadastro.TabStop = false;
 			// 
@@ -466,7 +466,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(804, 571);
 			this.ControlBox = false;
 			this.Controls.Add(this.groupCadastro);
 			this.Controls.Add(this.label17);

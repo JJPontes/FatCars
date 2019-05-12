@@ -31,15 +31,9 @@ namespace WindowsFormsApp1
 		}
 		private void FormCadastrarUsuario_Load(object sender, EventArgs e)
 		{
-			//Centralizando
-			label4.Left = (Width - label4.Width) / 2;
-		//	label4.Top = (Height - label4.Height) / 2;
-
-			LayoutCadastrar.Left = (Width - LayoutCadastrar.Width) / 2;
-			LayoutCadastrar.Top = (Height - LayoutCadastrar.Height) / 2;
-
-			Btn_Salvar.Left = (Width - Btn_Salvar.Width) / 2;
-			//Btn_Salvar.Top = (Height - Btn_Salvar.Height) / 2;
+			//centralizando
+			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
+			groupCadastro.Top = ((Height - groupCadastro.Height) - 50) / 2;
 
 		}
 
@@ -61,14 +55,9 @@ namespace WindowsFormsApp1
 
 		private void FormCadastrarUsuario_Resize(object sender, EventArgs e)
 		{
-			label4.Left = (Width - label4.Width) / 2;
-			//label4.Top = (Height - label4.Height) / 2;
-
-			LayoutCadastrar.Left = (Width - LayoutCadastrar.Width) / 2;
-			LayoutCadastrar.Top = (Height - LayoutCadastrar.Height) / 2;
-
-			Btn_Salvar.Left = (Width - Btn_Salvar.Width) / 2;
-			//Btn_Salvar.Top = (Height - Btn_Salvar.Height) / 2;
+			//centralizando
+			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
+			groupCadastro.Top = ((Height - groupCadastro.Height) - 50) / 2;
 		}
 	}
 }

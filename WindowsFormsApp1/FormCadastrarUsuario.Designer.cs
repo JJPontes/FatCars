@@ -45,7 +45,10 @@
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.LayoutCadastrar = new System.Windows.Forms.TableLayoutPanel();
+			this.groupCadastro = new System.Windows.Forms.GroupBox();
+			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			this.LayoutCadastrar.SuspendLayout();
+			this.groupCadastro.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// Btn_Salvar
@@ -113,7 +116,7 @@
 			this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(265, 24);
+			this.label4.Location = new System.Drawing.Point(77, 16);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(242, 25);
 			this.label4.TabIndex = 7;
@@ -211,7 +214,7 @@
 			this.LayoutCadastrar.Controls.Add(this.TextUsuario, 1, 0);
 			this.LayoutCadastrar.Controls.Add(this.label7, 0, 3);
 			this.LayoutCadastrar.Controls.Add(this.Btn_Salvar, 1, 8);
-			this.LayoutCadastrar.Location = new System.Drawing.Point(161, 80);
+			this.LayoutCadastrar.Location = new System.Drawing.Point(17, 65);
 			this.LayoutCadastrar.Name = "LayoutCadastrar";
 			this.LayoutCadastrar.RowCount = 9;
 			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -226,6 +229,16 @@
 			this.LayoutCadastrar.Size = new System.Drawing.Size(364, 243);
 			this.LayoutCadastrar.TabIndex = 12;
 			// 
+			// groupCadastro
+			// 
+			this.groupCadastro.Controls.Add(this.LayoutCadastrar);
+			this.groupCadastro.Controls.Add(this.label4);
+			this.groupCadastro.Location = new System.Drawing.Point(149, 12);
+			this.groupCadastro.Name = "groupCadastro";
+			this.groupCadastro.Size = new System.Drawing.Size(400, 324);
+			this.groupCadastro.TabIndex = 13;
+			this.groupCadastro.TabStop = false;
+			// 
 			// FormCadastrarUsuario
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,8 +247,7 @@
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.ControlBox = false;
-			this.Controls.Add(this.LayoutCadastrar);
-			this.Controls.Add(this.label4);
+			this.Controls.Add(this.groupCadastro);
 			this.Cursor = System.Windows.Forms.Cursors.Default;
 			this.Name = "FormCadastrarUsuario";
 			this.Text = "Cadastrar Usuários";
@@ -244,8 +256,9 @@
 			this.Resize += new System.EventHandler(this.FormCadastrarUsuario_Resize);
 			this.LayoutCadastrar.ResumeLayout(false);
 			this.LayoutCadastrar.PerformLayout();
+			this.groupCadastro.ResumeLayout(false);
+			this.groupCadastro.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
@@ -268,5 +281,7 @@
 		private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.TableLayoutPanel LayoutCadastrar;
+		private System.Windows.Forms.GroupBox groupCadastro;
+		private System.ComponentModel.BackgroundWorker backgroundWorker1;
 	}
 }

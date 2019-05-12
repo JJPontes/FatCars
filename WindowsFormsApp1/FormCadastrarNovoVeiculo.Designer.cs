@@ -45,12 +45,14 @@
 			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.LayoutCadastro = new System.Windows.Forms.TableLayoutPanel();
+			this.groupCadastro = new System.Windows.Forms.GroupBox();
 			this.LayoutCadastro.SuspendLayout();
+			this.groupCadastro.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// Btn_Salvar
 			// 
-			this.Btn_Salvar.Location = new System.Drawing.Point(332, 360);
+			this.Btn_Salvar.Location = new System.Drawing.Point(107, 345);
 			this.Btn_Salvar.Name = "Btn_Salvar";
 			this.Btn_Salvar.Size = new System.Drawing.Size(110, 30);
 			this.Btn_Salvar.TabIndex = 8;
@@ -62,7 +64,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-			this.label1.Location = new System.Drawing.Point(298, 22);
+			this.label1.Location = new System.Drawing.Point(51, 16);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(217, 25);
 			this.label1.TabIndex = 1;
@@ -215,7 +217,7 @@
 			this.LayoutCadastro.Controls.Add(this.TextModelo, 1, 1);
 			this.LayoutCadastro.Controls.Add(this.label2, 0, 4);
 			this.LayoutCadastro.Controls.Add(this.label5, 0, 5);
-			this.LayoutCadastro.Location = new System.Drawing.Point(270, 80);
+			this.LayoutCadastro.Location = new System.Drawing.Point(6, 57);
 			this.LayoutCadastro.Name = "LayoutCadastro";
 			this.LayoutCadastro.RowCount = 7;
 			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -228,24 +230,35 @@
 			this.LayoutCadastro.Size = new System.Drawing.Size(294, 274);
 			this.LayoutCadastro.TabIndex = 15;
 			// 
+			// groupCadastro
+			// 
+			this.groupCadastro.Controls.Add(this.label1);
+			this.groupCadastro.Controls.Add(this.Btn_Salvar);
+			this.groupCadastro.Controls.Add(this.LayoutCadastro);
+			this.groupCadastro.Location = new System.Drawing.Point(266, 57);
+			this.groupCadastro.Name = "groupCadastro";
+			this.groupCadastro.Size = new System.Drawing.Size(309, 381);
+			this.groupCadastro.TabIndex = 16;
+			this.groupCadastro.TabStop = false;
+			// 
 			// FormCadastrarNovoVeiculo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(826, 457);
+			this.ClientSize = new System.Drawing.Size(784, 561);
 			this.ControlBox = false;
-			this.Controls.Add(this.LayoutCadastro);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.Btn_Salvar);
+			this.Controls.Add(this.groupCadastro);
 			this.Name = "FormCadastrarNovoVeiculo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
 			this.Text = "Cadastro de Veículos";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.FormCadastrarNovoVeiculo_Load);
+			this.Resize += new System.EventHandler(this.FormCadastrarNovoVeiculo_Resize);
 			this.LayoutCadastro.ResumeLayout(false);
 			this.LayoutCadastro.PerformLayout();
+			this.groupCadastro.ResumeLayout(false);
+			this.groupCadastro.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
@@ -268,5 +281,6 @@
 		private System.Windows.Forms.MaskedTextBox maskedTextBox1;
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.TableLayoutPanel LayoutCadastro;
+		private System.Windows.Forms.GroupBox groupCadastro;
 	}
 }
