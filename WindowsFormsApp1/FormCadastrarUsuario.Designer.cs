@@ -51,7 +51,7 @@
 			// Btn_Salvar
 			// 
 			this.Btn_Salvar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.Btn_Salvar.Location = new System.Drawing.Point(359, 341);
+			this.Btn_Salvar.Location = new System.Drawing.Point(193, 212);
 			this.Btn_Salvar.Name = "Btn_Salvar";
 			this.Btn_Salvar.Size = new System.Drawing.Size(75, 23);
 			this.Btn_Salvar.TabIndex = 8;
@@ -62,7 +62,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(3, 136);
+			this.label1.Location = new System.Drawing.Point(3, 108);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(89, 13);
 			this.label1.TabIndex = 1;
@@ -79,7 +79,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(3, 170);
+			this.label2.Location = new System.Drawing.Point(3, 135);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(38, 13);
 			this.label2.TabIndex = 3;
@@ -88,7 +88,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(3, 204);
+			this.label3.Location = new System.Drawing.Point(3, 162);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(85, 13);
 			this.label3.TabIndex = 4;
@@ -96,14 +96,14 @@
 			// 
 			// TextSenha
 			// 
-			this.TextSenha.Location = new System.Drawing.Point(98, 37);
+			this.TextSenha.Location = new System.Drawing.Point(98, 30);
 			this.TextSenha.Name = "TextSenha";
 			this.TextSenha.Size = new System.Drawing.Size(266, 20);
 			this.TextSenha.TabIndex = 2;
 			// 
 			// TextConfirmarSenha
 			// 
-			this.TextConfirmarSenha.Location = new System.Drawing.Point(98, 71);
+			this.TextConfirmarSenha.Location = new System.Drawing.Point(98, 57);
 			this.TextConfirmarSenha.Name = "TextConfirmarSenha";
 			this.TextConfirmarSenha.Size = new System.Drawing.Size(266, 20);
 			this.TextConfirmarSenha.TabIndex = 3;
@@ -133,7 +133,7 @@
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(3, 68);
+			this.label6.Location = new System.Drawing.Point(3, 54);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(35, 13);
 			this.label6.TabIndex = 9;
@@ -142,7 +142,7 @@
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(3, 102);
+			this.label7.Location = new System.Drawing.Point(3, 81);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(85, 13);
 			this.label7.TabIndex = 10;
@@ -151,7 +151,7 @@
 			// label8
 			// 
 			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(3, 34);
+			this.label8.Location = new System.Drawing.Point(3, 27);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(36, 13);
 			this.label8.TabIndex = 11;
@@ -164,28 +164,28 @@
             "Usuário",
             "Supervisor",
             "Administrador"});
-			this.ComboNivelAcesso.Location = new System.Drawing.Point(98, 105);
+			this.ComboNivelAcesso.Location = new System.Drawing.Point(98, 84);
 			this.ComboNivelAcesso.Name = "ComboNivelAcesso";
 			this.ComboNivelAcesso.Size = new System.Drawing.Size(121, 21);
 			this.ComboNivelAcesso.TabIndex = 4;
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(98, 139);
+			this.textBox1.Location = new System.Drawing.Point(98, 111);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(266, 20);
 			this.textBox1.TabIndex = 5;
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(98, 173);
+			this.textBox2.Location = new System.Drawing.Point(98, 138);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(266, 20);
 			this.textBox2.TabIndex = 6;
 			// 
 			// textBox3
 			// 
-			this.textBox3.Location = new System.Drawing.Point(98, 207);
+			this.textBox3.Location = new System.Drawing.Point(98, 165);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(266, 20);
 			this.textBox3.TabIndex = 7;
@@ -210,9 +210,10 @@
 			this.LayoutCadastrar.Controls.Add(this.TextSenha, 1, 1);
 			this.LayoutCadastrar.Controls.Add(this.TextUsuario, 1, 0);
 			this.LayoutCadastrar.Controls.Add(this.label7, 0, 3);
+			this.LayoutCadastrar.Controls.Add(this.Btn_Salvar, 1, 8);
 			this.LayoutCadastrar.Location = new System.Drawing.Point(161, 80);
 			this.LayoutCadastrar.Name = "LayoutCadastrar";
-			this.LayoutCadastrar.RowCount = 7;
+			this.LayoutCadastrar.RowCount = 9;
 			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
 			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
 			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
@@ -220,6 +221,8 @@
 			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
 			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
 			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.LayoutCadastrar.Size = new System.Drawing.Size(364, 243);
 			this.LayoutCadastrar.TabIndex = 12;
 			// 
@@ -233,12 +236,12 @@
 			this.ControlBox = false;
 			this.Controls.Add(this.LayoutCadastrar);
 			this.Controls.Add(this.label4);
-			this.Controls.Add(this.Btn_Salvar);
 			this.Cursor = System.Windows.Forms.Cursors.Default;
 			this.Name = "FormCadastrarUsuario";
 			this.Text = "Cadastrar Usuários";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.FormCadastrarUsuario_Load);
+			this.Resize += new System.EventHandler(this.FormCadastrarUsuario_Resize);
 			this.LayoutCadastrar.ResumeLayout(false);
 			this.LayoutCadastrar.PerformLayout();
 			this.ResumeLayout(false);

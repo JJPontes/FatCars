@@ -28,9 +28,9 @@ namespace WindowsFormsApp1
 		private void FormCadastrarCliente_Load(object sender, EventArgs e)
 		{
 			//Centralizando
-			label4.Left = (Width - label4.Width) / 2;
-			LayoutDados.Left = (Width - LayoutDados.Width) / 2;
-			//groupBoxEndereco.Left = (Width - groupBoxEndereco.Width) / 2;
+		
+			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
+			groupCadastro.Top = (Height - groupCadastro.Height) / 2;
 		}
 
 		private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -73,6 +73,10 @@ namespace WindowsFormsApp1
 			txtEstado.Text = address.UF;
 		}
 
-		
+		private void FormCadastrarCliente_Resize(object sender, EventArgs e)
+		{
+			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
+			groupCadastro.Top = (Height - groupCadastro.Height) / 2;
+		}
 	}
 }

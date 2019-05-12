@@ -35,6 +35,7 @@
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarNovoVeículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarNovoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.cadastrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editarExcluirUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editarExcluirVeículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +51,6 @@
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarNovoCarroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.cadastrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -65,7 +65,7 @@
             this.toolStripMenuItem1});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(804, 24);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
 			this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -118,6 +118,13 @@
 			this.cadastrarNovoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
 			this.cadastrarNovoUsuárioToolStripMenuItem.Text = "Cadastrar novo usuário...";
 			this.cadastrarNovoUsuárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoUsuárioToolStripMenuItem_Click);
+			// 
+			// cadastrarClienteToolStripMenuItem
+			// 
+			this.cadastrarClienteToolStripMenuItem.Name = "cadastrarClienteToolStripMenuItem";
+			this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+			this.cadastrarClienteToolStripMenuItem.Text = "Cadastrar Cliente...";
+			this.cadastrarClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClienteToolStripMenuItem_Click);
 			// 
 			// editarToolStripMenuItem
 			// 
@@ -233,18 +240,11 @@
 			this.cadastrarNovoCarroToolStripMenuItem.Text = "Cadastrar novo veículo...";
 			this.cadastrarNovoCarroToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoCarroToolStripMenuItem_Click);
 			// 
-			// cadastrarClienteToolStripMenuItem
-			// 
-			this.cadastrarClienteToolStripMenuItem.Name = "cadastrarClienteToolStripMenuItem";
-			this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-			this.cadastrarClienteToolStripMenuItem.Text = "Cadastrar Cliente...";
-			this.cadastrarClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClienteToolStripMenuItem_Click);
-			// 
 			// FormPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(784, 490);
+			this.ClientSize = new System.Drawing.Size(804, 571);
 			this.Controls.Add(this.menuStrip1);
 			this.IsMdiContainer = true;
 			this.MainMenuStrip = this.menuStrip1;
