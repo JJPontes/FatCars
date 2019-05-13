@@ -54,7 +54,7 @@
 			// 
 			this.Btn_Salvar.Location = new System.Drawing.Point(107, 345);
 			this.Btn_Salvar.Name = "Btn_Salvar";
-			this.Btn_Salvar.Size = new System.Drawing.Size(110, 30);
+			this.Btn_Salvar.Size = new System.Drawing.Size(105, 40);
 			this.Btn_Salvar.TabIndex = 8;
 			this.Btn_Salvar.Text = "Salvar";
 			this.Btn_Salvar.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@
 			this.groupCadastro.Controls.Add(this.LayoutCadastro);
 			this.groupCadastro.Location = new System.Drawing.Point(266, 57);
 			this.groupCadastro.Name = "groupCadastro";
-			this.groupCadastro.Size = new System.Drawing.Size(309, 381);
+			this.groupCadastro.Size = new System.Drawing.Size(309, 391);
 			this.groupCadastro.TabIndex = 16;
 			this.groupCadastro.TabStop = false;
 			// 
@@ -259,7 +259,7 @@
             "Lexus",
             "Mazda",
             "Mercedes-Bens",
-            "Mitsubish",
+            "Mitsubishi",
             "Nissan",
             "Peugeot",
             "Porsche",

@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
 	{
 		public FormCadastrarUsuario()
 		{
+		
 			InitializeComponent();
 		}
 		//Metodo para limpar todos os textbox
@@ -31,6 +32,7 @@ namespace WindowsFormsApp1
 		}
 		private void FormCadastrarUsuario_Load(object sender, EventArgs e)
 		{
+			
 			//centralizando
 			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
 			groupCadastro.Top = ((Height - groupCadastro.Height) - 50) / 2;
@@ -39,6 +41,7 @@ namespace WindowsFormsApp1
 
 		private void Btn_Salvar_Click(object sender, EventArgs e)
 		{
+			
 			MessageBox.Show("Usuário Cadastrado com Sucesso!");
 			limparTextBoxes(this.Controls);
 		}

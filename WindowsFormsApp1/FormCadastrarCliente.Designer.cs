@@ -48,22 +48,22 @@
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.txtCep = new System.Windows.Forms.TextBox();
 			this.txtEstado = new System.Windows.Forms.TextBox();
-			this.textBox8 = new System.Windows.Forms.TextBox();
+			this.txtNumero = new System.Windows.Forms.TextBox();
 			this.txtBairro = new System.Windows.Forms.TextBox();
 			this.txtCidade = new System.Windows.Forms.TextBox();
 			this.txtRua = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.txtComplemento = new System.Windows.Forms.TextBox();
 			this.label18 = new System.Windows.Forms.Label();
 			this.LayoutDados = new System.Windows.Forms.TableLayoutPanel();
-			this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-			this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+			this.txtNascimento = new System.Windows.Forms.MaskedTextBox();
+			this.txtCpf = new System.Windows.Forms.MaskedTextBox();
 			this.txtNome = new System.Windows.Forms.TextBox();
-			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.txtProfissao = new System.Windows.Forms.TextBox();
 			this.txtEmail = new System.Windows.Forms.TextBox();
 			this.txtRG = new System.Windows.Forms.MaskedTextBox();
-			this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-			this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-			this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
+			this.txtTelRes = new System.Windows.Forms.MaskedTextBox();
+			this.txtTelCom = new System.Windows.Forms.MaskedTextBox();
+			this.txtTelCel = new System.Windows.Forms.MaskedTextBox();
 			this.Btn_Salvar = new System.Windows.Forms.Button();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.groupCadastro = new System.Windows.Forms.GroupBox();
@@ -236,12 +236,12 @@
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.56817F));
 			this.tableLayoutPanel1.Controls.Add(this.txtCep, 1, 0);
 			this.tableLayoutPanel1.Controls.Add(this.txtEstado, 1, 6);
-			this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 2);
+			this.tableLayoutPanel1.Controls.Add(this.txtNumero, 1, 2);
 			this.tableLayoutPanel1.Controls.Add(this.txtBairro, 1, 5);
 			this.tableLayoutPanel1.Controls.Add(this.txtCidade, 1, 4);
 			this.tableLayoutPanel1.Controls.Add(this.txtRua, 1, 1);
 			this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
-			this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 3);
+			this.tableLayoutPanel1.Controls.Add(this.txtComplemento, 1, 3);
 			this.tableLayoutPanel1.Controls.Add(this.label9, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.label10, 0, 3);
 			this.tableLayoutPanel1.Controls.Add(this.label8, 0, 6);
@@ -268,6 +268,7 @@
 			this.txtCep.Name = "txtCep";
 			this.txtCep.Size = new System.Drawing.Size(81, 20);
 			this.txtCep.TabIndex = 7;
+			this.txtCep.TextChanged += new System.EventHandler(this.txtCep_TextChanged_1);
 			this.txtCep.Leave += new System.EventHandler(this.txtCep_Leave_1);
 			// 
 			// txtEstado
@@ -277,13 +278,13 @@
 			this.txtEstado.Size = new System.Drawing.Size(173, 20);
 			this.txtEstado.TabIndex = 95;
 			// 
-			// textBox8
+			// txtNumero
 			// 
-			this.textBox8.Location = new System.Drawing.Point(87, 59);
-			this.textBox8.MaxLength = 5;
-			this.textBox8.Name = "textBox8";
-			this.textBox8.Size = new System.Drawing.Size(81, 20);
-			this.textBox8.TabIndex = 8;
+			this.txtNumero.Location = new System.Drawing.Point(87, 59);
+			this.txtNumero.MaxLength = 5;
+			this.txtNumero.Name = "txtNumero";
+			this.txtNumero.Size = new System.Drawing.Size(81, 20);
+			this.txtNumero.TabIndex = 8;
 			// 
 			// txtBairro
 			// 
@@ -306,12 +307,12 @@
 			this.txtRua.Size = new System.Drawing.Size(336, 20);
 			this.txtRua.TabIndex = 99;
 			// 
-			// textBox3
+			// txtComplemento
 			// 
-			this.textBox3.Location = new System.Drawing.Point(87, 87);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(336, 20);
-			this.textBox3.TabIndex = 98;
+			this.txtComplemento.Location = new System.Drawing.Point(87, 87);
+			this.txtComplemento.Name = "txtComplemento";
+			this.txtComplemento.Size = new System.Drawing.Size(336, 20);
+			this.txtComplemento.TabIndex = 98;
 			// 
 			// label18
 			// 
@@ -329,8 +330,8 @@
 			this.LayoutDados.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.4248F));
 			this.LayoutDados.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.720054F));
 			this.LayoutDados.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.48971F));
-			this.LayoutDados.Controls.Add(this.maskedTextBox6, 3, 1);
-			this.LayoutDados.Controls.Add(this.maskedTextBox4, 3, 0);
+			this.LayoutDados.Controls.Add(this.txtNascimento, 3, 1);
+			this.LayoutDados.Controls.Add(this.txtCpf, 3, 0);
 			this.LayoutDados.Controls.Add(this.label1, 0, 0);
 			this.LayoutDados.Controls.Add(this.label2, 0, 1);
 			this.LayoutDados.Controls.Add(this.label3, 0, 2);
@@ -338,7 +339,7 @@
 			this.LayoutDados.Controls.Add(this.label11, 2, 1);
 			this.LayoutDados.Controls.Add(this.label13, 2, 2);
 			this.LayoutDados.Controls.Add(this.txtNome, 1, 0);
-			this.LayoutDados.Controls.Add(this.textBox6, 3, 2);
+			this.LayoutDados.Controls.Add(this.txtProfissao, 3, 2);
 			this.LayoutDados.Controls.Add(this.txtEmail, 1, 1);
 			this.LayoutDados.Controls.Add(this.txtRG, 1, 2);
 			this.LayoutDados.Location = new System.Drawing.Point(6, 59);
@@ -350,22 +351,22 @@
 			this.LayoutDados.Size = new System.Drawing.Size(743, 86);
 			this.LayoutDados.TabIndex = 26;
 			// 
-			// maskedTextBox6
+			// txtNascimento
 			// 
-			this.maskedTextBox6.Location = new System.Drawing.Point(529, 31);
-			this.maskedTextBox6.Mask = "00/00/0000";
-			this.maskedTextBox6.Name = "maskedTextBox6";
-			this.maskedTextBox6.Size = new System.Drawing.Size(63, 20);
-			this.maskedTextBox6.TabIndex = 5;
-			this.maskedTextBox6.ValidatingType = typeof(System.DateTime);
+			this.txtNascimento.Location = new System.Drawing.Point(529, 31);
+			this.txtNascimento.Mask = "00/00/0000";
+			this.txtNascimento.Name = "txtNascimento";
+			this.txtNascimento.Size = new System.Drawing.Size(63, 20);
+			this.txtNascimento.TabIndex = 5;
+			this.txtNascimento.ValidatingType = typeof(System.DateTime);
 			// 
-			// maskedTextBox4
+			// txtCpf
 			// 
-			this.maskedTextBox4.Location = new System.Drawing.Point(529, 3);
-			this.maskedTextBox4.Mask = "000.000.000-00";
-			this.maskedTextBox4.Name = "maskedTextBox4";
-			this.maskedTextBox4.Size = new System.Drawing.Size(87, 20);
-			this.maskedTextBox4.TabIndex = 4;
+			this.txtCpf.Location = new System.Drawing.Point(529, 3);
+			this.txtCpf.Mask = "000.000.000-00";
+			this.txtCpf.Name = "txtCpf";
+			this.txtCpf.Size = new System.Drawing.Size(87, 20);
+			this.txtCpf.TabIndex = 4;
 			// 
 			// txtNome
 			// 
@@ -374,12 +375,12 @@
 			this.txtNome.Size = new System.Drawing.Size(334, 20);
 			this.txtNome.TabIndex = 1;
 			// 
-			// textBox6
+			// txtProfissao
 			// 
-			this.textBox6.Location = new System.Drawing.Point(529, 59);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(150, 20);
-			this.textBox6.TabIndex = 6;
+			this.txtProfissao.Location = new System.Drawing.Point(529, 59);
+			this.txtProfissao.Name = "txtProfissao";
+			this.txtProfissao.Size = new System.Drawing.Size(150, 20);
+			this.txtProfissao.TabIndex = 6;
 			// 
 			// txtEmail
 			// 
@@ -396,47 +397,48 @@
 			this.txtRG.Size = new System.Drawing.Size(79, 20);
 			this.txtRG.TabIndex = 3;
 			// 
-			// maskedTextBox5
+			// txtTelRes
 			// 
-			this.maskedTextBox5.Location = new System.Drawing.Point(103, 3);
-			this.maskedTextBox5.Mask = "(00) 0000-0000";
-			this.maskedTextBox5.Name = "maskedTextBox5";
-			this.maskedTextBox5.Size = new System.Drawing.Size(81, 20);
-			this.maskedTextBox5.TabIndex = 9;
+			this.txtTelRes.Location = new System.Drawing.Point(103, 3);
+			this.txtTelRes.Mask = "(00) 0000-0000";
+			this.txtTelRes.Name = "txtTelRes";
+			this.txtTelRes.Size = new System.Drawing.Size(81, 20);
+			this.txtTelRes.TabIndex = 9;
 			// 
-			// maskedTextBox7
+			// txtTelCom
 			// 
-			this.maskedTextBox7.Location = new System.Drawing.Point(103, 28);
-			this.maskedTextBox7.Mask = "(00) 0000-0000";
-			this.maskedTextBox7.Name = "maskedTextBox7";
-			this.maskedTextBox7.Size = new System.Drawing.Size(81, 20);
-			this.maskedTextBox7.TabIndex = 10;
+			this.txtTelCom.Location = new System.Drawing.Point(103, 28);
+			this.txtTelCom.Mask = "(00) 0000-0000";
+			this.txtTelCom.Name = "txtTelCom";
+			this.txtTelCom.Size = new System.Drawing.Size(81, 20);
+			this.txtTelCom.TabIndex = 10;
 			// 
-			// maskedTextBox8
+			// txtTelCel
 			// 
-			this.maskedTextBox8.Location = new System.Drawing.Point(103, 53);
-			this.maskedTextBox8.Mask = "(00) 00000-0000";
-			this.maskedTextBox8.Name = "maskedTextBox8";
-			this.maskedTextBox8.Size = new System.Drawing.Size(94, 20);
-			this.maskedTextBox8.TabIndex = 11;
+			this.txtTelCel.Location = new System.Drawing.Point(103, 53);
+			this.txtTelCel.Mask = "(00) 00000-0000";
+			this.txtTelCel.Name = "txtTelCel";
+			this.txtTelCel.Size = new System.Drawing.Size(94, 20);
+			this.txtTelCel.TabIndex = 11;
 			// 
 			// Btn_Salvar
 			// 
-			this.Btn_Salvar.Location = new System.Drawing.Point(368, 367);
+			this.Btn_Salvar.Location = new System.Drawing.Point(369, 362);
 			this.Btn_Salvar.Name = "Btn_Salvar";
-			this.Btn_Salvar.Size = new System.Drawing.Size(102, 35);
+			this.Btn_Salvar.Size = new System.Drawing.Size(105, 40);
 			this.Btn_Salvar.TabIndex = 12;
 			this.Btn_Salvar.Text = "Salvar";
 			this.Btn_Salvar.UseVisualStyleBackColor = true;
+			this.Btn_Salvar.Click += new System.EventHandler(this.Btn_Salvar_Click);
 			// 
 			// tableLayoutPanel2
 			// 
 			this.tableLayoutPanel2.ColumnCount = 2;
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.Controls.Add(this.maskedTextBox7, 1, 1);
-			this.tableLayoutPanel2.Controls.Add(this.maskedTextBox5, 1, 0);
-			this.tableLayoutPanel2.Controls.Add(this.maskedTextBox8, 1, 2);
+			this.tableLayoutPanel2.Controls.Add(this.txtTelCom, 1, 1);
+			this.tableLayoutPanel2.Controls.Add(this.txtTelRes, 1, 0);
+			this.tableLayoutPanel2.Controls.Add(this.txtTelCel, 1, 2);
 			this.tableLayoutPanel2.Controls.Add(this.label16, 0, 2);
 			this.tableLayoutPanel2.Controls.Add(this.label15, 0, 1);
 			this.tableLayoutPanel2.Controls.Add(this.label14, 0, 0);
@@ -511,21 +513,21 @@
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.TextBox txtBairro;
 		private System.Windows.Forms.TextBox txtCidade;
-		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox txtComplemento;
 		private System.Windows.Forms.TextBox txtRua;
 		private System.Windows.Forms.TableLayoutPanel LayoutDados;
-		private System.Windows.Forms.MaskedTextBox maskedTextBox8;
-		private System.Windows.Forms.MaskedTextBox maskedTextBox7;
-		private System.Windows.Forms.MaskedTextBox maskedTextBox6;
-		private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-		private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+		private System.Windows.Forms.MaskedTextBox txtTelCel;
+		private System.Windows.Forms.MaskedTextBox txtTelCom;
+		private System.Windows.Forms.MaskedTextBox txtNascimento;
+		private System.Windows.Forms.MaskedTextBox txtTelRes;
+		private System.Windows.Forms.MaskedTextBox txtCpf;
 		private System.Windows.Forms.TextBox txtNome;
-		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.TextBox txtProfissao;
 		private System.Windows.Forms.TextBox txtEmail;
 		private System.Windows.Forms.MaskedTextBox txtRG;
 		private System.Windows.Forms.Button Btn_Salvar;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-		private System.Windows.Forms.TextBox textBox8;
+		private System.Windows.Forms.TextBox txtNumero;
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.TextBox txtEstado;
 		private System.Windows.Forms.TextBox txtCep;

@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
 	public partial class FormPrincipal : Form
 	{
+
 		public FormPrincipal()
 		{
 			InitializeComponent();
@@ -170,9 +171,11 @@ namespace WindowsFormsApp1
 
 		private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+		
 			FormCadastrarCliente cadastrarCliente = new FormCadastrarCliente();
 			cadastrarCliente.MdiParent = this;
 			cadastrarCliente.Show();
+			
 		}
 	}
 	}
