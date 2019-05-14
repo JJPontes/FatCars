@@ -181,7 +181,24 @@ namespace WindowsFormsApp1
 
 		private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+			FormCadastrarPecaEstoque cadastrarPecaEstoque = new FormCadastrarPecaEstoque();
+			cadastrarPecaEstoque.MdiParent = this;
+			cadastrarPecaEstoque.Show();
 
+		}
+
+		private void monitorarVeículosAtivosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			FormMonitoramentoVeiculo formMonitoramentoVeiculo = new FormMonitoramentoVeiculo();
+			formMonitoramentoVeiculo.MdiParent = this;
+			formMonitoramentoVeiculo.Show();
+		}
+
+		private void consultarComprovantesToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			FormConsultarComprovantes formConsultarComprovantes = new FormConsultarComprovantes();
+			formConsultarComprovantes.MdiParent = this;
+			formConsultarComprovantes.Show();
 		}
 	}
 	}

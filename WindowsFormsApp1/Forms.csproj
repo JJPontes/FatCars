@@ -61,6 +61,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Car.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Correios, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Correios-Api.1.1.1\lib\portable-net45+win\Correios.dll</HintPath>
@@ -92,6 +95,12 @@
     <Compile Include="FormCadastrarCliente.Designer.cs">
       <DependentUpon>FormCadastrarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastrarPecaEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarPecaEstoque.Designer.cs">
+      <DependentUpon>FormCadastrarPecaEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +119,12 @@
     <Compile Include="FormConsultarCliente.Designer.cs">
       <DependentUpon>FormConsultarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultarComprovantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultarComprovantes.Designer.cs">
+      <DependentUpon>FormConsultarComprovantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultarVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +142,12 @@
     </Compile>
     <Compile Include="FormEditarVeiculo.Designer.cs">
       <DependentUpon>FormEditarVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMonitoramentoVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMonitoramentoVeiculo.Designer.cs">
+      <DependentUpon>FormMonitoramentoVeiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -179,11 +200,17 @@
     <EmbeddedResource Include="FormCadastrarNovoVeiculo.resx">
       <DependentUpon>FormCadastrarNovoVeiculo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastrarPecaEstoque.resx">
+      <DependentUpon>FormCadastrarPecaEstoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastrarUsuario.resx">
       <DependentUpon>FormCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultarCliente.resx">
       <DependentUpon>FormConsultarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarComprovantes.resx">
+      <DependentUpon>FormConsultarComprovantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultarVeiculo.resx">
       <DependentUpon>FormConsultarVeiculo.cs</DependentUpon>
@@ -193,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarVeiculo.resx">
       <DependentUpon>FormEditarVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMonitoramentoVeiculo.resx">
+      <DependentUpon>FormMonitoramentoVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
@@ -251,6 +281,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Car.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
