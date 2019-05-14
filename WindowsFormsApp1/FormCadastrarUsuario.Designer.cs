@@ -47,6 +47,7 @@
 			this.LayoutCadastrar = new System.Windows.Forms.TableLayoutPanel();
 			this.groupCadastro = new System.Windows.Forms.GroupBox();
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+			this.button1 = new System.Windows.Forms.Button();
 			this.LayoutCadastrar.SuspendLayout();
 			this.groupCadastro.SuspendLayout();
 			this.SuspendLayout();
@@ -239,6 +240,16 @@
 			this.groupCadastro.TabIndex = 13;
 			this.groupCadastro.TabStop = false;
 			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(577, 336);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 14;
+			this.button1.Text = "button1";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// FormCadastrarUsuario
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,6 +258,7 @@
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.ControlBox = false;
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.groupCadastro);
 			this.Cursor = System.Windows.Forms.Cursors.Default;
 			this.Name = "FormCadastrarUsuario";
@@ -283,5 +295,6 @@
 		private System.Windows.Forms.TableLayoutPanel LayoutCadastrar;
 		private System.Windows.Forms.GroupBox groupCadastro;
 		private System.ComponentModel.BackgroundWorker backgroundWorker1;
+		private System.Windows.Forms.Button button1;
 	}
 }

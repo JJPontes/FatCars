@@ -62,5 +62,9 @@ namespace WindowsFormsApp1
 			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
 			groupCadastro.Top = ((Height - groupCadastro.Height) - 50) / 2;
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+		}
 	}
 }

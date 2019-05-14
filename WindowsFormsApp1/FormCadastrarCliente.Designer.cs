@@ -67,6 +67,7 @@
 			this.Btn_Salvar = new System.Windows.Forms.Button();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.groupCadastro = new System.Windows.Forms.GroupBox();
+			this.button1 = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.LayoutDados.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
@@ -353,6 +354,7 @@
 			// 
 			// txtNascimento
 			// 
+			this.txtNascimento.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtNascimento.Location = new System.Drawing.Point(529, 31);
 			this.txtNascimento.Mask = "00/00/0000";
 			this.txtNascimento.Name = "txtNascimento";
@@ -362,6 +364,7 @@
 			// 
 			// txtCpf
 			// 
+			this.txtCpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtCpf.Location = new System.Drawing.Point(529, 3);
 			this.txtCpf.Mask = "000.000.000-00";
 			this.txtCpf.Name = "txtCpf";
@@ -391,6 +394,7 @@
 			// 
 			// txtRG
 			// 
+			this.txtRG.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtRG.Location = new System.Drawing.Point(89, 59);
 			this.txtRG.Mask = "00.000.000-0";
 			this.txtRG.Name = "txtRG";
@@ -399,6 +403,7 @@
 			// 
 			// txtTelRes
 			// 
+			this.txtTelRes.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtTelRes.Location = new System.Drawing.Point(103, 3);
 			this.txtTelRes.Mask = "(00) 0000-0000";
 			this.txtTelRes.Name = "txtTelRes";
@@ -407,6 +412,7 @@
 			// 
 			// txtTelCom
 			// 
+			this.txtTelCom.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtTelCom.Location = new System.Drawing.Point(103, 28);
 			this.txtTelCom.Mask = "(00) 0000-0000";
 			this.txtTelCom.Name = "txtTelCom";
@@ -415,6 +421,7 @@
 			// 
 			// txtTelCel
 			// 
+			this.txtTelCel.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtTelCel.Location = new System.Drawing.Point(103, 53);
 			this.txtTelCel.Mask = "(00) 00000-0000";
 			this.txtTelCel.Name = "txtTelCel";
@@ -453,6 +460,7 @@
 			// 
 			// groupCadastro
 			// 
+			this.groupCadastro.Controls.Add(this.button1);
 			this.groupCadastro.Controls.Add(this.LayoutDados);
 			this.groupCadastro.Controls.Add(this.tableLayoutPanel2);
 			this.groupCadastro.Controls.Add(this.label4);
@@ -463,6 +471,16 @@
 			this.groupCadastro.Size = new System.Drawing.Size(755, 408);
 			this.groupCadastro.TabIndex = 28;
 			this.groupCadastro.TabStop = false;
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(568, 355);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 201;
+			this.button1.Text = "button1";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// FormCadastrarCliente
 			// 
@@ -532,5 +550,6 @@
 		private System.Windows.Forms.TextBox txtEstado;
 		private System.Windows.Forms.TextBox txtCep;
 		private System.Windows.Forms.GroupBox groupCadastro;
+		private System.Windows.Forms.Button button1;
 	}
 }

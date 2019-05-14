@@ -167,11 +167,13 @@
 			this.Controls.Add(this.LayoutLogin);
 			this.Controls.Add(this.LogoFat);
 			this.Controls.Add(this.linkLabel1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.Name = "FormLogin";
 			this.Text = "FatCars - Login";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing_1);
 			this.Load += new System.EventHandler(this.Login_Load);
+			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormLogin_KeyPress);
 			((System.ComponentModel.ISupportInitialize)(this.LogoFat)).EndInit();
 			this.LayoutLogin.ResumeLayout(false);
 			this.LayoutLogin.PerformLayout();

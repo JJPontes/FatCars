@@ -164,6 +164,7 @@ namespace WindowsFormsApp1
 
 		private void FormPrincipal_Load(object sender, EventArgs e)
 		{
+
 			FormPrincipal1 principal1 = new FormPrincipal1();
 			principal1.MdiParent = this;
 			principal1.Show();
@@ -176,6 +177,11 @@ namespace WindowsFormsApp1
 			cadastrarCliente.MdiParent = this;
 			cadastrarCliente.Show();
 			
+		}
+
+		private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 	}

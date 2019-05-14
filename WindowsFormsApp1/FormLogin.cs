@@ -70,5 +70,17 @@ namespace WindowsFormsApp1
 		{
 
 		}
+
+		private void FormLogin_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			{
+				if (e.KeyChar == 13)
+				{
+					FormPrincipal form = new FormPrincipal();
+					form.Show();
+					this.Hide();
+				}
+			}
+		}
 	}
 }
