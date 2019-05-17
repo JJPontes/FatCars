@@ -31,5 +31,25 @@ namespace WindowsFormsApp1
 		{
 			dataGridView1.Visible = true;
 		}
+
+		private void FormConsultarCliente_Load(object sender, EventArgs e)
+		{
+			// TODO: esta linha de código carrega dados na tabela 'pIM1DataSet.TB_Cliente'. Você pode movê-la ou removê-la conforme necessário.
+			this.tB_ClienteTableAdapter.Fill(this.pIM1DataSet.TB_Cliente);
+
+		}
+
+		private void fillByToolStripButton_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				this.tB_ClienteTableAdapter.FillBy(this.pIM1DataSet.TB_Cliente);
+			}
+			catch (System.Exception ex)
+			{
+				System.Windows.Forms.MessageBox.Show(ex.Message);
+			}
+
+		}
 	}
 }

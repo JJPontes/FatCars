@@ -67,7 +67,8 @@
 			this.Btn_Salvar = new System.Windows.Forms.Button();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.groupCadastro = new System.Windows.Forms.GroupBox();
-			this.button1 = new System.Windows.Forms.Button();
+			this.radioPF = new System.Windows.Forms.RadioButton();
+			this.radioButton2 = new System.Windows.Forms.RadioButton();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.LayoutDados.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
@@ -249,7 +250,7 @@
 			this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
 			this.tableLayoutPanel1.Controls.Add(this.label7, 0, 4);
 			this.tableLayoutPanel1.Controls.Add(this.label18, 0, 2);
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 151);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 211);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 7;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28574F));
@@ -343,7 +344,7 @@
 			this.LayoutDados.Controls.Add(this.txtProfissao, 3, 2);
 			this.LayoutDados.Controls.Add(this.txtEmail, 1, 1);
 			this.LayoutDados.Controls.Add(this.txtRG, 1, 2);
-			this.LayoutDados.Location = new System.Drawing.Point(6, 59);
+			this.LayoutDados.Location = new System.Drawing.Point(6, 119);
 			this.LayoutDados.Name = "LayoutDados";
 			this.LayoutDados.RowCount = 3;
 			this.LayoutDados.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -430,7 +431,7 @@
 			// 
 			// Btn_Salvar
 			// 
-			this.Btn_Salvar.Location = new System.Drawing.Point(369, 362);
+			this.Btn_Salvar.Location = new System.Drawing.Point(369, 420);
 			this.Btn_Salvar.Name = "Btn_Salvar";
 			this.Btn_Salvar.Size = new System.Drawing.Size(105, 40);
 			this.Btn_Salvar.TabIndex = 12;
@@ -449,7 +450,7 @@
 			this.tableLayoutPanel2.Controls.Add(this.label16, 0, 2);
 			this.tableLayoutPanel2.Controls.Add(this.label15, 0, 1);
 			this.tableLayoutPanel2.Controls.Add(this.label14, 0, 0);
-			this.tableLayoutPanel2.Location = new System.Drawing.Point(446, 151);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(446, 211);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
 			this.tableLayoutPanel2.RowCount = 3;
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -460,7 +461,8 @@
 			// 
 			// groupCadastro
 			// 
-			this.groupCadastro.Controls.Add(this.button1);
+			this.groupCadastro.Controls.Add(this.radioButton2);
+			this.groupCadastro.Controls.Add(this.radioPF);
 			this.groupCadastro.Controls.Add(this.LayoutDados);
 			this.groupCadastro.Controls.Add(this.tableLayoutPanel2);
 			this.groupCadastro.Controls.Add(this.label4);
@@ -468,19 +470,31 @@
 			this.groupCadastro.Controls.Add(this.Btn_Salvar);
 			this.groupCadastro.Location = new System.Drawing.Point(33, 12);
 			this.groupCadastro.Name = "groupCadastro";
-			this.groupCadastro.Size = new System.Drawing.Size(755, 408);
+			this.groupCadastro.Size = new System.Drawing.Size(755, 466);
 			this.groupCadastro.TabIndex = 28;
 			this.groupCadastro.TabStop = false;
 			// 
-			// button1
+			// radioPF
 			// 
-			this.button1.Location = new System.Drawing.Point(568, 355);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 201;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.radioPF.AutoSize = true;
+			this.radioPF.Location = new System.Drawing.Point(219, 79);
+			this.radioPF.Name = "radioPF";
+			this.radioPF.Size = new System.Drawing.Size(92, 17);
+			this.radioPF.TabIndex = 202;
+			this.radioPF.TabStop = true;
+			this.radioPF.Text = "Pessoa Física";
+			this.radioPF.UseVisualStyleBackColor = true;
+			// 
+			// radioButton2
+			// 
+			this.radioButton2.AutoSize = true;
+			this.radioButton2.Location = new System.Drawing.Point(434, 79);
+			this.radioButton2.Name = "radioButton2";
+			this.radioButton2.Size = new System.Drawing.Size(101, 17);
+			this.radioButton2.TabIndex = 203;
+			this.radioButton2.TabStop = true;
+			this.radioButton2.Text = "Pessoa Jurídica";
+			this.radioButton2.UseVisualStyleBackColor = true;
 			// 
 			// FormCadastrarCliente
 			// 
@@ -550,6 +564,7 @@
 		private System.Windows.Forms.TextBox txtEstado;
 		private System.Windows.Forms.TextBox txtCep;
 		private System.Windows.Forms.GroupBox groupCadastro;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.RadioButton radioButton2;
+		private System.Windows.Forms.RadioButton radioPF;
 	}
 }

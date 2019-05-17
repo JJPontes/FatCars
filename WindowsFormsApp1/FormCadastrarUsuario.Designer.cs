@@ -54,7 +54,7 @@
 			// Btn_Salvar
 			// 
 			this.Btn_Salvar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.Btn_Salvar.Location = new System.Drawing.Point(178, 226);
+			this.Btn_Salvar.Location = new System.Drawing.Point(183, 226);
 			this.Btn_Salvar.Name = "Btn_Salvar";
 			this.Btn_Salvar.Size = new System.Drawing.Size(105, 40);
 			this.Btn_Salvar.TabIndex = 8;
@@ -226,7 +226,7 @@
 			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
 			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.LayoutCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.LayoutCadastrar.Size = new System.Drawing.Size(364, 272);
+			this.LayoutCadastrar.Size = new System.Drawing.Size(377, 272);
 			this.LayoutCadastrar.TabIndex = 12;
 			// 
 			// groupCadastro

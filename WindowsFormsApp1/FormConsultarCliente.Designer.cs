@@ -28,20 +28,29 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.ComboFiltro = new System.Windows.Forms.ComboBox();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.NomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.RgCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.CPFCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.rGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tBClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.pIM1DataSet = new WindowsFormsApp1.PIM1DataSet();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.button2 = new System.Windows.Forms.Button();
+			this.tB_ClienteTableAdapter = new WindowsFormsApp1.PIM1DataSetTableAdapters.TB_ClienteTableAdapter();
+			this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+			this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tBClienteBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pIM1DataSet)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
+			this.fillByToolStrip.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -98,12 +107,14 @@
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.AutoGenerateColumns = false;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdCliente,
-            this.NomeCliente,
-            this.RgCliente,
-            this.CPFCliente});
+            this.iDClienteDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.rGDataGridViewTextBoxColumn,
+            this.cPFDataGridViewTextBoxColumn});
+			this.dataGridView1.DataSource = this.tBClienteBindingSource;
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.dataGridView1.Location = new System.Drawing.Point(0, 101);
 			this.dataGridView1.Name = "dataGridView1";
@@ -113,31 +124,43 @@
 			this.dataGridView1.Visible = false;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
-			// IdCliente
+			// iDClienteDataGridViewTextBoxColumn
 			// 
-			this.IdCliente.HeaderText = "ID";
-			this.IdCliente.Name = "IdCliente";
-			this.IdCliente.ReadOnly = true;
-			this.IdCliente.Width = 50;
+			this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "ID_Cliente";
+			this.iDClienteDataGridViewTextBoxColumn.HeaderText = "ID_Cliente";
+			this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
+			this.iDClienteDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
-			// NomeCliente
+			// nomeDataGridViewTextBoxColumn
 			// 
-			this.NomeCliente.HeaderText = "Nome";
-			this.NomeCliente.Name = "NomeCliente";
-			this.NomeCliente.ReadOnly = true;
-			this.NomeCliente.Width = 205;
+			this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+			this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+			this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+			this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
-			// RgCliente
+			// rGDataGridViewTextBoxColumn
 			// 
-			this.RgCliente.HeaderText = "RG";
-			this.RgCliente.Name = "RgCliente";
-			this.RgCliente.ReadOnly = true;
+			this.rGDataGridViewTextBoxColumn.DataPropertyName = "RG";
+			this.rGDataGridViewTextBoxColumn.HeaderText = "RG";
+			this.rGDataGridViewTextBoxColumn.Name = "rGDataGridViewTextBoxColumn";
+			this.rGDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
-			// CPFCliente
+			// cPFDataGridViewTextBoxColumn
 			// 
-			this.CPFCliente.HeaderText = "CPF";
-			this.CPFCliente.Name = "CPFCliente";
-			this.CPFCliente.ReadOnly = true;
+			this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
+			this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
+			this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
+			this.cPFDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// tBClienteBindingSource
+			// 
+			this.tBClienteBindingSource.DataMember = "TB_Cliente";
+			this.tBClienteBindingSource.DataSource = this.pIM1DataSet;
+			// 
+			// pIM1DataSet
+			// 
+			this.pIM1DataSet.DataSetName = "PIM1DataSet";
+			this.pIM1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// tableLayoutPanel1
 			// 
@@ -173,6 +196,28 @@
 			this.button2.Text = "Editar...";
 			this.button2.UseVisualStyleBackColor = true;
 			// 
+			// tB_ClienteTableAdapter
+			// 
+			this.tB_ClienteTableAdapter.ClearBeforeFill = true;
+			// 
+			// fillByToolStrip
+			// 
+			this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByToolStripButton});
+			this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+			this.fillByToolStrip.Name = "fillByToolStrip";
+			this.fillByToolStrip.Size = new System.Drawing.Size(111, 25);
+			this.fillByToolStrip.TabIndex = 9;
+			this.fillByToolStrip.Text = "fillByToolStrip";
+			// 
+			// fillByToolStripButton
+			// 
+			this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.fillByToolStripButton.Name = "fillByToolStripButton";
+			this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+			this.fillByToolStripButton.Text = "FillBy";
+			this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
+			// 
 			// FormConsultarCliente
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,15 +226,22 @@
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.ClientSize = new System.Drawing.Size(800, 456);
 			this.ControlBox = false;
+			this.Controls.Add(this.fillByToolStrip);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.dataGridView1);
 			this.Name = "FormConsultarCliente";
 			this.Text = "Consultar Clientes";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.Load += new System.EventHandler(this.FormConsultarCliente_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tBClienteBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pIM1DataSet)).EndInit();
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
+			this.fillByToolStrip.ResumeLayout(false);
+			this.fillByToolStrip.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -201,11 +253,16 @@
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.ComboBox ComboFiltro;
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
-		private System.Windows.Forms.DataGridViewTextBoxColumn NomeCliente;
-		private System.Windows.Forms.DataGridViewTextBoxColumn RgCliente;
-		private System.Windows.Forms.DataGridViewTextBoxColumn CPFCliente;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Button button2;
+		private PIM1DataSet pIM1DataSet;
+		private System.Windows.Forms.BindingSource tBClienteBindingSource;
+		private PIM1DataSetTableAdapters.TB_ClienteTableAdapter tB_ClienteTableAdapter;
+		private System.Windows.Forms.DataGridViewTextBoxColumn iDClienteDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn rGDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cPFDataGridViewTextBoxColumn;
+		private System.Windows.Forms.ToolStrip fillByToolStrip;
+		private System.Windows.Forms.ToolStripButton fillByToolStripButton;
 	}
 }

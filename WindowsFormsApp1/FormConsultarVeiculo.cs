@@ -21,5 +21,12 @@ namespace WindowsFormsApp1
 		{
 			dataGridView1.Visible = true;
 		}
+
+		private void FormConsultarVeiculo_Load(object sender, EventArgs e)
+		{
+			// TODO: esta linha de código carrega dados na tabela 'pIM1DataSet1.TB_Carros'. Você pode movê-la ou removê-la conforme necessário.
+			this.tB_CarrosTableAdapter.Fill(this.pIM1DataSet1.TB_Carros);
+
+		}
 	}
 }

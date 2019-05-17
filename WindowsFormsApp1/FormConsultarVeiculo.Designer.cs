@@ -28,22 +28,33 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.MarcaCarro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.ModeloCarro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.CorCarro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.PlacaCarro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.ChassiCarro = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.label3 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.ComboFiltro = new System.Windows.Forms.ComboBox();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.Btn_Editar = new System.Windows.Forms.Button();
+			this.pIM1DataSet = new WindowsFormsApp1.PIM1DataSet();
+			this.pIM1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.pIM1DataSet1 = new WindowsFormsApp1.PIM1DataSet1();
+			this.tBCarrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.tB_CarrosTableAdapter = new WindowsFormsApp1.PIM1DataSet1TableAdapters.TB_CarrosTableAdapter();
+			this.idCarroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.corDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.placaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.chassiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pIM1DataSet)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pIM1DataSetBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pIM1DataSet1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tBCarrosBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -70,51 +81,23 @@
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.AutoGenerateColumns = false;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MarcaCarro,
-            this.ModeloCarro,
-            this.CorCarro,
-            this.PlacaCarro,
-            this.ChassiCarro});
+            this.idCarroDataGridViewTextBoxColumn,
+            this.marcaDataGridViewTextBoxColumn,
+            this.modeloDataGridViewTextBoxColumn,
+            this.corDataGridViewTextBoxColumn,
+            this.placaDataGridViewTextBoxColumn,
+            this.chassiDataGridViewTextBoxColumn});
+			this.dataGridView1.DataSource = this.tBCarrosBindingSource;
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.dataGridView1.Location = new System.Drawing.Point(0, 107);
+			this.dataGridView1.Location = new System.Drawing.Point(0, 113);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(800, 343);
+			this.dataGridView1.Size = new System.Drawing.Size(800, 337);
 			this.dataGridView1.TabIndex = 13;
 			this.dataGridView1.Visible = false;
-			// 
-			// MarcaCarro
-			// 
-			this.MarcaCarro.HeaderText = "Marca";
-			this.MarcaCarro.Name = "MarcaCarro";
-			this.MarcaCarro.ReadOnly = true;
-			// 
-			// ModeloCarro
-			// 
-			this.ModeloCarro.HeaderText = "Modelo";
-			this.ModeloCarro.Name = "ModeloCarro";
-			this.ModeloCarro.ReadOnly = true;
-			this.ModeloCarro.Width = 205;
-			// 
-			// CorCarro
-			// 
-			this.CorCarro.HeaderText = "Cor";
-			this.CorCarro.Name = "CorCarro";
-			this.CorCarro.ReadOnly = true;
-			// 
-			// PlacaCarro
-			// 
-			this.PlacaCarro.HeaderText = "Placa";
-			this.PlacaCarro.Name = "PlacaCarro";
-			this.PlacaCarro.ReadOnly = true;
-			// 
-			// ChassiCarro
-			// 
-			this.ChassiCarro.HeaderText = "Chassi";
-			this.ChassiCarro.Name = "ChassiCarro";
-			this.ChassiCarro.ReadOnly = true;
 			// 
 			// label3
 			// 
@@ -189,6 +172,72 @@
 			this.Btn_Editar.Text = "Editar...";
 			this.Btn_Editar.UseVisualStyleBackColor = true;
 			// 
+			// pIM1DataSet
+			// 
+			this.pIM1DataSet.DataSetName = "PIM1DataSet";
+			this.pIM1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// pIM1DataSetBindingSource
+			// 
+			this.pIM1DataSetBindingSource.DataSource = this.pIM1DataSet;
+			this.pIM1DataSetBindingSource.Position = 0;
+			// 
+			// pIM1DataSet1
+			// 
+			this.pIM1DataSet1.DataSetName = "PIM1DataSet1";
+			this.pIM1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// tBCarrosBindingSource
+			// 
+			this.tBCarrosBindingSource.DataMember = "TB_Carros";
+			this.tBCarrosBindingSource.DataSource = this.pIM1DataSet1;
+			// 
+			// tB_CarrosTableAdapter
+			// 
+			this.tB_CarrosTableAdapter.ClearBeforeFill = true;
+			// 
+			// idCarroDataGridViewTextBoxColumn
+			// 
+			this.idCarroDataGridViewTextBoxColumn.DataPropertyName = "Id_Carro";
+			this.idCarroDataGridViewTextBoxColumn.HeaderText = "Id_Carro";
+			this.idCarroDataGridViewTextBoxColumn.Name = "idCarroDataGridViewTextBoxColumn";
+			this.idCarroDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// marcaDataGridViewTextBoxColumn
+			// 
+			this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
+			this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+			this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+			this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// modeloDataGridViewTextBoxColumn
+			// 
+			this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
+			this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
+			this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
+			this.modeloDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// corDataGridViewTextBoxColumn
+			// 
+			this.corDataGridViewTextBoxColumn.DataPropertyName = "Cor";
+			this.corDataGridViewTextBoxColumn.HeaderText = "Cor";
+			this.corDataGridViewTextBoxColumn.Name = "corDataGridViewTextBoxColumn";
+			this.corDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// placaDataGridViewTextBoxColumn
+			// 
+			this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
+			this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
+			this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
+			this.placaDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// chassiDataGridViewTextBoxColumn
+			// 
+			this.chassiDataGridViewTextBoxColumn.DataPropertyName = "Chassi";
+			this.chassiDataGridViewTextBoxColumn.HeaderText = "Chassi";
+			this.chassiDataGridViewTextBoxColumn.Name = "chassiDataGridViewTextBoxColumn";
+			this.chassiDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
 			// FormConsultarVeiculo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,9 +252,14 @@
 			this.Name = "FormConsultarVeiculo";
 			this.Text = "Consultar Veículo";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.Load += new System.EventHandler(this.FormConsultarVeiculo_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pIM1DataSet)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pIM1DataSetBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pIM1DataSet1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tBCarrosBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -216,16 +270,22 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn MarcaCarro;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ModeloCarro;
-		private System.Windows.Forms.DataGridViewTextBoxColumn CorCarro;
-		private System.Windows.Forms.DataGridViewTextBoxColumn PlacaCarro;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ChassiCarro;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.ComboBox ComboFiltro;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Button Btn_Editar;
+		private System.Windows.Forms.BindingSource pIM1DataSetBindingSource;
+		private PIM1DataSet pIM1DataSet;
+		private PIM1DataSet1 pIM1DataSet1;
+		private System.Windows.Forms.BindingSource tBCarrosBindingSource;
+		private PIM1DataSet1TableAdapters.TB_CarrosTableAdapter tB_CarrosTableAdapter;
+		private System.Windows.Forms.DataGridViewTextBoxColumn idCarroDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn modeloDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn corDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn placaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn chassiDataGridViewTextBoxColumn;
 	}
 }
