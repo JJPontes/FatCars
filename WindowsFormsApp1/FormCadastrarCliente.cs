@@ -141,5 +141,47 @@ namespace WindowsFormsApp1
 		{
 			MessageBox.Show(" " + Program.Teste.Nome + "\n" + Program.Teste.Nascimento);
 		}
+
+		private void Label12_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void RadioPF_CheckedChanged(object sender, EventArgs e)
+		{
+			if (radioPF.Checked == true)
+			{
+				lblCPF.Text = "CPF";
+				lblRG.Text = "RG";
+				lblProfissao.Text = "Profissao";
+			}
+
+			else
+			{
+				lblCPF.Text = "CNPJ";
+				lblRG.Text = "IE";
+				lblProfissao.Text = "Contato";
+			}
+		}
+
+		private void RadioPj_CheckedChanged(object sender, EventArgs e)
+		{
+			if (radioPj.Checked == true)
+			{
+				lblCPF.Text = "CNPJ";
+				lblRG.Text = "IE";
+				lblProfissao.Text = "Contato";
+
+
+			}
+			else
+			{
+				lblCPF.Text = "CPF";
+				lblRG.Text = "RG";
+				lblProfissao.Text = "Profissao";
+
+			}
+
+		}
 	}
 }

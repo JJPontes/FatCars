@@ -200,6 +200,18 @@ namespace WindowsFormsApp1
 			formConsultarComprovantes.MdiParent = this;
 			formConsultarComprovantes.Show();
 		}
+
+		private void RelatóriosToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void NovaLocaçaoToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			FormNovaLocacao formNovaLocacao = new FormNovaLocacao();
+			formNovaLocacao.MdiParent = this;
+			formNovaLocacao.Show();
+		}
 	}
 	}
 

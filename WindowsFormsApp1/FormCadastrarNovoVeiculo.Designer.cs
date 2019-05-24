@@ -34,7 +34,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			this.TextModelo = new System.Windows.Forms.TextBox();
 			this.TextAno = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
@@ -44,8 +43,10 @@
 			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.LayoutCadastro = new System.Windows.Forms.TableLayoutPanel();
-			this.groupCadastro = new System.Windows.Forms.GroupBox();
 			this.comboBox2 = new System.Windows.Forms.ComboBox();
+			this.comboBox3 = new System.Windows.Forms.ComboBox();
+			this.groupCadastro = new System.Windows.Forms.GroupBox();
+			this.lblRenavam = new System.Windows.Forms.Label();
 			this.LayoutCadastro.SuspendLayout();
 			this.groupCadastro.SuspendLayout();
 			this.SuspendLayout();
@@ -107,14 +108,6 @@
 			this.label5.TabIndex = 5;
 			this.label5.Text = "Ano Fab";
 			// 
-			// TextModelo
-			// 
-			this.TextModelo.Location = new System.Drawing.Point(72, 42);
-			this.TextModelo.MaxLength = 30;
-			this.TextModelo.Name = "TextModelo";
-			this.TextModelo.Size = new System.Drawing.Size(213, 20);
-			this.TextModelo.TabIndex = 2;
-			// 
 			// TextAno
 			// 
 			this.TextAno.Location = new System.Drawing.Point(72, 198);
@@ -128,9 +121,9 @@
 			this.label6.AutoSize = true;
 			this.label6.Location = new System.Drawing.Point(3, 0);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(37, 13);
+			this.label6.Size = new System.Drawing.Size(58, 13);
 			this.label6.TabIndex = 10;
-			this.label6.Text = "Marca";
+			this.label6.Text = "Montadora";
 			// 
 			// label7
 			// 
@@ -172,7 +165,7 @@
 			this.maskedTextBox1.Location = new System.Drawing.Point(72, 120);
 			this.maskedTextBox1.Mask = "???-0000";
 			this.maskedTextBox1.Name = "maskedTextBox1";
-			this.maskedTextBox1.Size = new System.Drawing.Size(67, 20);
+			this.maskedTextBox1.Size = new System.Drawing.Size(55, 20);
 			this.maskedTextBox1.TabIndex = 4;
 			// 
 			// comboBox1
@@ -188,6 +181,7 @@
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(92, 21);
 			this.comboBox1.TabIndex = 5;
+			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
 			// LayoutCadastro
 			// 
@@ -206,9 +200,9 @@
 			this.LayoutCadastro.Controls.Add(this.label3, 0, 3);
 			this.LayoutCadastro.Controls.Add(this.TextChassi, 1, 2);
 			this.LayoutCadastro.Controls.Add(this.label8, 0, 6);
-			this.LayoutCadastro.Controls.Add(this.TextModelo, 1, 1);
 			this.LayoutCadastro.Controls.Add(this.label2, 0, 4);
 			this.LayoutCadastro.Controls.Add(this.label5, 0, 5);
+			this.LayoutCadastro.Controls.Add(this.comboBox3, 1, 1);
 			this.LayoutCadastro.Location = new System.Drawing.Point(6, 57);
 			this.LayoutCadastro.Name = "LayoutCadastro";
 			this.LayoutCadastro.RowCount = 7;
@@ -219,19 +213,9 @@
 			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
 			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
 			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.LayoutCadastro.Size = new System.Drawing.Size(294, 274);
 			this.LayoutCadastro.TabIndex = 15;
-			// 
-			// groupCadastro
-			// 
-			this.groupCadastro.Controls.Add(this.label1);
-			this.groupCadastro.Controls.Add(this.Btn_Salvar);
-			this.groupCadastro.Controls.Add(this.LayoutCadastro);
-			this.groupCadastro.Location = new System.Drawing.Point(266, 57);
-			this.groupCadastro.Name = "groupCadastro";
-			this.groupCadastro.Size = new System.Drawing.Size(309, 391);
-			this.groupCadastro.TabIndex = 16;
-			this.groupCadastro.TabStop = false;
 			// 
 			// comboBox2
 			// 
@@ -279,12 +263,41 @@
 			this.comboBox2.TabIndex = 1;
 			this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
 			// 
+			// comboBox3
+			// 
+			this.comboBox3.FormattingEnabled = true;
+			this.comboBox3.Location = new System.Drawing.Point(72, 42);
+			this.comboBox3.Name = "comboBox3";
+			this.comboBox3.Size = new System.Drawing.Size(213, 21);
+			this.comboBox3.TabIndex = 15;
+			// 
+			// groupCadastro
+			// 
+			this.groupCadastro.Controls.Add(this.label1);
+			this.groupCadastro.Controls.Add(this.Btn_Salvar);
+			this.groupCadastro.Controls.Add(this.LayoutCadastro);
+			this.groupCadastro.Location = new System.Drawing.Point(266, 57);
+			this.groupCadastro.Name = "groupCadastro";
+			this.groupCadastro.Size = new System.Drawing.Size(309, 391);
+			this.groupCadastro.TabIndex = 16;
+			this.groupCadastro.TabStop = false;
+			// 
+			// lblRenavam
+			// 
+			this.lblRenavam.AutoSize = true;
+			this.lblRenavam.Location = new System.Drawing.Point(76, 117);
+			this.lblRenavam.Name = "lblRenavam";
+			this.lblRenavam.Size = new System.Drawing.Size(53, 13);
+			this.lblRenavam.TabIndex = 17;
+			this.lblRenavam.Text = "Renavam";
+			// 
 			// FormCadastrarNovoVeiculo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 561);
 			this.ControlBox = false;
+			this.Controls.Add(this.lblRenavam);
 			this.Controls.Add(this.groupCadastro);
 			this.Name = "FormCadastrarNovoVeiculo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
@@ -297,6 +310,7 @@
 			this.groupCadastro.ResumeLayout(false);
 			this.groupCadastro.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -308,7 +322,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox TextModelo;
 		private System.Windows.Forms.TextBox TextAno;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;
@@ -320,5 +333,7 @@
 		private System.Windows.Forms.TableLayoutPanel LayoutCadastro;
 		private System.Windows.Forms.GroupBox groupCadastro;
 		private System.Windows.Forms.ComboBox comboBox2;
+		private System.Windows.Forms.ComboBox comboBox3;
+		private System.Windows.Forms.Label lblRenavam;
 	}
 }

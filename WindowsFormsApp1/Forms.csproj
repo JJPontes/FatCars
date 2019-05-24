@@ -74,6 +74,7 @@
     <Reference Include="Correios.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Correios.CEP.Net.1.1.6\lib\Correios.Net.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
@@ -148,6 +149,12 @@
     </Compile>
     <Compile Include="FormMonitoramentoVeiculo.Designer.cs">
       <DependentUpon>FormMonitoramentoVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNovaLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNovaLocacao.Designer.cs">
+      <DependentUpon>FormNovaLocacao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -234,6 +241,9 @@
     <EmbeddedResource Include="FormMonitoramentoVeiculo.resx">
       <DependentUpon>FormMonitoramentoVeiculo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormNovaLocacao.resx">
+      <DependentUpon>FormNovaLocacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -319,6 +329,9 @@
     <Content Include="PIM1.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
