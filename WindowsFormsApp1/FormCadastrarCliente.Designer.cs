@@ -373,6 +373,7 @@
 			this.txtCpf.Name = "txtCpf";
 			this.txtCpf.Size = new System.Drawing.Size(87, 20);
 			this.txtCpf.TabIndex = 4;
+			this.txtCpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.TxtCpf_MaskInputRejected);
 			// 
 			// txtNome
 			// 
@@ -380,6 +381,7 @@
 			this.txtNome.Name = "txtNome";
 			this.txtNome.Size = new System.Drawing.Size(332, 20);
 			this.txtNome.TabIndex = 1;
+			this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
 			// 
 			// txtProfissao
 			// 

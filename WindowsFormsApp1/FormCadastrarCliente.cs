@@ -183,5 +183,15 @@ namespace WindowsFormsApp1
 			}
 
 		}
+
+		private void TxtCpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+		{
+
+		}
+
+		private void txtNome_TextChanged(object sender, EventArgs e)
+		{
+		
+		}
 	}
 }

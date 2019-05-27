@@ -1,0 +1,1660 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="fatcarModel.Store" Provider="Devart.Data.MySql" ProviderManifestToken="MySQL, 8.0.16" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="cargos">
+          <Key>
+            <PropertyRef Name="IDCARGO" />
+          </Key>
+          <Property Name="IDCARGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CARGO" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="carros">
+          <Key>
+            <PropertyRef Name="IDCARROS" />
+          </Key>
+          <Property Name="IDCARROS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="int" Nullable="false" />
+          <Property Name="MANUTENCAO_IDMANUTENCAO" Type="int" Nullable="false" />
+          <Property Name="MODELOS_IDMODELO" Type="int" Nullable="false" />
+          <Property Name="COR_IDCOR" Type="int" Nullable="false" />
+          <Property Name="PLACA" Type="int" Nullable="false" />
+          <Property Name="RENAVAM" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="CHASSI" Type="varchar" MaxLength="17" Nullable="false" />
+          <Property Name="ANO_FAB" Type="int" Nullable="false" />
+          <Property Name="ANO_MOD" Type="int" Nullable="false" />
+          <Property Name="QUILOMETRAGEM" Type="int" Nullable="false" />
+          <Property Name="VALOR_DIARIA" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="DATA_AQUISICAO" Type="date" Nullable="false" />
+          <Property Name="ARCONDICIONADO" Type="sbyte" />
+          <Property Name="DIRECAOHIDRAULICA" Type="sbyte" />
+          <Property Name="VIDROELETRICO" Type="sbyte" />
+          <Property Name="AIRBAG" Type="sbyte" />
+          <Property Name="ABS" Type="sbyte" />
+          <Property Name="LUGARES" Type="int" Nullable="false" />
+          <Property Name="PORTAS" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="IDCLIENTE" />
+          </Key>
+          <Property Name="IDCLIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USUARIO_IDUSUARIO" Type="int" Nullable="false" />
+          <Property Name="ENDERECO_IDENDERECO" Type="int" Nullable="false" />
+          <Property Name="NOME_CLIENTE" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="TIPO_CLIENTE" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="STATUS_CLIENTE" Type="sbyte" />
+          <Property Name="CPF" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="CNPJ" Type="varchar" MaxLength="18" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="100" />
+          <Property Name="DT_NASCIMENTO" Type="date" />
+        </EntityType>
+        <EntityType Name="contratocarro">
+          <Key>
+            <PropertyRef Name="IDCONTRATOCARRO" />
+          </Key>
+          <Property Name="IDCONTRATOCARRO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CONTRATOS_IDCONTRATO" Type="int" Nullable="false" />
+          <Property Name="CARRO_IDCARRO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="contratopneus">
+          <Key>
+            <PropertyRef Name="IDCONTRATOPNEUS" />
+          </Key>
+          <Property Name="IDCONTRATOPNEUS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="int" Nullable="false" />
+          <Property Name="KMUSADA" Type="int" />
+        </EntityType>
+        <EntityType Name="contratos">
+          <Key>
+            <PropertyRef Name="IDCONTRATO" />
+          </Key>
+          <Property Name="IDCONTRATO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CLIENTE_IDCLIENTE" Type="int" Nullable="false" />
+          <Property Name="STATUS" Type="sbyte" />
+          <Property Name="DATACONTRATO" Type="date" Nullable="false" />
+          <Property Name="DATAINICIO" Type="date" />
+          <Property Name="DATAFINAL" Type="date" />
+          <Property Name="VALOR" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="KMINICIAL" Type="int" Nullable="false" />
+          <Property Name="KMFINAL" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="contratoseguros">
+          <Key>
+            <PropertyRef Name="IDCONTRATOSSEGUROS" />
+          </Key>
+          <Property Name="IDCONTRATOSSEGUROS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="int" Nullable="false" />
+          <Property Name="TIPOSEGURO" Type="varchar" MaxLength="20" />
+          <Property Name="VALOR" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="contratosinistros">
+          <Key>
+            <PropertyRef Name="IDCONTRATOSINISTROS" />
+          </Key>
+          <Property Name="IDCONTRATOSINISTROS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="int" Nullable="false" />
+          <Property Name="DESCRIÃ‡ÃƒO" Type="varchar" MaxLength="250" />
+          <Property Name="VALOR" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="contratoviagens">
+          <Key>
+            <PropertyRef Name="IDCONTRATOVIAGENS" />
+          </Key>
+          <Property Name="IDCONTRATOVIAGENS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CONTRATO_IDCONTRATO" Type="int" Nullable="false" />
+          <Property Name="ROTA" Type="varchar" MaxLength="250" />
+          <Property Name="OCUPANTES" Type="int" />
+        </EntityType>
+        <EntityType Name="cor">
+          <Key>
+            <PropertyRef Name="IDCOR" />
+          </Key>
+          <Property Name="IDCOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COR" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="endereco">
+          <Key>
+            <PropertyRef Name="IDENDERECO" />
+          </Key>
+          <Property Name="IDENDERECO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TIPO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CEP" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="LOGRADOURO" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="NUM" Type="int" />
+          <Property Name="COMPLEMENTO" Type="varchar" MaxLength="255" />
+          <Property Name="BAIRRO" Type="varchar" MaxLength="50" />
+          <Property Name="CIDADE" Type="varchar" MaxLength="50" />
+          <Property Name="UF" Type="varchar" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="entradasaida">
+          <Key>
+            <PropertyRef Name="IDENTRADASAIDA" />
+          </Key>
+          <Property Name="IDENTRADASAIDA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CARROS_IDCARRO" Type="int" Nullable="false" />
+          <Property Name="HORAENTRADA" Type="time" Precision="0" />
+          <Property Name="HORASAIDA" Type="time" Precision="0" />
+        </EntityType>
+        <EntityType Name="funcionarios">
+          <Key>
+            <PropertyRef Name="IDFUNCIONARIO" />
+          </Key>
+          <Property Name="IDFUNCIONARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CARGOS_IDCARGO" Type="int" Nullable="false" />
+          <Property Name="USUARIOS_IDUSUARIO" Type="int" Nullable="false" />
+          <Property Name="MATRICULA" Type="int" Nullable="false" />
+          <Property Name="NOME" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="SALARIO" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="CEP" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="LOGRADOURO" Type="varchar" MaxLength="250" />
+          <Property Name="NUM" Type="varchar" MaxLength="6" />
+          <Property Name="COMPLEMENTO" Type="varchar" MaxLength="250" />
+          <Property Name="BAIRRO" Type="varchar" MaxLength="50" />
+          <Property Name="CIDADE" Type="varchar" MaxLength="50" />
+          <Property Name="UF" Type="varchar" MaxLength="2" />
+          <Property Name="TELCEL" Type="varchar" MaxLength="15" />
+          <Property Name="TELRES" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="manutencao">
+          <Key>
+            <PropertyRef Name="IDMANUTENCAO" />
+          </Key>
+          <Property Name="IDMANUTENCAO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DESCRICAO" Type="varchar" MaxLength="250" />
+          <Property Name="VALORMANUTENCAO" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="manutencaopeca">
+          <Key>
+            <PropertyRef Name="IDMANUTENCAOPECA" />
+          </Key>
+          <Property Name="IDMANUTENCAOPECA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PECAS_IDPECAS" Type="int" Nullable="false" />
+          <Property Name="MANUTENCAO_IDMANUTENCAO" Type="int" Nullable="false" />
+          <Property Name="VALOR" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="modelos">
+          <Key>
+            <PropertyRef Name="IDMODELO" />
+          </Key>
+          <Property Name="IDMODELO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MONTADORA_IDMONTADORA" Type="int" Nullable="false" />
+          <Property Name="NOME" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="montadora">
+          <Key>
+            <PropertyRef Name="IDMONTADORA" />
+          </Key>
+          <Property Name="IDMONTADORA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOME" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="motoristas">
+          <Key>
+            <PropertyRef Name="IDMOTORISTAS" />
+          </Key>
+          <Property Name="IDMOTORISTAS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="int" Nullable="false" />
+          <Property Name="ENDERECO_IDENDERECO" Type="int" Nullable="false" />
+          <Property Name="NOME" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CNH" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="VALIDADE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CATEGORIA" Type="varchar" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="multas">
+          <Key>
+            <PropertyRef Name="IDMULTAS" />
+          </Key>
+          <Property Name="IDMULTAS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="int" Nullable="false" />
+          <Property Name="DESCRICAO" Type="varchar" MaxLength="250" />
+          <Property Name="VALOR" Type="decimal" Precision="9" Scale="2" />
+        </EntityType>
+        <EntityType Name="pecas">
+          <Key>
+            <PropertyRef Name="IDPECA" />
+          </Key>
+          <Property Name="IDPECA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DESCRICAO_PECA" Type="varchar" MaxLength="255" />
+          <Property Name="VALOR_PECA" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pneus">
+          <Key>
+            <PropertyRef Name="IDPNEUS" />
+          </Key>
+          <Property Name="IDPNEUS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CARROS_IDCARROS" Type="int" Nullable="false" />
+          <Property Name="TIPOPNEU" Type="varchar" MaxLength="200" />
+          <Property Name="KMINICIAL" Type="int" Nullable="false" />
+          <Property Name="KMATUAL" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="telefonecliente">
+          <Key>
+            <PropertyRef Name="IDTELEFONE" />
+          </Key>
+          <Property Name="IDTELEFONE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CLIENTE_IDCLIENTE" Type="int" Nullable="false" />
+          <Property Name="TIPO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="NUMTELEFONE" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="IDUSUARIO" />
+          </Key>
+          <Property Name="IDUSUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NIVEL" Type="int" Nullable="false" />
+          <Property Name="LOGIN" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="PASS" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CARROS_3">
+          <End Role="modelos" Type="Self.modelos" Multiplicity="1" />
+          <End Role="carros" Type="Self.carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="modelos">
+              <PropertyRef Name="IDMODELO" />
+            </Principal>
+            <Dependent Role="carros">
+              <PropertyRef Name="MODELOS_IDMODELO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARROS_4">
+          <End Role="cor" Type="Self.cor" Multiplicity="1" />
+          <End Role="carros" Type="Self.carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cor">
+              <PropertyRef Name="IDCOR" />
+            </Principal>
+            <Dependent Role="carros">
+              <PropertyRef Name="COR_IDCOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARROS_5">
+          <End Role="manutencao" Type="Self.manutencao" Multiplicity="1" />
+          <End Role="carros" Type="Self.carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="manutencao">
+              <PropertyRef Name="IDMANUTENCAO" />
+            </Principal>
+            <Dependent Role="carros">
+              <PropertyRef Name="MANUTENCAO_IDMANUTENCAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARROS_6">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="carros" Type="Self.carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="carros">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CLIENTE_2">
+          <End Role="usuarios" Type="Self.usuarios" Multiplicity="1" />
+          <End Role="cliente" Type="Self.cliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="IDUSUARIO" />
+            </Principal>
+            <Dependent Role="cliente">
+              <PropertyRef Name="USUARIO_IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CLIENTE_3">
+          <End Role="endereco" Type="Self.endereco" Multiplicity="1" />
+          <End Role="cliente" Type="Self.cliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="IDENDERECO" />
+            </Principal>
+            <Dependent Role="cliente">
+              <PropertyRef Name="ENDERECO_IDENDERECO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOCARRO_1">
+          <End Role="contratos" Type="Self.contratos" Multiplicity="1" />
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratos">
+              <PropertyRef Name="IDCONTRATO" />
+            </Principal>
+            <Dependent Role="contratocarro">
+              <PropertyRef Name="CONTRATOS_IDCONTRATO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOCARRO_3">
+          <End Role="carros" Type="Self.carros" Multiplicity="1" />
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="carros">
+              <PropertyRef Name="IDCARROS" />
+            </Principal>
+            <Dependent Role="contratocarro">
+              <PropertyRef Name="CARRO_IDCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOPNEUS_2">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="contratopneus" Type="Self.contratopneus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="contratopneus">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOS_2">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="contratos" Type="Self.contratos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="IDCLIENTE" />
+            </Principal>
+            <Dependent Role="contratos">
+              <PropertyRef Name="CLIENTE_IDCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOSEGUROS_1">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="contratoseguros" Type="Self.contratoseguros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="contratoseguros">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOSINISTROS_2">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="contratosinistros" Type="Self.contratosinistros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="contratosinistros">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOVIAGENS_2">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="contratoviagens" Type="Self.contratoviagens" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="contratoviagens">
+              <PropertyRef Name="CONTRATO_IDCONTRATO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ENTRADASAIDA_1">
+          <End Role="carros" Type="Self.carros" Multiplicity="1" />
+          <End Role="entradasaida" Type="Self.entradasaida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="carros">
+              <PropertyRef Name="IDCARROS" />
+            </Principal>
+            <Dependent Role="entradasaida">
+              <PropertyRef Name="CARROS_IDCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FUNCIONARIOS_3">
+          <End Role="cargos" Type="Self.cargos" Multiplicity="1" />
+          <End Role="funcionarios" Type="Self.funcionarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cargos">
+              <PropertyRef Name="IDCARGO" />
+            </Principal>
+            <Dependent Role="funcionarios">
+              <PropertyRef Name="CARGOS_IDCARGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FUNCIONARIOS_4">
+          <End Role="usuarios" Type="Self.usuarios" Multiplicity="1" />
+          <End Role="funcionarios" Type="Self.funcionarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="IDUSUARIO" />
+            </Principal>
+            <Dependent Role="funcionarios">
+              <PropertyRef Name="USUARIOS_IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MANUTENCAOPECA_1">
+          <End Role="pecas" Type="Self.pecas" Multiplicity="1" />
+          <End Role="manutencaopeca" Type="Self.manutencaopeca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pecas">
+              <PropertyRef Name="IDPECA" />
+            </Principal>
+            <Dependent Role="manutencaopeca">
+              <PropertyRef Name="PECAS_IDPECAS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MANUTENCAOPECA_2">
+          <End Role="manutencao" Type="Self.manutencao" Multiplicity="1" />
+          <End Role="manutencaopeca" Type="Self.manutencaopeca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="manutencao">
+              <PropertyRef Name="IDMANUTENCAO" />
+            </Principal>
+            <Dependent Role="manutencaopeca">
+              <PropertyRef Name="MANUTENCAO_IDMANUTENCAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MODELOS_2">
+          <End Role="montadora" Type="Self.montadora" Multiplicity="1" />
+          <End Role="modelos" Type="Self.modelos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="montadora">
+              <PropertyRef Name="IDMONTADORA" />
+            </Principal>
+            <Dependent Role="modelos">
+              <PropertyRef Name="MONTADORA_IDMONTADORA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOTORISTAS_1">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="motoristas" Type="Self.motoristas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="motoristas">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOTORISTAS_3">
+          <End Role="endereco" Type="Self.endereco" Multiplicity="1" />
+          <End Role="motoristas" Type="Self.motoristas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="IDENDERECO" />
+            </Principal>
+            <Dependent Role="motoristas">
+              <PropertyRef Name="ENDERECO_IDENDERECO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MULTAS_2">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="multas" Type="Self.multas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="multas">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PNEUS_2">
+          <End Role="contratos" Type="Self.contratos" Multiplicity="1" />
+          <End Role="pneus" Type="Self.pneus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratos">
+              <PropertyRef Name="IDCONTRATO" />
+            </Principal>
+            <Dependent Role="pneus">
+              <PropertyRef Name="CARROS_IDCARROS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TELEFONECLIENTE_2">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="telefonecliente" Type="Self.telefonecliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="IDCLIENTE" />
+            </Principal>
+            <Dependent Role="telefonecliente">
+              <PropertyRef Name="CLIENTE_IDCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="fatcarModelStoreContainer">
+          <EntitySet Name="cargos" EntityType="Self.cargos" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="carros" EntityType="Self.carros" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="cliente" EntityType="Self.cliente" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="contratocarro" EntityType="Self.contratocarro" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="contratopneus" EntityType="Self.contratopneus" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="contratos" EntityType="Self.contratos" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="contratoseguros" EntityType="Self.contratoseguros" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="contratosinistros" EntityType="Self.contratosinistros" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="contratoviagens" EntityType="Self.contratoviagens" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="cor" EntityType="Self.cor" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="endereco" EntityType="Self.endereco" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="entradasaida" EntityType="Self.entradasaida" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="funcionarios" EntityType="Self.funcionarios" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="manutencao" EntityType="Self.manutencao" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="manutencaopeca" EntityType="Self.manutencaopeca" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="modelos" EntityType="Self.modelos" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="montadora" EntityType="Self.montadora" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="motoristas" EntityType="Self.motoristas" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="multas" EntityType="Self.multas" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="pecas" EntityType="Self.pecas" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="pneus" EntityType="Self.pneus" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="telefonecliente" EntityType="Self.telefonecliente" Schema="fatcar" store:Type="Tables" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="fatcar" store:Type="Tables" />
+          <AssociationSet Name="FK_CARROS_3" Association="Self.FK_CARROS_3">
+            <End Role="modelos" EntitySet="modelos" />
+            <End Role="carros" EntitySet="carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARROS_4" Association="Self.FK_CARROS_4">
+            <End Role="cor" EntitySet="cor" />
+            <End Role="carros" EntitySet="carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARROS_5" Association="Self.FK_CARROS_5">
+            <End Role="manutencao" EntitySet="manutencao" />
+            <End Role="carros" EntitySet="carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARROS_6" Association="Self.FK_CARROS_6">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="carros" EntitySet="carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CLIENTE_2" Association="Self.FK_CLIENTE_2">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="cliente" EntitySet="cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CLIENTE_3" Association="Self.FK_CLIENTE_3">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="cliente" EntitySet="cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOCARRO_1" Association="Self.FK_CONTRATOCARRO_1">
+            <End Role="contratos" EntitySet="contratos" />
+            <End Role="contratocarro" EntitySet="contratocarro" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOCARRO_3" Association="Self.FK_CONTRATOCARRO_3">
+            <End Role="carros" EntitySet="carros" />
+            <End Role="contratocarro" EntitySet="contratocarro" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOPNEUS_2" Association="Self.FK_CONTRATOPNEUS_2">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="contratopneus" EntitySet="contratopneus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOS_2" Association="Self.FK_CONTRATOS_2">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="contratos" EntitySet="contratos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOSEGUROS_1" Association="Self.FK_CONTRATOSEGUROS_1">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="contratoseguros" EntitySet="contratoseguros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOSINISTROS_2" Association="Self.FK_CONTRATOSINISTROS_2">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="contratosinistros" EntitySet="contratosinistros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOVIAGENS_2" Association="Self.FK_CONTRATOVIAGENS_2">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="contratoviagens" EntitySet="contratoviagens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ENTRADASAIDA_1" Association="Self.FK_ENTRADASAIDA_1">
+            <End Role="carros" EntitySet="carros" />
+            <End Role="entradasaida" EntitySet="entradasaida" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FUNCIONARIOS_3" Association="Self.FK_FUNCIONARIOS_3">
+            <End Role="cargos" EntitySet="cargos" />
+            <End Role="funcionarios" EntitySet="funcionarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FUNCIONARIOS_4" Association="Self.FK_FUNCIONARIOS_4">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="funcionarios" EntitySet="funcionarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MANUTENCAOPECA_1" Association="Self.FK_MANUTENCAOPECA_1">
+            <End Role="pecas" EntitySet="pecas" />
+            <End Role="manutencaopeca" EntitySet="manutencaopeca" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MANUTENCAOPECA_2" Association="Self.FK_MANUTENCAOPECA_2">
+            <End Role="manutencao" EntitySet="manutencao" />
+            <End Role="manutencaopeca" EntitySet="manutencaopeca" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MODELOS_2" Association="Self.FK_MODELOS_2">
+            <End Role="montadora" EntitySet="montadora" />
+            <End Role="modelos" EntitySet="modelos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOTORISTAS_1" Association="Self.FK_MOTORISTAS_1">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="motoristas" EntitySet="motoristas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOTORISTAS_3" Association="Self.FK_MOTORISTAS_3">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="motoristas" EntitySet="motoristas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MULTAS_2" Association="Self.FK_MULTAS_2">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="multas" EntitySet="multas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PNEUS_2" Association="Self.FK_PNEUS_2">
+            <End Role="contratos" EntitySet="contratos" />
+            <End Role="pneus" EntitySet="pneus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TELEFONECLIENTE_2" Association="Self.FK_TELEFONECLIENTE_2">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="telefonecliente" EntitySet="telefonecliente" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="fatcarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="cargos">
+          <Key>
+            <PropertyRef Name="IDCARGO" />
+          </Key>
+          <Property Name="IDCARGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CARGO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="funcionarios" Relationship="Self.FK_FUNCIONARIOS_3" FromRole="cargos" ToRole="funcionarios" />
+        </EntityType>
+        <EntityType Name="carros">
+          <Key>
+            <PropertyRef Name="IDCARROS" />
+          </Key>
+          <Property Name="IDCARROS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="Int32" Nullable="false" />
+          <Property Name="MANUTENCAO_IDMANUTENCAO" Type="Int32" Nullable="false" />
+          <Property Name="MODELOS_IDMODELO" Type="Int32" Nullable="false" />
+          <Property Name="COR_IDCOR" Type="Int32" Nullable="false" />
+          <Property Name="PLACA" Type="Int32" Nullable="false" />
+          <Property Name="RENAVAM" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CHASSI" Type="String" MaxLength="17" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ANO_FAB" Type="Int32" Nullable="false" />
+          <Property Name="ANO_MOD" Type="Int32" Nullable="false" />
+          <Property Name="QUILOMETRAGEM" Type="Int32" Nullable="false" />
+          <Property Name="VALOR_DIARIA" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="DATA_AQUISICAO" Type="DateTime" Nullable="false" />
+          <Property Name="ARCONDICIONADO" Type="SByte" />
+          <Property Name="DIRECAOHIDRAULICA" Type="SByte" />
+          <Property Name="VIDROELETRICO" Type="SByte" />
+          <Property Name="AIRBAG" Type="SByte" />
+          <Property Name="ABS" Type="SByte" />
+          <Property Name="LUGARES" Type="Int32" Nullable="false" />
+          <Property Name="PORTAS" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="modelos" Relationship="Self.FK_CARROS_3" FromRole="carros" ToRole="modelos" />
+          <NavigationProperty Name="cor" Relationship="Self.FK_CARROS_4" FromRole="carros" ToRole="cor" />
+          <NavigationProperty Name="manutencao" Relationship="Self.FK_CARROS_5" FromRole="carros" ToRole="manutencao" />
+          <NavigationProperty Name="contratocarro" Relationship="Self.FK_CARROS_6" FromRole="carros" ToRole="contratocarro" />
+          <NavigationProperty Name="contratocarro1" Relationship="Self.FK_CONTRATOCARRO_3" FromRole="carros" ToRole="contratocarro" />
+          <NavigationProperty Name="entradasaida" Relationship="Self.FK_ENTRADASAIDA_1" FromRole="carros" ToRole="entradasaida" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="IDCLIENTE" />
+          </Key>
+          <Property Name="IDCLIENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USUARIO_IDUSUARIO" Type="Int32" Nullable="false" />
+          <Property Name="ENDERECO_IDENDERECO" Type="Int32" Nullable="false" />
+          <Property Name="NOME_CLIENTE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TIPO_CLIENTE" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="STATUS_CLIENTE" Type="SByte" />
+          <Property Name="CPF" Type="String" MaxLength="14" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CNPJ" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DT_NASCIMENTO" Type="DateTime" />
+          <NavigationProperty Name="usuarios" Relationship="Self.FK_CLIENTE_2" FromRole="cliente" ToRole="usuarios" />
+          <NavigationProperty Name="endereco" Relationship="Self.FK_CLIENTE_3" FromRole="cliente" ToRole="endereco" />
+          <NavigationProperty Name="contratos" Relationship="Self.FK_CONTRATOS_2" FromRole="cliente" ToRole="contratos" />
+          <NavigationProperty Name="telefonecliente" Relationship="Self.FK_TELEFONECLIENTE_2" FromRole="cliente" ToRole="telefonecliente" />
+        </EntityType>
+        <EntityType Name="contratocarro">
+          <Key>
+            <PropertyRef Name="IDCONTRATOCARRO" />
+          </Key>
+          <Property Name="IDCONTRATOCARRO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CONTRATOS_IDCONTRATO" Type="Int32" Nullable="false" />
+          <Property Name="CARRO_IDCARRO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="carros" Relationship="Self.FK_CARROS_6" FromRole="contratocarro" ToRole="carros" />
+          <NavigationProperty Name="carros1" Relationship="Self.FK_CONTRATOCARRO_3" FromRole="contratocarro" ToRole="carros" />
+          <NavigationProperty Name="contratos" Relationship="Self.FK_CONTRATOCARRO_1" FromRole="contratocarro" ToRole="contratos" />
+          <NavigationProperty Name="contratopneus" Relationship="Self.FK_CONTRATOPNEUS_2" FromRole="contratocarro" ToRole="contratopneus" />
+          <NavigationProperty Name="contratoseguros" Relationship="Self.FK_CONTRATOSEGUROS_1" FromRole="contratocarro" ToRole="contratoseguros" />
+          <NavigationProperty Name="contratosinistros" Relationship="Self.FK_CONTRATOSINISTROS_2" FromRole="contratocarro" ToRole="contratosinistros" />
+          <NavigationProperty Name="contratoviagens" Relationship="Self.FK_CONTRATOVIAGENS_2" FromRole="contratocarro" ToRole="contratoviagens" />
+          <NavigationProperty Name="motoristas" Relationship="Self.FK_MOTORISTAS_1" FromRole="contratocarro" ToRole="motoristas" />
+          <NavigationProperty Name="multas" Relationship="Self.FK_MULTAS_2" FromRole="contratocarro" ToRole="multas" />
+        </EntityType>
+        <EntityType Name="contratopneus">
+          <Key>
+            <PropertyRef Name="IDCONTRATOPNEUS" />
+          </Key>
+          <Property Name="IDCONTRATOPNEUS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="Int32" Nullable="false" />
+          <Property Name="KMUSADA" Type="Int32" />
+          <NavigationProperty Name="contratocarro" Relationship="Self.FK_CONTRATOPNEUS_2" FromRole="contratopneus" ToRole="contratocarro" />
+        </EntityType>
+        <EntityType Name="contratos">
+          <Key>
+            <PropertyRef Name="IDCONTRATO" />
+          </Key>
+          <Property Name="IDCONTRATO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CLIENTE_IDCLIENTE" Type="Int32" Nullable="false" />
+          <Property Name="STATUS" Type="SByte" />
+          <Property Name="DATACONTRATO" Type="DateTime" Nullable="false" />
+          <Property Name="DATAINICIO" Type="DateTime" />
+          <Property Name="DATAFINAL" Type="DateTime" />
+          <Property Name="VALOR" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="KMINICIAL" Type="Int32" Nullable="false" />
+          <Property Name="KMFINAL" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cliente" Relationship="Self.FK_CONTRATOS_2" FromRole="contratos" ToRole="cliente" />
+          <NavigationProperty Name="contratocarro" Relationship="Self.FK_CONTRATOCARRO_1" FromRole="contratos" ToRole="contratocarro" />
+          <NavigationProperty Name="pneus" Relationship="Self.FK_PNEUS_2" FromRole="contratos" ToRole="pneus" />
+        </EntityType>
+        <EntityType Name="contratoseguros">
+          <Key>
+            <PropertyRef Name="IDCONTRATOSSEGUROS" />
+          </Key>
+          <Property Name="IDCONTRATOSSEGUROS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="Int32" Nullable="false" />
+          <Property Name="TIPOSEGURO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="VALOR" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <NavigationProperty Name="contratocarro" Relationship="Self.FK_CONTRATOSEGUROS_1" FromRole="contratoseguros" ToRole="contratocarro" />
+        </EntityType>
+        <EntityType Name="contratosinistros">
+          <Key>
+            <PropertyRef Name="IDCONTRATOSINISTROS" />
+          </Key>
+          <Property Name="IDCONTRATOSINISTROS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIÃ_ÃƒO" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="VALOR" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <NavigationProperty Name="contratocarro" Relationship="Self.FK_CONTRATOSINISTROS_2" FromRole="contratosinistros" ToRole="contratocarro" />
+        </EntityType>
+        <EntityType Name="contratoviagens">
+          <Key>
+            <PropertyRef Name="IDCONTRATOVIAGENS" />
+          </Key>
+          <Property Name="IDCONTRATOVIAGENS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CONTRATO_IDCONTRATO" Type="Int32" Nullable="false" />
+          <Property Name="ROTA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OCUPANTES" Type="Int32" />
+          <NavigationProperty Name="contratocarro" Relationship="Self.FK_CONTRATOVIAGENS_2" FromRole="contratoviagens" ToRole="contratocarro" />
+        </EntityType>
+        <EntityType Name="cor">
+          <Key>
+            <PropertyRef Name="IDCOR" />
+          </Key>
+          <Property Name="IDCOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COR1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="carros" Relationship="Self.FK_CARROS_4" FromRole="cor" ToRole="carros" />
+        </EntityType>
+        <EntityType Name="endereco">
+          <Key>
+            <PropertyRef Name="IDENDERECO" />
+          </Key>
+          <Property Name="IDENDERECO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TIPO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CEP" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LOGRADOURO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NUM" Type="Int32" />
+          <Property Name="COMPLEMENTO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BAIRRO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CIDADE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UF" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="cliente" Relationship="Self.FK_CLIENTE_3" FromRole="endereco" ToRole="cliente" />
+          <NavigationProperty Name="motoristas" Relationship="Self.FK_MOTORISTAS_3" FromRole="endereco" ToRole="motoristas" />
+        </EntityType>
+        <EntityType Name="entradasaida">
+          <Key>
+            <PropertyRef Name="IDENTRADASAIDA" />
+          </Key>
+          <Property Name="IDENTRADASAIDA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CARROS_IDCARRO" Type="Int32" Nullable="false" />
+          <Property Name="HORAENTRADA" Type="Time" />
+          <Property Name="HORASAIDA" Type="Time" />
+          <NavigationProperty Name="carros" Relationship="Self.FK_ENTRADASAIDA_1" FromRole="entradasaida" ToRole="carros" />
+        </EntityType>
+        <EntityType Name="funcionarios">
+          <Key>
+            <PropertyRef Name="IDFUNCIONARIO" />
+          </Key>
+          <Property Name="IDFUNCIONARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CARGOS_IDCARGO" Type="Int32" Nullable="false" />
+          <Property Name="USUARIOS_IDUSUARIO" Type="Int32" Nullable="false" />
+          <Property Name="MATRICULA" Type="Int32" Nullable="false" />
+          <Property Name="NOME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SALARIO" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <Property Name="CEP" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LOGRADOURO" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NUM" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="COMPLEMENTO" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BAIRRO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CIDADE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UF" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="TELCEL" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="TELRES" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="cargos" Relationship="Self.FK_FUNCIONARIOS_3" FromRole="funcionarios" ToRole="cargos" />
+          <NavigationProperty Name="usuarios" Relationship="Self.FK_FUNCIONARIOS_4" FromRole="funcionarios" ToRole="usuarios" />
+        </EntityType>
+        <EntityType Name="manutencao">
+          <Key>
+            <PropertyRef Name="IDMANUTENCAO" />
+          </Key>
+          <Property Name="IDMANUTENCAO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRICAO" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="VALORMANUTENCAO" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <NavigationProperty Name="carros" Relationship="Self.FK_CARROS_5" FromRole="manutencao" ToRole="carros" />
+          <NavigationProperty Name="manutencaopeca" Relationship="Self.FK_MANUTENCAOPECA_2" FromRole="manutencao" ToRole="manutencaopeca" />
+        </EntityType>
+        <EntityType Name="manutencaopeca">
+          <Key>
+            <PropertyRef Name="IDMANUTENCAOPECA" />
+          </Key>
+          <Property Name="IDMANUTENCAOPECA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PECAS_IDPECAS" Type="Int32" Nullable="false" />
+          <Property Name="MANUTENCAO_IDMANUTENCAO" Type="Int32" Nullable="false" />
+          <Property Name="VALOR" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <NavigationProperty Name="manutencao" Relationship="Self.FK_MANUTENCAOPECA_2" FromRole="manutencaopeca" ToRole="manutencao" />
+          <NavigationProperty Name="pecas" Relationship="Self.FK_MANUTENCAOPECA_1" FromRole="manutencaopeca" ToRole="pecas" />
+        </EntityType>
+        <EntityType Name="modelos">
+          <Key>
+            <PropertyRef Name="IDMODELO" />
+          </Key>
+          <Property Name="IDMODELO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MONTADORA_IDMONTADORA" Type="Int32" Nullable="false" />
+          <Property Name="NOME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="carros" Relationship="Self.FK_CARROS_3" FromRole="modelos" ToRole="carros" />
+          <NavigationProperty Name="montadora" Relationship="Self.FK_MODELOS_2" FromRole="modelos" ToRole="montadora" />
+        </EntityType>
+        <EntityType Name="montadora">
+          <Key>
+            <PropertyRef Name="IDMONTADORA" />
+          </Key>
+          <Property Name="IDMONTADORA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="modelos" Relationship="Self.FK_MODELOS_2" FromRole="montadora" ToRole="modelos" />
+        </EntityType>
+        <EntityType Name="motoristas">
+          <Key>
+            <PropertyRef Name="IDMOTORISTAS" />
+          </Key>
+          <Property Name="IDMOTORISTAS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="Int32" Nullable="false" />
+          <Property Name="ENDERECO_IDENDERECO" Type="Int32" Nullable="false" />
+          <Property Name="NOME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CNH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VALIDADE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CATEGORIA" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="contratocarro" Relationship="Self.FK_MOTORISTAS_1" FromRole="motoristas" ToRole="contratocarro" />
+          <NavigationProperty Name="endereco" Relationship="Self.FK_MOTORISTAS_3" FromRole="motoristas" ToRole="endereco" />
+        </EntityType>
+        <EntityType Name="multas">
+          <Key>
+            <PropertyRef Name="IDMULTAS" />
+          </Key>
+          <Property Name="IDMULTAS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CONTRATOCARRO_IDCONTRATOCARRO" Type="Int32" Nullable="false" />
+          <Property Name="DESCRICAO" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="VALOR" Type="Decimal" Precision="9" Scale="2" />
+          <NavigationProperty Name="contratocarro" Relationship="Self.FK_MULTAS_2" FromRole="multas" ToRole="contratocarro" />
+        </EntityType>
+        <EntityType Name="pecas">
+          <Key>
+            <PropertyRef Name="IDPECA" />
+          </Key>
+          <Property Name="IDPECA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRICAO_PECA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="VALOR_PECA" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+          <NavigationProperty Name="manutencaopeca" Relationship="Self.FK_MANUTENCAOPECA_1" FromRole="pecas" ToRole="manutencaopeca" />
+        </EntityType>
+        <EntityType Name="pneus">
+          <Key>
+            <PropertyRef Name="IDPNEUS" />
+          </Key>
+          <Property Name="IDPNEUS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CARROS_IDCARROS" Type="Int32" Nullable="false" />
+          <Property Name="TIPOPNEU" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="KMINICIAL" Type="Int32" Nullable="false" />
+          <Property Name="KMATUAL" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="contratos" Relationship="Self.FK_PNEUS_2" FromRole="pneus" ToRole="contratos" />
+        </EntityType>
+        <EntityType Name="telefonecliente">
+          <Key>
+            <PropertyRef Name="IDTELEFONE" />
+          </Key>
+          <Property Name="IDTELEFONE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CLIENTE_IDCLIENTE" Type="Int32" Nullable="false" />
+          <Property Name="TIPO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NUMTELEFONE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="cliente" Relationship="Self.FK_TELEFONECLIENTE_2" FromRole="telefonecliente" ToRole="cliente" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="IDUSUARIO" />
+          </Key>
+          <Property Name="IDUSUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NIVEL" Type="Int32" Nullable="false" />
+          <Property Name="LOGIN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PASS" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="cliente" Relationship="Self.FK_CLIENTE_2" FromRole="usuarios" ToRole="cliente" />
+          <NavigationProperty Name="funcionarios" Relationship="Self.FK_FUNCIONARIOS_4" FromRole="usuarios" ToRole="funcionarios" />
+        </EntityType>
+        <Association Name="FK_FUNCIONARIOS_3">
+          <End Role="cargos" Type="Self.cargos" Multiplicity="1" />
+          <End Role="funcionarios" Type="Self.funcionarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cargos">
+              <PropertyRef Name="IDCARGO" />
+            </Principal>
+            <Dependent Role="funcionarios">
+              <PropertyRef Name="CARGOS_IDCARGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARROS_3">
+          <End Role="modelos" Type="Self.modelos" Multiplicity="1" />
+          <End Role="carros" Type="Self.carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="modelos">
+              <PropertyRef Name="IDMODELO" />
+            </Principal>
+            <Dependent Role="carros">
+              <PropertyRef Name="MODELOS_IDMODELO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARROS_4">
+          <End Role="cor" Type="Self.cor" Multiplicity="1" />
+          <End Role="carros" Type="Self.carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cor">
+              <PropertyRef Name="IDCOR" />
+            </Principal>
+            <Dependent Role="carros">
+              <PropertyRef Name="COR_IDCOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARROS_5">
+          <End Role="manutencao" Type="Self.manutencao" Multiplicity="1" />
+          <End Role="carros" Type="Self.carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="manutencao">
+              <PropertyRef Name="IDMANUTENCAO" />
+            </Principal>
+            <Dependent Role="carros">
+              <PropertyRef Name="MANUTENCAO_IDMANUTENCAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARROS_6">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="carros" Type="Self.carros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="carros">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOCARRO_3">
+          <End Role="carros" Type="Self.carros" Multiplicity="1" />
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="carros">
+              <PropertyRef Name="IDCARROS" />
+            </Principal>
+            <Dependent Role="contratocarro">
+              <PropertyRef Name="CARRO_IDCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ENTRADASAIDA_1">
+          <End Role="carros" Type="Self.carros" Multiplicity="1" />
+          <End Role="entradasaida" Type="Self.entradasaida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="carros">
+              <PropertyRef Name="IDCARROS" />
+            </Principal>
+            <Dependent Role="entradasaida">
+              <PropertyRef Name="CARROS_IDCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CLIENTE_2">
+          <End Role="usuarios" Type="Self.usuarios" Multiplicity="1" />
+          <End Role="cliente" Type="Self.cliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="IDUSUARIO" />
+            </Principal>
+            <Dependent Role="cliente">
+              <PropertyRef Name="USUARIO_IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CLIENTE_3">
+          <End Role="endereco" Type="Self.endereco" Multiplicity="1" />
+          <End Role="cliente" Type="Self.cliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="IDENDERECO" />
+            </Principal>
+            <Dependent Role="cliente">
+              <PropertyRef Name="ENDERECO_IDENDERECO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOS_2">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="contratos" Type="Self.contratos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="IDCLIENTE" />
+            </Principal>
+            <Dependent Role="contratos">
+              <PropertyRef Name="CLIENTE_IDCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TELEFONECLIENTE_2">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="telefonecliente" Type="Self.telefonecliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="IDCLIENTE" />
+            </Principal>
+            <Dependent Role="telefonecliente">
+              <PropertyRef Name="CLIENTE_IDCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOCARRO_1">
+          <End Role="contratos" Type="Self.contratos" Multiplicity="1" />
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratos">
+              <PropertyRef Name="IDCONTRATO" />
+            </Principal>
+            <Dependent Role="contratocarro">
+              <PropertyRef Name="CONTRATOS_IDCONTRATO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOPNEUS_2">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="contratopneus" Type="Self.contratopneus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="contratopneus">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOSEGUROS_1">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="contratoseguros" Type="Self.contratoseguros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="contratoseguros">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOSINISTROS_2">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="contratosinistros" Type="Self.contratosinistros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="contratosinistros">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRATOVIAGENS_2">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="contratoviagens" Type="Self.contratoviagens" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="contratoviagens">
+              <PropertyRef Name="CONTRATO_IDCONTRATO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOTORISTAS_1">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="motoristas" Type="Self.motoristas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="motoristas">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MULTAS_2">
+          <End Role="contratocarro" Type="Self.contratocarro" Multiplicity="1" />
+          <End Role="multas" Type="Self.multas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratocarro">
+              <PropertyRef Name="IDCONTRATOCARRO" />
+            </Principal>
+            <Dependent Role="multas">
+              <PropertyRef Name="CONTRATOCARRO_IDCONTRATOCARRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PNEUS_2">
+          <End Role="contratos" Type="Self.contratos" Multiplicity="1" />
+          <End Role="pneus" Type="Self.pneus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contratos">
+              <PropertyRef Name="IDCONTRATO" />
+            </Principal>
+            <Dependent Role="pneus">
+              <PropertyRef Name="CARROS_IDCARROS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOTORISTAS_3">
+          <End Role="endereco" Type="Self.endereco" Multiplicity="1" />
+          <End Role="motoristas" Type="Self.motoristas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="IDENDERECO" />
+            </Principal>
+            <Dependent Role="motoristas">
+              <PropertyRef Name="ENDERECO_IDENDERECO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FUNCIONARIOS_4">
+          <End Role="usuarios" Type="Self.usuarios" Multiplicity="1" />
+          <End Role="funcionarios" Type="Self.funcionarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="IDUSUARIO" />
+            </Principal>
+            <Dependent Role="funcionarios">
+              <PropertyRef Name="USUARIOS_IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MANUTENCAOPECA_2">
+          <End Role="manutencao" Type="Self.manutencao" Multiplicity="1" />
+          <End Role="manutencaopeca" Type="Self.manutencaopeca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="manutencao">
+              <PropertyRef Name="IDMANUTENCAO" />
+            </Principal>
+            <Dependent Role="manutencaopeca">
+              <PropertyRef Name="MANUTENCAO_IDMANUTENCAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MANUTENCAOPECA_1">
+          <End Role="pecas" Type="Self.pecas" Multiplicity="1" />
+          <End Role="manutencaopeca" Type="Self.manutencaopeca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pecas">
+              <PropertyRef Name="IDPECA" />
+            </Principal>
+            <Dependent Role="manutencaopeca">
+              <PropertyRef Name="PECAS_IDPECAS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MODELOS_2">
+          <End Role="montadora" Type="Self.montadora" Multiplicity="1" />
+          <End Role="modelos" Type="Self.modelos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="montadora">
+              <PropertyRef Name="IDMONTADORA" />
+            </Principal>
+            <Dependent Role="modelos">
+              <PropertyRef Name="MONTADORA_IDMONTADORA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="fatcarEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="cargos" EntityType="Self.cargos" />
+          <EntitySet Name="carros" EntityType="Self.carros" />
+          <EntitySet Name="cliente" EntityType="Self.cliente" />
+          <EntitySet Name="contratocarro" EntityType="Self.contratocarro" />
+          <EntitySet Name="contratopneus" EntityType="Self.contratopneus" />
+          <EntitySet Name="contratos" EntityType="Self.contratos" />
+          <EntitySet Name="contratoseguros" EntityType="Self.contratoseguros" />
+          <EntitySet Name="contratosinistros" EntityType="Self.contratosinistros" />
+          <EntitySet Name="contratoviagens" EntityType="Self.contratoviagens" />
+          <EntitySet Name="cor" EntityType="Self.cor" />
+          <EntitySet Name="endereco" EntityType="Self.endereco" />
+          <EntitySet Name="entradasaida" EntityType="Self.entradasaida" />
+          <EntitySet Name="funcionarios" EntityType="Self.funcionarios" />
+          <EntitySet Name="manutencao" EntityType="Self.manutencao" />
+          <EntitySet Name="manutencaopeca" EntityType="Self.manutencaopeca" />
+          <EntitySet Name="modelos" EntityType="Self.modelos" />
+          <EntitySet Name="montadora" EntityType="Self.montadora" />
+          <EntitySet Name="motoristas" EntityType="Self.motoristas" />
+          <EntitySet Name="multas" EntityType="Self.multas" />
+          <EntitySet Name="pecas" EntityType="Self.pecas" />
+          <EntitySet Name="pneus" EntityType="Self.pneus" />
+          <EntitySet Name="telefonecliente" EntityType="Self.telefonecliente" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+          <AssociationSet Name="FK_FUNCIONARIOS_3" Association="Self.FK_FUNCIONARIOS_3">
+            <End Role="cargos" EntitySet="cargos" />
+            <End Role="funcionarios" EntitySet="funcionarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARROS_3" Association="Self.FK_CARROS_3">
+            <End Role="modelos" EntitySet="modelos" />
+            <End Role="carros" EntitySet="carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARROS_4" Association="Self.FK_CARROS_4">
+            <End Role="cor" EntitySet="cor" />
+            <End Role="carros" EntitySet="carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARROS_5" Association="Self.FK_CARROS_5">
+            <End Role="manutencao" EntitySet="manutencao" />
+            <End Role="carros" EntitySet="carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARROS_6" Association="Self.FK_CARROS_6">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="carros" EntitySet="carros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOCARRO_3" Association="Self.FK_CONTRATOCARRO_3">
+            <End Role="carros" EntitySet="carros" />
+            <End Role="contratocarro" EntitySet="contratocarro" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ENTRADASAIDA_1" Association="Self.FK_ENTRADASAIDA_1">
+            <End Role="carros" EntitySet="carros" />
+            <End Role="entradasaida" EntitySet="entradasaida" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CLIENTE_2" Association="Self.FK_CLIENTE_2">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="cliente" EntitySet="cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CLIENTE_3" Association="Self.FK_CLIENTE_3">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="cliente" EntitySet="cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOS_2" Association="Self.FK_CONTRATOS_2">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="contratos" EntitySet="contratos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TELEFONECLIENTE_2" Association="Self.FK_TELEFONECLIENTE_2">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="telefonecliente" EntitySet="telefonecliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOCARRO_1" Association="Self.FK_CONTRATOCARRO_1">
+            <End Role="contratos" EntitySet="contratos" />
+            <End Role="contratocarro" EntitySet="contratocarro" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOPNEUS_2" Association="Self.FK_CONTRATOPNEUS_2">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="contratopneus" EntitySet="contratopneus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOSEGUROS_1" Association="Self.FK_CONTRATOSEGUROS_1">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="contratoseguros" EntitySet="contratoseguros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOSINISTROS_2" Association="Self.FK_CONTRATOSINISTROS_2">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="contratosinistros" EntitySet="contratosinistros" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRATOVIAGENS_2" Association="Self.FK_CONTRATOVIAGENS_2">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="contratoviagens" EntitySet="contratoviagens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOTORISTAS_1" Association="Self.FK_MOTORISTAS_1">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="motoristas" EntitySet="motoristas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MULTAS_2" Association="Self.FK_MULTAS_2">
+            <End Role="contratocarro" EntitySet="contratocarro" />
+            <End Role="multas" EntitySet="multas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PNEUS_2" Association="Self.FK_PNEUS_2">
+            <End Role="contratos" EntitySet="contratos" />
+            <End Role="pneus" EntitySet="pneus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOTORISTAS_3" Association="Self.FK_MOTORISTAS_3">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="motoristas" EntitySet="motoristas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FUNCIONARIOS_4" Association="Self.FK_FUNCIONARIOS_4">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="funcionarios" EntitySet="funcionarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MANUTENCAOPECA_2" Association="Self.FK_MANUTENCAOPECA_2">
+            <End Role="manutencao" EntitySet="manutencao" />
+            <End Role="manutencaopeca" EntitySet="manutencaopeca" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MANUTENCAOPECA_1" Association="Self.FK_MANUTENCAOPECA_1">
+            <End Role="pecas" EntitySet="pecas" />
+            <End Role="manutencaopeca" EntitySet="manutencaopeca" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MODELOS_2" Association="Self.FK_MODELOS_2">
+            <End Role="montadora" EntitySet="montadora" />
+            <End Role="modelos" EntitySet="modelos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="fatcarModelStoreContainer" CdmEntityContainer="fatcarEntities">
+          <EntitySetMapping Name="cargos">
+            <EntityTypeMapping TypeName="fatcarModel.cargos">
+              <MappingFragment StoreEntitySet="cargos">
+                <ScalarProperty Name="IDCARGO" ColumnName="IDCARGO" />
+                <ScalarProperty Name="CARGO" ColumnName="CARGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="carros">
+            <EntityTypeMapping TypeName="fatcarModel.carros">
+              <MappingFragment StoreEntitySet="carros">
+                <ScalarProperty Name="IDCARROS" ColumnName="IDCARROS" />
+                <ScalarProperty Name="CONTRATOCARRO_IDCONTRATOCARRO" ColumnName="CONTRATOCARRO_IDCONTRATOCARRO" />
+                <ScalarProperty Name="MANUTENCAO_IDMANUTENCAO" ColumnName="MANUTENCAO_IDMANUTENCAO" />
+                <ScalarProperty Name="MODELOS_IDMODELO" ColumnName="MODELOS_IDMODELO" />
+                <ScalarProperty Name="COR_IDCOR" ColumnName="COR_IDCOR" />
+                <ScalarProperty Name="PLACA" ColumnName="PLACA" />
+                <ScalarProperty Name="RENAVAM" ColumnName="RENAVAM" />
+                <ScalarProperty Name="CHASSI" ColumnName="CHASSI" />
+                <ScalarProperty Name="ANO_FAB" ColumnName="ANO_FAB" />
+                <ScalarProperty Name="ANO_MOD" ColumnName="ANO_MOD" />
+                <ScalarProperty Name="QUILOMETRAGEM" ColumnName="QUILOMETRAGEM" />
+                <ScalarProperty Name="VALOR_DIARIA" ColumnName="VALOR_DIARIA" />
+                <ScalarProperty Name="DATA_AQUISICAO" ColumnName="DATA_AQUISICAO" />
+                <ScalarProperty Name="ARCONDICIONADO" ColumnName="ARCONDICIONADO" />
+                <ScalarProperty Name="DIRECAOHIDRAULICA" ColumnName="DIRECAOHIDRAULICA" />
+                <ScalarProperty Name="VIDROELETRICO" ColumnName="VIDROELETRICO" />
+                <ScalarProperty Name="AIRBAG" ColumnName="AIRBAG" />
+                <ScalarProperty Name="ABS" ColumnName="ABS" />
+                <ScalarProperty Name="LUGARES" ColumnName="LUGARES" />
+                <ScalarProperty Name="PORTAS" ColumnName="PORTAS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cliente">
+            <EntityTypeMapping TypeName="fatcarModel.cliente">
+              <MappingFragment StoreEntitySet="cliente">
+                <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+                <ScalarProperty Name="USUARIO_IDUSUARIO" ColumnName="USUARIO_IDUSUARIO" />
+                <ScalarProperty Name="ENDERECO_IDENDERECO" ColumnName="ENDERECO_IDENDERECO" />
+                <ScalarProperty Name="NOME_CLIENTE" ColumnName="NOME_CLIENTE" />
+                <ScalarProperty Name="TIPO_CLIENTE" ColumnName="TIPO_CLIENTE" />
+                <ScalarProperty Name="STATUS_CLIENTE" ColumnName="STATUS_CLIENTE" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="CNPJ" ColumnName="CNPJ" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="DT_NASCIMENTO" ColumnName="DT_NASCIMENTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contratocarro">
+            <EntityTypeMapping TypeName="fatcarModel.contratocarro">
+              <MappingFragment StoreEntitySet="contratocarro">
+                <ScalarProperty Name="IDCONTRATOCARRO" ColumnName="IDCONTRATOCARRO" />
+                <ScalarProperty Name="CONTRATOS_IDCONTRATO" ColumnName="CONTRATOS_IDCONTRATO" />
+                <ScalarProperty Name="CARRO_IDCARRO" ColumnName="CARRO_IDCARRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contratopneus">
+            <EntityTypeMapping TypeName="fatcarModel.contratopneus">
+              <MappingFragment StoreEntitySet="contratopneus">
+                <ScalarProperty Name="IDCONTRATOPNEUS" ColumnName="IDCONTRATOPNEUS" />
+                <ScalarProperty Name="CONTRATOCARRO_IDCONTRATOCARRO" ColumnName="CONTRATOCARRO_IDCONTRATOCARRO" />
+                <ScalarProperty Name="KMUSADA" ColumnName="KMUSADA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contratos">
+            <EntityTypeMapping TypeName="fatcarModel.contratos">
+              <MappingFragment StoreEntitySet="contratos">
+                <ScalarProperty Name="IDCONTRATO" ColumnName="IDCONTRATO" />
+                <ScalarProperty Name="CLIENTE_IDCLIENTE" ColumnName="CLIENTE_IDCLIENTE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="DATACONTRATO" ColumnName="DATACONTRATO" />
+                <ScalarProperty Name="DATAINICIO" ColumnName="DATAINICIO" />
+                <ScalarProperty Name="DATAFINAL" ColumnName="DATAFINAL" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+                <ScalarProperty Name="KMINICIAL" ColumnName="KMINICIAL" />
+                <ScalarProperty Name="KMFINAL" ColumnName="KMFINAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contratoseguros">
+            <EntityTypeMapping TypeName="fatcarModel.contratoseguros">
+              <MappingFragment StoreEntitySet="contratoseguros">
+                <ScalarProperty Name="IDCONTRATOSSEGUROS" ColumnName="IDCONTRATOSSEGUROS" />
+                <ScalarProperty Name="CONTRATOCARRO_IDCONTRATOCARRO" ColumnName="CONTRATOCARRO_IDCONTRATOCARRO" />
+                <ScalarProperty Name="TIPOSEGURO" ColumnName="TIPOSEGURO" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contratosinistros">
+            <EntityTypeMapping TypeName="fatcarModel.contratosinistros">
+              <MappingFragment StoreEntitySet="contratosinistros">
+                <ScalarProperty Name="IDCONTRATOSINISTROS" ColumnName="IDCONTRATOSINISTROS" />
+                <ScalarProperty Name="CONTRATOCARRO_IDCONTRATOCARRO" ColumnName="CONTRATOCARRO_IDCONTRATOCARRO" />
+                <ScalarProperty Name="DESCRIÃ_ÃƒO" ColumnName="DESCRIÃ‡ÃƒO" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contratoviagens">
+            <EntityTypeMapping TypeName="fatcarModel.contratoviagens">
+              <MappingFragment StoreEntitySet="contratoviagens">
+                <ScalarProperty Name="IDCONTRATOVIAGENS" ColumnName="IDCONTRATOVIAGENS" />
+                <ScalarProperty Name="CONTRATO_IDCONTRATO" ColumnName="CONTRATO_IDCONTRATO" />
+                <ScalarProperty Name="ROTA" ColumnName="ROTA" />
+                <ScalarProperty Name="OCUPANTES" ColumnName="OCUPANTES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cor">
+            <EntityTypeMapping TypeName="fatcarModel.cor">
+              <MappingFragment StoreEntitySet="cor">
+                <ScalarProperty Name="IDCOR" ColumnName="IDCOR" />
+                <ScalarProperty Name="COR1" ColumnName="COR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="endereco">
+            <EntityTypeMapping TypeName="fatcarModel.endereco">
+              <MappingFragment StoreEntitySet="endereco">
+                <ScalarProperty Name="IDENDERECO" ColumnName="IDENDERECO" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="LOGRADOURO" ColumnName="LOGRADOURO" />
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="COMPLEMENTO" ColumnName="COMPLEMENTO" />
+                <ScalarProperty Name="BAIRRO" ColumnName="BAIRRO" />
+                <ScalarProperty Name="CIDADE" ColumnName="CIDADE" />
+                <ScalarProperty Name="UF" ColumnName="UF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="entradasaida">
+            <EntityTypeMapping TypeName="fatcarModel.entradasaida">
+              <MappingFragment StoreEntitySet="entradasaida">
+                <ScalarProperty Name="IDENTRADASAIDA" ColumnName="IDENTRADASAIDA" />
+                <ScalarProperty Name="CARROS_IDCARRO" ColumnName="CARROS_IDCARRO" />
+                <ScalarProperty Name="HORAENTRADA" ColumnName="HORAENTRADA" />
+                <ScalarProperty Name="HORASAIDA" ColumnName="HORASAIDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="funcionarios">
+            <EntityTypeMapping TypeName="fatcarModel.funcionarios">
+              <MappingFragment StoreEntitySet="funcionarios">
+                <ScalarProperty Name="IDFUNCIONARIO" ColumnName="IDFUNCIONARIO" />
+                <ScalarProperty Name="CARGOS_IDCARGO" ColumnName="CARGOS_IDCARGO" />
+                <ScalarProperty Name="USUARIOS_IDUSUARIO" ColumnName="USUARIOS_IDUSUARIO" />
+                <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="SALARIO" ColumnName="SALARIO" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="LOGRADOURO" ColumnName="LOGRADOURO" />
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="COMPLEMENTO" ColumnName="COMPLEMENTO" />
+                <ScalarProperty Name="BAIRRO" ColumnName="BAIRRO" />
+                <ScalarProperty Name="CIDADE" ColumnName="CIDADE" />
+                <ScalarProperty Name="UF" ColumnName="UF" />
+                <ScalarProperty Name="TELCEL" ColumnName="TELCEL" />
+                <ScalarProperty Name="TELRES" ColumnName="TELRES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="manutencao">
+            <EntityTypeMapping TypeName="fatcarModel.manutencao">
+              <MappingFragment StoreEntitySet="manutencao">
+                <ScalarProperty Name="IDMANUTENCAO" ColumnName="IDMANUTENCAO" />
+                <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+                <ScalarProperty Name="VALORMANUTENCAO" ColumnName="VALORMANUTENCAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="manutencaopeca">
+            <EntityTypeMapping TypeName="fatcarModel.manutencaopeca">
+              <MappingFragment StoreEntitySet="manutencaopeca">
+                <ScalarProperty Name="IDMANUTENCAOPECA" ColumnName="IDMANUTENCAOPECA" />
+                <ScalarProperty Name="PECAS_IDPECAS" ColumnName="PECAS_IDPECAS" />
+                <ScalarProperty Name="MANUTENCAO_IDMANUTENCAO" ColumnName="MANUTENCAO_IDMANUTENCAO" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="modelos">
+            <EntityTypeMapping TypeName="fatcarModel.modelos">
+              <MappingFragment StoreEntitySet="modelos">
+                <ScalarProperty Name="IDMODELO" ColumnName="IDMODELO" />
+                <ScalarProperty Name="MONTADORA_IDMONTADORA" ColumnName="MONTADORA_IDMONTADORA" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="montadora">
+            <EntityTypeMapping TypeName="fatcarModel.montadora">
+              <MappingFragment StoreEntitySet="montadora">
+                <ScalarProperty Name="IDMONTADORA" ColumnName="IDMONTADORA" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="motoristas">
+            <EntityTypeMapping TypeName="fatcarModel.motoristas">
+              <MappingFragment StoreEntitySet="motoristas">
+                <ScalarProperty Name="IDMOTORISTAS" ColumnName="IDMOTORISTAS" />
+                <ScalarProperty Name="CONTRATOCARRO_IDCONTRATOCARRO" ColumnName="CONTRATOCARRO_IDCONTRATOCARRO" />
+                <ScalarProperty Name="ENDERECO_IDENDERECO" ColumnName="ENDERECO_IDENDERECO" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="CNH" ColumnName="CNH" />
+                <ScalarProperty Name="VALIDADE" ColumnName="VALIDADE" />
+                <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="multas">
+            <EntityTypeMapping TypeName="fatcarModel.multas">
+              <MappingFragment StoreEntitySet="multas">
+                <ScalarProperty Name="IDMULTAS" ColumnName="IDMULTAS" />
+                <ScalarProperty Name="CONTRATOCARRO_IDCONTRATOCARRO" ColumnName="CONTRATOCARRO_IDCONTRATOCARRO" />
+                <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pecas">
+            <EntityTypeMapping TypeName="fatcarModel.pecas">
+              <MappingFragment StoreEntitySet="pecas">
+                <ScalarProperty Name="IDPECA" ColumnName="IDPECA" />
+                <ScalarProperty Name="DESCRICAO_PECA" ColumnName="DESCRICAO_PECA" />
+                <ScalarProperty Name="VALOR_PECA" ColumnName="VALOR_PECA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pneus">
+            <EntityTypeMapping TypeName="fatcarModel.pneus">
+              <MappingFragment StoreEntitySet="pneus">
+                <ScalarProperty Name="IDPNEUS" ColumnName="IDPNEUS" />
+                <ScalarProperty Name="CARROS_IDCARROS" ColumnName="CARROS_IDCARROS" />
+                <ScalarProperty Name="TIPOPNEU" ColumnName="TIPOPNEU" />
+                <ScalarProperty Name="KMINICIAL" ColumnName="KMINICIAL" />
+                <ScalarProperty Name="KMATUAL" ColumnName="KMATUAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="telefonecliente">
+            <EntityTypeMapping TypeName="fatcarModel.telefonecliente">
+              <MappingFragment StoreEntitySet="telefonecliente">
+                <ScalarProperty Name="IDTELEFONE" ColumnName="IDTELEFONE" />
+                <ScalarProperty Name="CLIENTE_IDCLIENTE" ColumnName="CLIENTE_IDCLIENTE" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="NUMTELEFONE" ColumnName="NUMTELEFONE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="fatcarModel.usuarios">
+              <MappingFragment StoreEntitySet="usuarios">
+                <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+                <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="PASS" ColumnName="PASS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
