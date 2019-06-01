@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label4 = new System.Windows.Forms.Label();
+			this.lblCadastrarCliente = new System.Windows.Forms.Label();
 			this.lblNome = new System.Windows.Forms.Label();
 			this.lblEmail = new System.Windows.Forms.Label();
 			this.lblRG = new System.Windows.Forms.Label();
@@ -36,10 +36,10 @@
 			this.lblBairro = new System.Windows.Forms.Label();
 			this.lblCidade = new System.Windows.Forms.Label();
 			this.lblEstado = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.lblComp = new System.Windows.Forms.Label();
+			this.lblCep = new System.Windows.Forms.Label();
+			this.lblComplemento = new System.Windows.Forms.Label();
 			this.lblNascimento = new System.Windows.Forms.Label();
-			this.lblCPF = new System.Windows.Forms.Label();
+			this.lblCpf = new System.Windows.Forms.Label();
 			this.lblProfissao = new System.Windows.Forms.Label();
 			this.lblTelRes = new System.Windows.Forms.Label();
 			this.lblTelCom = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
 			this.txtCidade = new System.Windows.Forms.TextBox();
 			this.txtRua = new System.Windows.Forms.TextBox();
 			this.txtComplemento = new System.Windows.Forms.TextBox();
-			this.lblNum = new System.Windows.Forms.Label();
+			this.lblNumero = new System.Windows.Forms.Label();
 			this.LayoutDados = new System.Windows.Forms.TableLayoutPanel();
 			this.txtNascimento = new System.Windows.Forms.MaskedTextBox();
 			this.txtCpf = new System.Windows.Forms.MaskedTextBox();
@@ -64,7 +64,7 @@
 			this.txtTelRes = new System.Windows.Forms.MaskedTextBox();
 			this.txtTelCom = new System.Windows.Forms.MaskedTextBox();
 			this.txtTelCel = new System.Windows.Forms.MaskedTextBox();
-			this.Btn_Salvar = new System.Windows.Forms.Button();
+			this.btnSalvar = new System.Windows.Forms.Button();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.groupCadastro = new System.Windows.Forms.GroupBox();
 			this.radioPj = new System.Windows.Forms.RadioButton();
@@ -75,17 +75,17 @@
 			this.groupCadastro.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// label4
+			// lblCadastrarCliente
 			// 
-			this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(290, 16);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(179, 25);
-			this.label4.TabIndex = 8;
-			this.label4.Text = "Cadastrar Cliente";
-			this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.lblCadastrarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.lblCadastrarCliente.AutoSize = true;
+			this.lblCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCadastrarCliente.Location = new System.Drawing.Point(290, 16);
+			this.lblCadastrarCliente.Name = "lblCadastrarCliente";
+			this.lblCadastrarCliente.Size = new System.Drawing.Size(179, 25);
+			this.lblCadastrarCliente.TabIndex = 8;
+			this.lblCadastrarCliente.Text = "Cadastrar Cliente";
+			this.lblCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// lblNome
 			// 
@@ -151,23 +151,23 @@
 			this.lblEstado.TabIndex = 15;
 			this.lblEstado.Text = "Estado";
 			// 
-			// label9
+			// lblCep
 			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(3, 0);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(28, 13);
-			this.label9.TabIndex = 16;
-			this.label9.Text = "CEP";
+			this.lblCep.AutoSize = true;
+			this.lblCep.Location = new System.Drawing.Point(3, 0);
+			this.lblCep.Name = "lblCep";
+			this.lblCep.Size = new System.Drawing.Size(28, 13);
+			this.lblCep.TabIndex = 16;
+			this.lblCep.Text = "CEP";
 			// 
-			// lblComp
+			// lblComplemento
 			// 
-			this.lblComp.AutoSize = true;
-			this.lblComp.Location = new System.Drawing.Point(3, 84);
-			this.lblComp.Name = "lblComp";
-			this.lblComp.Size = new System.Drawing.Size(71, 13);
-			this.lblComp.TabIndex = 17;
-			this.lblComp.Text = "Complemento";
+			this.lblComplemento.AutoSize = true;
+			this.lblComplemento.Location = new System.Drawing.Point(3, 84);
+			this.lblComplemento.Name = "lblComplemento";
+			this.lblComplemento.Size = new System.Drawing.Size(71, 13);
+			this.lblComplemento.TabIndex = 17;
+			this.lblComplemento.Text = "Complemento";
 			// 
 			// lblNascimento
 			// 
@@ -178,15 +178,15 @@
 			this.lblNascimento.TabIndex = 18;
 			this.lblNascimento.Text = "Data de Nascimento";
 			// 
-			// lblCPF
+			// lblCpf
 			// 
-			this.lblCPF.AutoSize = true;
-			this.lblCPF.Location = new System.Drawing.Point(425, 0);
-			this.lblCPF.Name = "lblCPF";
-			this.lblCPF.Size = new System.Drawing.Size(27, 13);
-			this.lblCPF.TabIndex = 19;
-			this.lblCPF.Text = "CPF";
-			this.lblCPF.Click += new System.EventHandler(this.Label12_Click);
+			this.lblCpf.AutoSize = true;
+			this.lblCpf.Location = new System.Drawing.Point(425, 0);
+			this.lblCpf.Name = "lblCpf";
+			this.lblCpf.Size = new System.Drawing.Size(27, 13);
+			this.lblCpf.TabIndex = 19;
+			this.lblCpf.Text = "CPF";
+			this.lblCpf.Click += new System.EventHandler(this.Label12_Click);
 			// 
 			// lblProfissao
 			// 
@@ -245,12 +245,12 @@
 			this.tableLayoutPanel1.Controls.Add(this.txtRua, 1, 1);
 			this.tableLayoutPanel1.Controls.Add(this.lblLogradouro, 0, 1);
 			this.tableLayoutPanel1.Controls.Add(this.txtComplemento, 1, 3);
-			this.tableLayoutPanel1.Controls.Add(this.label9, 0, 0);
-			this.tableLayoutPanel1.Controls.Add(this.lblComp, 0, 3);
+			this.tableLayoutPanel1.Controls.Add(this.lblCep, 0, 0);
+			this.tableLayoutPanel1.Controls.Add(this.lblComplemento, 0, 3);
 			this.tableLayoutPanel1.Controls.Add(this.lblEstado, 0, 6);
 			this.tableLayoutPanel1.Controls.Add(this.lblBairro, 0, 5);
 			this.tableLayoutPanel1.Controls.Add(this.lblCidade, 0, 4);
-			this.tableLayoutPanel1.Controls.Add(this.lblNum, 0, 2);
+			this.tableLayoutPanel1.Controls.Add(this.lblNumero, 0, 2);
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 211);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 7;
@@ -318,14 +318,14 @@
 			this.txtComplemento.Size = new System.Drawing.Size(336, 20);
 			this.txtComplemento.TabIndex = 98;
 			// 
-			// lblNum
+			// lblNumero
 			// 
-			this.lblNum.AutoSize = true;
-			this.lblNum.Location = new System.Drawing.Point(3, 56);
-			this.lblNum.Name = "lblNum";
-			this.lblNum.Size = new System.Drawing.Size(44, 13);
-			this.lblNum.TabIndex = 18;
-			this.lblNum.Text = "Número";
+			this.lblNumero.AutoSize = true;
+			this.lblNumero.Location = new System.Drawing.Point(3, 56);
+			this.lblNumero.Name = "lblNumero";
+			this.lblNumero.Size = new System.Drawing.Size(44, 13);
+			this.lblNumero.TabIndex = 18;
+			this.lblNumero.Text = "Número";
 			// 
 			// LayoutDados
 			// 
@@ -339,7 +339,7 @@
 			this.LayoutDados.Controls.Add(this.lblNome, 0, 0);
 			this.LayoutDados.Controls.Add(this.lblEmail, 0, 1);
 			this.LayoutDados.Controls.Add(this.lblRG, 0, 2);
-			this.LayoutDados.Controls.Add(this.lblCPF, 2, 0);
+			this.LayoutDados.Controls.Add(this.lblCpf, 2, 0);
 			this.LayoutDados.Controls.Add(this.lblNascimento, 2, 1);
 			this.LayoutDados.Controls.Add(this.lblProfissao, 2, 2);
 			this.LayoutDados.Controls.Add(this.txtNome, 1, 0);
@@ -435,15 +435,15 @@
 			this.txtTelCel.Size = new System.Drawing.Size(94, 20);
 			this.txtTelCel.TabIndex = 11;
 			// 
-			// Btn_Salvar
+			// btnSalvar
 			// 
-			this.Btn_Salvar.Location = new System.Drawing.Point(369, 420);
-			this.Btn_Salvar.Name = "Btn_Salvar";
-			this.Btn_Salvar.Size = new System.Drawing.Size(105, 40);
-			this.Btn_Salvar.TabIndex = 12;
-			this.Btn_Salvar.Text = "Salvar";
-			this.Btn_Salvar.UseVisualStyleBackColor = true;
-			this.Btn_Salvar.Click += new System.EventHandler(this.Btn_Salvar_Click);
+			this.btnSalvar.Location = new System.Drawing.Point(369, 420);
+			this.btnSalvar.Name = "btnSalvar";
+			this.btnSalvar.Size = new System.Drawing.Size(105, 40);
+			this.btnSalvar.TabIndex = 12;
+			this.btnSalvar.Text = "Salvar";
+			this.btnSalvar.UseVisualStyleBackColor = true;
+			this.btnSalvar.Click += new System.EventHandler(this.Btn_Salvar_Click);
 			// 
 			// tableLayoutPanel2
 			// 
@@ -471,9 +471,9 @@
 			this.groupCadastro.Controls.Add(this.radioPF);
 			this.groupCadastro.Controls.Add(this.LayoutDados);
 			this.groupCadastro.Controls.Add(this.tableLayoutPanel2);
-			this.groupCadastro.Controls.Add(this.label4);
+			this.groupCadastro.Controls.Add(this.lblCadastrarCliente);
 			this.groupCadastro.Controls.Add(this.tableLayoutPanel1);
-			this.groupCadastro.Controls.Add(this.Btn_Salvar);
+			this.groupCadastro.Controls.Add(this.btnSalvar);
 			this.groupCadastro.Location = new System.Drawing.Point(33, 12);
 			this.groupCadastro.Name = "groupCadastro";
 			this.groupCadastro.Size = new System.Drawing.Size(755, 466);
@@ -533,7 +533,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label lblCadastrarCliente;
 		private System.Windows.Forms.Label lblNome;
 		private System.Windows.Forms.Label lblEmail;
 		private System.Windows.Forms.Label lblRG;
@@ -541,10 +541,10 @@
 		private System.Windows.Forms.Label lblBairro;
 		private System.Windows.Forms.Label lblCidade;
 		private System.Windows.Forms.Label lblEstado;
-		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.Label lblComp;
+		private System.Windows.Forms.Label lblCep;
+		private System.Windows.Forms.Label lblComplemento;
 		private System.Windows.Forms.Label lblNascimento;
-		private System.Windows.Forms.Label lblCPF;
+		private System.Windows.Forms.Label lblCpf;
 		private System.Windows.Forms.Label lblProfissao;
 		private System.Windows.Forms.Label lblTelRes;
 		private System.Windows.Forms.Label lblTelCom;
@@ -564,10 +564,10 @@
 		private System.Windows.Forms.TextBox txtNome;
 		private System.Windows.Forms.TextBox txtProfissao;
 		private System.Windows.Forms.TextBox txtEmail;
-		private System.Windows.Forms.Button Btn_Salvar;
+		private System.Windows.Forms.Button btnSalvar;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 		private System.Windows.Forms.TextBox txtNumero;
-		private System.Windows.Forms.Label lblNum;
+		private System.Windows.Forms.Label lblNumero;
 		private System.Windows.Forms.TextBox txtEstado;
 		private System.Windows.Forms.TextBox txtCep;
 		private System.Windows.Forms.GroupBox groupCadastro;

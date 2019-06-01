@@ -212,6 +212,11 @@ namespace WindowsFormsApp1
 			formNovaLocacao.MdiParent = this;
 			formNovaLocacao.Show();
 		}
+
+		private void motoristaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 	}
 

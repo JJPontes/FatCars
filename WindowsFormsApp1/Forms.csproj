@@ -327,20 +327,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Util.cs" />
-    <Compile Include="Views\Mobile\MasterDetailPage1.xaml.cs">
-      <DependentUpon>MasterDetailPage1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Mobile\MasterDetailPage1Detail.xaml.cs">
-      <DependentUpon>MasterDetailPage1Detail.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Mobile\MasterDetailPage1Master.xaml.cs">
-      <DependentUpon>MasterDetailPage1Master.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Mobile\MasterDetailPage1MenuItem.cs" />
-    <Compile Include="Views\Mobile\View1.cs" />
-    <Compile Include="Views\Mobile\View2.xaml.cs">
-      <DependentUpon>View2.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Views\Desktop\FormCadastrarCliente.resx">
       <DependentUpon>FormCadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -499,26 +485,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\Mobile\View2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\Mobile\MasterDetailPage1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\Mobile\MasterDetailPage1Master.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\Mobile\MasterDetailPage1Detail.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

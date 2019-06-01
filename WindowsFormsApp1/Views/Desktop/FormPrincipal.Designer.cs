@@ -31,6 +31,8 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.administraçaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.novaLocaçaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.efetuarLogoffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,18 +51,18 @@
 			this.consultarComprovantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.relatóriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.reservasDeVeiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.cadastrarNovoCarroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.relatóriosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.consumoMédioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.quilometragemRodadaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.sinistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.multasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.novaLocaçaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.cadastrarNovoCarroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.viagensAtivasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.motoristaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -93,6 +95,18 @@
 			this.administraçaoToolStripMenuItem.Text = "Administração";
 			this.administraçaoToolStripMenuItem.Click += new System.EventHandler(this.administraçaoToolStripMenuItem_Click);
 			// 
+			// novaLocaçaoToolStripMenuItem
+			// 
+			this.novaLocaçaoToolStripMenuItem.Name = "novaLocaçaoToolStripMenuItem";
+			this.novaLocaçaoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.novaLocaçaoToolStripMenuItem.Text = "Nova Locaçao...";
+			this.novaLocaçaoToolStripMenuItem.Click += new System.EventHandler(this.NovaLocaçaoToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+			// 
 			// efetuarLogoffToolStripMenuItem
 			// 
 			this.efetuarLogoffToolStripMenuItem.Name = "efetuarLogoffToolStripMenuItem";
@@ -113,7 +127,8 @@
             this.cadastrarNovoVeículoToolStripMenuItem,
             this.cadastrarNovoUsuárioToolStripMenuItem,
             this.cadastrarClienteToolStripMenuItem,
-            this.estoqueToolStripMenuItem});
+            this.estoqueToolStripMenuItem,
+            this.motoristaToolStripMenuItem});
 			this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
 			this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
 			this.cadastrarToolStripMenuItem.Text = "Cadastrar";
@@ -122,35 +137,36 @@
 			// cadastrarNovoVeículoToolStripMenuItem
 			// 
 			this.cadastrarNovoVeículoToolStripMenuItem.Name = "cadastrarNovoVeículoToolStripMenuItem";
-			this.cadastrarNovoVeículoToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-			this.cadastrarNovoVeículoToolStripMenuItem.Text = "Cadastrar veículo...";
+			this.cadastrarNovoVeículoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.cadastrarNovoVeículoToolStripMenuItem.Text = "Veículo...";
 			this.cadastrarNovoVeículoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoVeículoToolStripMenuItem_Click);
 			// 
 			// cadastrarNovoUsuárioToolStripMenuItem
 			// 
 			this.cadastrarNovoUsuárioToolStripMenuItem.Name = "cadastrarNovoUsuárioToolStripMenuItem";
-			this.cadastrarNovoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-			this.cadastrarNovoUsuárioToolStripMenuItem.Text = "Cadastrar usuário...";
+			this.cadastrarNovoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.cadastrarNovoUsuárioToolStripMenuItem.Text = "Usuário...";
 			this.cadastrarNovoUsuárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoUsuárioToolStripMenuItem_Click);
 			// 
 			// cadastrarClienteToolStripMenuItem
 			// 
 			this.cadastrarClienteToolStripMenuItem.Name = "cadastrarClienteToolStripMenuItem";
-			this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-			this.cadastrarClienteToolStripMenuItem.Text = "Cadastrar cliente...";
+			this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.cadastrarClienteToolStripMenuItem.Text = "Cliente...";
 			this.cadastrarClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClienteToolStripMenuItem_Click);
 			// 
 			// estoqueToolStripMenuItem
 			// 
 			this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-			this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-			this.estoqueToolStripMenuItem.Text = "Cadastrar Peça em estoque...";
+			this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.estoqueToolStripMenuItem.Text = "Peça em estoque...";
 			this.estoqueToolStripMenuItem.Click += new System.EventHandler(this.estoqueToolStripMenuItem_Click);
 			// 
 			// monitorarToolStripMenuItem
 			// 
 			this.monitorarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.monitorarVeículosAtivosToolStripMenuItem});
+            this.monitorarVeículosAtivosToolStripMenuItem,
+            this.viagensAtivasToolStripMenuItem});
 			this.monitorarToolStripMenuItem.Name = "monitorarToolStripMenuItem";
 			this.monitorarToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
 			this.monitorarToolStripMenuItem.Text = "Monitorar";
@@ -158,8 +174,8 @@
 			// monitorarVeículosAtivosToolStripMenuItem
 			// 
 			this.monitorarVeículosAtivosToolStripMenuItem.Name = "monitorarVeículosAtivosToolStripMenuItem";
-			this.monitorarVeículosAtivosToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-			this.monitorarVeículosAtivosToolStripMenuItem.Text = "Monitorar Veículos reservados...";
+			this.monitorarVeículosAtivosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.monitorarVeículosAtivosToolStripMenuItem.Text = "Rastrear Motoristas";
 			this.monitorarVeículosAtivosToolStripMenuItem.Click += new System.EventHandler(this.monitorarVeículosAtivosToolStripMenuItem_Click);
 			// 
 			// consultarToolStripMenuItem
@@ -230,41 +246,6 @@
 			this.reservasDeVeiculosToolStripMenuItem.Text = "Reservas de Veiculos";
 			this.reservasDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.reservasDeVeiculosToolStripMenuItem_Click);
 			// 
-			// toolStripMenuItem1
-			// 
-			this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajudaToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.sobreToolStripMenuItem});
-			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
-			this.toolStripMenuItem1.Text = "?";
-			// 
-			// ajudaToolStripMenuItem
-			// 
-			this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-			this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.ajudaToolStripMenuItem.Text = "Ajuda";
-			// 
-			// toolStripSeparator1
-			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-			// 
-			// sobreToolStripMenuItem
-			// 
-			this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-			this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.sobreToolStripMenuItem.Text = "Sobre...";
-			this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
-			// 
-			// cadastrarNovoCarroToolStripMenuItem
-			// 
-			this.cadastrarNovoCarroToolStripMenuItem.Name = "cadastrarNovoCarroToolStripMenuItem";
-			this.cadastrarNovoCarroToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-			this.cadastrarNovoCarroToolStripMenuItem.Text = "Cadastrar novo veículo...";
-			this.cadastrarNovoCarroToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoCarroToolStripMenuItem_Click);
-			// 
 			// relatóriosToolStripMenuItem2
 			// 
 			this.relatóriosToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -301,17 +282,53 @@
 			this.multasToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
 			this.multasToolStripMenuItem.Text = "Multas";
 			// 
-			// novaLocaçaoToolStripMenuItem
+			// toolStripMenuItem1
 			// 
-			this.novaLocaçaoToolStripMenuItem.Name = "novaLocaçaoToolStripMenuItem";
-			this.novaLocaçaoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.novaLocaçaoToolStripMenuItem.Text = "Nova Locaçao...";
-			this.novaLocaçaoToolStripMenuItem.Click += new System.EventHandler(this.NovaLocaçaoToolStripMenuItem_Click);
+			this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajudaToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.sobreToolStripMenuItem});
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
+			this.toolStripMenuItem1.Text = "?";
 			// 
-			// toolStripSeparator2
+			// ajudaToolStripMenuItem
 			// 
-			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+			this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+			this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+			this.ajudaToolStripMenuItem.Text = "Ajuda";
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(110, 6);
+			// 
+			// sobreToolStripMenuItem
+			// 
+			this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+			this.sobreToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+			this.sobreToolStripMenuItem.Text = "Sobre...";
+			this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
+			// 
+			// cadastrarNovoCarroToolStripMenuItem
+			// 
+			this.cadastrarNovoCarroToolStripMenuItem.Name = "cadastrarNovoCarroToolStripMenuItem";
+			this.cadastrarNovoCarroToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+			this.cadastrarNovoCarroToolStripMenuItem.Text = "Cadastrar novo veículo...";
+			this.cadastrarNovoCarroToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoCarroToolStripMenuItem_Click);
+			// 
+			// viagensAtivasToolStripMenuItem
+			// 
+			this.viagensAtivasToolStripMenuItem.Name = "viagensAtivasToolStripMenuItem";
+			this.viagensAtivasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.viagensAtivasToolStripMenuItem.Text = "Viagens Ativas";
+			// 
+			// motoristaToolStripMenuItem
+			// 
+			this.motoristaToolStripMenuItem.Name = "motoristaToolStripMenuItem";
+			this.motoristaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.motoristaToolStripMenuItem.Text = "Motorista...";
+			this.motoristaToolStripMenuItem.Click += new System.EventHandler(this.motoristaToolStripMenuItem_Click);
 			// 
 			// FormPrincipal
 			// 
@@ -368,6 +385,8 @@
 		private System.Windows.Forms.ToolStripMenuItem multasToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem novaLocaçaoToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+		private System.Windows.Forms.ToolStripMenuItem motoristaToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem viagensAtivasToolStripMenuItem;
 	}
 }
 

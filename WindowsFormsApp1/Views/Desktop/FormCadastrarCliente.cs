@@ -151,14 +151,14 @@ namespace WindowsFormsApp1
 		{
 			if (radioPF.Checked == true)
 			{
-				lblCPF.Text = "CPF";
+				lblCpf.Text = "CPF";
 				lblRG.Text = "RG";
 				lblProfissao.Text = "Profissao";
 			}
 
 			else
 			{
-				lblCPF.Text = "CNPJ";
+				lblCpf.Text = "CNPJ";
 				lblRG.Text = "IE";
 				lblProfissao.Text = "Contato";
 			}
@@ -168,7 +168,7 @@ namespace WindowsFormsApp1
 		{
 			if (radioPj.Checked == true)
 			{
-				lblCPF.Text = "CNPJ";
+				lblCpf.Text = "CNPJ";
 				lblRG.Text = "IE";
 				lblProfissao.Text = "Contato";
 
@@ -176,7 +176,7 @@ namespace WindowsFormsApp1
 			}
 			else
 			{
-				lblCPF.Text = "CPF";
+				lblCpf.Text = "CPF";
 				lblRG.Text = "RG";
 				lblProfissao.Text = "Profissao";
 
