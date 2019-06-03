@@ -153,7 +153,17 @@ namespace WindowsFormsApp1
 			{
 				lblCpf.Text = "CPF";
 				lblRG.Text = "RG";
-				lblProfissao.Text = "Profissao";
+				lblProfissao.Text = "Profissão";
+				lblCNH.Show();
+				txtCNH.Show();
+				lblCategoria.Show();
+				txtCategoria.Show();
+				lblValidade.Show();
+				maskedValidade.Show();
+				lblTelCel.Show();
+				txtTelCel.Show();
+				lblTelRes.Show();
+				txtTelRes.Show();
 			}
 
 			else
@@ -161,6 +171,17 @@ namespace WindowsFormsApp1
 				lblCpf.Text = "CNPJ";
 				lblRG.Text = "IE";
 				lblProfissao.Text = "Contato";
+				lblTelCom.Text = "Telefone";
+				lblCNH.Hide();
+				txtCNH.Hide();
+				lblCategoria.Hide();
+				txtCategoria.Hide();
+				lblValidade.Hide();
+				maskedValidade.Hide();
+				lblTelCel.Hide();
+				txtTelCel.Hide();
+				lblTelRes.Hide();
+				txtTelRes.Hide();
 			}
 		}
 
@@ -171,6 +192,18 @@ namespace WindowsFormsApp1
 				lblCpf.Text = "CNPJ";
 				lblRG.Text = "IE";
 				lblProfissao.Text = "Contato";
+				lblTelCom.Text = "Telefone";
+				lblCNH.Hide();
+				txtCNH.Hide();
+				lblCategoria.Hide();
+				txtCategoria.Hide();
+				lblValidade.Hide();
+				maskedValidade.Hide();
+				lblTelCel.Hide();
+				txtTelCel.Hide();
+				lblTelRes.Hide();
+				txtTelRes.Hide();
+
 
 
 			}
@@ -178,7 +211,17 @@ namespace WindowsFormsApp1
 			{
 				lblCpf.Text = "CPF";
 				lblRG.Text = "RG";
-				lblProfissao.Text = "Profissao";
+				lblProfissao.Text = "Profissão";
+				lblCNH.Show();
+				txtCNH.Show();
+				lblCategoria.Show();
+				txtCategoria.Show();
+				lblValidade.Show();
+				maskedValidade.Show();
+				lblTelCel.Show();
+				txtTelCel.Show();
+				lblTelRes.Show();
+				txtTelRes.Show();
 
 			}
 

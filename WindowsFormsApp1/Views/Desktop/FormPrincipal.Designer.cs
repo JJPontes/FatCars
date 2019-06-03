@@ -63,6 +63,12 @@
 			this.cadastrarNovoCarroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.viagensAtivasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.motoristaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.reservadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.consultarEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.manutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.emitirAlertaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.registrarAlertaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.visualizarProcessoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -72,6 +78,7 @@
             this.administraçaoToolStripMenuItem,
             this.cadastrarToolStripMenuItem,
             this.monitorarToolStripMenuItem,
+            this.manutençãoToolStripMenuItem,
             this.consultarToolStripMenuItem,
             this.relatóriosToolStripMenuItem1,
             this.relatóriosToolStripMenuItem2,
@@ -186,7 +193,8 @@
             this.consultarEditarUsuáriosToolStripMenuItem,
             this.consultarEditarEstoqueDePeçasToolStripMenuItem,
             this.consultarReservasAtivasToolStripMenuItem,
-            this.consultarComprovantesToolStripMenuItem});
+            this.consultarComprovantesToolStripMenuItem,
+            this.consultarEmpresasToolStripMenuItem});
 			this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
 			this.consultarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
 			this.consultarToolStripMenuItem.Text = "Consultar";
@@ -252,7 +260,8 @@
             this.consumoMédioToolStripMenuItem,
             this.quilometragemRodadaToolStripMenuItem1,
             this.sinistrosToolStripMenuItem,
-            this.multasToolStripMenuItem});
+            this.multasToolStripMenuItem,
+            this.reservadToolStripMenuItem});
 			this.relatóriosToolStripMenuItem2.Name = "relatóriosToolStripMenuItem2";
 			this.relatóriosToolStripMenuItem2.Size = new System.Drawing.Size(71, 20);
 			this.relatóriosToolStripMenuItem2.Text = "Relatórios";
@@ -330,6 +339,47 @@
 			this.motoristaToolStripMenuItem.Text = "Motorista...";
 			this.motoristaToolStripMenuItem.Click += new System.EventHandler(this.motoristaToolStripMenuItem_Click);
 			// 
+			// reservadToolStripMenuItem
+			// 
+			this.reservadToolStripMenuItem.Name = "reservadToolStripMenuItem";
+			this.reservadToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+			this.reservadToolStripMenuItem.Text = "Reservas";
+			// 
+			// consultarEmpresasToolStripMenuItem
+			// 
+			this.consultarEmpresasToolStripMenuItem.Name = "consultarEmpresasToolStripMenuItem";
+			this.consultarEmpresasToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+			this.consultarEmpresasToolStripMenuItem.Text = "Consultar Empresas...";
+			this.consultarEmpresasToolStripMenuItem.Click += new System.EventHandler(this.consultarEmpresasToolStripMenuItem_Click);
+			// 
+			// manutençãoToolStripMenuItem
+			// 
+			this.manutençãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.emitirAlertaToolStripMenuItem,
+            this.registrarAlertaToolStripMenuItem,
+            this.visualizarProcessoToolStripMenuItem});
+			this.manutençãoToolStripMenuItem.Name = "manutençãoToolStripMenuItem";
+			this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+			this.manutençãoToolStripMenuItem.Text = "Manutenção";
+			// 
+			// emitirAlertaToolStripMenuItem
+			// 
+			this.emitirAlertaToolStripMenuItem.Name = "emitirAlertaToolStripMenuItem";
+			this.emitirAlertaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+			this.emitirAlertaToolStripMenuItem.Text = "Emitir Alerta...";
+			// 
+			// registrarAlertaToolStripMenuItem
+			// 
+			this.registrarAlertaToolStripMenuItem.Name = "registrarAlertaToolStripMenuItem";
+			this.registrarAlertaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+			this.registrarAlertaToolStripMenuItem.Text = "Registrar Alerta...";
+			// 
+			// visualizarProcessoToolStripMenuItem
+			// 
+			this.visualizarProcessoToolStripMenuItem.Name = "visualizarProcessoToolStripMenuItem";
+			this.visualizarProcessoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+			this.visualizarProcessoToolStripMenuItem.Text = "Visualizar Processo...";
+			// 
 			// FormPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +437,12 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 		private System.Windows.Forms.ToolStripMenuItem motoristaToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem viagensAtivasToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem consultarEmpresasToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem reservadToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem manutençãoToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem emitirAlertaToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem registrarAlertaToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem visualizarProcessoToolStripMenuItem;
 	}
 }
 

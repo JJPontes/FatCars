@@ -28,42 +28,42 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label4 = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.lblMonitoramento = new System.Windows.Forms.Label();
+			this.lblSelecione = new System.Windows.Forms.Label();
+			this.comboSelecao = new System.Windows.Forms.ComboBox();
 			this.webBrowser1 = new System.Windows.Forms.WebBrowser();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// label4
+			// lblMonitoramento
 			// 
-			this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(277, 16);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(273, 25);
-			this.label4.TabIndex = 9;
-			this.label4.Text = "Monitoramento de Veículos";
-			this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.lblMonitoramento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.lblMonitoramento.AutoSize = true;
+			this.lblMonitoramento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMonitoramento.Location = new System.Drawing.Point(277, 16);
+			this.lblMonitoramento.Name = "lblMonitoramento";
+			this.lblMonitoramento.Size = new System.Drawing.Size(273, 25);
+			this.lblMonitoramento.TabIndex = 9;
+			this.lblMonitoramento.Text = "Monitoramento de Veículos";
+			this.lblMonitoramento.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
-			// label1
+			// lblSelecione
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(25, 64);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(101, 13);
-			this.label1.TabIndex = 10;
-			this.label1.Text = "Selecione o Veiculo";
+			this.lblSelecione.AutoSize = true;
+			this.lblSelecione.Location = new System.Drawing.Point(25, 64);
+			this.lblSelecione.Name = "lblSelecione";
+			this.lblSelecione.Size = new System.Drawing.Size(101, 13);
+			this.lblSelecione.TabIndex = 10;
+			this.lblSelecione.Text = "Selecione o Veiculo";
 			// 
-			// comboBox1
+			// comboSelecao
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(151, 61);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 21);
-			this.comboBox1.TabIndex = 11;
+			this.comboSelecao.FormattingEnabled = true;
+			this.comboSelecao.Location = new System.Drawing.Point(151, 61);
+			this.comboSelecao.Name = "comboSelecao";
+			this.comboSelecao.Size = new System.Drawing.Size(121, 21);
+			this.comboSelecao.TabIndex = 11;
 			// 
 			// webBrowser1
 			// 
@@ -78,10 +78,10 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.label4);
+			this.groupBox1.Controls.Add(this.lblMonitoramento);
 			this.groupBox1.Controls.Add(this.webBrowser1);
-			this.groupBox1.Controls.Add(this.label1);
-			this.groupBox1.Controls.Add(this.comboBox1);
+			this.groupBox1.Controls.Add(this.lblSelecione);
+			this.groupBox1.Controls.Add(this.comboSelecao);
 			this.groupBox1.Location = new System.Drawing.Point(12, 12);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(776, 416);
@@ -107,9 +107,9 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.Label lblMonitoramento;
+		private System.Windows.Forms.Label lblSelecione;
+		private System.Windows.Forms.ComboBox comboSelecao;
 		private System.Windows.Forms.WebBrowser webBrowser1;
 		private System.Windows.Forms.GroupBox groupBox1;
 	}

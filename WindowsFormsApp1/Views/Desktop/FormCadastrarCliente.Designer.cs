@@ -69,6 +69,12 @@
 			this.groupCadastro = new System.Windows.Forms.GroupBox();
 			this.radioPj = new System.Windows.Forms.RadioButton();
 			this.radioPF = new System.Windows.Forms.RadioButton();
+			this.lblCNH = new System.Windows.Forms.Label();
+			this.txtCNH = new System.Windows.Forms.TextBox();
+			this.lblCategoria = new System.Windows.Forms.Label();
+			this.txtCategoria = new System.Windows.Forms.TextBox();
+			this.lblValidade = new System.Windows.Forms.Label();
+			this.maskedValidade = new System.Windows.Forms.MaskedTextBox();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.LayoutDados.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
@@ -200,7 +206,7 @@
 			// lblTelRes
 			// 
 			this.lblTelRes.AutoSize = true;
-			this.lblTelRes.Location = new System.Drawing.Point(3, 0);
+			this.lblTelRes.Location = new System.Drawing.Point(3, 78);
 			this.lblTelRes.Name = "lblTelRes";
 			this.lblTelRes.Size = new System.Drawing.Size(74, 13);
 			this.lblTelRes.TabIndex = 21;
@@ -209,7 +215,7 @@
 			// lblTelCom
 			// 
 			this.lblTelCom.AutoSize = true;
-			this.lblTelCom.Location = new System.Drawing.Point(3, 25);
+			this.lblTelCom.Location = new System.Drawing.Point(3, 118);
 			this.lblTelCom.Name = "lblTelCom";
 			this.lblTelCom.Size = new System.Drawing.Size(76, 13);
 			this.lblTelCom.TabIndex = 22;
@@ -218,7 +224,7 @@
 			// lblTelCel
 			// 
 			this.lblTelCel.AutoSize = true;
-			this.lblTelCel.Location = new System.Drawing.Point(3, 50);
+			this.lblTelCel.Location = new System.Drawing.Point(3, 158);
 			this.lblTelCel.Name = "lblTelCel";
 			this.lblTelCel.Size = new System.Drawing.Size(70, 13);
 			this.lblTelCel.TabIndex = 23;
@@ -262,12 +268,12 @@
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28574F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28574F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(437, 201);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(419, 201);
 			this.tableLayoutPanel1.TabIndex = 200;
 			// 
 			// txtCep
 			// 
-			this.txtCep.Location = new System.Drawing.Point(87, 3);
+			this.txtCep.Location = new System.Drawing.Point(84, 3);
 			this.txtCep.MaxLength = 9;
 			this.txtCep.Name = "txtCep";
 			this.txtCep.Size = new System.Drawing.Size(81, 20);
@@ -277,14 +283,14 @@
 			// 
 			// txtEstado
 			// 
-			this.txtEstado.Location = new System.Drawing.Point(87, 171);
+			this.txtEstado.Location = new System.Drawing.Point(84, 171);
 			this.txtEstado.Name = "txtEstado";
 			this.txtEstado.Size = new System.Drawing.Size(173, 20);
 			this.txtEstado.TabIndex = 95;
 			// 
 			// txtNumero
 			// 
-			this.txtNumero.Location = new System.Drawing.Point(87, 59);
+			this.txtNumero.Location = new System.Drawing.Point(84, 59);
 			this.txtNumero.MaxLength = 5;
 			this.txtNumero.Name = "txtNumero";
 			this.txtNumero.Size = new System.Drawing.Size(81, 20);
@@ -292,30 +298,30 @@
 			// 
 			// txtBairro
 			// 
-			this.txtBairro.Location = new System.Drawing.Point(87, 143);
+			this.txtBairro.Location = new System.Drawing.Point(84, 143);
 			this.txtBairro.Name = "txtBairro";
 			this.txtBairro.Size = new System.Drawing.Size(173, 20);
 			this.txtBairro.TabIndex = 96;
 			// 
 			// txtCidade
 			// 
-			this.txtCidade.Location = new System.Drawing.Point(87, 115);
+			this.txtCidade.Location = new System.Drawing.Point(84, 115);
 			this.txtCidade.Name = "txtCidade";
 			this.txtCidade.Size = new System.Drawing.Size(173, 20);
 			this.txtCidade.TabIndex = 97;
 			// 
 			// txtRua
 			// 
-			this.txtRua.Location = new System.Drawing.Point(87, 31);
+			this.txtRua.Location = new System.Drawing.Point(84, 31);
 			this.txtRua.Name = "txtRua";
-			this.txtRua.Size = new System.Drawing.Size(336, 20);
+			this.txtRua.Size = new System.Drawing.Size(332, 20);
 			this.txtRua.TabIndex = 99;
 			// 
 			// txtComplemento
 			// 
-			this.txtComplemento.Location = new System.Drawing.Point(87, 87);
+			this.txtComplemento.Location = new System.Drawing.Point(84, 87);
 			this.txtComplemento.Name = "txtComplemento";
-			this.txtComplemento.Size = new System.Drawing.Size(336, 20);
+			this.txtComplemento.Size = new System.Drawing.Size(332, 20);
 			this.txtComplemento.TabIndex = 98;
 			// 
 			// lblNumero
@@ -358,6 +364,7 @@
 			// txtNascimento
 			// 
 			this.txtNascimento.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+			this.txtNascimento.HidePromptOnLeave = true;
 			this.txtNascimento.Location = new System.Drawing.Point(536, 31);
 			this.txtNascimento.Mask = "00/00/0000";
 			this.txtNascimento.Name = "txtNascimento";
@@ -368,6 +375,7 @@
 			// txtCpf
 			// 
 			this.txtCpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+			this.txtCpf.HidePromptOnLeave = true;
 			this.txtCpf.Location = new System.Drawing.Point(536, 3);
 			this.txtCpf.Mask = "000.000.000-00";
 			this.txtCpf.Name = "txtCpf";
@@ -409,7 +417,7 @@
 			// txtTelRes
 			// 
 			this.txtTelRes.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-			this.txtTelRes.Location = new System.Drawing.Point(103, 3);
+			this.txtTelRes.Location = new System.Drawing.Point(113, 81);
 			this.txtTelRes.Mask = "(00) 0000-0000";
 			this.txtTelRes.Name = "txtTelRes";
 			this.txtTelRes.Size = new System.Drawing.Size(81, 20);
@@ -419,7 +427,7 @@
 			// txtTelCom
 			// 
 			this.txtTelCom.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-			this.txtTelCom.Location = new System.Drawing.Point(103, 28);
+			this.txtTelCom.Location = new System.Drawing.Point(113, 121);
 			this.txtTelCom.Mask = "(00) 0000-0000";
 			this.txtTelCom.Name = "txtTelCom";
 			this.txtTelCom.Size = new System.Drawing.Size(81, 20);
@@ -429,7 +437,7 @@
 			// txtTelCel
 			// 
 			this.txtTelCel.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-			this.txtTelCel.Location = new System.Drawing.Point(103, 53);
+			this.txtTelCel.Location = new System.Drawing.Point(113, 161);
 			this.txtTelCel.Mask = "(00) 00000-0000";
 			this.txtTelCel.Name = "txtTelCel";
 			this.txtTelCel.Size = new System.Drawing.Size(94, 20);
@@ -448,21 +456,30 @@
 			// tableLayoutPanel2
 			// 
 			this.tableLayoutPanel2.ColumnCount = 2;
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.Controls.Add(this.txtTelCom, 1, 1);
-			this.tableLayoutPanel2.Controls.Add(this.txtTelRes, 1, 0);
-			this.tableLayoutPanel2.Controls.Add(this.txtTelCel, 1, 2);
-			this.tableLayoutPanel2.Controls.Add(this.lblTelCel, 0, 2);
-			this.tableLayoutPanel2.Controls.Add(this.lblTelCom, 0, 1);
-			this.tableLayoutPanel2.Controls.Add(this.lblTelRes, 0, 0);
-			this.tableLayoutPanel2.Location = new System.Drawing.Point(446, 211);
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.47878F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.52122F));
+			this.tableLayoutPanel2.Controls.Add(this.maskedValidade, 1, 2);
+			this.tableLayoutPanel2.Controls.Add(this.lblValidade, 0, 2);
+			this.tableLayoutPanel2.Controls.Add(this.txtCategoria, 1, 1);
+			this.tableLayoutPanel2.Controls.Add(this.lblCategoria, 0, 1);
+			this.tableLayoutPanel2.Controls.Add(this.txtCNH, 1, 0);
+			this.tableLayoutPanel2.Controls.Add(this.lblCNH, 0, 0);
+			this.tableLayoutPanel2.Controls.Add(this.lblTelCel, 0, 5);
+			this.tableLayoutPanel2.Controls.Add(this.txtTelCel, 1, 5);
+			this.tableLayoutPanel2.Controls.Add(this.lblTelCom, 0, 4);
+			this.tableLayoutPanel2.Controls.Add(this.txtTelCom, 1, 4);
+			this.tableLayoutPanel2.Controls.Add(this.lblTelRes, 0, 3);
+			this.tableLayoutPanel2.Controls.Add(this.txtTelRes, 1, 3);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(428, 211);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-			this.tableLayoutPanel2.RowCount = 3;
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 77);
+			this.tableLayoutPanel2.RowCount = 6;
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(321, 201);
 			this.tableLayoutPanel2.TabIndex = 27;
 			// 
 			// groupCadastro
@@ -495,6 +512,7 @@
 			// radioPF
 			// 
 			this.radioPF.AutoSize = true;
+			this.radioPF.Checked = true;
 			this.radioPF.Location = new System.Drawing.Point(221, 77);
 			this.radioPF.Name = "radioPF";
 			this.radioPF.Size = new System.Drawing.Size(92, 17);
@@ -503,6 +521,58 @@
 			this.radioPF.Text = "Pessoa Física";
 			this.radioPF.UseVisualStyleBackColor = true;
 			this.radioPF.CheckedChanged += new System.EventHandler(this.RadioPF_CheckedChanged);
+			// 
+			// lblCNH
+			// 
+			this.lblCNH.AutoSize = true;
+			this.lblCNH.Location = new System.Drawing.Point(3, 0);
+			this.lblCNH.Name = "lblCNH";
+			this.lblCNH.Size = new System.Drawing.Size(88, 13);
+			this.lblCNH.TabIndex = 24;
+			this.lblCNH.Text = "Número da CNH:";
+			// 
+			// txtCNH
+			// 
+			this.txtCNH.Location = new System.Drawing.Point(113, 3);
+			this.txtCNH.Name = "txtCNH";
+			this.txtCNH.Size = new System.Drawing.Size(205, 20);
+			this.txtCNH.TabIndex = 25;
+			// 
+			// lblCategoria
+			// 
+			this.lblCategoria.AutoSize = true;
+			this.lblCategoria.Location = new System.Drawing.Point(3, 26);
+			this.lblCategoria.Name = "lblCategoria";
+			this.lblCategoria.Size = new System.Drawing.Size(55, 13);
+			this.lblCategoria.TabIndex = 204;
+			this.lblCategoria.Text = "Categoria:";
+			// 
+			// txtCategoria
+			// 
+			this.txtCategoria.Location = new System.Drawing.Point(113, 29);
+			this.txtCategoria.MaxLength = 2;
+			this.txtCategoria.Name = "txtCategoria";
+			this.txtCategoria.Size = new System.Drawing.Size(39, 20);
+			this.txtCategoria.TabIndex = 205;
+			// 
+			// lblValidade
+			// 
+			this.lblValidade.AutoSize = true;
+			this.lblValidade.Location = new System.Drawing.Point(3, 52);
+			this.lblValidade.Name = "lblValidade";
+			this.lblValidade.Size = new System.Drawing.Size(51, 13);
+			this.lblValidade.TabIndex = 204;
+			this.lblValidade.Text = "Validade:";
+			// 
+			// maskedValidade
+			// 
+			this.maskedValidade.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+			this.maskedValidade.HidePromptOnLeave = true;
+			this.maskedValidade.Location = new System.Drawing.Point(113, 55);
+			this.maskedValidade.Mask = "00/00";
+			this.maskedValidade.Name = "maskedValidade";
+			this.maskedValidade.Size = new System.Drawing.Size(45, 20);
+			this.maskedValidade.TabIndex = 204;
 			// 
 			// FormCadastrarCliente
 			// 
@@ -574,5 +644,11 @@
 		private System.Windows.Forms.RadioButton radioPj;
 		private System.Windows.Forms.RadioButton radioPF;
 		private System.Windows.Forms.TextBox txtRG;
+		private System.Windows.Forms.Label lblCNH;
+		private System.Windows.Forms.TextBox txtCNH;
+		private System.Windows.Forms.Label lblCategoria;
+		private System.Windows.Forms.TextBox txtCategoria;
+		private System.Windows.Forms.Label lblValidade;
+		private System.Windows.Forms.MaskedTextBox maskedValidade;
 	}
 }

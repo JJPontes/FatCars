@@ -16,5 +16,17 @@ namespace WindowsFormsApp1
 		{
 			InitializeComponent();
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormCadastrarClientePop formCadastrarClientePop = new Views.Desktop.FormCadastrarClientePop();
+			formCadastrarClientePop.Show();
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormCadastrarNovoVeiculoPop formCadastrarNovoVeiculoPop = new Views.Desktop.FormCadastrarNovoVeiculoPop();
+			formCadastrarNovoVeiculoPop.Show();
+		}
 	}
 }

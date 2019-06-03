@@ -28,199 +28,154 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.Btn_Salvar = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.TextAno = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
-			this.TextChassi = new System.Windows.Forms.TextBox();
-			this.label8 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.LayoutCadastro = new System.Windows.Forms.TableLayoutPanel();
-			this.comboBox2 = new System.Windows.Forms.ComboBox();
-			this.comboBox3 = new System.Windows.Forms.ComboBox();
+			this.btnSalvar = new System.Windows.Forms.Button();
+			this.lblCadastroDeVeiculos = new System.Windows.Forms.Label();
+			this.lblCor = new System.Windows.Forms.Label();
+			this.lblPlaca = new System.Windows.Forms.Label();
+			this.lblModelo = new System.Windows.Forms.Label();
+			this.lblFab = new System.Windows.Forms.Label();
+			this.lblMontadora = new System.Windows.Forms.Label();
+			this.lblChassi = new System.Windows.Forms.Label();
+			this.txtChassi = new System.Windows.Forms.TextBox();
+			this.lblAnoMod = new System.Windows.Forms.Label();
+			this.maskedTxtPlaca = new System.Windows.Forms.MaskedTextBox();
+			this.comboCores = new System.Windows.Forms.ComboBox();
+			this.comboMontadora = new System.Windows.Forms.ComboBox();
+			this.comboModelo = new System.Windows.Forms.ComboBox();
 			this.groupCadastro = new System.Windows.Forms.GroupBox();
+			this.lblOpcionais = new System.Windows.Forms.Label();
+			this.checkedOpcionais = new System.Windows.Forms.CheckedListBox();
+			this.txtRenavam = new System.Windows.Forms.TextBox();
 			this.lblRenavam = new System.Windows.Forms.Label();
-			this.LayoutCadastro.SuspendLayout();
+			this.label9 = new System.Windows.Forms.Label();
+			this.txtObservacoes = new System.Windows.Forms.RichTextBox();
+			this.lblPortas = new System.Windows.Forms.Label();
+			this.upDownPortas = new System.Windows.Forms.DomainUpDown();
+			this.txtAnoMod = new System.Windows.Forms.TextBox();
+			this.txtAnoFab = new System.Windows.Forms.TextBox();
 			this.groupCadastro.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// Btn_Salvar
+			// btnSalvar
 			// 
-			this.Btn_Salvar.Location = new System.Drawing.Point(107, 345);
-			this.Btn_Salvar.Name = "Btn_Salvar";
-			this.Btn_Salvar.Size = new System.Drawing.Size(105, 40);
-			this.Btn_Salvar.TabIndex = 8;
-			this.Btn_Salvar.Text = "Salvar";
-			this.Btn_Salvar.UseVisualStyleBackColor = true;
-			this.Btn_Salvar.Click += new System.EventHandler(this.button1_Click);
+			this.btnSalvar.Location = new System.Drawing.Point(441, 336);
+			this.btnSalvar.Name = "btnSalvar";
+			this.btnSalvar.Size = new System.Drawing.Size(105, 40);
+			this.btnSalvar.TabIndex = 8;
+			this.btnSalvar.Text = "Salvar";
+			this.btnSalvar.UseVisualStyleBackColor = true;
+			this.btnSalvar.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// label1
+			// lblCadastroDeVeiculos
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-			this.label1.Location = new System.Drawing.Point(51, 16);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(217, 25);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "Cadastro de Veículos";
-			this.label1.Click += new System.EventHandler(this.label1_Click);
+			this.lblCadastroDeVeiculos.AutoSize = true;
+			this.lblCadastroDeVeiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+			this.lblCadastroDeVeiculos.Location = new System.Drawing.Point(165, 16);
+			this.lblCadastroDeVeiculos.Name = "lblCadastroDeVeiculos";
+			this.lblCadastroDeVeiculos.Size = new System.Drawing.Size(217, 25);
+			this.lblCadastroDeVeiculos.TabIndex = 1;
+			this.lblCadastroDeVeiculos.Text = "Cadastro de Veículos";
+			this.lblCadastroDeVeiculos.Click += new System.EventHandler(this.label1_Click);
 			// 
-			// label2
+			// lblCor
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(3, 156);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(23, 13);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "Cor";
+			this.lblCor.AutoSize = true;
+			this.lblCor.Location = new System.Drawing.Point(231, 120);
+			this.lblCor.Name = "lblCor";
+			this.lblCor.Size = new System.Drawing.Size(23, 13);
+			this.lblCor.TabIndex = 2;
+			this.lblCor.Text = "Cor";
 			// 
-			// label3
+			// lblPlaca
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(3, 117);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(34, 13);
-			this.label3.TabIndex = 3;
-			this.label3.Text = "Placa";
+			this.lblPlaca.AutoSize = true;
+			this.lblPlaca.Location = new System.Drawing.Point(6, 297);
+			this.lblPlaca.Name = "lblPlaca";
+			this.lblPlaca.Size = new System.Drawing.Size(34, 13);
+			this.lblPlaca.TabIndex = 3;
+			this.lblPlaca.Text = "Placa";
 			// 
-			// label4
+			// lblModelo
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(3, 39);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(42, 13);
-			this.label4.TabIndex = 4;
-			this.label4.Text = "Modelo";
+			this.lblModelo.AutoSize = true;
+			this.lblModelo.Location = new System.Drawing.Point(180, 72);
+			this.lblModelo.Name = "lblModelo";
+			this.lblModelo.Size = new System.Drawing.Size(42, 13);
+			this.lblModelo.TabIndex = 4;
+			this.lblModelo.Text = "Modelo";
 			// 
-			// label5
+			// lblFab
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(3, 195);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(47, 13);
-			this.label5.TabIndex = 5;
-			this.label5.Text = "Ano Fab";
+			this.lblFab.AutoSize = true;
+			this.lblFab.Location = new System.Drawing.Point(3, 122);
+			this.lblFab.Name = "lblFab";
+			this.lblFab.Size = new System.Drawing.Size(47, 13);
+			this.lblFab.TabIndex = 5;
+			this.lblFab.Text = "Ano Fab";
 			// 
-			// TextAno
+			// lblMontadora
 			// 
-			this.TextAno.Location = new System.Drawing.Point(72, 198);
-			this.TextAno.MaxLength = 4;
-			this.TextAno.Name = "TextAno";
-			this.TextAno.Size = new System.Drawing.Size(67, 20);
-			this.TextAno.TabIndex = 6;
+			this.lblMontadora.AutoSize = true;
+			this.lblMontadora.Location = new System.Drawing.Point(6, 72);
+			this.lblMontadora.Name = "lblMontadora";
+			this.lblMontadora.Size = new System.Drawing.Size(58, 13);
+			this.lblMontadora.TabIndex = 10;
+			this.lblMontadora.Text = "Montadora";
 			// 
-			// label6
+			// lblChassi
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(3, 0);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(58, 13);
-			this.label6.TabIndex = 10;
-			this.label6.Text = "Montadora";
+			this.lblChassi.AutoSize = true;
+			this.lblChassi.Location = new System.Drawing.Point(180, 297);
+			this.lblChassi.Name = "lblChassi";
+			this.lblChassi.Size = new System.Drawing.Size(38, 13);
+			this.lblChassi.TabIndex = 12;
+			this.lblChassi.Text = "Chassi";
+			this.lblChassi.Click += new System.EventHandler(this.label7_Click);
 			// 
-			// label7
+			// txtChassi
 			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(3, 78);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(38, 13);
-			this.label7.TabIndex = 12;
-			this.label7.Text = "Chassi";
-			this.label7.Click += new System.EventHandler(this.label7_Click);
+			this.txtChassi.Location = new System.Drawing.Point(183, 313);
+			this.txtChassi.MaxLength = 15;
+			this.txtChassi.Name = "txtChassi";
+			this.txtChassi.Size = new System.Drawing.Size(188, 20);
+			this.txtChassi.TabIndex = 3;
 			// 
-			// TextChassi
+			// lblAnoMod
 			// 
-			this.TextChassi.Location = new System.Drawing.Point(72, 81);
-			this.TextChassi.MaxLength = 15;
-			this.TextChassi.Name = "TextChassi";
-			this.TextChassi.Size = new System.Drawing.Size(213, 20);
-			this.TextChassi.TabIndex = 3;
+			this.lblAnoMod.AutoSize = true;
+			this.lblAnoMod.Location = new System.Drawing.Point(78, 122);
+			this.lblAnoMod.Name = "lblAnoMod";
+			this.lblAnoMod.Size = new System.Drawing.Size(50, 13);
+			this.lblAnoMod.TabIndex = 14;
+			this.lblAnoMod.Text = "Ano Mod";
 			// 
-			// label8
+			// maskedTxtPlaca
 			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(3, 234);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(50, 13);
-			this.label8.TabIndex = 14;
-			this.label8.Text = "Ano Mod";
+			this.maskedTxtPlaca.Location = new System.Drawing.Point(6, 313);
+			this.maskedTxtPlaca.Mask = "???-0000";
+			this.maskedTxtPlaca.Name = "maskedTxtPlaca";
+			this.maskedTxtPlaca.Size = new System.Drawing.Size(55, 20);
+			this.maskedTxtPlaca.TabIndex = 4;
 			// 
-			// textBox1
+			// comboCores
 			// 
-			this.textBox1.Location = new System.Drawing.Point(72, 237);
-			this.textBox1.MaxLength = 4;
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(67, 20);
-			this.textBox1.TabIndex = 7;
-			// 
-			// maskedTextBox1
-			// 
-			this.maskedTextBox1.Location = new System.Drawing.Point(72, 120);
-			this.maskedTextBox1.Mask = "???-0000";
-			this.maskedTextBox1.Name = "maskedTextBox1";
-			this.maskedTextBox1.Size = new System.Drawing.Size(55, 20);
-			this.maskedTextBox1.TabIndex = 4;
-			// 
-			// comboBox1
-			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Items.AddRange(new object[] {
+			this.comboCores.FormattingEnabled = true;
+			this.comboCores.Items.AddRange(new object[] {
             "PRETO",
             "BRANCO",
             "VERMELHO",
             "VERDE",
             "AZUL"});
-			this.comboBox1.Location = new System.Drawing.Point(72, 159);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(92, 21);
-			this.comboBox1.TabIndex = 5;
-			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+			this.comboCores.Location = new System.Drawing.Point(234, 136);
+			this.comboCores.Name = "comboCores";
+			this.comboCores.Size = new System.Drawing.Size(92, 21);
+			this.comboCores.TabIndex = 5;
+			this.comboCores.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
-			// LayoutCadastro
+			// comboMontadora
 			// 
-			this.LayoutCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.LayoutCadastro.ColumnCount = 2;
-			this.LayoutCadastro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.47719F));
-			this.LayoutCadastro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.5228F));
-			this.LayoutCadastro.Controls.Add(this.comboBox2, 1, 0);
-			this.LayoutCadastro.Controls.Add(this.label6, 0, 0);
-			this.LayoutCadastro.Controls.Add(this.textBox1, 1, 6);
-			this.LayoutCadastro.Controls.Add(this.comboBox1, 1, 4);
-			this.LayoutCadastro.Controls.Add(this.TextAno, 1, 5);
-			this.LayoutCadastro.Controls.Add(this.label4, 0, 1);
-			this.LayoutCadastro.Controls.Add(this.maskedTextBox1, 1, 3);
-			this.LayoutCadastro.Controls.Add(this.label7, 0, 2);
-			this.LayoutCadastro.Controls.Add(this.label3, 0, 3);
-			this.LayoutCadastro.Controls.Add(this.TextChassi, 1, 2);
-			this.LayoutCadastro.Controls.Add(this.label8, 0, 6);
-			this.LayoutCadastro.Controls.Add(this.label2, 0, 4);
-			this.LayoutCadastro.Controls.Add(this.label5, 0, 5);
-			this.LayoutCadastro.Controls.Add(this.comboBox3, 1, 1);
-			this.LayoutCadastro.Location = new System.Drawing.Point(6, 57);
-			this.LayoutCadastro.Name = "LayoutCadastro";
-			this.LayoutCadastro.RowCount = 7;
-			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-			this.LayoutCadastro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.LayoutCadastro.Size = new System.Drawing.Size(294, 274);
-			this.LayoutCadastro.TabIndex = 15;
-			// 
-			// comboBox2
-			// 
-			this.comboBox2.FormattingEnabled = true;
-			this.comboBox2.Items.AddRange(new object[] {
+			this.comboMontadora.FormattingEnabled = true;
+			this.comboMontadora.Items.AddRange(new object[] {
             "Audi",
             "Bentley",
             "BMW",
@@ -256,40 +211,148 @@
             "Toyota",
             "Volkswagen",
             "Volvo"});
-			this.comboBox2.Location = new System.Drawing.Point(72, 3);
-			this.comboBox2.Name = "comboBox2";
-			this.comboBox2.Size = new System.Drawing.Size(152, 21);
-			this.comboBox2.Sorted = true;
-			this.comboBox2.TabIndex = 1;
-			this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+			this.comboMontadora.Location = new System.Drawing.Point(6, 88);
+			this.comboMontadora.Name = "comboMontadora";
+			this.comboMontadora.Size = new System.Drawing.Size(161, 21);
+			this.comboMontadora.Sorted = true;
+			this.comboMontadora.TabIndex = 1;
+			this.comboMontadora.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
 			// 
-			// comboBox3
+			// comboModelo
 			// 
-			this.comboBox3.FormattingEnabled = true;
-			this.comboBox3.Location = new System.Drawing.Point(72, 42);
-			this.comboBox3.Name = "comboBox3";
-			this.comboBox3.Size = new System.Drawing.Size(213, 21);
-			this.comboBox3.TabIndex = 15;
+			this.comboModelo.FormattingEnabled = true;
+			this.comboModelo.Location = new System.Drawing.Point(180, 88);
+			this.comboModelo.Name = "comboModelo";
+			this.comboModelo.Size = new System.Drawing.Size(146, 21);
+			this.comboModelo.TabIndex = 15;
 			// 
 			// groupCadastro
 			// 
-			this.groupCadastro.Controls.Add(this.label1);
-			this.groupCadastro.Controls.Add(this.Btn_Salvar);
-			this.groupCadastro.Controls.Add(this.LayoutCadastro);
-			this.groupCadastro.Location = new System.Drawing.Point(266, 57);
+			this.groupCadastro.Controls.Add(this.txtAnoFab);
+			this.groupCadastro.Controls.Add(this.txtAnoMod);
+			this.groupCadastro.Controls.Add(this.upDownPortas);
+			this.groupCadastro.Controls.Add(this.lblOpcionais);
+			this.groupCadastro.Controls.Add(this.lblCadastroDeVeiculos);
+			this.groupCadastro.Controls.Add(this.checkedOpcionais);
+			this.groupCadastro.Controls.Add(this.txtRenavam);
+			this.groupCadastro.Controls.Add(this.lblRenavam);
+			this.groupCadastro.Controls.Add(this.label9);
+			this.groupCadastro.Controls.Add(this.txtObservacoes);
+			this.groupCadastro.Controls.Add(this.lblPortas);
+			this.groupCadastro.Controls.Add(this.comboMontadora);
+			this.groupCadastro.Controls.Add(this.comboCores);
+			this.groupCadastro.Controls.Add(this.lblAnoMod);
+			this.groupCadastro.Controls.Add(this.lblFab);
+			this.groupCadastro.Controls.Add(this.lblMontadora);
+			this.groupCadastro.Controls.Add(this.maskedTxtPlaca);
+			this.groupCadastro.Controls.Add(this.lblCor);
+			this.groupCadastro.Controls.Add(this.lblModelo);
+			this.groupCadastro.Controls.Add(this.lblPlaca);
+			this.groupCadastro.Controls.Add(this.lblChassi);
+			this.groupCadastro.Controls.Add(this.txtChassi);
+			this.groupCadastro.Controls.Add(this.btnSalvar);
+			this.groupCadastro.Controls.Add(this.comboModelo);
+			this.groupCadastro.Location = new System.Drawing.Point(43, 57);
 			this.groupCadastro.Name = "groupCadastro";
-			this.groupCadastro.Size = new System.Drawing.Size(309, 391);
+			this.groupCadastro.Size = new System.Drawing.Size(569, 391);
 			this.groupCadastro.TabIndex = 16;
 			this.groupCadastro.TabStop = false;
+			// 
+			// lblOpcionais
+			// 
+			this.lblOpcionais.AutoSize = true;
+			this.lblOpcionais.Location = new System.Drawing.Point(416, 72);
+			this.lblOpcionais.Name = "lblOpcionais";
+			this.lblOpcionais.Size = new System.Drawing.Size(54, 13);
+			this.lblOpcionais.TabIndex = 23;
+			this.lblOpcionais.Text = "Opcionais";
+			// 
+			// checkedOpcionais
+			// 
+			this.checkedOpcionais.FormattingEnabled = true;
+			this.checkedOpcionais.Items.AddRange(new object[] {
+            "Ar Condicionado",
+            "Direção Hidráulica",
+            "Vidro Elétrico",
+            "Air Bag",
+            "Freios ABS"});
+			this.checkedOpcionais.Location = new System.Drawing.Point(416, 91);
+			this.checkedOpcionais.Name = "checkedOpcionais";
+			this.checkedOpcionais.Size = new System.Drawing.Size(141, 79);
+			this.checkedOpcionais.TabIndex = 22;
+			// 
+			// txtRenavam
+			// 
+			this.txtRenavam.Location = new System.Drawing.Point(67, 313);
+			this.txtRenavam.Name = "txtRenavam";
+			this.txtRenavam.Size = new System.Drawing.Size(100, 20);
+			this.txtRenavam.TabIndex = 21;
 			// 
 			// lblRenavam
 			// 
 			this.lblRenavam.AutoSize = true;
-			this.lblRenavam.Location = new System.Drawing.Point(76, 117);
+			this.lblRenavam.Location = new System.Drawing.Point(70, 297);
 			this.lblRenavam.Name = "lblRenavam";
 			this.lblRenavam.Size = new System.Drawing.Size(53, 13);
 			this.lblRenavam.TabIndex = 17;
 			this.lblRenavam.Text = "Renavam";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(6, 174);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(80, 13);
+			this.label9.TabIndex = 20;
+			this.label9.Text = "lblObservacoes";
+			// 
+			// txtObservacoes
+			// 
+			this.txtObservacoes.Location = new System.Drawing.Point(6, 193);
+			this.txtObservacoes.MaxLength = 250;
+			this.txtObservacoes.Name = "txtObservacoes";
+			this.txtObservacoes.Size = new System.Drawing.Size(320, 96);
+			this.txtObservacoes.TabIndex = 19;
+			this.txtObservacoes.Text = "Observações...";
+			// 
+			// lblPortas
+			// 
+			this.lblPortas.AutoSize = true;
+			this.lblPortas.Location = new System.Drawing.Point(177, 120);
+			this.lblPortas.Name = "lblPortas";
+			this.lblPortas.Size = new System.Drawing.Size(37, 13);
+			this.lblPortas.TabIndex = 16;
+			this.lblPortas.Text = "Portas";
+			// 
+			// upDownPortas
+			// 
+			this.upDownPortas.Items.Add("2");
+			this.upDownPortas.Items.Add("3");
+			this.upDownPortas.Items.Add("4");
+			this.upDownPortas.Items.Add("5");
+			this.upDownPortas.Items.Add("6");
+			this.upDownPortas.Items.Add("7");
+			this.upDownPortas.Items.Add("8");
+			this.upDownPortas.Location = new System.Drawing.Point(180, 138);
+			this.upDownPortas.Name = "upDownPortas";
+			this.upDownPortas.ReadOnly = true;
+			this.upDownPortas.Size = new System.Drawing.Size(42, 20);
+			this.upDownPortas.Sorted = true;
+			this.upDownPortas.TabIndex = 26;
+			// 
+			// txtAnoMod
+			// 
+			this.txtAnoMod.Location = new System.Drawing.Point(81, 138);
+			this.txtAnoMod.Name = "txtAnoMod";
+			this.txtAnoMod.Size = new System.Drawing.Size(69, 20);
+			this.txtAnoMod.TabIndex = 27;
+			// 
+			// txtAnoFab
+			// 
+			this.txtAnoFab.Location = new System.Drawing.Point(6, 138);
+			this.txtAnoFab.Name = "txtAnoFab";
+			this.txtAnoFab.Size = new System.Drawing.Size(69, 20);
+			this.txtAnoFab.TabIndex = 28;
 			// 
 			// FormCadastrarNovoVeiculo
 			// 
@@ -297,7 +360,6 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 561);
 			this.ControlBox = false;
-			this.Controls.Add(this.lblRenavam);
 			this.Controls.Add(this.groupCadastro);
 			this.Name = "FormCadastrarNovoVeiculo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
@@ -305,35 +367,38 @@
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.FormCadastrarNovoVeiculo_Load);
 			this.Resize += new System.EventHandler(this.FormCadastrarNovoVeiculo_Resize);
-			this.LayoutCadastro.ResumeLayout(false);
-			this.LayoutCadastro.PerformLayout();
 			this.groupCadastro.ResumeLayout(false);
 			this.groupCadastro.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.Button Btn_Salvar;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox TextAno;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.TextBox TextChassi;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.TableLayoutPanel LayoutCadastro;
+		private System.Windows.Forms.Button btnSalvar;
+		private System.Windows.Forms.Label lblCadastroDeVeiculos;
+		private System.Windows.Forms.Label lblCor;
+		private System.Windows.Forms.Label lblPlaca;
+		private System.Windows.Forms.Label lblModelo;
+		private System.Windows.Forms.Label lblFab;
+		private System.Windows.Forms.Label lblMontadora;
+		private System.Windows.Forms.Label lblChassi;
+		private System.Windows.Forms.TextBox txtChassi;
+		private System.Windows.Forms.Label lblAnoMod;
+		private System.Windows.Forms.MaskedTextBox maskedTxtPlaca;
+		private System.Windows.Forms.ComboBox comboCores;
 		private System.Windows.Forms.GroupBox groupCadastro;
-		private System.Windows.Forms.ComboBox comboBox2;
-		private System.Windows.Forms.ComboBox comboBox3;
+		private System.Windows.Forms.ComboBox comboMontadora;
+		private System.Windows.Forms.ComboBox comboModelo;
 		private System.Windows.Forms.Label lblRenavam;
+		private System.Windows.Forms.TextBox txtRenavam;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.RichTextBox txtObservacoes;
+		private System.Windows.Forms.Label lblPortas;
+		private System.Windows.Forms.Label lblOpcionais;
+		private System.Windows.Forms.CheckedListBox checkedOpcionais;
+		private System.Windows.Forms.DomainUpDown upDownPortas;
+		private System.Windows.Forms.TextBox txtAnoFab;
+		private System.Windows.Forms.TextBox txtAnoMod;
 	}
 }

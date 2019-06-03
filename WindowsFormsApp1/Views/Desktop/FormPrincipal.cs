@@ -97,9 +97,6 @@ namespace WindowsFormsApp1
 
 		private void cadastrarNovoVeículoToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			//FormCadastrarNovoVeiculo cadastro = new FormCadastrarNovoVeiculo();
-			//cadastro.Show();
-
 			FormCadastrarNovoVeiculo cadastrarNovoVeiculo = new FormCadastrarNovoVeiculo();
 			cadastrarNovoVeiculo.MdiParent = this;
 			cadastrarNovoVeiculo.Show();
@@ -115,9 +112,11 @@ namespace WindowsFormsApp1
 
 		private void editarExcluirUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+			/*
 			FormEditarUsuario editarUsuario = new FormEditarUsuario();
 			editarUsuario.MdiParent = this;
 			editarUsuario.Show();
+			*/
 		}
 
 		private void editarExcluirVeículosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -214,6 +213,13 @@ namespace WindowsFormsApp1
 		}
 
 		private void motoristaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormCadastrarMotorista formCadastrarMotorista = new Views.Desktop.FormCadastrarMotorista();
+			formCadastrarMotorista.MdiParent = this;
+			formCadastrarMotorista.Show();
+		}
+
+		private void consultarEmpresasToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 
 		}

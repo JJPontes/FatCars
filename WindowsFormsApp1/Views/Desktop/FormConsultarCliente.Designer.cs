@@ -29,10 +29,10 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
+			this.lblConsultarClientes = new System.Windows.Forms.Label();
+			this.lblFiltro = new System.Windows.Forms.Label();
+			this.txtPesquisa = new System.Windows.Forms.TextBox();
+			this.btnPesquisar = new System.Windows.Forms.Button();
 			this.ComboFiltro = new System.Windows.Forms.ComboBox();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +42,7 @@
 			this.tBClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.pIM1DataSet = new WindowsFormsApp1.PIM1DataSet();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.button2 = new System.Windows.Forms.Button();
+			this.btnEditar = new System.Windows.Forms.Button();
 			this.tB_ClienteTableAdapter = new WindowsFormsApp1.PIM1DataSetTableAdapters.TB_ClienteTableAdapter();
 			this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
 			this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -53,42 +53,42 @@
 			this.fillByToolStrip.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lblConsultarClientes
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-			this.label1.Location = new System.Drawing.Point(284, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(188, 25);
-			this.label1.TabIndex = 2;
-			this.label1.Text = "Consultar Clientes";
+			this.lblConsultarClientes.AutoSize = true;
+			this.lblConsultarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+			this.lblConsultarClientes.Location = new System.Drawing.Point(284, 0);
+			this.lblConsultarClientes.Name = "lblConsultarClientes";
+			this.lblConsultarClientes.Size = new System.Drawing.Size(188, 25);
+			this.lblConsultarClientes.TabIndex = 2;
+			this.lblConsultarClientes.Text = "Consultar Clientes";
 			// 
-			// label2
+			// lblFiltro
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			this.label2.Location = new System.Drawing.Point(3, 45);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(44, 20);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "Filtro";
+			this.lblFiltro.AutoSize = true;
+			this.lblFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+			this.lblFiltro.Location = new System.Drawing.Point(3, 45);
+			this.lblFiltro.Name = "lblFiltro";
+			this.lblFiltro.Size = new System.Drawing.Size(44, 20);
+			this.lblFiltro.TabIndex = 3;
+			this.lblFiltro.Text = "Filtro";
 			// 
-			// textBox1
+			// txtPesquisa
 			// 
-			this.textBox1.Location = new System.Drawing.Point(284, 48);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(180, 20);
-			this.textBox1.TabIndex = 4;
+			this.txtPesquisa.Location = new System.Drawing.Point(284, 48);
+			this.txtPesquisa.Name = "txtPesquisa";
+			this.txtPesquisa.Size = new System.Drawing.Size(180, 20);
+			this.txtPesquisa.TabIndex = 4;
 			// 
-			// button1
+			// btnPesquisar
 			// 
-			this.button1.Location = new System.Drawing.Point(478, 48);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 5;
-			this.button1.Text = "Pesquisar...";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.btnPesquisar.Location = new System.Drawing.Point(478, 48);
+			this.btnPesquisar.Name = "btnPesquisar";
+			this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+			this.btnPesquisar.TabIndex = 5;
+			this.btnPesquisar.Text = "Pesquisar...";
+			this.btnPesquisar.UseVisualStyleBackColor = true;
+			this.btnPesquisar.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// ComboFiltro
 			// 
@@ -170,12 +170,12 @@
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.59136F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.84715F));
-			this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
+			this.tableLayoutPanel1.Controls.Add(this.lblConsultarClientes, 2, 0);
 			this.tableLayoutPanel1.Controls.Add(this.ComboFiltro, 1, 2);
-			this.tableLayoutPanel1.Controls.Add(this.textBox1, 2, 2);
-			this.tableLayoutPanel1.Controls.Add(this.button1, 3, 2);
-			this.tableLayoutPanel1.Controls.Add(this.button2, 3, 3);
-			this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
+			this.tableLayoutPanel1.Controls.Add(this.txtPesquisa, 2, 2);
+			this.tableLayoutPanel1.Controls.Add(this.btnPesquisar, 3, 2);
+			this.tableLayoutPanel1.Controls.Add(this.btnEditar, 3, 3);
+			this.tableLayoutPanel1.Controls.Add(this.lblFiltro, 0, 2);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -187,14 +187,14 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 107);
 			this.tableLayoutPanel1.TabIndex = 8;
 			// 
-			// button2
+			// btnEditar
 			// 
-			this.button2.Location = new System.Drawing.Point(478, 77);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 7;
-			this.button2.Text = "Editar...";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnEditar.Location = new System.Drawing.Point(478, 77);
+			this.btnEditar.Name = "btnEditar";
+			this.btnEditar.Size = new System.Drawing.Size(75, 23);
+			this.btnEditar.TabIndex = 7;
+			this.btnEditar.Text = "Editar...";
+			this.btnEditar.UseVisualStyleBackColor = true;
 			// 
 			// tB_ClienteTableAdapter
 			// 
@@ -204,9 +204,9 @@
 			// 
 			this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fillByToolStripButton});
-			this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+			this.fillByToolStrip.Location = new System.Drawing.Point(0, 107);
 			this.fillByToolStrip.Name = "fillByToolStrip";
-			this.fillByToolStrip.Size = new System.Drawing.Size(111, 25);
+			this.fillByToolStrip.Size = new System.Drawing.Size(800, 25);
 			this.fillByToolStrip.TabIndex = 9;
 			this.fillByToolStrip.Text = "fillByToolStrip";
 			// 
@@ -247,14 +247,14 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label lblConsultarClientes;
+		private System.Windows.Forms.Label lblFiltro;
+		private System.Windows.Forms.TextBox txtPesquisa;
+		private System.Windows.Forms.Button btnPesquisar;
 		private System.Windows.Forms.ComboBox ComboFiltro;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btnEditar;
 		private PIM1DataSet pIM1DataSet;
 		private System.Windows.Forms.BindingSource tBClienteBindingSource;
 		private PIM1DataSetTableAdapters.TB_ClienteTableAdapter tB_ClienteTableAdapter;
