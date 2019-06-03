@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.groupCadastro = new System.Windows.Forms.GroupBox();
 			this.radioPj = new System.Windows.Forms.RadioButton();
 			this.radioPF = new System.Windows.Forms.RadioButton();
 			this.LayoutDados = new System.Windows.Forms.TableLayoutPanel();
@@ -44,12 +45,18 @@
 			this.txtEmail = new System.Windows.Forms.TextBox();
 			this.txtRG = new System.Windows.Forms.TextBox();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-			this.txtTelCom = new System.Windows.Forms.MaskedTextBox();
-			this.txtTelRes = new System.Windows.Forms.MaskedTextBox();
-			this.txtTelCel = new System.Windows.Forms.MaskedTextBox();
+			this.maskedValidade = new System.Windows.Forms.MaskedTextBox();
+			this.lblValidade = new System.Windows.Forms.Label();
+			this.txtCategoria = new System.Windows.Forms.TextBox();
+			this.lblCategoria = new System.Windows.Forms.Label();
+			this.txtCNH = new System.Windows.Forms.TextBox();
+			this.lblCNH = new System.Windows.Forms.Label();
 			this.lblTelCel = new System.Windows.Forms.Label();
+			this.txtTelCel = new System.Windows.Forms.MaskedTextBox();
 			this.lblTelCom = new System.Windows.Forms.Label();
+			this.txtTelCom = new System.Windows.Forms.MaskedTextBox();
 			this.lblTelRes = new System.Windows.Forms.Label();
+			this.txtTelRes = new System.Windows.Forms.MaskedTextBox();
 			this.lblCadastrarCliente = new System.Windows.Forms.Label();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.txtCep = new System.Windows.Forms.TextBox();
@@ -67,33 +74,51 @@
 			this.lblCidade = new System.Windows.Forms.Label();
 			this.lblNumero = new System.Windows.Forms.Label();
 			this.btnSalvar = new System.Windows.Forms.Button();
+			this.label17 = new System.Windows.Forms.Label();
+			this.groupCadastro.SuspendLayout();
 			this.LayoutDados.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
+			// groupCadastro
+			// 
+			this.groupCadastro.Controls.Add(this.radioPj);
+			this.groupCadastro.Controls.Add(this.radioPF);
+			this.groupCadastro.Controls.Add(this.LayoutDados);
+			this.groupCadastro.Controls.Add(this.tableLayoutPanel2);
+			this.groupCadastro.Controls.Add(this.lblCadastrarCliente);
+			this.groupCadastro.Controls.Add(this.tableLayoutPanel1);
+			this.groupCadastro.Controls.Add(this.btnSalvar);
+			this.groupCadastro.Location = new System.Drawing.Point(27, -1);
+			this.groupCadastro.Name = "groupCadastro";
+			this.groupCadastro.Size = new System.Drawing.Size(755, 466);
+			this.groupCadastro.TabIndex = 30;
+			this.groupCadastro.TabStop = false;
+			// 
 			// radioPj
 			// 
 			this.radioPj.AutoSize = true;
-			this.radioPj.Location = new System.Drawing.Point(459, 64);
+			this.radioPj.Location = new System.Drawing.Point(436, 77);
 			this.radioPj.Name = "radioPj";
 			this.radioPj.Size = new System.Drawing.Size(101, 17);
-			this.radioPj.TabIndex = 210;
-			this.radioPj.TabStop = true;
+			this.radioPj.TabIndex = 203;
 			this.radioPj.Text = "Pessoa Jurídica";
 			this.radioPj.UseVisualStyleBackColor = true;
-			this.radioPj.CheckedChanged += new System.EventHandler(this.radioPj_CheckedChanged);
+			this.radioPj.CheckedChanged += new System.EventHandler(this.radioPj_CheckedChanged_1);
 			// 
 			// radioPF
 			// 
 			this.radioPF.AutoSize = true;
-			this.radioPF.Location = new System.Drawing.Point(244, 64);
+			this.radioPF.Checked = true;
+			this.radioPF.Location = new System.Drawing.Point(221, 77);
 			this.radioPF.Name = "radioPF";
 			this.radioPF.Size = new System.Drawing.Size(92, 17);
-			this.radioPF.TabIndex = 209;
+			this.radioPF.TabIndex = 202;
 			this.radioPF.TabStop = true;
 			this.radioPF.Text = "Pessoa Física";
 			this.radioPF.UseVisualStyleBackColor = true;
+			this.radioPF.CheckedChanged += new System.EventHandler(this.radioPF_CheckedChanged);
 			// 
 			// LayoutDados
 			// 
@@ -114,18 +139,19 @@
 			this.LayoutDados.Controls.Add(this.txtProfissao, 3, 2);
 			this.LayoutDados.Controls.Add(this.txtEmail, 1, 1);
 			this.LayoutDados.Controls.Add(this.txtRG, 1, 2);
-			this.LayoutDados.Location = new System.Drawing.Point(29, 106);
+			this.LayoutDados.Location = new System.Drawing.Point(6, 119);
 			this.LayoutDados.Name = "LayoutDados";
 			this.LayoutDados.RowCount = 3;
 			this.LayoutDados.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
 			this.LayoutDados.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
 			this.LayoutDados.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
 			this.LayoutDados.Size = new System.Drawing.Size(743, 86);
-			this.LayoutDados.TabIndex = 206;
+			this.LayoutDados.TabIndex = 26;
 			// 
 			// txtNascimento
 			// 
 			this.txtNascimento.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+			this.txtNascimento.HidePromptOnLeave = true;
 			this.txtNascimento.Location = new System.Drawing.Point(536, 31);
 			this.txtNascimento.Mask = "00/00/0000";
 			this.txtNascimento.Name = "txtNascimento";
@@ -136,6 +162,7 @@
 			// txtCpf
 			// 
 			this.txtCpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+			this.txtCpf.HidePromptOnLeave = true;
 			this.txtCpf.Location = new System.Drawing.Point(536, 3);
 			this.txtCpf.Mask = "000.000.000-00";
 			this.txtCpf.Name = "txtCpf";
@@ -229,88 +256,149 @@
 			// tableLayoutPanel2
 			// 
 			this.tableLayoutPanel2.ColumnCount = 2;
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.Controls.Add(this.txtTelCom, 1, 1);
-			this.tableLayoutPanel2.Controls.Add(this.txtTelRes, 1, 0);
-			this.tableLayoutPanel2.Controls.Add(this.txtTelCel, 1, 2);
-			this.tableLayoutPanel2.Controls.Add(this.lblTelCel, 0, 2);
-			this.tableLayoutPanel2.Controls.Add(this.lblTelCom, 0, 1);
-			this.tableLayoutPanel2.Controls.Add(this.lblTelRes, 0, 0);
-			this.tableLayoutPanel2.Location = new System.Drawing.Point(469, 198);
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.47878F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.52122F));
+			this.tableLayoutPanel2.Controls.Add(this.maskedValidade, 1, 2);
+			this.tableLayoutPanel2.Controls.Add(this.lblValidade, 0, 2);
+			this.tableLayoutPanel2.Controls.Add(this.txtCategoria, 1, 1);
+			this.tableLayoutPanel2.Controls.Add(this.lblCategoria, 0, 1);
+			this.tableLayoutPanel2.Controls.Add(this.txtCNH, 1, 0);
+			this.tableLayoutPanel2.Controls.Add(this.lblCNH, 0, 0);
+			this.tableLayoutPanel2.Controls.Add(this.lblTelCel, 0, 5);
+			this.tableLayoutPanel2.Controls.Add(this.txtTelCel, 1, 5);
+			this.tableLayoutPanel2.Controls.Add(this.lblTelCom, 0, 4);
+			this.tableLayoutPanel2.Controls.Add(this.txtTelCom, 1, 4);
+			this.tableLayoutPanel2.Controls.Add(this.lblTelRes, 0, 3);
+			this.tableLayoutPanel2.Controls.Add(this.txtTelRes, 1, 3);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(428, 211);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-			this.tableLayoutPanel2.RowCount = 3;
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 77);
-			this.tableLayoutPanel2.TabIndex = 207;
+			this.tableLayoutPanel2.RowCount = 6;
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(321, 201);
+			this.tableLayoutPanel2.TabIndex = 27;
+			// 
+			// maskedValidade
+			// 
+			this.maskedValidade.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+			this.maskedValidade.HidePromptOnLeave = true;
+			this.maskedValidade.Location = new System.Drawing.Point(113, 55);
+			this.maskedValidade.Mask = "00/00";
+			this.maskedValidade.Name = "maskedValidade";
+			this.maskedValidade.Size = new System.Drawing.Size(45, 20);
+			this.maskedValidade.TabIndex = 204;
+			// 
+			// lblValidade
+			// 
+			this.lblValidade.AutoSize = true;
+			this.lblValidade.Location = new System.Drawing.Point(3, 52);
+			this.lblValidade.Name = "lblValidade";
+			this.lblValidade.Size = new System.Drawing.Size(51, 13);
+			this.lblValidade.TabIndex = 204;
+			this.lblValidade.Text = "Validade:";
+			// 
+			// txtCategoria
+			// 
+			this.txtCategoria.Location = new System.Drawing.Point(113, 29);
+			this.txtCategoria.MaxLength = 2;
+			this.txtCategoria.Name = "txtCategoria";
+			this.txtCategoria.Size = new System.Drawing.Size(39, 20);
+			this.txtCategoria.TabIndex = 205;
+			// 
+			// lblCategoria
+			// 
+			this.lblCategoria.AutoSize = true;
+			this.lblCategoria.Location = new System.Drawing.Point(3, 26);
+			this.lblCategoria.Name = "lblCategoria";
+			this.lblCategoria.Size = new System.Drawing.Size(55, 13);
+			this.lblCategoria.TabIndex = 204;
+			this.lblCategoria.Text = "Categoria:";
+			// 
+			// txtCNH
+			// 
+			this.txtCNH.Location = new System.Drawing.Point(113, 3);
+			this.txtCNH.Name = "txtCNH";
+			this.txtCNH.Size = new System.Drawing.Size(205, 20);
+			this.txtCNH.TabIndex = 25;
+			// 
+			// lblCNH
+			// 
+			this.lblCNH.AutoSize = true;
+			this.lblCNH.Location = new System.Drawing.Point(3, 0);
+			this.lblCNH.Name = "lblCNH";
+			this.lblCNH.Size = new System.Drawing.Size(88, 13);
+			this.lblCNH.TabIndex = 24;
+			this.lblCNH.Text = "Número da CNH:";
+			// 
+			// lblTelCel
+			// 
+			this.lblTelCel.AutoSize = true;
+			this.lblTelCel.Location = new System.Drawing.Point(3, 158);
+			this.lblTelCel.Name = "lblTelCel";
+			this.lblTelCel.Size = new System.Drawing.Size(70, 13);
+			this.lblTelCel.TabIndex = 23;
+			this.lblTelCel.Text = "Telefone Cel.";
+			// 
+			// txtTelCel
+			// 
+			this.txtTelCel.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+			this.txtTelCel.Location = new System.Drawing.Point(113, 161);
+			this.txtTelCel.Mask = "(00) 00000-0000";
+			this.txtTelCel.Name = "txtTelCel";
+			this.txtTelCel.Size = new System.Drawing.Size(94, 20);
+			this.txtTelCel.TabIndex = 11;
+			// 
+			// lblTelCom
+			// 
+			this.lblTelCom.AutoSize = true;
+			this.lblTelCom.Location = new System.Drawing.Point(3, 118);
+			this.lblTelCom.Name = "lblTelCom";
+			this.lblTelCom.Size = new System.Drawing.Size(76, 13);
+			this.lblTelCom.TabIndex = 22;
+			this.lblTelCom.Text = "Telefone Com.";
 			// 
 			// txtTelCom
 			// 
 			this.txtTelCom.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-			this.txtTelCom.Location = new System.Drawing.Point(103, 28);
+			this.txtTelCom.Location = new System.Drawing.Point(113, 121);
 			this.txtTelCom.Mask = "(00) 0000-0000";
 			this.txtTelCom.Name = "txtTelCom";
 			this.txtTelCom.Size = new System.Drawing.Size(81, 20);
 			this.txtTelCom.TabIndex = 10;
 			this.txtTelCom.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			// 
+			// lblTelRes
+			// 
+			this.lblTelRes.AutoSize = true;
+			this.lblTelRes.Location = new System.Drawing.Point(3, 78);
+			this.lblTelRes.Name = "lblTelRes";
+			this.lblTelRes.Size = new System.Drawing.Size(74, 13);
+			this.lblTelRes.TabIndex = 21;
+			this.lblTelRes.Text = "Telefone Res.";
+			// 
 			// txtTelRes
 			// 
 			this.txtTelRes.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-			this.txtTelRes.Location = new System.Drawing.Point(103, 3);
+			this.txtTelRes.Location = new System.Drawing.Point(113, 81);
 			this.txtTelRes.Mask = "(00) 0000-0000";
 			this.txtTelRes.Name = "txtTelRes";
 			this.txtTelRes.Size = new System.Drawing.Size(81, 20);
 			this.txtTelRes.TabIndex = 9;
 			this.txtTelRes.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			// 
-			// txtTelCel
-			// 
-			this.txtTelCel.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-			this.txtTelCel.Location = new System.Drawing.Point(103, 53);
-			this.txtTelCel.Mask = "(00) 00000-0000";
-			this.txtTelCel.Name = "txtTelCel";
-			this.txtTelCel.Size = new System.Drawing.Size(94, 20);
-			this.txtTelCel.TabIndex = 11;
-			// 
-			// lblTelCel
-			// 
-			this.lblTelCel.AutoSize = true;
-			this.lblTelCel.Location = new System.Drawing.Point(3, 50);
-			this.lblTelCel.Name = "lblTelCel";
-			this.lblTelCel.Size = new System.Drawing.Size(70, 13);
-			this.lblTelCel.TabIndex = 23;
-			this.lblTelCel.Text = "Telefone Cel.";
-			// 
-			// lblTelCom
-			// 
-			this.lblTelCom.AutoSize = true;
-			this.lblTelCom.Location = new System.Drawing.Point(3, 25);
-			this.lblTelCom.Name = "lblTelCom";
-			this.lblTelCom.Size = new System.Drawing.Size(76, 13);
-			this.lblTelCom.TabIndex = 22;
-			this.lblTelCom.Text = "Telefone Com.";
-			// 
-			// lblTelRes
-			// 
-			this.lblTelRes.AutoSize = true;
-			this.lblTelRes.Location = new System.Drawing.Point(3, 0);
-			this.lblTelRes.Name = "lblTelRes";
-			this.lblTelRes.Size = new System.Drawing.Size(74, 13);
-			this.lblTelRes.TabIndex = 21;
-			this.lblTelRes.Text = "Telefone Res.";
-			// 
 			// lblCadastrarCliente
 			// 
 			this.lblCadastrarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.lblCadastrarCliente.AutoSize = true;
 			this.lblCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCadastrarCliente.Location = new System.Drawing.Point(317, 3);
+			this.lblCadastrarCliente.Location = new System.Drawing.Point(290, 16);
 			this.lblCadastrarCliente.Name = "lblCadastrarCliente";
 			this.lblCadastrarCliente.Size = new System.Drawing.Size(179, 25);
-			this.lblCadastrarCliente.TabIndex = 204;
+			this.lblCadastrarCliente.TabIndex = 8;
 			this.lblCadastrarCliente.Text = "Cadastrar Cliente";
 			this.lblCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
@@ -333,7 +421,7 @@
 			this.tableLayoutPanel1.Controls.Add(this.lblBairro, 0, 5);
 			this.tableLayoutPanel1.Controls.Add(this.lblCidade, 0, 4);
 			this.tableLayoutPanel1.Controls.Add(this.lblNumero, 0, 2);
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(29, 198);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 211);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 7;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28574F));
@@ -344,12 +432,12 @@
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28574F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28574F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(437, 201);
-			this.tableLayoutPanel1.TabIndex = 208;
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(419, 201);
+			this.tableLayoutPanel1.TabIndex = 200;
 			// 
 			// txtCep
 			// 
-			this.txtCep.Location = new System.Drawing.Point(87, 3);
+			this.txtCep.Location = new System.Drawing.Point(84, 3);
 			this.txtCep.MaxLength = 9;
 			this.txtCep.Name = "txtCep";
 			this.txtCep.Size = new System.Drawing.Size(81, 20);
@@ -357,14 +445,14 @@
 			// 
 			// txtEstado
 			// 
-			this.txtEstado.Location = new System.Drawing.Point(87, 171);
+			this.txtEstado.Location = new System.Drawing.Point(84, 171);
 			this.txtEstado.Name = "txtEstado";
 			this.txtEstado.Size = new System.Drawing.Size(173, 20);
 			this.txtEstado.TabIndex = 95;
 			// 
 			// txtNumero
 			// 
-			this.txtNumero.Location = new System.Drawing.Point(87, 59);
+			this.txtNumero.Location = new System.Drawing.Point(84, 59);
 			this.txtNumero.MaxLength = 5;
 			this.txtNumero.Name = "txtNumero";
 			this.txtNumero.Size = new System.Drawing.Size(81, 20);
@@ -372,23 +460,23 @@
 			// 
 			// txtBairro
 			// 
-			this.txtBairro.Location = new System.Drawing.Point(87, 143);
+			this.txtBairro.Location = new System.Drawing.Point(84, 143);
 			this.txtBairro.Name = "txtBairro";
 			this.txtBairro.Size = new System.Drawing.Size(173, 20);
 			this.txtBairro.TabIndex = 96;
 			// 
 			// txtCidade
 			// 
-			this.txtCidade.Location = new System.Drawing.Point(87, 115);
+			this.txtCidade.Location = new System.Drawing.Point(84, 115);
 			this.txtCidade.Name = "txtCidade";
 			this.txtCidade.Size = new System.Drawing.Size(173, 20);
 			this.txtCidade.TabIndex = 97;
 			// 
 			// txtRua
 			// 
-			this.txtRua.Location = new System.Drawing.Point(87, 31);
+			this.txtRua.Location = new System.Drawing.Point(84, 31);
 			this.txtRua.Name = "txtRua";
-			this.txtRua.Size = new System.Drawing.Size(336, 20);
+			this.txtRua.Size = new System.Drawing.Size(332, 20);
 			this.txtRua.TabIndex = 99;
 			// 
 			// lblLogradouro
@@ -402,9 +490,9 @@
 			// 
 			// txtComplemento
 			// 
-			this.txtComplemento.Location = new System.Drawing.Point(87, 87);
+			this.txtComplemento.Location = new System.Drawing.Point(84, 87);
 			this.txtComplemento.Name = "txtComplemento";
-			this.txtComplemento.Size = new System.Drawing.Size(336, 20);
+			this.txtComplemento.Size = new System.Drawing.Size(332, 20);
 			this.txtComplemento.TabIndex = 98;
 			// 
 			// lblCep
@@ -463,28 +551,32 @@
 			// 
 			// btnSalvar
 			// 
-			this.btnSalvar.Location = new System.Drawing.Point(392, 407);
+			this.btnSalvar.Location = new System.Drawing.Point(369, 420);
 			this.btnSalvar.Name = "btnSalvar";
 			this.btnSalvar.Size = new System.Drawing.Size(105, 40);
-			this.btnSalvar.TabIndex = 205;
+			this.btnSalvar.TabIndex = 12;
 			this.btnSalvar.Text = "Salvar";
 			this.btnSalvar.UseVisualStyleBackColor = true;
-			this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+			// 
+			// label17
+			// 
+			this.label17.AutoSize = true;
+			this.label17.Location = new System.Drawing.Point(319, 354);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(0, 13);
+			this.label17.TabIndex = 29;
 			// 
 			// FormCadastrarClientePop
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(808, 465);
-			this.Controls.Add(this.radioPj);
-			this.Controls.Add(this.radioPF);
-			this.Controls.Add(this.LayoutDados);
-			this.Controls.Add(this.tableLayoutPanel2);
-			this.Controls.Add(this.lblCadastrarCliente);
-			this.Controls.Add(this.tableLayoutPanel1);
-			this.Controls.Add(this.btnSalvar);
+			this.Controls.Add(this.groupCadastro);
+			this.Controls.Add(this.label17);
 			this.Name = "FormCadastrarClientePop";
 			this.Text = "Cadastrar novo cliente";
+			this.groupCadastro.ResumeLayout(false);
+			this.groupCadastro.PerformLayout();
 			this.LayoutDados.ResumeLayout(false);
 			this.LayoutDados.PerformLayout();
 			this.tableLayoutPanel2.ResumeLayout(false);
@@ -498,6 +590,7 @@
 
 		#endregion
 
+		private System.Windows.Forms.GroupBox groupCadastro;
 		private System.Windows.Forms.RadioButton radioPj;
 		private System.Windows.Forms.RadioButton radioPF;
 		private System.Windows.Forms.TableLayoutPanel LayoutDados;
@@ -514,12 +607,18 @@
 		private System.Windows.Forms.TextBox txtEmail;
 		private System.Windows.Forms.TextBox txtRG;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-		private System.Windows.Forms.MaskedTextBox txtTelCom;
-		private System.Windows.Forms.MaskedTextBox txtTelRes;
-		private System.Windows.Forms.MaskedTextBox txtTelCel;
+		private System.Windows.Forms.MaskedTextBox maskedValidade;
+		private System.Windows.Forms.Label lblValidade;
+		private System.Windows.Forms.TextBox txtCategoria;
+		private System.Windows.Forms.Label lblCategoria;
+		private System.Windows.Forms.TextBox txtCNH;
+		private System.Windows.Forms.Label lblCNH;
 		private System.Windows.Forms.Label lblTelCel;
+		private System.Windows.Forms.MaskedTextBox txtTelCel;
 		private System.Windows.Forms.Label lblTelCom;
+		private System.Windows.Forms.MaskedTextBox txtTelCom;
 		private System.Windows.Forms.Label lblTelRes;
+		private System.Windows.Forms.MaskedTextBox txtTelRes;
 		private System.Windows.Forms.Label lblCadastrarCliente;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.TextBox txtCep;
@@ -537,5 +636,6 @@
 		private System.Windows.Forms.Label lblCidade;
 		private System.Windows.Forms.Label lblNumero;
 		private System.Windows.Forms.Button btnSalvar;
+		private System.Windows.Forms.Label label17;
 	}
 }
