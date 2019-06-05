@@ -16,7 +16,8 @@ namespace WindowsFormsApp1
 		{
 			InitializeComponent();
 		}
-
+		DateTime Entrada = new DateTime();
+		DateTime Saida = new DateTime();
 
 		private void button2_Click(object sender, EventArgs e)
 		{
@@ -51,20 +52,30 @@ namespace WindowsFormsApp1
 
 		private void checkSegRoubo_CheckedChanged(object sender, EventArgs e)
 		{
-			if (checkSegRoubo.Checked == true)
+			if (Saida <= Entrada)
 			{
-				double seg;
-				seg = double.Parse(lblValorSeguro.Text) + (30 * double.Parse(lblDias.Text));
-			
-				lblValorSeguro.Text = seg.ToString("F2");
+				MessageBox.Show("Favor Entrar com as datas corretamente");
+				checkSegRoubo.Checked = false;
 			}
 			else
 			{
-				double seg;
-				seg = double.Parse(lblValorSeguro.Text) - (30 * double.Parse(lblDias.Text));
-				lblValorSeguro.Text = seg.ToString("F2");
+				if (checkSegRoubo.Checked == true)
+				{
+					double seg;
+					seg = double.Parse(lblValorSeguro.Text) + (Program.Valores.SegFurtoBatida * double.Parse(lblDias.Text));
+
+					lblValorSeguro.Text = seg.ToString("F2");
+				}
+				else
+				{
+					double seg;
+					seg = double.Parse(lblValorSeguro.Text) - (Program.Valores.SegFurtoBatida * double.Parse(lblDias.Text));
+					lblValorSeguro.Text = seg.ToString("F2");
+				}
 			}
 		}
+
+		
 
 		private void lblValorSeguro_Click(object sender, EventArgs e)
 		{
@@ -73,17 +84,25 @@ namespace WindowsFormsApp1
 
 		private void checkSegTerceiros_CheckedChanged(object sender, EventArgs e)
 		{
-			if (checkSegTerceiros.Checked == true)
+			if (Saida <= Entrada)
 			{
-				double seg;
-				seg = double.Parse(lblValorSeguro.Text) + (30 * double.Parse(lblDias.Text));
-				lblValorSeguro.Text = seg.ToString("F2");
+				MessageBox.Show("Favor Entrar com as datas corretamente");
+				checkSegTerceiros.Checked = false;
 			}
 			else
 			{
-				double seg;
-				seg = double.Parse(lblValorSeguro.Text) - (30 * double.Parse(lblDias.Text));
-				lblValorSeguro.Text = seg.ToString("F2");
+				if (checkSegTerceiros.Checked == true)
+				{
+					double seg;
+					seg = double.Parse(lblValorSeguro.Text) + (Program.Valores.SegTerceiros * double.Parse(lblDias.Text));
+					lblValorSeguro.Text = seg.ToString("F2");
+				}
+				else
+				{
+					double seg;
+					seg = double.Parse(lblValorSeguro.Text) - (Program.Valores.SegTerceiros * double.Parse(lblDias.Text));
+					lblValorSeguro.Text = seg.ToString("F2");
+				}
 			}
 		}
 
@@ -99,12 +118,11 @@ namespace WindowsFormsApp1
 
 		private void dateTimeDevolucao_ValueChanged(object sender, EventArgs e)
 		{
-			DateTime entrada = new DateTime();
-			DateTime saida = new DateTime();
+			
 
-			entrada = DateTime.Parse(dateTimeRetirada.Text);
-			saida = DateTime.Parse(dateTimeDevolucao.Text);
-			int dif = (saida.Subtract(entrada)).Days;
+			Entrada = DateTime.Parse(dateTimeRetirada.Text);
+			Saida = DateTime.Parse(dateTimeDevolucao.Text);
+			int dif = (Saida.Subtract(Entrada)).Days;
 			lblDias.Text = dif.ToString();
 		}
 
@@ -138,6 +156,12 @@ namespace WindowsFormsApp1
 				+ double.Parse(lblSubTotal.Text));
 
 			lblValorRestante.Text = total.ToString("F2");
+		}
+
+		private void FormNovaLocacao_Load(object sender, EventArgs e)
+		{
+			lblValorSegRoubo.Text ="(" + Program.Valores.SegFurtoBatida.ToString("C") +  "/dia)";
+			lblValorSegTerceiros.Text ="(" + Program.Valores.SegTerceiros.ToString("C") + "/dia)";
 		}
 	}
 }

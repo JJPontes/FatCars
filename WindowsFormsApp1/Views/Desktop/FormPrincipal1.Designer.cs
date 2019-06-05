@@ -39,6 +39,7 @@
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(804, 571);
 			this.ControlBox = false;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormPrincipal1";
 			this.Text = "BEM VINDO";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

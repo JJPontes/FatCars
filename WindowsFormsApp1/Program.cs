@@ -27,8 +27,8 @@ namespace WindowsFormsApp1
 			Application.Run(new FormLogin());
 		}
 
-			public static Exemplo Teste { get; set; }
-
+		public static Precos Valores { get; set; } = new Precos();
+			
 	}
 }
 

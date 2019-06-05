@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1.Views.Desktop
 {
-	public partial class FormRelatorioReservas : Form
+	public partial class FormRelatorios : Form
 	{
-		public FormRelatorioReservas()
+		public FormRelatorios()
 		{
 			InitializeComponent();
-		}
-
-		private void label1_Click(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultarCliente));
 			this.lblConsultarClientes = new System.Windows.Forms.Label();
 			this.lblFiltro = new System.Windows.Forms.Label();
 			this.txtPesquisa = new System.Windows.Forms.TextBox();
@@ -37,15 +38,16 @@
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.btnEditar = new System.Windows.Forms.Button();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.dataSetFat = new WindowsFormsApp1.DataSetFat();
-			this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.iDCLIENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tIPOCLIENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nOMECLIENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.eMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dataSetFat = new WindowsFormsApp1.DataSetFat();
 			this.tableLayoutPanel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cargos)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.carros)).BeginInit();
@@ -70,7 +72,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.pneus)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.telefonecliente)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.usuarios)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblConsultarClientes
@@ -173,6 +174,42 @@
 			this.dataGridView1.Size = new System.Drawing.Size(695, 254);
 			this.dataGridView1.TabIndex = 9;
 			// 
+			// iDCLIENTEDataGridViewTextBoxColumn
+			// 
+			this.iDCLIENTEDataGridViewTextBoxColumn.DataPropertyName = "IDCLIENTE";
+			this.iDCLIENTEDataGridViewTextBoxColumn.HeaderText = "ID";
+			this.iDCLIENTEDataGridViewTextBoxColumn.Name = "iDCLIENTEDataGridViewTextBoxColumn";
+			// 
+			// tIPOCLIENTEDataGridViewTextBoxColumn
+			// 
+			this.tIPOCLIENTEDataGridViewTextBoxColumn.DataPropertyName = "TIPO_CLIENTE";
+			this.tIPOCLIENTEDataGridViewTextBoxColumn.HeaderText = "TIPO";
+			this.tIPOCLIENTEDataGridViewTextBoxColumn.Name = "tIPOCLIENTEDataGridViewTextBoxColumn";
+			// 
+			// nOMECLIENTEDataGridViewTextBoxColumn
+			// 
+			this.nOMECLIENTEDataGridViewTextBoxColumn.DataPropertyName = "NOME_CLIENTE";
+			this.nOMECLIENTEDataGridViewTextBoxColumn.HeaderText = "NOME";
+			this.nOMECLIENTEDataGridViewTextBoxColumn.Name = "nOMECLIENTEDataGridViewTextBoxColumn";
+			this.nOMECLIENTEDataGridViewTextBoxColumn.Width = 250;
+			// 
+			// eMAILDataGridViewTextBoxColumn
+			// 
+			this.eMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL";
+			this.eMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL";
+			this.eMAILDataGridViewTextBoxColumn.Name = "eMAILDataGridViewTextBoxColumn";
+			// 
+			// cPFDataGridViewTextBoxColumn
+			// 
+			this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
+			this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
+			this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
+			// 
+			// clienteBindingSource
+			// 
+			this.clienteBindingSource.DataMember = "cliente";
+			this.clienteBindingSource.DataSource = this.dataSetFat;
+			// 
 			// dataSetFat
 			// 
 			// 
@@ -271,42 +308,6 @@
 			this.dataSetFat.usuarios.Owner = this;
 			this.dataSetFat.Owner = this;
 			// 
-			// clienteBindingSource
-			// 
-			this.clienteBindingSource.DataMember = "cliente";
-			this.clienteBindingSource.DataSource = this.dataSetFat;
-			// 
-			// iDCLIENTEDataGridViewTextBoxColumn
-			// 
-			this.iDCLIENTEDataGridViewTextBoxColumn.DataPropertyName = "IDCLIENTE";
-			this.iDCLIENTEDataGridViewTextBoxColumn.HeaderText = "ID";
-			this.iDCLIENTEDataGridViewTextBoxColumn.Name = "iDCLIENTEDataGridViewTextBoxColumn";
-			// 
-			// tIPOCLIENTEDataGridViewTextBoxColumn
-			// 
-			this.tIPOCLIENTEDataGridViewTextBoxColumn.DataPropertyName = "TIPO_CLIENTE";
-			this.tIPOCLIENTEDataGridViewTextBoxColumn.HeaderText = "TIPO";
-			this.tIPOCLIENTEDataGridViewTextBoxColumn.Name = "tIPOCLIENTEDataGridViewTextBoxColumn";
-			// 
-			// nOMECLIENTEDataGridViewTextBoxColumn
-			// 
-			this.nOMECLIENTEDataGridViewTextBoxColumn.DataPropertyName = "NOME_CLIENTE";
-			this.nOMECLIENTEDataGridViewTextBoxColumn.HeaderText = "NOME";
-			this.nOMECLIENTEDataGridViewTextBoxColumn.Name = "nOMECLIENTEDataGridViewTextBoxColumn";
-			this.nOMECLIENTEDataGridViewTextBoxColumn.Width = 250;
-			// 
-			// eMAILDataGridViewTextBoxColumn
-			// 
-			this.eMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL";
-			this.eMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL";
-			this.eMAILDataGridViewTextBoxColumn.Name = "eMAILDataGridViewTextBoxColumn";
-			// 
-			// cPFDataGridViewTextBoxColumn
-			// 
-			this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
-			this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
-			this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
-			// 
 			// FormConsultarCliente
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,6 +318,7 @@
 			this.ControlBox = false;
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.tableLayoutPanel1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormConsultarCliente";
 			this.Text = "Consultar Clientes";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -324,6 +326,7 @@
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cargos)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.carros)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cliente)).EndInit();
@@ -348,7 +351,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.telefonecliente)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.usuarios)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetFat)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
 			this.ResumeLayout(false);
 
 		}

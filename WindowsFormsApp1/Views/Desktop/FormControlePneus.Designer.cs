@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormControlePneus));
 			this.lblPlaca = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -192,6 +193,7 @@
 			this.Controls.Add(this.maskedTextBox1);
 			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.lblPlaca);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormControlePneus";
 			this.Text = "Controle de Pneus";
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastrarNovoVeiculo));
 			this.TabCadastroVeiculos = new System.Windows.Forms.TabControl();
 			this.tabInformacoes = new System.Windows.Forms.TabPage();
 			this.txtValorDiaria = new System.Windows.Forms.TextBox();
@@ -64,23 +65,13 @@
 			this.txtChassi = new System.Windows.Forms.TextBox();
 			this.btnSalvar = new System.Windows.Forms.Button();
 			this.comboModelo = new System.Windows.Forms.ComboBox();
-			this.tabManut = new System.Windows.Forms.TabPage();
-			this.tabSinistros = new System.Windows.Forms.TabPage();
 			this.tabAbastecimentos = new System.Windows.Forms.TabPage();
-			this.txtTotal = new System.Windows.Forms.TextBox();
-			this.lblTotal = new System.Windows.Forms.Label();
-			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.label9 = new System.Windows.Forms.Label();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
-			this.comboCombustivel = new System.Windows.Forms.ComboBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.button1 = new System.Windows.Forms.Button();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.button2 = new System.Windows.Forms.Button();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,22 +80,21 @@
 			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-			this.label10 = new System.Windows.Forms.Label();
-			this.label11 = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
-			this.groupBox4 = new System.Windows.Forms.GroupBox();
-			this.button3 = new System.Windows.Forms.Button();
-			this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-			this.label12 = new System.Windows.Forms.Label();
-			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.textBox7 = new System.Windows.Forms.TextBox();
-			this.label14 = new System.Windows.Forms.Label();
-			this.label15 = new System.Windows.Forms.Label();
-			this.label16 = new System.Windows.Forms.Label();
-			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.button1 = new System.Windows.Forms.Button();
+			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+			this.txtTotal = new System.Windows.Forms.TextBox();
+			this.label5 = new System.Windows.Forms.Label();
+			this.lblTotal = new System.Windows.Forms.Label();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.comboCombustivel = new System.Windows.Forms.ComboBox();
+			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.label7 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.tabManutencao = new System.Windows.Forms.TabPage();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.button4 = new System.Windows.Forms.Button();
 			this.label13 = new System.Windows.Forms.Label();
@@ -117,6 +107,17 @@
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+			this.button3 = new System.Windows.Forms.Button();
+			this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+			this.label12 = new System.Windows.Forms.Label();
+			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.label14 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.label16 = new System.Windows.Forms.Label();
+			this.tabSinistros = new System.Windows.Forms.TabPage();
 			this.groupBox7 = new System.Windows.Forms.GroupBox();
 			this.button5 = new System.Windows.Forms.Button();
 			this.label18 = new System.Windows.Forms.Label();
@@ -144,17 +145,17 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-			this.tabManut.SuspendLayout();
-			this.tabSinistros.SuspendLayout();
 			this.tabAbastecimentos.SuspendLayout();
-			this.groupBox1.SuspendLayout();
+			this.groupBox3.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			this.groupBox3.SuspendLayout();
-			this.groupBox4.SuspendLayout();
+			this.groupBox1.SuspendLayout();
+			this.tabManutencao.SuspendLayout();
 			this.groupBox5.SuspendLayout();
 			this.groupBox6.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+			this.groupBox4.SuspendLayout();
+			this.tabSinistros.SuspendLayout();
 			this.groupBox7.SuspendLayout();
 			this.groupBox8.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -165,7 +166,7 @@
 			// 
 			this.TabCadastroVeiculos.Controls.Add(this.tabInformacoes);
 			this.TabCadastroVeiculos.Controls.Add(this.tabAbastecimentos);
-			this.TabCadastroVeiculos.Controls.Add(this.tabManut);
+			this.TabCadastroVeiculos.Controls.Add(this.tabManutencao);
 			this.TabCadastroVeiculos.Controls.Add(this.tabSinistros);
 			this.TabCadastroVeiculos.Location = new System.Drawing.Point(12, 12);
 			this.TabCadastroVeiculos.Name = "TabCadastroVeiculos";
@@ -611,31 +612,6 @@
 			this.comboModelo.Size = new System.Drawing.Size(146, 21);
 			this.comboModelo.TabIndex = 56;
 			// 
-			// tabManut
-			// 
-			this.tabManut.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.tabManut.Controls.Add(this.groupBox5);
-			this.tabManut.Controls.Add(this.groupBox6);
-			this.tabManut.Controls.Add(this.groupBox4);
-			this.tabManut.Location = new System.Drawing.Point(4, 22);
-			this.tabManut.Name = "tabManut";
-			this.tabManut.Padding = new System.Windows.Forms.Padding(3);
-			this.tabManut.Size = new System.Drawing.Size(752, 354);
-			this.tabManut.TabIndex = 1;
-			this.tabManut.Text = "Histórico de Manutenção";
-			// 
-			// tabSinistros
-			// 
-			this.tabSinistros.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.tabSinistros.Controls.Add(this.groupBox7);
-			this.tabSinistros.Controls.Add(this.groupBox8);
-			this.tabSinistros.Controls.Add(this.groupBox9);
-			this.tabSinistros.Location = new System.Drawing.Point(4, 22);
-			this.tabSinistros.Name = "tabSinistros";
-			this.tabSinistros.Size = new System.Drawing.Size(752, 354);
-			this.tabSinistros.TabIndex = 2;
-			this.tabSinistros.Text = "Sinistros";
-			// 
 			// tabAbastecimentos
 			// 
 			this.tabAbastecimentos.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -649,141 +625,60 @@
 			this.tabAbastecimentos.TabIndex = 3;
 			this.tabAbastecimentos.Text = "Abastecimentos";
 			// 
-			// txtTotal
+			// groupBox3
 			// 
-			this.txtTotal.Location = new System.Drawing.Point(595, 39);
-			this.txtTotal.Name = "txtTotal";
-			this.txtTotal.ReadOnly = true;
-			this.txtTotal.Size = new System.Drawing.Size(100, 20);
-			this.txtTotal.TabIndex = 11;
+			this.groupBox3.Controls.Add(this.button2);
+			this.groupBox3.Controls.Add(this.label11);
+			this.groupBox3.Controls.Add(this.label10);
+			this.groupBox3.Controls.Add(this.dateTimePicker2);
+			this.groupBox3.Controls.Add(this.dateTimePicker1);
+			this.groupBox3.Location = new System.Drawing.Point(7, 250);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Size = new System.Drawing.Size(738, 79);
+			this.groupBox3.TabIndex = 14;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "Consulta por Período:";
 			// 
-			// lblTotal
+			// button2
 			// 
-			this.lblTotal.AutoSize = true;
-			this.lblTotal.Location = new System.Drawing.Point(592, 23);
-			this.lblTotal.Name = "lblTotal";
-			this.lblTotal.Size = new System.Drawing.Size(31, 13);
-			this.lblTotal.TabIndex = 10;
-			this.lblTotal.Text = "Total";
+			this.button2.Location = new System.Drawing.Point(541, 34);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(69, 20);
+			this.button2.TabIndex = 13;
+			this.button2.Text = "Consultar...";
+			this.button2.UseVisualStyleBackColor = true;
 			// 
-			// textBox5
+			// label11
 			// 
-			this.textBox5.Location = new System.Drawing.Point(465, 40);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(100, 20);
-			this.textBox5.TabIndex = 9;
+			this.label11.AutoSize = true;
+			this.label11.Location = new System.Drawing.Point(274, 41);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(13, 13);
+			this.label11.TabIndex = 3;
+			this.label11.Text = "a";
 			// 
-			// label9
+			// label10
 			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(462, 24);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(73, 13);
-			this.label9.TabIndex = 8;
-			this.label9.Text = "Valor Unitário:";
+			this.label10.AutoSize = true;
+			this.label10.Location = new System.Drawing.Point(11, 41);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(24, 13);
+			this.label10.TabIndex = 2;
+			this.label10.Text = "De:";
 			// 
-			// textBox4
+			// dateTimePicker2
 			// 
-			this.textBox4.Location = new System.Drawing.Point(359, 40);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(100, 20);
-			this.textBox4.TabIndex = 7;
+			this.dateTimePicker2.Location = new System.Drawing.Point(293, 34);
+			this.dateTimePicker2.Name = "dateTimePicker2";
+			this.dateTimePicker2.Size = new System.Drawing.Size(229, 20);
+			this.dateTimePicker2.TabIndex = 1;
 			// 
-			// label8
+			// dateTimePicker1
 			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(356, 24);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(55, 13);
-			this.label8.TabIndex = 6;
-			this.label8.Text = "Qtd Litros:";
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(229, 23);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(64, 13);
-			this.label7.TabIndex = 5;
-			this.label7.Text = "Combustivel";
-			// 
-			// comboCombustivel
-			// 
-			this.comboCombustivel.AutoCompleteCustomSource.AddRange(new string[] {
-            "Etanol",
-            "Gasolina",
-            "GNV",
-            "Diesel"});
-			this.comboCombustivel.FormattingEnabled = true;
-			this.comboCombustivel.Location = new System.Drawing.Point(232, 39);
-			this.comboCombustivel.Name = "comboCombustivel";
-			this.comboCombustivel.Size = new System.Drawing.Size(121, 21);
-			this.comboCombustivel.TabIndex = 4;
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(3, 24);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(33, 13);
-			this.label6.TabIndex = 3;
-			this.label6.Text = "Data:";
-			// 
-			// maskedTextBox1
-			// 
-			this.maskedTextBox1.Location = new System.Drawing.Point(6, 40);
-			this.maskedTextBox1.Mask = "00/00/0000";
-			this.maskedTextBox1.Name = "maskedTextBox1";
-			this.maskedTextBox1.Size = new System.Drawing.Size(90, 20);
-			this.maskedTextBox1.TabIndex = 2;
-			this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-			// 
-			// textBox3
-			// 
-			this.textBox3.Location = new System.Drawing.Point(113, 40);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(100, 20);
-			this.textBox3.TabIndex = 1;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(110, 24);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(109, 13);
-			this.label5.TabIndex = 0;
-			this.label5.Text = "Km no abastecimento";
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Controls.Add(this.button1);
-			this.groupBox1.Controls.Add(this.maskedTextBox1);
-			this.groupBox1.Controls.Add(this.txtTotal);
-			this.groupBox1.Controls.Add(this.label5);
-			this.groupBox1.Controls.Add(this.lblTotal);
-			this.groupBox1.Controls.Add(this.textBox3);
-			this.groupBox1.Controls.Add(this.textBox5);
-			this.groupBox1.Controls.Add(this.label6);
-			this.groupBox1.Controls.Add(this.label9);
-			this.groupBox1.Controls.Add(this.comboCombustivel);
-			this.groupBox1.Controls.Add(this.textBox4);
-			this.groupBox1.Controls.Add(this.label7);
-			this.groupBox1.Controls.Add(this.label8);
-			this.groupBox1.Location = new System.Drawing.Point(6, 6);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(740, 85);
-			this.groupBox1.TabIndex = 12;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Lançamento de Consumo";
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(702, 39);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(23, 20);
-			this.button1.TabIndex = 12;
-			this.button1.Text = "+";
-			this.button1.UseVisualStyleBackColor = true;
+			this.dateTimePicker1.Location = new System.Drawing.Point(41, 35);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(227, 20);
+			this.dateTimePicker1.TabIndex = 0;
 			// 
 			// groupBox2
 			// 
@@ -840,154 +735,154 @@
 			this.Column6.HeaderText = "Total";
 			this.Column6.Name = "Column6";
 			// 
-			// groupBox3
+			// groupBox1
 			// 
-			this.groupBox3.Controls.Add(this.button2);
-			this.groupBox3.Controls.Add(this.label11);
-			this.groupBox3.Controls.Add(this.label10);
-			this.groupBox3.Controls.Add(this.dateTimePicker2);
-			this.groupBox3.Controls.Add(this.dateTimePicker1);
-			this.groupBox3.Location = new System.Drawing.Point(7, 250);
-			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(738, 79);
-			this.groupBox3.TabIndex = 14;
-			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "Consulta por Período:";
+			this.groupBox1.Controls.Add(this.button1);
+			this.groupBox1.Controls.Add(this.maskedTextBox1);
+			this.groupBox1.Controls.Add(this.txtTotal);
+			this.groupBox1.Controls.Add(this.label5);
+			this.groupBox1.Controls.Add(this.lblTotal);
+			this.groupBox1.Controls.Add(this.textBox3);
+			this.groupBox1.Controls.Add(this.textBox5);
+			this.groupBox1.Controls.Add(this.label6);
+			this.groupBox1.Controls.Add(this.label9);
+			this.groupBox1.Controls.Add(this.comboCombustivel);
+			this.groupBox1.Controls.Add(this.textBox4);
+			this.groupBox1.Controls.Add(this.label7);
+			this.groupBox1.Controls.Add(this.label8);
+			this.groupBox1.Location = new System.Drawing.Point(6, 6);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(740, 85);
+			this.groupBox1.TabIndex = 12;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Lançamento de Consumo";
 			// 
-			// dateTimePicker1
+			// button1
 			// 
-			this.dateTimePicker1.Location = new System.Drawing.Point(41, 35);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(227, 20);
-			this.dateTimePicker1.TabIndex = 0;
+			this.button1.Location = new System.Drawing.Point(702, 39);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(23, 20);
+			this.button1.TabIndex = 12;
+			this.button1.Text = "+";
+			this.button1.UseVisualStyleBackColor = true;
 			// 
-			// dateTimePicker2
+			// maskedTextBox1
 			// 
-			this.dateTimePicker2.Location = new System.Drawing.Point(293, 34);
-			this.dateTimePicker2.Name = "dateTimePicker2";
-			this.dateTimePicker2.Size = new System.Drawing.Size(229, 20);
-			this.dateTimePicker2.TabIndex = 1;
+			this.maskedTextBox1.Location = new System.Drawing.Point(6, 40);
+			this.maskedTextBox1.Mask = "00/00/0000";
+			this.maskedTextBox1.Name = "maskedTextBox1";
+			this.maskedTextBox1.Size = new System.Drawing.Size(90, 20);
+			this.maskedTextBox1.TabIndex = 2;
+			this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
 			// 
-			// label10
+			// txtTotal
 			// 
-			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(11, 41);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(24, 13);
-			this.label10.TabIndex = 2;
-			this.label10.Text = "De:";
+			this.txtTotal.Location = new System.Drawing.Point(595, 39);
+			this.txtTotal.Name = "txtTotal";
+			this.txtTotal.ReadOnly = true;
+			this.txtTotal.Size = new System.Drawing.Size(100, 20);
+			this.txtTotal.TabIndex = 11;
 			// 
-			// label11
+			// label5
 			// 
-			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(274, 41);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(13, 13);
-			this.label11.TabIndex = 3;
-			this.label11.Text = "a";
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(110, 24);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(109, 13);
+			this.label5.TabIndex = 0;
+			this.label5.Text = "Km no abastecimento";
 			// 
-			// button2
+			// lblTotal
 			// 
-			this.button2.Location = new System.Drawing.Point(541, 34);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(69, 20);
-			this.button2.TabIndex = 13;
-			this.button2.Text = "Consultar...";
-			this.button2.UseVisualStyleBackColor = true;
+			this.lblTotal.AutoSize = true;
+			this.lblTotal.Location = new System.Drawing.Point(592, 23);
+			this.lblTotal.Name = "lblTotal";
+			this.lblTotal.Size = new System.Drawing.Size(31, 13);
+			this.lblTotal.TabIndex = 10;
+			this.lblTotal.Text = "Total";
 			// 
-			// groupBox4
+			// textBox3
 			// 
-			this.groupBox4.Controls.Add(this.richTextBox1);
-			this.groupBox4.Controls.Add(this.button3);
-			this.groupBox4.Controls.Add(this.maskedTextBox2);
-			this.groupBox4.Controls.Add(this.label12);
-			this.groupBox4.Controls.Add(this.textBox6);
-			this.groupBox4.Controls.Add(this.textBox7);
-			this.groupBox4.Controls.Add(this.label14);
-			this.groupBox4.Controls.Add(this.label15);
-			this.groupBox4.Controls.Add(this.label16);
-			this.groupBox4.Location = new System.Drawing.Point(6, 6);
-			this.groupBox4.Name = "groupBox4";
-			this.groupBox4.Size = new System.Drawing.Size(740, 97);
-			this.groupBox4.TabIndex = 13;
-			this.groupBox4.TabStop = false;
-			this.groupBox4.Text = "Lançamento de manutenção";
+			this.textBox3.Location = new System.Drawing.Point(113, 40);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.Size = new System.Drawing.Size(100, 20);
+			this.textBox3.TabIndex = 1;
 			// 
-			// button3
+			// textBox5
 			// 
-			this.button3.Location = new System.Drawing.Point(709, 40);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(23, 20);
-			this.button3.TabIndex = 12;
-			this.button3.Text = "+";
-			this.button3.UseVisualStyleBackColor = true;
+			this.textBox5.Location = new System.Drawing.Point(465, 40);
+			this.textBox5.Name = "textBox5";
+			this.textBox5.Size = new System.Drawing.Size(100, 20);
+			this.textBox5.TabIndex = 9;
 			// 
-			// maskedTextBox2
+			// label6
 			// 
-			this.maskedTextBox2.Location = new System.Drawing.Point(6, 40);
-			this.maskedTextBox2.Mask = "00/00/0000";
-			this.maskedTextBox2.Name = "maskedTextBox2";
-			this.maskedTextBox2.Size = new System.Drawing.Size(90, 20);
-			this.maskedTextBox2.TabIndex = 2;
-			this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(3, 24);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(33, 13);
+			this.label6.TabIndex = 3;
+			this.label6.Text = "Data:";
 			// 
-			// label12
+			// label9
 			// 
-			this.label12.AutoSize = true;
-			this.label12.Location = new System.Drawing.Point(110, 24);
-			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(99, 13);
-			this.label12.TabIndex = 0;
-			this.label12.Text = "Km na manutenção";
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(462, 24);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(73, 13);
+			this.label9.TabIndex = 8;
+			this.label9.Text = "Valor Unitário:";
 			// 
-			// textBox6
+			// comboCombustivel
 			// 
-			this.textBox6.Location = new System.Drawing.Point(113, 40);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(100, 20);
-			this.textBox6.TabIndex = 1;
+			this.comboCombustivel.AutoCompleteCustomSource.AddRange(new string[] {
+            "Etanol",
+            "Gasolina",
+            "GNV",
+            "Diesel"});
+			this.comboCombustivel.FormattingEnabled = true;
+			this.comboCombustivel.Location = new System.Drawing.Point(232, 39);
+			this.comboCombustivel.Name = "comboCombustivel";
+			this.comboCombustivel.Size = new System.Drawing.Size(121, 21);
+			this.comboCombustivel.TabIndex = 4;
 			// 
-			// textBox7
+			// textBox4
 			// 
-			this.textBox7.Location = new System.Drawing.Point(599, 40);
-			this.textBox7.Name = "textBox7";
-			this.textBox7.Size = new System.Drawing.Size(100, 20);
-			this.textBox7.TabIndex = 9;
+			this.textBox4.Location = new System.Drawing.Point(359, 40);
+			this.textBox4.Name = "textBox4";
+			this.textBox4.Size = new System.Drawing.Size(100, 20);
+			this.textBox4.TabIndex = 7;
 			// 
-			// label14
+			// label7
 			// 
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(3, 24);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(33, 13);
-			this.label14.TabIndex = 3;
-			this.label14.Text = "Data:";
+			this.label7.AutoSize = true;
+			this.label7.Location = new System.Drawing.Point(229, 23);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(64, 13);
+			this.label7.TabIndex = 5;
+			this.label7.Text = "Combustivel";
 			// 
-			// label15
+			// label8
 			// 
-			this.label15.AutoSize = true;
-			this.label15.Location = new System.Drawing.Point(596, 23);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(34, 13);
-			this.label15.TabIndex = 8;
-			this.label15.Text = "Valor:";
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(356, 24);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(55, 13);
+			this.label8.TabIndex = 6;
+			this.label8.Text = "Qtd Litros:";
 			// 
-			// label16
+			// tabManutencao
 			// 
-			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(216, 24);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(55, 13);
-			this.label16.TabIndex = 5;
-			this.label16.Text = "Descrição";
-			// 
-			// richTextBox1
-			// 
-			this.richTextBox1.Location = new System.Drawing.Point(219, 40);
-			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(361, 46);
-			this.richTextBox1.TabIndex = 13;
-			this.richTextBox1.Text = "";
+			this.tabManutencao.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.tabManutencao.Controls.Add(this.groupBox5);
+			this.tabManutencao.Controls.Add(this.groupBox6);
+			this.tabManutencao.Controls.Add(this.groupBox4);
+			this.tabManutencao.Location = new System.Drawing.Point(4, 22);
+			this.tabManutencao.Name = "tabManutencao";
+			this.tabManutencao.Padding = new System.Windows.Forms.Padding(3);
+			this.tabManutencao.Size = new System.Drawing.Size(752, 354);
+			this.tabManutencao.TabIndex = 1;
+			this.tabManutencao.Text = "Manutenções";
 			// 
 			// groupBox5
 			// 
@@ -1087,6 +982,112 @@
 			// 
 			this.dataGridViewTextBoxColumn6.HeaderText = "Total";
 			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+			// 
+			// groupBox4
+			// 
+			this.groupBox4.Controls.Add(this.richTextBox1);
+			this.groupBox4.Controls.Add(this.button3);
+			this.groupBox4.Controls.Add(this.maskedTextBox2);
+			this.groupBox4.Controls.Add(this.label12);
+			this.groupBox4.Controls.Add(this.textBox6);
+			this.groupBox4.Controls.Add(this.textBox7);
+			this.groupBox4.Controls.Add(this.label14);
+			this.groupBox4.Controls.Add(this.label15);
+			this.groupBox4.Controls.Add(this.label16);
+			this.groupBox4.Location = new System.Drawing.Point(6, 6);
+			this.groupBox4.Name = "groupBox4";
+			this.groupBox4.Size = new System.Drawing.Size(740, 97);
+			this.groupBox4.TabIndex = 13;
+			this.groupBox4.TabStop = false;
+			this.groupBox4.Text = "Lançamento de manutenção";
+			// 
+			// richTextBox1
+			// 
+			this.richTextBox1.Location = new System.Drawing.Point(219, 40);
+			this.richTextBox1.Name = "richTextBox1";
+			this.richTextBox1.Size = new System.Drawing.Size(361, 46);
+			this.richTextBox1.TabIndex = 13;
+			this.richTextBox1.Text = "";
+			// 
+			// button3
+			// 
+			this.button3.Location = new System.Drawing.Point(709, 40);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(23, 20);
+			this.button3.TabIndex = 12;
+			this.button3.Text = "+";
+			this.button3.UseVisualStyleBackColor = true;
+			// 
+			// maskedTextBox2
+			// 
+			this.maskedTextBox2.Location = new System.Drawing.Point(6, 40);
+			this.maskedTextBox2.Mask = "00/00/0000";
+			this.maskedTextBox2.Name = "maskedTextBox2";
+			this.maskedTextBox2.Size = new System.Drawing.Size(90, 20);
+			this.maskedTextBox2.TabIndex = 2;
+			this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.Location = new System.Drawing.Point(110, 24);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(99, 13);
+			this.label12.TabIndex = 0;
+			this.label12.Text = "Km na manutenção";
+			// 
+			// textBox6
+			// 
+			this.textBox6.Location = new System.Drawing.Point(113, 40);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.Size = new System.Drawing.Size(100, 20);
+			this.textBox6.TabIndex = 1;
+			// 
+			// textBox7
+			// 
+			this.textBox7.Location = new System.Drawing.Point(599, 40);
+			this.textBox7.Name = "textBox7";
+			this.textBox7.Size = new System.Drawing.Size(100, 20);
+			this.textBox7.TabIndex = 9;
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(3, 24);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(33, 13);
+			this.label14.TabIndex = 3;
+			this.label14.Text = "Data:";
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Location = new System.Drawing.Point(596, 23);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(34, 13);
+			this.label15.TabIndex = 8;
+			this.label15.Text = "Valor:";
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Location = new System.Drawing.Point(216, 24);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(55, 13);
+			this.label16.TabIndex = 5;
+			this.label16.Text = "Descrição";
+			// 
+			// tabSinistros
+			// 
+			this.tabSinistros.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.tabSinistros.Controls.Add(this.groupBox7);
+			this.tabSinistros.Controls.Add(this.groupBox8);
+			this.tabSinistros.Controls.Add(this.groupBox9);
+			this.tabSinistros.Location = new System.Drawing.Point(4, 22);
+			this.tabSinistros.Name = "tabSinistros";
+			this.tabSinistros.Size = new System.Drawing.Size(752, 354);
+			this.tabSinistros.TabIndex = 2;
+			this.tabSinistros.Text = "Sinistros";
 			// 
 			// groupBox7
 			// 
@@ -1288,6 +1289,7 @@
 			this.ClientSize = new System.Drawing.Size(783, 418);
 			this.ControlBox = false;
 			this.Controls.Add(this.TabCadastroVeiculos);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormCadastrarNovoVeiculo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
 			this.Text = "Cadastro de Veículos";
@@ -1299,21 +1301,21 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-			this.tabManut.ResumeLayout(false);
-			this.tabSinistros.ResumeLayout(false);
 			this.tabAbastecimentos.ResumeLayout(false);
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
-			this.groupBox2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
-			this.groupBox4.ResumeLayout(false);
-			this.groupBox4.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
+			this.tabManutencao.ResumeLayout(false);
 			this.groupBox5.ResumeLayout(false);
 			this.groupBox5.PerformLayout();
 			this.groupBox6.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+			this.groupBox4.ResumeLayout(false);
+			this.groupBox4.PerformLayout();
+			this.tabSinistros.ResumeLayout(false);
 			this.groupBox7.ResumeLayout(false);
 			this.groupBox7.PerformLayout();
 			this.groupBox8.ResumeLayout(false);
@@ -1359,7 +1361,7 @@
 		private System.Windows.Forms.TextBox txtChassi;
 		private System.Windows.Forms.Button btnSalvar;
 		private System.Windows.Forms.ComboBox comboModelo;
-		private System.Windows.Forms.TabPage tabManut;
+		private System.Windows.Forms.TabPage tabManutencao;
 		private System.Windows.Forms.TabPage tabSinistros;
 		public System.Windows.Forms.TabControl TabCadastroVeiculos;
 		private System.Windows.Forms.TextBox txtValorDiaria;

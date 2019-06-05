@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarVeiculo));
 			this.label1 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
@@ -48,6 +49,7 @@
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.ControlBox = false;
 			this.Controls.Add(this.label1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormEditarVeiculo";
 			this.Text = "Editar Veículo";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

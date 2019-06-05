@@ -176,6 +176,12 @@
     <Compile Include="Views\Desktop\FormBuscaCliente.Designer.cs">
       <DependentUpon>FormBuscaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Desktop\FormBuscaLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Desktop\FormBuscaLocacao.Designer.cs">
+      <DependentUpon>FormBuscaLocacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Desktop\FormCadastrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,12 @@
     <Compile Include="Views\Desktop\FormControlePneus.Designer.cs">
       <DependentUpon>FormControlePneus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Desktop\FormControleUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Desktop\FormControleUsuarios.Designer.cs">
+      <DependentUpon>FormControleUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Desktop\FormDevolucao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,23 +290,11 @@
     <Compile Include="Views\Desktop\FormPrincipal1.Designer.cs">
       <DependentUpon>FormPrincipal1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Desktop\FormRelatorioMultas.cs">
+    <Compile Include="Views\Desktop\FormRelatorios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Desktop\FormRelatorioMultas.Designer.cs">
-      <DependentUpon>FormRelatorioMultas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Desktop\FormRelatorioReservas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Desktop\FormRelatorioReservas.Designer.cs">
-      <DependentUpon>FormRelatorioReservas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Desktop\FormRelatorioSinistro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Desktop\FormRelatorioSinistro.Designer.cs">
-      <DependentUpon>FormRelatorioSinistro.cs</DependentUpon>
+    <Compile Include="Views\Desktop\FormRelatorios.Designer.cs">
+      <DependentUpon>FormRelatorios.cs</DependentUpon>
     </Compile>
     <Compile Include="funcionarios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -362,12 +362,12 @@
     <Compile Include="usuarios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Util.cs" />
-    <Compile Include="Views\Desktop\FormTeste.cs">
+    <Compile Include="Precos.cs" />
+    <Compile Include="Views\Desktop\FormTabelaDePrecos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Desktop\FormTeste.Designer.cs">
-      <DependentUpon>FormTeste.cs</DependentUpon>
+    <Compile Include="Views\Desktop\FormTabelaDePrecos.Designer.cs">
+      <DependentUpon>FormTabelaDePrecos.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Views\Desktop\FormBuscaCarro.resx">
@@ -375,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Desktop\FormBuscaCliente.resx">
       <DependentUpon>FormBuscaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Desktop\FormBuscaLocacao.resx">
+      <DependentUpon>FormBuscaLocacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Desktop\FormCadastrarCliente.resx">
       <DependentUpon>FormCadastrarCliente.cs</DependentUpon>
@@ -406,6 +409,9 @@
     <EmbeddedResource Include="Views\Desktop\FormControlePneus.resx">
       <DependentUpon>FormControlePneus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Desktop\FormControleUsuarios.resx">
+      <DependentUpon>FormControleUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Desktop\FormDevolucao.resx">
       <DependentUpon>FormDevolucao.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,14 +433,8 @@
     <EmbeddedResource Include="Views\Desktop\FormPrincipal1.resx">
       <DependentUpon>FormPrincipal1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Desktop\FormRelatorioMultas.resx">
-      <DependentUpon>FormRelatorioMultas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Desktop\FormRelatorioReservas.resx">
-      <DependentUpon>FormRelatorioReservas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Desktop\FormRelatorioSinistro.resx">
-      <DependentUpon>FormRelatorioSinistro.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Desktop\FormRelatorios.resx">
+      <DependentUpon>FormRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -449,8 +449,8 @@
     <EmbeddedResource Include="Views\Desktop\FormSobre.resx">
       <DependentUpon>FormSobre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Desktop\FormTeste.resx">
-      <DependentUpon>FormTeste.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Desktop\FormTabelaDePrecos.resx">
+      <DependentUpon>FormTabelaDePrecos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSetFat.xsc">
       <DependentUpon>DataSetFat.xsd</DependentUpon>

@@ -44,6 +44,7 @@ namespace WindowsFormsApp1
 			
 			MessageBox.Show("Usuário Cadastrado com Sucesso!");
 			limparTextBoxes(this.Controls);
+			this.Hide();
 		}
 
 		private void label1_Click(object sender, EventArgs e)

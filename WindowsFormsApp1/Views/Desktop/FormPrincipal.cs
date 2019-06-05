@@ -123,38 +123,19 @@ namespace WindowsFormsApp1
 
 		private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
-			FormConsultarCliente consultarCliente = new FormConsultarCliente();
+			FormCadastrarCliente consultarCliente = new FormCadastrarCliente();
 			consultarCliente.MdiParent = this;
 			consultarCliente.Show();
 		}
 
 		private void veiculosToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			FormConsultarVeiculo consultarVeiculo = new FormConsultarVeiculo();
+			FormCadastrarNovoVeiculo consultarVeiculo = new FormCadastrarNovoVeiculo();
 			consultarVeiculo.MdiParent = this;
 			consultarVeiculo.Show();
 		}
 
-		private void reservasDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			FormRelatorioReservas relatorioReservas = new FormRelatorioReservas();
-			relatorioReservas.MdiParent = this;
-			relatorioReservas.Show();
-		}
-
-		private void multasToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			FormRelatorioMultas relatorioMultas = new FormRelatorioMultas();
-			relatorioMultas.MdiParent = this;
-			relatorioMultas.Show();
-		}
-
-		private void sinistrosToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			FormRelatorioSinistro relatorioSinistro = new FormRelatorioSinistro();
-			relatorioSinistro.MdiParent = this;
-			relatorioSinistro.Show();
-		}
+		
 
 		private void FormPrincipal_Load(object sender, EventArgs e)
 		{
@@ -195,7 +176,8 @@ namespace WindowsFormsApp1
 
 		private void RelatóriosToolStripMenuItem2_Click(object sender, EventArgs e)
 		{
-
+			Views.Desktop.FormRelatorios formRelatorios = new Views.Desktop.FormRelatorios();
+			formRelatorios.Show();
 		}
 
 		private void NovaLocaçaoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -205,12 +187,7 @@ namespace WindowsFormsApp1
 			formNovaLocacao.Show();
 		}
 
-		private void motoristaToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			Views.Desktop.FormCadastrarMotorista formCadastrarMotorista = new Views.Desktop.FormCadastrarMotorista();
-			formCadastrarMotorista.MdiParent = this;
-			formCadastrarMotorista.Show();
-		}
+	
 
 		private void consultarEmpresasToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -250,6 +227,59 @@ namespace WindowsFormsApp1
 			devolucao.MdiParent = this;
 
 			devolucao.Show();
+		}
+
+		private void controleDePreçosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormTabelaDePrecos tabelaDePrecos = new Views.Desktop.FormTabelaDePrecos();
+			tabelaDePrecos.ControlBox = true;
+			tabelaDePrecos.Show();
+
+		}
+
+		private void consultarEditarEstoqueDePeçasToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormControleEstoque controleEstoque = new Views.Desktop.FormControleEstoque();
+			controleEstoque.TabCotroleEstoque.SelectTab(2);
+			controleEstoque.MdiParent = this;
+			controleEstoque.Show();
+		}
+
+		private void consultarEditarUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormControleUsuarios controleUsuarios = new Views.Desktop.FormControleUsuarios();
+			controleUsuarios.MdiParent = this;
+			controleUsuarios.Show();
+		}
+
+		private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void consultarEditarMotoristasToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormCadastrarMotorista formCadastrarMotorista = new Views.Desktop.FormCadastrarMotorista();
+			formCadastrarMotorista.MdiParent = this;
+			formCadastrarMotorista.ControlBox = false;
+			formCadastrarMotorista.Show();
+		}
+
+		private void registrarAlertaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			FormCadastrarNovoVeiculo cadastrarNovoVeiculo = new FormCadastrarNovoVeiculo();
+			cadastrarNovoVeiculo.MdiParent = this;
+			cadastrarNovoVeiculo.TabCadastroVeiculos.SelectTab(2);
+			cadastrarNovoVeiculo.ControlBox = true;
+			cadastrarNovoVeiculo.Show();
+		}
+
+		private void consultarReservasAtivasToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormBuscaLocacao buscaLocacao = new Views.Desktop.FormBuscaLocacao();
+			buscaLocacao.ControlBox = false;
+			buscaLocacao.MdiParent = this;
+			buscaLocacao.Show();
 		}
 	}
 	}

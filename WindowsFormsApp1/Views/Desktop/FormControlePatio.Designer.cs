@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormControlePatio));
 			this.label2 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
@@ -458,6 +459,7 @@
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.groupBox2);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormControlePatio";
 			this.Text = "Controle de pátio";
 			this.groupBox1.ResumeLayout(false);

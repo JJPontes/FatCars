@@ -71,6 +71,7 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.LogoFat);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormSobre";
 			this.Text = "Sobre";
 			this.Load += new System.EventHandler(this.FormSobre_Load);

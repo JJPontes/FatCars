@@ -16,5 +16,10 @@ namespace WindowsFormsApp1.Views.Desktop
 		{
 			InitializeComponent();
 		}
+
+		private void label13_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

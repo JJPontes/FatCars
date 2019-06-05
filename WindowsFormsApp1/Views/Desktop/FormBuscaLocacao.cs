@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1.Views.Desktop
 {
-	public partial class FormRelatorioSinistro : Form
+	public partial class FormBuscaLocacao : Form
 	{
-		public FormRelatorioSinistro()
+		public FormBuscaLocacao()
 		{
 			InitializeComponent();
 		}

@@ -25,5 +25,11 @@ namespace WindowsFormsApp1.Views.Desktop
 			formCadastrarNovoVeiculo.Show();
 				
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormBuscaLocacao buscaLocacao = new Views.Desktop.FormBuscaLocacao();
+			buscaLocacao.Show();
+		}
 	}
 }

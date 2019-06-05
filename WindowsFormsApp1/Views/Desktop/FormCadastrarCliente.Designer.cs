@@ -28,10 +28,11 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastrarCliente));
 			this.label17 = new System.Windows.Forms.Label();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabCadastro = new System.Windows.Forms.TabPage();
+			this.button2 = new System.Windows.Forms.Button();
 			this.groupEndereco = new System.Windows.Forms.GroupBox();
 			this.txtCep = new System.Windows.Forms.TextBox();
 			this.lblCep = new System.Windows.Forms.Label();
@@ -78,11 +79,11 @@
 			this.btnSalvar = new System.Windows.Forms.Button();
 			this.tabMultas = new System.Windows.Forms.TabPage();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.iDMULTASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dESCRICAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.vALORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.multasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.dataSetFat = new WindowsFormsApp1.DataSetFat();
+			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.button1 = new System.Windows.Forms.Button();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label7 = new System.Windows.Forms.Label();
@@ -94,37 +95,11 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
 			this.label3 = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabCadastro.SuspendLayout();
 			this.groupEndereco.SuspendLayout();
 			this.tabMultas.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.multasBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cargos)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.carros)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cliente)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratocarro)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratopneus)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratos)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratoseguros)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratosinistros)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratoviagens)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cor)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.endereco)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.entradasaida)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.funcionarios)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.manutencao)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.manutencaopeca)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.modelos)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.montadora)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.motoristas)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.multas)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.pecas)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.pneus)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.telefonecliente)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.usuarios)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label17
@@ -185,6 +160,18 @@
 			this.tabCadastro.Size = new System.Drawing.Size(761, 422);
 			this.tabCadastro.TabIndex = 0;
 			this.tabCadastro.Text = "Informações do Cliente";
+			// 
+			// button2
+			// 
+			this.button2.AccessibleName = "Buscar Cliente";
+			this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.button2.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
+			this.button2.Location = new System.Drawing.Point(356, 80);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(31, 20);
+			this.button2.TabIndex = 243;
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// groupEndereco
 			// 
@@ -608,146 +595,50 @@
 			this.tabMultas.Location = new System.Drawing.Point(4, 22);
 			this.tabMultas.Name = "tabMultas";
 			this.tabMultas.Padding = new System.Windows.Forms.Padding(3);
-			this.tabMultas.Size = new System.Drawing.Size(761, 482);
+			this.tabMultas.Size = new System.Drawing.Size(761, 422);
 			this.tabMultas.TabIndex = 1;
 			this.tabMultas.Text = "Adição de multas";
 			// 
 			// dataGridView1
 			// 
-			this.dataGridView1.AutoGenerateColumns = false;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDMULTASDataGridViewTextBoxColumn,
-            this.dESCRICAODataGridViewTextBoxColumn,
-            this.vALORDataGridViewTextBoxColumn});
-			this.dataGridView1.DataSource = this.multasBindingSource;
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
 			this.dataGridView1.Location = new System.Drawing.Point(3, 106);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.Size = new System.Drawing.Size(744, 271);
 			this.dataGridView1.TabIndex = 13;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
-			// iDMULTASDataGridViewTextBoxColumn
+			// Column1
 			// 
-			this.iDMULTASDataGridViewTextBoxColumn.DataPropertyName = "IDMULTAS";
-			this.iDMULTASDataGridViewTextBoxColumn.HeaderText = "ID";
-			this.iDMULTASDataGridViewTextBoxColumn.Name = "iDMULTASDataGridViewTextBoxColumn";
+			this.Column1.HeaderText = "Data";
+			this.Column1.Name = "Column1";
 			// 
-			// dESCRICAODataGridViewTextBoxColumn
+			// Column2
 			// 
-			this.dESCRICAODataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO";
-			this.dESCRICAODataGridViewTextBoxColumn.HeaderText = "DESCRIÇÃO";
-			this.dESCRICAODataGridViewTextBoxColumn.Name = "dESCRICAODataGridViewTextBoxColumn";
-			this.dESCRICAODataGridViewTextBoxColumn.Width = 500;
+			this.Column2.HeaderText = "Descrição";
+			this.Column2.Name = "Column2";
+			this.Column2.Width = 200;
 			// 
-			// vALORDataGridViewTextBoxColumn
+			// Column3
 			// 
-			this.vALORDataGridViewTextBoxColumn.DataPropertyName = "VALOR";
-			this.vALORDataGridViewTextBoxColumn.HeaderText = "VALOR";
-			this.vALORDataGridViewTextBoxColumn.Name = "vALORDataGridViewTextBoxColumn";
+			this.Column3.HeaderText = "Valor";
+			this.Column3.Name = "Column3";
 			// 
-			// multasBindingSource
+			// Column4
 			// 
-			this.multasBindingSource.DataMember = "multas";
-			this.multasBindingSource.DataSource = this.dataSetFat;
+			this.Column4.HeaderText = "Pontos";
+			this.Column4.Name = "Column4";
 			// 
-			// dataSetFat
+			// Column5
 			// 
-			// 
-			// cargos
-			// 
-			this.dataSetFat.cargos.Owner = this;
-			// 
-			// carros
-			// 
-			this.dataSetFat.carros.Owner = this;
-			// 
-			// cliente
-			// 
-			this.dataSetFat.cliente.Owner = this;
-			// 
-			// contratocarro
-			// 
-			this.dataSetFat.contratocarro.Owner = this;
-			// 
-			// contratopneus
-			// 
-			this.dataSetFat.contratopneus.Owner = this;
-			// 
-			// contratos
-			// 
-			this.dataSetFat.contratos.Owner = this;
-			// 
-			// contratoseguros
-			// 
-			this.dataSetFat.contratoseguros.Owner = this;
-			// 
-			// contratosinistros
-			// 
-			this.dataSetFat.contratosinistros.Owner = this;
-			// 
-			// contratoviagens
-			// 
-			this.dataSetFat.contratoviagens.Owner = this;
-			// 
-			// cor
-			// 
-			this.dataSetFat.cor.Owner = this;
-			this.dataSetFat.DataSetName = "DataSetFat";
-			// 
-			// endereco
-			// 
-			this.dataSetFat.endereco.Owner = this;
-			// 
-			// entradasaida
-			// 
-			this.dataSetFat.entradasaida.Owner = this;
-			// 
-			// funcionarios
-			// 
-			this.dataSetFat.funcionarios.Owner = this;
-			// 
-			// manutencao
-			// 
-			this.dataSetFat.manutencao.Owner = this;
-			// 
-			// manutencaopeca
-			// 
-			this.dataSetFat.manutencaopeca.Owner = this;
-			// 
-			// modelos
-			// 
-			this.dataSetFat.modelos.Owner = this;
-			// 
-			// montadora
-			// 
-			this.dataSetFat.montadora.Owner = this;
-			// 
-			// motoristas
-			// 
-			this.dataSetFat.motoristas.Owner = this;
-			// 
-			// multas
-			// 
-			this.dataSetFat.multas.Owner = this;
-			this.dataSetFat.Name = "dataSetFat";
-			// 
-			// pecas
-			// 
-			this.dataSetFat.pecas.Owner = this;
-			// 
-			// pneus
-			// 
-			this.dataSetFat.pneus.Owner = this;
-			// 
-			// telefonecliente
-			// 
-			this.dataSetFat.telefonecliente.Owner = this;
-			// 
-			// usuarios
-			// 
-			this.dataSetFat.usuarios.Owner = this;
-			this.dataSetFat.Owner = this;
+			this.Column5.HeaderText = "Placa";
+			this.Column5.Name = "Column5";
 			// 
 			// button1
 			// 
@@ -841,18 +732,6 @@
 			this.label3.TabIndex = 1;
 			this.label3.Text = "Data de vencimento:";
 			// 
-			// button2
-			// 
-			this.button2.AccessibleName = "Buscar Cliente";
-			this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.button2.Image = global::WindowsFormsApp1.Properties.Resources.lupa;
-			this.button2.Location = new System.Drawing.Point(356, 80);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(31, 20);
-			this.button2.TabIndex = 243;
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
-			// 
 			// FormCadastrarCliente
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -861,6 +740,7 @@
 			this.ControlBox = false;
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.label17);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormCadastrarCliente";
 			this.Text = "Cadastro de Clientes";
 			this.Load += new System.EventHandler(this.FormCadastrarCliente_Load);
@@ -874,31 +754,6 @@
 			this.tabMultas.ResumeLayout(false);
 			this.tabMultas.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.multasBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cargos)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.carros)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cliente)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratocarro)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratopneus)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratos)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratoseguros)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratosinistros)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratoviagens)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cor)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.endereco)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.entradasaida)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.funcionarios)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.manutencao)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.manutencaopeca)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.modelos)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.montadora)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.motoristas)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.multas)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.pecas)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.pneus)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.telefonecliente)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.usuarios)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSetFat)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -965,11 +820,11 @@
 		private System.Windows.Forms.TextBox txtNome;
 		private System.Windows.Forms.Button btnSalvar;
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.BindingSource multasBindingSource;
-		private DataSetFat dataSetFat;
-		private System.Windows.Forms.DataGridViewTextBoxColumn iDMULTASDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dESCRICAODataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn vALORDataGridViewTextBoxColumn;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
 	}
 }

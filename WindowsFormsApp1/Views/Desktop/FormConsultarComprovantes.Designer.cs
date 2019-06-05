@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultarComprovantes));
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.btnPesquisar = new System.Windows.Forms.Button();
 			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -162,6 +163,7 @@
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.ControlBox = false;
 			this.Controls.Add(this.groupBox1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormConsultarComprovantes";
 			this.Text = "Consultar Comprovantes";
 			this.Load += new System.EventHandler(this.FormConsultarComprovantes_Load);

@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastrarMotorista));
 			this.btnAddMotorista = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(9, 82);
+			this.label2.Location = new System.Drawing.Point(12, 54);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(88, 13);
 			this.label2.TabIndex = 4;
@@ -72,7 +73,7 @@
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(12, 98);
+			this.textBox2.Location = new System.Drawing.Point(15, 70);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(219, 20);
 			this.textBox2.TabIndex = 5;
@@ -80,7 +81,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(237, 82);
+			this.label3.Location = new System.Drawing.Point(237, 54);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(55, 13);
 			this.label3.TabIndex = 6;
@@ -88,7 +89,7 @@
 			// 
 			// textBox3
 			// 
-			this.textBox3.Location = new System.Drawing.Point(240, 98);
+			this.textBox3.Location = new System.Drawing.Point(240, 70);
 			this.textBox3.MaxLength = 2;
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(39, 20);
@@ -96,7 +97,7 @@
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(97, 203);
+			this.button3.Location = new System.Drawing.Point(127, 166);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(75, 35);
 			this.button3.TabIndex = 10;
@@ -108,7 +109,7 @@
 			// 
 			this.maskedEmitida.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.maskedEmitida.HidePromptOnLeave = true;
-			this.maskedEmitida.Location = new System.Drawing.Point(12, 142);
+			this.maskedEmitida.Location = new System.Drawing.Point(15, 114);
 			this.maskedEmitida.Mask = "00/00/0000";
 			this.maskedEmitida.Name = "maskedEmitida";
 			this.maskedEmitida.Size = new System.Drawing.Size(75, 20);
@@ -118,7 +119,7 @@
 			// lblEmitida
 			// 
 			this.lblEmitida.AutoSize = true;
-			this.lblEmitida.Location = new System.Drawing.Point(9, 126);
+			this.lblEmitida.Location = new System.Drawing.Point(12, 98);
 			this.lblEmitida.Name = "lblEmitida";
 			this.lblEmitida.Size = new System.Drawing.Size(61, 13);
 			this.lblEmitida.TabIndex = 244;
@@ -128,7 +129,7 @@
 			// 
 			this.maskedValidade.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.maskedValidade.HidePromptOnLeave = true;
-			this.maskedValidade.Location = new System.Drawing.Point(96, 142);
+			this.maskedValidade.Location = new System.Drawing.Point(99, 114);
 			this.maskedValidade.Mask = "00/00/0000";
 			this.maskedValidade.Name = "maskedValidade";
 			this.maskedValidade.Size = new System.Drawing.Size(75, 20);
@@ -138,7 +139,7 @@
 			// lblValidade
 			// 
 			this.lblValidade.AutoSize = true;
-			this.lblValidade.Location = new System.Drawing.Point(93, 126);
+			this.lblValidade.Location = new System.Drawing.Point(96, 98);
 			this.lblValidade.Name = "lblValidade";
 			this.lblValidade.Size = new System.Drawing.Size(51, 13);
 			this.lblValidade.TabIndex = 242;
@@ -156,7 +157,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(423, 268);
+			this.ClientSize = new System.Drawing.Size(329, 213);
 			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.maskedEmitida);
 			this.Controls.Add(this.lblEmitida);
@@ -169,8 +170,9 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnAddMotorista);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormCadastrarMotorista";
-			this.Text = "Cadastrar Motorista";
+			this.Text = "Motoristas";
 			this.Load += new System.EventHandler(this.FormCadastrarMotorista_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

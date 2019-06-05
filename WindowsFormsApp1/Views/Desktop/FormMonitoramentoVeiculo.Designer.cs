@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMonitoramentoVeiculo));
 			this.lblMonitoramento = new System.Windows.Forms.Label();
 			this.lblSelecione = new System.Windows.Forms.Label();
 			this.comboSelecao = new System.Windows.Forms.ComboBox();
@@ -95,6 +96,7 @@
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.ControlBox = false;
 			this.Controls.Add(this.groupBox1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormMonitoramentoVeiculo";
 			this.Text = "Monitoramento de Veiculos";
 			this.Load += new System.EventHandler(this.FormMonitoramentoVeiculo_Load);

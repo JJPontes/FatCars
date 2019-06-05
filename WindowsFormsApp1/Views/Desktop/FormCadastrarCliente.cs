@@ -117,7 +117,7 @@ namespace WindowsFormsApp1
 
 		private void Btn_Salvar_Click(object sender, EventArgs e)
 		{
-
+			/*
 			if (txtNome.Text != null) Program.Teste.Nome = txtNome.Text;
 			if (txtEmail.Text != null) Program.Teste.Email = txtEmail.Text;
 			if (txtRG.Text != null) Program.Teste.RG = Convert.ToString(txtRG.Text);
@@ -134,14 +134,14 @@ namespace WindowsFormsApp1
 			if (txtTelCom.Text != null) Program.Teste.TelCom = Convert.ToString(txtTelCom.Text);
 			if (txtTelCel.Text != null) Program.Teste.TelCel = Convert.ToString(txtTelCel.Text);
 
-
+	*/
 			MessageBox.Show("Cliente Cadastrado com sucesso!");
 			limparTextBoxes(this.Controls);
 		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show(" " + Program.Teste.Nome + "\n" + Program.Teste.Nascimento);
+			//MessageBox.Show(" " + Program.Teste.Nome + "\n" + Program.Teste.Nascimento);
 		}
 
 		private void Label12_Click(object sender, EventArgs e)

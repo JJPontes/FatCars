@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscaCarro));
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.lblFiltro = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
@@ -129,6 +130,7 @@
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.label1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.Name = "FormBuscaCarro";
 			this.Text = "Consultar Veículos";

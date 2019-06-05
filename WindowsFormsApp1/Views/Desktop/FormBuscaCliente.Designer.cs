@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscaCliente));
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -180,6 +181,7 @@
 			this.ClientSize = new System.Drawing.Size(715, 394);
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.tableLayoutPanel1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormBuscaCliente";
 			this.Text = "Buscar Clientes";
 			this.Load += new System.EventHandler(this.FormBuscaCliente_Load);

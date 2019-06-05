@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultarVeiculo));
 			this.label1 = new System.Windows.Forms.Label();
 			this.lblConsultarVeiculos = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -237,6 +238,7 @@
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.label1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormConsultarVeiculo";
 			this.Text = "Consultar Veículo";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

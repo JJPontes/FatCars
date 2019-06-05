@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNovaLocacao));
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +51,8 @@
 			this.maskedHoraDevolucao = new System.Windows.Forms.MaskedTextBox();
 			this.checkSegRoubo = new System.Windows.Forms.CheckBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.lblValorSegTerceiros = new System.Windows.Forms.Label();
+			this.lblValorSegRoubo = new System.Windows.Forms.Label();
 			this.checkSegTerceiros = new System.Windows.Forms.CheckBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.txtPagoRetirada = new System.Windows.Forms.TextBox();
@@ -73,6 +76,12 @@
 			this.label11 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.label18 = new System.Windows.Forms.Label();
+			this.comboBox2 = new System.Windows.Forms.ComboBox();
+			this.lblRecebidoPor = new System.Windows.Forms.Label();
+			this.comboCombustivel = new System.Windows.Forms.ComboBox();
+			this.label23 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
@@ -196,7 +205,7 @@
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(14, 290);
+			this.label6.Location = new System.Drawing.Point(278, 335);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(110, 13);
 			this.label6.TabIndex = 15;
@@ -216,14 +225,14 @@
             "Cartão de crédito",
             "Cartão de débito",
             "Boleto bancário"});
-			this.comboBox1.Location = new System.Drawing.Point(130, 283);
+			this.comboBox1.Location = new System.Drawing.Point(281, 352);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(130, 21);
 			this.comboBox1.TabIndex = 16;
 			// 
 			// button5
 			// 
-			this.button5.Location = new System.Drawing.Point(322, 356);
+			this.button5.Location = new System.Drawing.Point(296, 388);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(133, 44);
 			this.button5.TabIndex = 17;
@@ -280,14 +289,36 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.lblValorSegTerceiros);
+			this.groupBox1.Controls.Add(this.lblValorSegRoubo);
 			this.groupBox1.Controls.Add(this.checkSegTerceiros);
 			this.groupBox1.Controls.Add(this.checkSegRoubo);
 			this.groupBox1.Location = new System.Drawing.Point(17, 223);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(380, 54);
+			this.groupBox1.Size = new System.Drawing.Size(380, 70);
 			this.groupBox1.TabIndex = 23;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Seguros";
+			// 
+			// lblValorSegTerceiros
+			// 
+			this.lblValorSegTerceiros.AutoSize = true;
+			this.lblValorSegTerceiros.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblValorSegTerceiros.Location = new System.Drawing.Point(234, 39);
+			this.lblValorSegTerceiros.Name = "lblValorSegTerceiros";
+			this.lblValorSegTerceiros.Size = new System.Drawing.Size(10, 12);
+			this.lblValorSegTerceiros.TabIndex = 25;
+			this.lblValorSegTerceiros.Text = "0";
+			// 
+			// lblValorSegRoubo
+			// 
+			this.lblValorSegRoubo.AutoSize = true;
+			this.lblValorSegRoubo.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblValorSegRoubo.Location = new System.Drawing.Point(42, 39);
+			this.lblValorSegRoubo.Name = "lblValorSegRoubo";
+			this.lblValorSegRoubo.Size = new System.Drawing.Size(10, 12);
+			this.lblValorSegRoubo.TabIndex = 24;
+			this.lblValorSegRoubo.Text = "0";
 			// 
 			// checkSegTerceiros
 			// 
@@ -303,15 +334,15 @@
 			// label8
 			// 
 			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(14, 336);
+			this.label8.Location = new System.Drawing.Point(278, 296);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(114, 13);
+			this.label8.Size = new System.Drawing.Size(117, 13);
 			this.label8.TabIndex = 25;
-			this.label8.Text = "Valor pago na retirada:";
+			this.label8.Text = "Valor pago antecipado:";
 			// 
 			// txtPagoRetirada
 			// 
-			this.txtPagoRetirada.Location = new System.Drawing.Point(135, 328);
+			this.txtPagoRetirada.Location = new System.Drawing.Point(281, 312);
 			this.txtPagoRetirada.Name = "txtPagoRetirada";
 			this.txtPagoRetirada.Size = new System.Drawing.Size(100, 20);
 			this.txtPagoRetirada.TabIndex = 26;
@@ -545,12 +576,74 @@
 			this.label9.TabIndex = 28;
 			this.label9.Text = "(=) Valor Diária:";
 			// 
+			// textBox3
+			// 
+			this.textBox3.Location = new System.Drawing.Point(17, 312);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.Size = new System.Drawing.Size(100, 20);
+			this.textBox3.TabIndex = 32;
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Location = new System.Drawing.Point(14, 296);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(67, 13);
+			this.label18.TabIndex = 31;
+			this.label18.Text = "Km do carro:";
+			// 
+			// comboBox2
+			// 
+			this.comboBox2.FormattingEnabled = true;
+			this.comboBox2.Location = new System.Drawing.Point(17, 352);
+			this.comboBox2.Name = "comboBox2";
+			this.comboBox2.Size = new System.Drawing.Size(254, 21);
+			this.comboBox2.TabIndex = 36;
+			// 
+			// lblRecebidoPor
+			// 
+			this.lblRecebidoPor.AutoSize = true;
+			this.lblRecebidoPor.Location = new System.Drawing.Point(14, 335);
+			this.lblRecebidoPor.Name = "lblRecebidoPor";
+			this.lblRecebidoPor.Size = new System.Drawing.Size(70, 13);
+			this.lblRecebidoPor.TabIndex = 35;
+			this.lblRecebidoPor.Text = "Liberado Por:";
+			// 
+			// comboCombustivel
+			// 
+			this.comboCombustivel.FormattingEnabled = true;
+			this.comboCombustivel.Items.AddRange(new object[] {
+            "Cheio",
+            "3/4",
+            "1/2",
+            "1/4",
+            "Reserva"});
+			this.comboCombustivel.Location = new System.Drawing.Point(140, 311);
+			this.comboCombustivel.Name = "comboCombustivel";
+			this.comboCombustivel.Size = new System.Drawing.Size(121, 21);
+			this.comboCombustivel.TabIndex = 38;
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.Location = new System.Drawing.Point(137, 296);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(110, 13);
+			this.label23.TabIndex = 37;
+			this.label23.Text = "Nivel de combustível:";
+			// 
 			// FormNovaLocacao
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(718, 495);
+			this.ClientSize = new System.Drawing.Size(718, 444);
 			this.ControlBox = false;
+			this.Controls.Add(this.comboCombustivel);
+			this.Controls.Add(this.label23);
+			this.Controls.Add(this.comboBox2);
+			this.Controls.Add(this.lblRecebidoPor);
+			this.Controls.Add(this.textBox3);
+			this.Controls.Add(this.label18);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.txtPagoRetirada);
 			this.Controls.Add(this.label8);
@@ -574,8 +667,10 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.textBox1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormNovaLocacao";
 			this.Text = "Nova Locação";
+			this.Load += new System.EventHandler(this.FormNovaLocacao_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
@@ -632,5 +727,13 @@
 		private System.Windows.Forms.Label lblValorDiaria;
 		private System.Windows.Forms.Label lblSubTotal;
 		private System.Windows.Forms.Label lblValorPagoRetirada;
+		private System.Windows.Forms.Label lblValorSegTerceiros;
+		private System.Windows.Forms.Label lblValorSegRoubo;
+		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.ComboBox comboBox2;
+		private System.Windows.Forms.Label lblRecebidoPor;
+		private System.Windows.Forms.ComboBox comboCombustivel;
+		private System.Windows.Forms.Label label23;
 	}
 }
