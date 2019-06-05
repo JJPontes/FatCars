@@ -44,9 +44,9 @@
 			this.txtSenha = new System.Windows.Forms.TextBox();
 			this.txtConfirmaSenha = new System.Windows.Forms.TextBox();
 			this.LayoutCadastrar = new System.Windows.Forms.TableLayoutPanel();
+			this.comboCargo = new System.Windows.Forms.ComboBox();
 			this.groupCadastro = new System.Windows.Forms.GroupBox();
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-			this.comboCargo = new System.Windows.Forms.ComboBox();
 			this.LayoutCadastrar.SuspendLayout();
 			this.groupCadastro.SuspendLayout();
 			this.SuspendLayout();
@@ -224,16 +224,6 @@
 			this.LayoutCadastrar.Size = new System.Drawing.Size(377, 272);
 			this.LayoutCadastrar.TabIndex = 12;
 			// 
-			// groupCadastro
-			// 
-			this.groupCadastro.Controls.Add(this.LayoutCadastrar);
-			this.groupCadastro.Controls.Add(this.lblCadastrarNovoUsuario);
-			this.groupCadastro.Location = new System.Drawing.Point(149, 12);
-			this.groupCadastro.Name = "groupCadastro";
-			this.groupCadastro.Size = new System.Drawing.Size(400, 348);
-			this.groupCadastro.TabIndex = 13;
-			this.groupCadastro.TabStop = false;
-			// 
 			// comboCargo
 			// 
 			this.comboCargo.FormattingEnabled = true;
@@ -242,19 +232,27 @@
 			this.comboCargo.Size = new System.Drawing.Size(121, 21);
 			this.comboCargo.TabIndex = 12;
 			// 
+			// groupCadastro
+			// 
+			this.groupCadastro.Controls.Add(this.LayoutCadastrar);
+			this.groupCadastro.Controls.Add(this.lblCadastrarNovoUsuario);
+			this.groupCadastro.Location = new System.Drawing.Point(12, 12);
+			this.groupCadastro.Name = "groupCadastro";
+			this.groupCadastro.Size = new System.Drawing.Size(400, 348);
+			this.groupCadastro.TabIndex = 13;
+			this.groupCadastro.TabStop = false;
+			// 
 			// FormCadastrarUsuario
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.ControlBox = false;
+			this.ClientSize = new System.Drawing.Size(430, 372);
 			this.Controls.Add(this.groupCadastro);
 			this.Cursor = System.Windows.Forms.Cursors.Default;
 			this.Name = "FormCadastrarUsuario";
 			this.Text = "Cadastrar Usuários";
-			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.FormCadastrarUsuario_Load);
 			this.Resize += new System.EventHandler(this.FormCadastrarUsuario_Resize);
 			this.LayoutCadastrar.ResumeLayout(false);

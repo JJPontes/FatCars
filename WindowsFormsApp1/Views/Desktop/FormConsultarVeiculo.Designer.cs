@@ -45,7 +45,6 @@
 			this.button1 = new System.Windows.Forms.Button();
 			this.ComboFiltro = new System.Windows.Forms.ComboBox();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.Btn_Editar = new System.Windows.Forms.Button();
 			this.pIM1DataSet = new WindowsFormsApp1.PIM1DataSet();
 			this.pIM1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.tB_CarrosTableAdapter = new WindowsFormsApp1.PIM1DataSet1TableAdapters.TB_CarrosTableAdapter();
@@ -95,7 +94,7 @@
 			this.dataGridView1.Location = new System.Drawing.Point(0, 113);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(800, 337);
+			this.dataGridView1.Size = new System.Drawing.Size(654, 337);
 			this.dataGridView1.TabIndex = 13;
 			this.dataGridView1.Visible = false;
 			// 
@@ -204,25 +203,14 @@
 			this.tableLayoutPanel1.Controls.Add(this.button1, 3, 2);
 			this.tableLayoutPanel1.Controls.Add(this.ComboFiltro, 1, 2);
 			this.tableLayoutPanel1.Controls.Add(this.txtPesquisar, 2, 2);
-			this.tableLayoutPanel1.Controls.Add(this.Btn_Editar, 3, 3);
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 1);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 4;
+			this.tableLayoutPanel1.RowCount = 3;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 106);
 			this.tableLayoutPanel1.TabIndex = 14;
-			// 
-			// Btn_Editar
-			// 
-			this.Btn_Editar.Location = new System.Drawing.Point(455, 77);
-			this.Btn_Editar.Name = "Btn_Editar";
-			this.Btn_Editar.Size = new System.Drawing.Size(75, 23);
-			this.Btn_Editar.TabIndex = 13;
-			this.Btn_Editar.Text = "Editar...";
-			this.Btn_Editar.UseVisualStyleBackColor = true;
 			// 
 			// pIM1DataSet
 			// 
@@ -244,7 +232,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(654, 450);
 			this.ControlBox = false;
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.dataGridView1);
@@ -275,7 +263,6 @@
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.ComboBox ComboFiltro;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-		private System.Windows.Forms.Button Btn_Editar;
 		private System.Windows.Forms.BindingSource pIM1DataSetBindingSource;
 		private PIM1DataSet pIM1DataSet;
 		private PIM1DataSet1 pIM1DataSet1;

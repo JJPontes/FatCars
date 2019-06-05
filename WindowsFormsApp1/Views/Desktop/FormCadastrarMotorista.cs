@@ -26,5 +26,12 @@ namespace WindowsFormsApp1.Views.Desktop
 		{
 
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			FormCadastrarCliente formCadastrarCliente = new FormCadastrarCliente();
+			formCadastrarCliente.ControlBox = true;
+			formCadastrarCliente.Show();
+		}
 	}
 }

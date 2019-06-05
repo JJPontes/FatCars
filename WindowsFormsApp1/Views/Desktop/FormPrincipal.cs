@@ -103,12 +103,7 @@ namespace WindowsFormsApp1
 
 		}
 
-		private void cadastrarNovoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			FormCadastrarUsuario cadastrarUsuario = new FormCadastrarUsuario();
-			cadastrarUsuario.MdiParent = this;
-			cadastrarUsuario.Show();
-		}
+		
 
 		private void editarExcluirUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -180,9 +175,7 @@ namespace WindowsFormsApp1
 
 		private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			FormCadastrarPecaEstoque cadastrarPecaEstoque = new FormCadastrarPecaEstoque();
-			cadastrarPecaEstoque.MdiParent = this;
-			cadastrarPecaEstoque.Show();
+			
 
 		}
 
@@ -222,6 +215,41 @@ namespace WindowsFormsApp1
 		private void consultarEmpresasToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 
+		}
+
+		private void cadastrarNovoUsuárioToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			FormCadastrarUsuario cadastrarUsuario = new FormCadastrarUsuario();
+			cadastrarUsuario.Show();
+		}
+
+		private void controleDePátioToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormControlePatio formControlePatio = new Views.Desktop.FormControlePatio();
+			formControlePatio.MdiParent = this;
+			formControlePatio.Show();
+		}
+
+		private void controleDePneusToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormControlePneus formControlePneus = new Views.Desktop.FormControlePneus();
+			formControlePneus.MdiParent = this;
+			formControlePneus.Show();
+		}
+
+		private void estoqueToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormControleEstoque controleEstoque = new Views.Desktop.FormControleEstoque();
+			controleEstoque.MdiParent = this;
+			controleEstoque.Show();
+		}
+
+		private void devoluçãoToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormDevolução devolucao = new Views.Desktop.FormDevolução();
+			devolucao.MdiParent = this;
+
+			devolucao.Show();
 		}
 	}
 	}

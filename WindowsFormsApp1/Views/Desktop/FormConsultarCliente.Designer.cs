@@ -34,23 +34,43 @@
 			this.txtPesquisa = new System.Windows.Forms.TextBox();
 			this.btnPesquisar = new System.Windows.Forms.Button();
 			this.ComboFiltro = new System.Windows.Forms.ComboBox();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.rGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.tBClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.pIM1DataSet = new WindowsFormsApp1.PIM1DataSet();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.btnEditar = new System.Windows.Forms.Button();
-			this.tB_ClienteTableAdapter = new WindowsFormsApp1.PIM1DataSetTableAdapters.TB_ClienteTableAdapter();
-			this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-			this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.tBClienteBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pIM1DataSet)).BeginInit();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.dataSetFat = new WindowsFormsApp1.DataSetFat();
+			this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.iDCLIENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tIPOCLIENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.nOMECLIENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.eMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tableLayoutPanel1.SuspendLayout();
-			this.fillByToolStrip.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cargos)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.carros)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cliente)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratocarro)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratopneus)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratos)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratoseguros)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratosinistros)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratoviagens)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cor)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.endereco)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.entradasaida)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.funcionarios)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.manutencao)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.manutencaopeca)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.modelos)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.montadora)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.motoristas)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.multas)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.pecas)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.pneus)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.telefonecliente)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.usuarios)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblConsultarClientes
@@ -103,65 +123,6 @@
 			this.ComboFiltro.TabIndex = 6;
 			this.ComboFiltro.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
-			// dataGridView1
-			// 
-			this.dataGridView1.AllowUserToAddRows = false;
-			this.dataGridView1.AllowUserToDeleteRows = false;
-			this.dataGridView1.AutoGenerateColumns = false;
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDClienteDataGridViewTextBoxColumn,
-            this.nomeDataGridViewTextBoxColumn,
-            this.rGDataGridViewTextBoxColumn,
-            this.cPFDataGridViewTextBoxColumn});
-			this.dataGridView1.DataSource = this.tBClienteBindingSource;
-			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.dataGridView1.Location = new System.Drawing.Point(0, 101);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.ReadOnly = true;
-			this.dataGridView1.Size = new System.Drawing.Size(800, 355);
-			this.dataGridView1.TabIndex = 7;
-			this.dataGridView1.Visible = false;
-			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-			// 
-			// iDClienteDataGridViewTextBoxColumn
-			// 
-			this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "ID_Cliente";
-			this.iDClienteDataGridViewTextBoxColumn.HeaderText = "ID_Cliente";
-			this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
-			this.iDClienteDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// nomeDataGridViewTextBoxColumn
-			// 
-			this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-			this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-			this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-			this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// rGDataGridViewTextBoxColumn
-			// 
-			this.rGDataGridViewTextBoxColumn.DataPropertyName = "RG";
-			this.rGDataGridViewTextBoxColumn.HeaderText = "RG";
-			this.rGDataGridViewTextBoxColumn.Name = "rGDataGridViewTextBoxColumn";
-			this.rGDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// cPFDataGridViewTextBoxColumn
-			// 
-			this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
-			this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
-			this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
-			this.cPFDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// tBClienteBindingSource
-			// 
-			this.tBClienteBindingSource.DataMember = "TB_Cliente";
-			this.tBClienteBindingSource.DataSource = this.pIM1DataSet;
-			// 
-			// pIM1DataSet
-			// 
-			this.pIM1DataSet.DataSetName = "PIM1DataSet";
-			this.pIM1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
 			// tableLayoutPanel1
 			// 
 			this.tableLayoutPanel1.ColumnCount = 5;
@@ -196,27 +157,155 @@
 			this.btnEditar.Text = "Editar...";
 			this.btnEditar.UseVisualStyleBackColor = true;
 			// 
-			// tB_ClienteTableAdapter
+			// dataGridView1
 			// 
-			this.tB_ClienteTableAdapter.ClearBeforeFill = true;
+			this.dataGridView1.AutoGenerateColumns = false;
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCLIENTEDataGridViewTextBoxColumn,
+            this.tIPOCLIENTEDataGridViewTextBoxColumn,
+            this.nOMECLIENTEDataGridViewTextBoxColumn,
+            this.eMAILDataGridViewTextBoxColumn,
+            this.cPFDataGridViewTextBoxColumn});
+			this.dataGridView1.DataSource = this.clienteBindingSource;
+			this.dataGridView1.Location = new System.Drawing.Point(38, 113);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(695, 254);
+			this.dataGridView1.TabIndex = 9;
 			// 
-			// fillByToolStrip
+			// dataSetFat
 			// 
-			this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-			this.fillByToolStrip.Location = new System.Drawing.Point(0, 107);
-			this.fillByToolStrip.Name = "fillByToolStrip";
-			this.fillByToolStrip.Size = new System.Drawing.Size(800, 25);
-			this.fillByToolStrip.TabIndex = 9;
-			this.fillByToolStrip.Text = "fillByToolStrip";
 			// 
-			// fillByToolStripButton
+			// cargos
 			// 
-			this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.fillByToolStripButton.Name = "fillByToolStripButton";
-			this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
-			this.fillByToolStripButton.Text = "FillBy";
-			this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
+			this.dataSetFat.cargos.Owner = this;
+			// 
+			// carros
+			// 
+			this.dataSetFat.carros.Owner = this;
+			// 
+			// cliente
+			// 
+			this.dataSetFat.cliente.Owner = this;
+			// 
+			// contratocarro
+			// 
+			this.dataSetFat.contratocarro.Owner = this;
+			// 
+			// contratopneus
+			// 
+			this.dataSetFat.contratopneus.Owner = this;
+			// 
+			// contratos
+			// 
+			this.dataSetFat.contratos.Owner = this;
+			// 
+			// contratoseguros
+			// 
+			this.dataSetFat.contratoseguros.Owner = this;
+			// 
+			// contratosinistros
+			// 
+			this.dataSetFat.contratosinistros.Owner = this;
+			// 
+			// contratoviagens
+			// 
+			this.dataSetFat.contratoviagens.Owner = this;
+			// 
+			// cor
+			// 
+			this.dataSetFat.cor.Owner = this;
+			this.dataSetFat.DataSetName = "DataSetFat";
+			// 
+			// endereco
+			// 
+			this.dataSetFat.endereco.Owner = this;
+			// 
+			// entradasaida
+			// 
+			this.dataSetFat.entradasaida.Owner = this;
+			// 
+			// funcionarios
+			// 
+			this.dataSetFat.funcionarios.Owner = this;
+			// 
+			// manutencao
+			// 
+			this.dataSetFat.manutencao.Owner = this;
+			// 
+			// manutencaopeca
+			// 
+			this.dataSetFat.manutencaopeca.Owner = this;
+			// 
+			// modelos
+			// 
+			this.dataSetFat.modelos.Owner = this;
+			// 
+			// montadora
+			// 
+			this.dataSetFat.montadora.Owner = this;
+			// 
+			// motoristas
+			// 
+			this.dataSetFat.motoristas.Owner = this;
+			// 
+			// multas
+			// 
+			this.dataSetFat.multas.Owner = this;
+			this.dataSetFat.Name = "dataSetFat";
+			// 
+			// pecas
+			// 
+			this.dataSetFat.pecas.Owner = this;
+			// 
+			// pneus
+			// 
+			this.dataSetFat.pneus.Owner = this;
+			// 
+			// telefonecliente
+			// 
+			this.dataSetFat.telefonecliente.Owner = this;
+			// 
+			// usuarios
+			// 
+			this.dataSetFat.usuarios.Owner = this;
+			this.dataSetFat.Owner = this;
+			// 
+			// clienteBindingSource
+			// 
+			this.clienteBindingSource.DataMember = "cliente";
+			this.clienteBindingSource.DataSource = this.dataSetFat;
+			// 
+			// iDCLIENTEDataGridViewTextBoxColumn
+			// 
+			this.iDCLIENTEDataGridViewTextBoxColumn.DataPropertyName = "IDCLIENTE";
+			this.iDCLIENTEDataGridViewTextBoxColumn.HeaderText = "ID";
+			this.iDCLIENTEDataGridViewTextBoxColumn.Name = "iDCLIENTEDataGridViewTextBoxColumn";
+			// 
+			// tIPOCLIENTEDataGridViewTextBoxColumn
+			// 
+			this.tIPOCLIENTEDataGridViewTextBoxColumn.DataPropertyName = "TIPO_CLIENTE";
+			this.tIPOCLIENTEDataGridViewTextBoxColumn.HeaderText = "TIPO";
+			this.tIPOCLIENTEDataGridViewTextBoxColumn.Name = "tIPOCLIENTEDataGridViewTextBoxColumn";
+			// 
+			// nOMECLIENTEDataGridViewTextBoxColumn
+			// 
+			this.nOMECLIENTEDataGridViewTextBoxColumn.DataPropertyName = "NOME_CLIENTE";
+			this.nOMECLIENTEDataGridViewTextBoxColumn.HeaderText = "NOME";
+			this.nOMECLIENTEDataGridViewTextBoxColumn.Name = "nOMECLIENTEDataGridViewTextBoxColumn";
+			this.nOMECLIENTEDataGridViewTextBoxColumn.Width = 250;
+			// 
+			// eMAILDataGridViewTextBoxColumn
+			// 
+			this.eMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL";
+			this.eMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL";
+			this.eMAILDataGridViewTextBoxColumn.Name = "eMAILDataGridViewTextBoxColumn";
+			// 
+			// cPFDataGridViewTextBoxColumn
+			// 
+			this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
+			this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
+			this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
 			// 
 			// FormConsultarCliente
 			// 
@@ -226,22 +315,41 @@
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.ClientSize = new System.Drawing.Size(800, 456);
 			this.ControlBox = false;
-			this.Controls.Add(this.fillByToolStrip);
-			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.dataGridView1);
+			this.Controls.Add(this.tableLayoutPanel1);
 			this.Name = "FormConsultarCliente";
 			this.Text = "Consultar Clientes";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.FormConsultarCliente_Load);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.tBClienteBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pIM1DataSet)).EndInit();
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
-			this.fillByToolStrip.ResumeLayout(false);
-			this.fillByToolStrip.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cargos)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.carros)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cliente)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratocarro)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratopneus)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratos)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratoseguros)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratosinistros)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.contratoviagens)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.cor)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.endereco)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.entradasaida)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.funcionarios)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.manutencao)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.manutencaopeca)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.modelos)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.montadora)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.motoristas)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.multas)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.pecas)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.pneus)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.telefonecliente)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat.usuarios)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataSetFat)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
@@ -252,17 +360,15 @@
 		private System.Windows.Forms.TextBox txtPesquisa;
 		private System.Windows.Forms.Button btnPesquisar;
 		private System.Windows.Forms.ComboBox ComboFiltro;
-		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Button btnEditar;
-		private PIM1DataSet pIM1DataSet;
-		private System.Windows.Forms.BindingSource tBClienteBindingSource;
-		private PIM1DataSetTableAdapters.TB_ClienteTableAdapter tB_ClienteTableAdapter;
-		private System.Windows.Forms.DataGridViewTextBoxColumn iDClienteDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn rGDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn iDCLIENTEDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn tIPOCLIENTEDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn nOMECLIENTEDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn eMAILDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn cPFDataGridViewTextBoxColumn;
-		private System.Windows.Forms.ToolStrip fillByToolStrip;
-		private System.Windows.Forms.ToolStripButton fillByToolStripButton;
+		private System.Windows.Forms.BindingSource clienteBindingSource;
+		private DataSetFat dataSetFat;
 	}
 }

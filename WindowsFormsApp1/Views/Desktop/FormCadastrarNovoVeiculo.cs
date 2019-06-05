@@ -60,21 +60,23 @@ namespace WindowsFormsApp1
 
 		private void FormCadastrarNovoVeiculo_Load(object sender, EventArgs e)
 		{
-			//centralizando
+			/*centralizando
 			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
 			groupCadastro.Top = ((Height - groupCadastro.Height) - 50) / 2;
 
-			/*label1.Left = (Width - label1.Width) / 2;
+			label1.Left = (Width - label1.Width) / 2;
 			LayoutCadastro.Left = (Width - LayoutCadastro.Width) / 2;
-			Btn_Salvar.Left = (Width - Btn_Salvar.Width) / 2;*/
+			Btn_Salvar.Left = (Width - Btn_Salvar.Width) / 2;
+			*/
 
 		}
 
 		private void FormCadastrarNovoVeiculo_Resize(object sender, EventArgs e)
 		{
-			//centralizando
+			/*centralizando
 			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
 			groupCadastro.Top = ((Height - groupCadastro.Height) - 50) / 2;
+			*/
 		}
 
 		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,6 +86,33 @@ namespace WindowsFormsApp1
 
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
+
+		}
+
+		private void btnLocalizar_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormBuscaCarro formBuscaCarro = new Views.Desktop.FormBuscaCarro();
+			formBuscaCarro.Show();
+		}
+
+		private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnLocalizar_Click_1(object sender, EventArgs e)
+		{
+			Views.Desktop.FormBuscaCarro formBuscaCarro = new Views.Desktop.FormBuscaCarro();
+			formBuscaCarro.Show();
+		}
+
+		private void txtValorDiaria_TextChanged(object sender, EventArgs e)
+		{
+		}
+
+		private void txtValorDiaria_Leave(object sender, EventArgs e)
+		{
+			txtValorDiaria.Text = double.Parse(txtValorDiaria.Text).ToString("C");
 
 		}
 	}

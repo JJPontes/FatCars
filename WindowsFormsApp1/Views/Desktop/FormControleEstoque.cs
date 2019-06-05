@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Views.Desktop
 {
-	public partial class FormCadastrarNovoVeiculoPop : Form
+	public partial class FormControleEstoque : Form
 	{
-		public FormCadastrarNovoVeiculoPop()
+		public FormControleEstoque()
 		{
 			InitializeComponent();
-		}
-
-		private void btnSalvar_Click(object sender, EventArgs e)
-		{
-			this.Hide();
 		}
 	}
 }

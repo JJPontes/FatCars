@@ -25,11 +25,11 @@ namespace WindowsFormsApp1
 		private void FormCadastrarCliente_Load(object sender, EventArgs e)
 		{
 
-			//Centralizando
+			/*Centralizando
 
 			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
 			groupCadastro.Top = ((Height - groupCadastro.Height)-50) / 2;
-
+			*/
 		}
 
 		private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -91,8 +91,10 @@ namespace WindowsFormsApp1
 
 		private void FormCadastrarCliente_Resize(object sender, EventArgs e)
 		{
-			groupCadastro.Left = (Width - groupCadastro.Width) / 2;
+			/*
+			 * groupCadastro.Left = (Width - groupCadastro.Width) / 2;
 			groupCadastro.Top = ((Height - groupCadastro.Height) - 50) / 2;
+			*/
 		}
 
 		private void txtCep_TextChanged_1(object sender, EventArgs e)
@@ -119,7 +121,7 @@ namespace WindowsFormsApp1
 			if (txtNome.Text != null) Program.Teste.Nome = txtNome.Text;
 			if (txtEmail.Text != null) Program.Teste.Email = txtEmail.Text;
 			if (txtRG.Text != null) Program.Teste.RG = Convert.ToString(txtRG.Text);
-			if (txtCpf.Text != null) Program.Teste.CPF = Convert.ToString(txtCpf.Text);
+			if (maskedCpf.Text != null) Program.Teste.CPF = Convert.ToString(maskedCpf.Text);
 			if (txtNascimento.Text != null) Program.Teste.Nascimento = txtNascimento.Text;
 			if (txtProfissao.Text != null) Program.Teste.Profissao = txtProfissao.Text;
 			if (txtCep.Text != null) Program.Teste.CEP = txtCep.Text;
@@ -149,81 +151,12 @@ namespace WindowsFormsApp1
 
 		private void RadioPF_CheckedChanged(object sender, EventArgs e)
 		{
-			if (radioPF.Checked == true)
-			{
-				lblCpf.Text = "CPF";
-				lblRG.Text = "RG";
-				lblProfissao.Text = "Profissão";
-				lblCNH.Show();
-				txtCNH.Show();
-				lblCategoria.Show();
-				txtCategoria.Show();
-				lblValidade.Show();
-				maskedValidade.Show();
-				lblTelCel.Show();
-				txtTelCel.Show();
-				lblTelRes.Show();
-				txtTelRes.Show();
-			}
-
-			else
-			{
-				lblCpf.Text = "CNPJ";
-				lblRG.Text = "IE";
-				lblProfissao.Text = "Contato";
-				lblTelCom.Text = "Telefone";
-				lblCNH.Hide();
-				txtCNH.Hide();
-				lblCategoria.Hide();
-				txtCategoria.Hide();
-				lblValidade.Hide();
-				maskedValidade.Hide();
-				lblTelCel.Hide();
-				txtTelCel.Hide();
-				lblTelRes.Hide();
-				txtTelRes.Hide();
-			}
+			
 		}
 
 		private void RadioPj_CheckedChanged(object sender, EventArgs e)
 		{
-			if (radioPj.Checked == true)
-			{
-				lblCpf.Text = "CNPJ";
-				lblRG.Text = "IE";
-				lblProfissao.Text = "Contato";
-				lblTelCom.Text = "Telefone";
-				lblCNH.Hide();
-				txtCNH.Hide();
-				lblCategoria.Hide();
-				txtCategoria.Hide();
-				lblValidade.Hide();
-				maskedValidade.Hide();
-				lblTelCel.Hide();
-				txtTelCel.Hide();
-				lblTelRes.Hide();
-				txtTelRes.Hide();
-
-
-
-			}
-			else
-			{
-				lblCpf.Text = "CPF";
-				lblRG.Text = "RG";
-				lblProfissao.Text = "Profissão";
-				lblCNH.Show();
-				txtCNH.Show();
-				lblCategoria.Show();
-				txtCategoria.Show();
-				lblValidade.Show();
-				maskedValidade.Show();
-				lblTelCel.Show();
-				txtTelCel.Show();
-				lblTelRes.Show();
-				txtTelRes.Show();
-
-			}
+			
 
 		}
 
@@ -235,6 +168,112 @@ namespace WindowsFormsApp1
 		private void txtNome_TextChanged(object sender, EventArgs e)
 		{
 		
+		}
+
+		
+
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+
+		private void radioPF_CheckedChanged_1(object sender, EventArgs e)
+		{
+			if (radioPF.Checked == true)
+			{
+				lblCpf.Text = "CPF";
+				maskedCpf.Name = "maskedCPF";
+				maskedCpf.Mask = "999.999.999-99";
+				lblRG.Text = "RG";
+				lblProfissao.Text = "Profissão";
+				lblCNH.Show();
+				txtCNH.Show();
+				lblCategoria.Show();
+				txtCategoria.Show();
+				lblEmitida.Show();
+				maskedEmitida.Show();
+				lblValidade.Show();
+				maskedValidade.Show();
+				lblTelCel.Show();
+				txtTelCel.Show();
+				lblTelRes.Show();
+				txtTelRes.Show();
+				
+			}
+
+			else
+			{
+				lblCpf.Text = "CNPJ";
+				lblRG.Text = "IE";
+				lblProfissao.Text = "Contato";
+				lblTelCom.Text = "Telefone";
+				lblCNH.Hide();
+				txtCNH.Hide();
+				lblCategoria.Hide();
+				txtCategoria.Hide();
+				lblEmitida.Hide();
+				maskedEmitida.Hide();
+				lblValidade.Hide();
+				maskedValidade.Hide();
+				lblTelCel.Hide();
+				txtTelCel.Hide();
+				lblTelRes.Hide();
+				txtTelRes.Hide();
+				
+			}
+		}
+
+		private void radioPj_CheckedChanged_1(object sender, EventArgs e)
+		{
+			if (radioPj.Checked == true)
+			{
+				lblCpf.Text = "CNPJ";
+				maskedCpf.Name = "maskedCNPJ";
+				maskedCpf.Mask = "99.999.999/9999-99";
+				lblRG.Text = "IE";
+				lblProfissao.Text = "Contato";
+				lblTelCom.Text = "Telefone";
+				lblCNH.Hide();
+				txtCNH.Hide();
+				lblCategoria.Hide();
+				txtCategoria.Hide();
+				lblEmitida.Hide();
+				maskedEmitida.Hide();
+				lblValidade.Hide();
+				maskedValidade.Hide();
+				lblTelCel.Hide();
+				txtTelCel.Hide();
+				lblTelRes.Hide();
+				txtTelRes.Hide();
+
+
+
+			}
+			else
+			{
+				lblCpf.Text = "CPF";
+				lblRG.Text = "RG";
+				lblProfissao.Text = "Profissão";
+				lblCNH.Show();
+				txtCNH.Show();
+				lblCategoria.Show();
+				txtCategoria.Show();
+				lblEmitida.Show();
+				maskedEmitida.Show();
+				lblValidade.Show();
+				maskedValidade.Show();
+				lblTelCel.Show();
+				txtTelCel.Show();
+				lblTelRes.Show();
+				txtTelRes.Show();
+
+			}
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormBuscaCliente formBuscaCliente = new Views.Desktop.FormBuscaCliente();
+			formBuscaCliente.Show();
 		}
 	}
 }
