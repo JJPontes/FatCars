@@ -80,5 +80,17 @@ namespace WindowsFormsApp1
 			cadastrarMotorista.Show();
 		
 		}
+
+		private void lblEmail_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormBuscaFuncionario buscaFuncionario = new Views.Desktop.FormBuscaFuncionario();
+			buscaFuncionario.Show();
+
+		}
 	}
 }

@@ -33,7 +33,6 @@
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.lblNome = new System.Windows.Forms.Label();
 			this.txtConfirmaSenha = new System.Windows.Forms.TextBox();
-			this.lblEmail = new System.Windows.Forms.Label();
 			this.txtSenha = new System.Windows.Forms.TextBox();
 			this.lblCargo = new System.Windows.Forms.Label();
 			this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -41,14 +40,16 @@
 			this.lblNomeUsuario = new System.Windows.Forms.Label();
 			this.lblSenha = new System.Windows.Forms.Label();
 			this.lblConfirmaSenha = new System.Windows.Forms.Label();
-			this.TxtEmail = new System.Windows.Forms.TextBox();
 			this.txtNome = new System.Windows.Forms.TextBox();
 			this.lblNivelAcesso = new System.Windows.Forms.Label();
 			this.btnSalvar = new System.Windows.Forms.Button();
 			this.comboCargo = new System.Windows.Forms.ComboBox();
 			this.btnAdicionarUsuario = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.btnCadastrarCNH = new System.Windows.Forms.Button();
+			this.lblEmail = new System.Windows.Forms.Label();
+			this.TxtEmail = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.comboStatus = new System.Windows.Forms.ComboBox();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -72,7 +73,7 @@
 			// lblNome
 			// 
 			this.lblNome.AutoSize = true;
-			this.lblNome.Location = new System.Drawing.Point(15, 60);
+			this.lblNome.Location = new System.Drawing.Point(15, 102);
 			this.lblNome.Name = "lblNome";
 			this.lblNome.Size = new System.Drawing.Size(35, 13);
 			this.lblNome.TabIndex = 8;
@@ -85,15 +86,6 @@
 			this.txtConfirmaSenha.PasswordChar = '*';
 			this.txtConfirmaSenha.Size = new System.Drawing.Size(266, 20);
 			this.txtConfirmaSenha.TabIndex = 7;
-			// 
-			// lblEmail
-			// 
-			this.lblEmail.AutoSize = true;
-			this.lblEmail.Location = new System.Drawing.Point(15, 102);
-			this.lblEmail.Name = "lblEmail";
-			this.lblEmail.Size = new System.Drawing.Size(36, 13);
-			this.lblEmail.TabIndex = 11;
-			this.lblEmail.Text = "E-Mail";
 			// 
 			// txtSenha
 			// 
@@ -158,16 +150,9 @@
 			this.lblConfirmaSenha.TabIndex = 4;
 			this.lblConfirmaSenha.Text = "Confirmar Senha";
 			// 
-			// TxtEmail
-			// 
-			this.TxtEmail.Location = new System.Drawing.Point(18, 118);
-			this.TxtEmail.Name = "TxtEmail";
-			this.TxtEmail.Size = new System.Drawing.Size(266, 20);
-			this.TxtEmail.TabIndex = 2;
-			// 
 			// txtNome
 			// 
-			this.txtNome.Location = new System.Drawing.Point(18, 76);
+			this.txtNome.Location = new System.Drawing.Point(18, 118);
 			this.txtNome.Name = "txtNome";
 			this.txtNome.Size = new System.Drawing.Size(266, 20);
 			this.txtNome.TabIndex = 1;
@@ -184,7 +169,7 @@
 			// btnSalvar
 			// 
 			this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.btnSalvar.Location = new System.Drawing.Point(87, 362);
+			this.btnSalvar.Location = new System.Drawing.Point(93, 301);
 			this.btnSalvar.Name = "btnSalvar";
 			this.btnSalvar.Size = new System.Drawing.Size(105, 40);
 			this.btnSalvar.TabIndex = 8;
@@ -213,12 +198,14 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.btnCadastrarCNH);
+			this.groupBox1.Controls.Add(this.comboStatus);
+			this.groupBox1.Controls.Add(this.label1);
+			this.groupBox1.Controls.Add(this.lblEmail);
+			this.groupBox1.Controls.Add(this.TxtEmail);
 			this.groupBox1.Controls.Add(this.txtConfirmaSenha);
 			this.groupBox1.Controls.Add(this.btnAdicionarUsuario);
 			this.groupBox1.Controls.Add(this.comboCargo);
 			this.groupBox1.Controls.Add(this.btnSalvar);
-			this.groupBox1.Controls.Add(this.TxtEmail);
 			this.groupBox1.Controls.Add(this.lblNivelAcesso);
 			this.groupBox1.Controls.Add(this.lblNome);
 			this.groupBox1.Controls.Add(this.txtNome);
@@ -226,7 +213,6 @@
 			this.groupBox1.Controls.Add(this.lblUsuario);
 			this.groupBox1.Controls.Add(this.txtSenha);
 			this.groupBox1.Controls.Add(this.comboBox1);
-			this.groupBox1.Controls.Add(this.lblEmail);
 			this.groupBox1.Controls.Add(this.ComboNivelAcesso);
 			this.groupBox1.Controls.Add(this.lblSenha);
 			this.groupBox1.Controls.Add(this.lblNomeUsuario);
@@ -234,26 +220,51 @@
 			this.groupBox1.Controls.Add(this.lblCargo);
 			this.groupBox1.Location = new System.Drawing.Point(12, 12);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(305, 418);
+			this.groupBox1.Size = new System.Drawing.Size(305, 360);
 			this.groupBox1.TabIndex = 14;
 			this.groupBox1.TabStop = false;
 			// 
-			// btnCadastrarCNH
+			// lblEmail
 			// 
-			this.btnCadastrarCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.btnCadastrarCNH.Location = new System.Drawing.Point(80, 316);
-			this.btnCadastrarCNH.Name = "btnCadastrarCNH";
-			this.btnCadastrarCNH.Size = new System.Drawing.Size(128, 40);
-			this.btnCadastrarCNH.TabIndex = 14;
-			this.btnCadastrarCNH.Text = "Cadastrar CNH";
-			this.btnCadastrarCNH.UseVisualStyleBackColor = true;
-			this.btnCadastrarCNH.Click += new System.EventHandler(this.btnCadastrarCNH_Click);
+			this.lblEmail.AutoSize = true;
+			this.lblEmail.Location = new System.Drawing.Point(15, 65);
+			this.lblEmail.Name = "lblEmail";
+			this.lblEmail.Size = new System.Drawing.Size(119, 13);
+			this.lblEmail.TabIndex = 15;
+			this.lblEmail.Text = "Nº Registro Funcionário";
+			// 
+			// TxtEmail
+			// 
+			this.TxtEmail.Location = new System.Drawing.Point(18, 81);
+			this.TxtEmail.Name = "TxtEmail";
+			this.TxtEmail.Size = new System.Drawing.Size(120, 20);
+			this.TxtEmail.TabIndex = 14;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(155, 65);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(40, 13);
+			this.label1.TabIndex = 16;
+			this.label1.Text = "Status:";
+			// 
+			// comboStatus
+			// 
+			this.comboStatus.FormattingEnabled = true;
+			this.comboStatus.Items.AddRange(new object[] {
+            "Ativo",
+            "Inativo"});
+			this.comboStatus.Location = new System.Drawing.Point(158, 81);
+			this.comboStatus.Name = "comboStatus";
+			this.comboStatus.Size = new System.Drawing.Size(126, 21);
+			this.comboStatus.TabIndex = 17;
 			// 
 			// FormControleUsuarios
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(342, 441);
+			this.ClientSize = new System.Drawing.Size(342, 381);
 			this.ControlBox = false;
 			this.Controls.Add(this.groupBox1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -271,7 +282,6 @@
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label lblNome;
 		private System.Windows.Forms.TextBox txtConfirmaSenha;
-		private System.Windows.Forms.Label lblEmail;
 		private System.Windows.Forms.TextBox txtSenha;
 		private System.Windows.Forms.Label lblCargo;
 		private System.Windows.Forms.TextBox txtUsuario;
@@ -279,13 +289,15 @@
 		private System.Windows.Forms.Label lblNomeUsuario;
 		private System.Windows.Forms.Label lblSenha;
 		private System.Windows.Forms.Label lblConfirmaSenha;
-		private System.Windows.Forms.TextBox TxtEmail;
 		private System.Windows.Forms.TextBox txtNome;
 		private System.Windows.Forms.Label lblNivelAcesso;
 		private System.Windows.Forms.Button btnSalvar;
 		private System.Windows.Forms.ComboBox comboCargo;
 		private System.Windows.Forms.Button btnAdicionarUsuario;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Button btnCadastrarCNH;
+		private System.Windows.Forms.ComboBox comboStatus;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lblEmail;
+		private System.Windows.Forms.TextBox TxtEmail;
 	}
 }

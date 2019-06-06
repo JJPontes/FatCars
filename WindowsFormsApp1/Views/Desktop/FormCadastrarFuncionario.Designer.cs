@@ -84,6 +84,8 @@
 			this.textNrRegistro = new System.Windows.Forms.TextBox();
 			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
 			this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+			this.label9 = new System.Windows.Forms.Label();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.groupEndereco.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -240,7 +242,7 @@
 			// 
 			this.maskedEmitida.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.maskedEmitida.HidePromptOnLeave = true;
-			this.maskedEmitida.Location = new System.Drawing.Point(375, 168);
+			this.maskedEmitida.Location = new System.Drawing.Point(372, 160);
 			this.maskedEmitida.Mask = "00/00/0000";
 			this.maskedEmitida.Name = "maskedEmitida";
 			this.maskedEmitida.Size = new System.Drawing.Size(75, 20);
@@ -250,7 +252,7 @@
 			// lblEmitida
 			// 
 			this.lblEmitida.AutoSize = true;
-			this.lblEmitida.Location = new System.Drawing.Point(372, 152);
+			this.lblEmitida.Location = new System.Drawing.Point(369, 144);
 			this.lblEmitida.Name = "lblEmitida";
 			this.lblEmitida.Size = new System.Drawing.Size(61, 13);
 			this.lblEmitida.TabIndex = 269;
@@ -278,7 +280,7 @@
 			// 
 			this.maskedValidade.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.maskedValidade.HidePromptOnLeave = true;
-			this.maskedValidade.Location = new System.Drawing.Point(459, 168);
+			this.maskedValidade.Location = new System.Drawing.Point(456, 160);
 			this.maskedValidade.Mask = "00/00/0000";
 			this.maskedValidade.Name = "maskedValidade";
 			this.maskedValidade.Size = new System.Drawing.Size(75, 20);
@@ -307,7 +309,7 @@
 			// lblValidade
 			// 
 			this.lblValidade.AutoSize = true;
-			this.lblValidade.Location = new System.Drawing.Point(456, 152);
+			this.lblValidade.Location = new System.Drawing.Point(453, 144);
 			this.lblValidade.Name = "lblValidade";
 			this.lblValidade.Size = new System.Drawing.Size(51, 13);
 			this.lblValidade.TabIndex = 265;
@@ -316,7 +318,7 @@
 			// lblProfissao
 			// 
 			this.lblProfissao.AutoSize = true;
-			this.lblProfissao.Location = new System.Drawing.Point(28, 110);
+			this.lblProfissao.Location = new System.Drawing.Point(25, 102);
 			this.lblProfissao.Name = "lblProfissao";
 			this.lblProfissao.Size = new System.Drawing.Size(78, 13);
 			this.lblProfissao.TabIndex = 258;
@@ -324,7 +326,7 @@
 			// 
 			// txtCategoria
 			// 
-			this.txtCategoria.Location = new System.Drawing.Point(321, 168);
+			this.txtCategoria.Location = new System.Drawing.Point(318, 160);
 			this.txtCategoria.MaxLength = 2;
 			this.txtCategoria.Name = "txtCategoria";
 			this.txtCategoria.Size = new System.Drawing.Size(39, 20);
@@ -334,7 +336,7 @@
 			// 
 			this.txtNascimento.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
 			this.txtNascimento.HidePromptOnLeave = true;
-			this.txtNascimento.Location = new System.Drawing.Point(586, 129);
+			this.txtNascimento.Location = new System.Drawing.Point(657, 121);
 			this.txtNascimento.Mask = "00/00/0000";
 			this.txtNascimento.Name = "txtNascimento";
 			this.txtNascimento.Size = new System.Drawing.Size(71, 20);
@@ -344,7 +346,7 @@
 			// lblCategoria
 			// 
 			this.lblCategoria.AutoSize = true;
-			this.lblCategoria.Location = new System.Drawing.Point(318, 152);
+			this.lblCategoria.Location = new System.Drawing.Point(315, 144);
 			this.lblCategoria.Name = "lblCategoria";
 			this.lblCategoria.Size = new System.Drawing.Size(55, 13);
 			this.lblCategoria.TabIndex = 267;
@@ -352,7 +354,7 @@
 			// 
 			// txtCNH
 			// 
-			this.txtCNH.Location = new System.Drawing.Point(114, 168);
+			this.txtCNH.Location = new System.Drawing.Point(111, 160);
 			this.txtCNH.Name = "txtCNH";
 			this.txtCNH.Size = new System.Drawing.Size(205, 20);
 			this.txtCNH.TabIndex = 264;
@@ -360,7 +362,7 @@
 			// lblNascimento
 			// 
 			this.lblNascimento.AutoSize = true;
-			this.lblNascimento.Location = new System.Drawing.Point(583, 113);
+			this.lblNascimento.Location = new System.Drawing.Point(654, 105);
 			this.lblNascimento.Name = "lblNascimento";
 			this.lblNascimento.Size = new System.Drawing.Size(80, 13);
 			this.lblNascimento.TabIndex = 256;
@@ -369,7 +371,7 @@
 			// lblCNH
 			// 
 			this.lblCNH.AutoSize = true;
-			this.lblCNH.Location = new System.Drawing.Point(111, 152);
+			this.lblCNH.Location = new System.Drawing.Point(108, 144);
 			this.lblCNH.Name = "lblCNH";
 			this.lblCNH.Size = new System.Drawing.Size(88, 13);
 			this.lblCNH.TabIndex = 263;
@@ -456,7 +458,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(28, 152);
+			this.label1.Location = new System.Drawing.Point(25, 144);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(79, 13);
 			this.label1.TabIndex = 274;
@@ -464,15 +466,15 @@
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(113, 129);
+			this.textBox2.Location = new System.Drawing.Point(227, 121);
 			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(150, 20);
+			this.textBox2.Size = new System.Drawing.Size(139, 20);
 			this.textBox2.TabIndex = 275;
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(108, 113);
+			this.label2.Location = new System.Drawing.Point(369, 102);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(39, 13);
 			this.label2.TabIndex = 276;
@@ -480,15 +482,15 @@
 			// 
 			// textBox3
 			// 
-			this.textBox3.Location = new System.Drawing.Point(269, 129);
+			this.textBox3.Location = new System.Drawing.Point(372, 121);
 			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(150, 20);
+			this.textBox3.Size = new System.Drawing.Size(147, 20);
 			this.textBox3.TabIndex = 277;
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(266, 113);
+			this.label3.Location = new System.Drawing.Point(224, 105);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(50, 13);
 			this.label3.TabIndex = 278;
@@ -496,15 +498,15 @@
 			// 
 			// textBox4
 			// 
-			this.textBox4.Location = new System.Drawing.Point(430, 129);
+			this.textBox4.Location = new System.Drawing.Point(525, 121);
 			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(150, 20);
+			this.textBox4.Size = new System.Drawing.Size(126, 20);
 			this.textBox4.TabIndex = 279;
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(430, 113);
+			this.label4.Location = new System.Drawing.Point(522, 105);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(79, 13);
 			this.label4.TabIndex = 280;
@@ -562,7 +564,7 @@
 			// 
 			// maskedTextBox1
 			// 
-			this.maskedTextBox1.Location = new System.Drawing.Point(31, 129);
+			this.maskedTextBox1.Location = new System.Drawing.Point(28, 121);
 			this.maskedTextBox1.Mask = "00/00/0000";
 			this.maskedTextBox1.Name = "maskedTextBox1";
 			this.maskedTextBox1.Size = new System.Drawing.Size(76, 20);
@@ -571,12 +573,29 @@
 			// 
 			// maskedTextBox2
 			// 
-			this.maskedTextBox2.Location = new System.Drawing.Point(31, 168);
+			this.maskedTextBox2.Location = new System.Drawing.Point(28, 160);
 			this.maskedTextBox2.Mask = "00/00/0000";
 			this.maskedTextBox2.Name = "maskedTextBox2";
 			this.maskedTextBox2.Size = new System.Drawing.Size(76, 20);
 			this.maskedTextBox2.TabIndex = 288;
 			this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(107, 102);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(35, 13);
+			this.label9.TabIndex = 290;
+			this.label9.Text = "Cargo";
+			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(110, 120);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(110, 21);
+			this.comboBox1.TabIndex = 291;
 			// 
 			// FormCadastrarFuncionario
 			// 
@@ -584,6 +603,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.ControlBox = false;
+			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.label9);
 			this.Controls.Add(this.maskedTextBox2);
 			this.Controls.Add(this.maskedTextBox1);
 			this.Controls.Add(this.label7);
@@ -693,5 +714,7 @@
 		private System.Windows.Forms.TextBox textNrRegistro;
 		private System.Windows.Forms.MaskedTextBox maskedTextBox1;
 		private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.ComboBox comboBox1;
 	}
 }
