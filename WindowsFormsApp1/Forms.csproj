@@ -176,6 +176,12 @@
     <Compile Include="Views\Desktop\FormBuscaCliente.Designer.cs">
       <DependentUpon>FormBuscaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Desktop\FormBuscaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Desktop\FormBuscaFuncionario.Designer.cs">
+      <DependentUpon>FormBuscaFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Desktop\FormBuscaLocacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,18 @@
     </Compile>
     <Compile Include="Views\Desktop\FormCadastrarCliente.Designer.cs">
       <DependentUpon>FormCadastrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Desktop\FormCadastrarDespesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Desktop\FormCadastrarDespesa.Designer.cs">
+      <DependentUpon>FormCadastrarDespesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Desktop\FormCadastrarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Desktop\FormCadastrarFuncionario.Designer.cs">
+      <DependentUpon>FormCadastrarFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Desktop\FormCadastrarMotorista.cs">
       <SubType>Form</SubType>
@@ -206,11 +224,11 @@
     <Compile Include="Views\Desktop\FormCadastrarUsuario.Designer.cs">
       <DependentUpon>FormCadastrarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Desktop\FormCadastrarNovoVeiculo.cs">
+    <Compile Include="Views\Desktop\FormCadastrarVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Desktop\FormCadastrarNovoVeiculo.Designer.cs">
-      <DependentUpon>FormCadastrarNovoVeiculo.cs</DependentUpon>
+    <Compile Include="Views\Desktop\FormCadastrarVeiculo.Designer.cs">
+      <DependentUpon>FormCadastrarVeiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Desktop\FormConsultarCliente.cs">
       <SubType>Form</SubType>
@@ -376,17 +394,26 @@
     <EmbeddedResource Include="Views\Desktop\FormBuscaCliente.resx">
       <DependentUpon>FormBuscaCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Desktop\FormBuscaFuncionario.resx">
+      <DependentUpon>FormBuscaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Desktop\FormBuscaLocacao.resx">
       <DependentUpon>FormBuscaLocacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Desktop\FormCadastrarCliente.resx">
       <DependentUpon>FormCadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Desktop\FormCadastrarDespesa.resx">
+      <DependentUpon>FormCadastrarDespesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Desktop\FormCadastrarFuncionario.resx">
+      <DependentUpon>FormCadastrarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Desktop\FormCadastrarMotorista.resx">
       <DependentUpon>FormCadastrarMotorista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Desktop\FormCadastrarNovoVeiculo.resx">
-      <DependentUpon>FormCadastrarNovoVeiculo.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Desktop\FormCadastrarVeiculo.resx">
+      <DependentUpon>FormCadastrarVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Desktop\FormControleEstoque.resx">
       <DependentUpon>FormControleEstoque.cs</DependentUpon>

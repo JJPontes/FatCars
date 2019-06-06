@@ -46,6 +46,7 @@
 			this.txtConfirmaSenha = new System.Windows.Forms.TextBox();
 			this.comboCargo = new System.Windows.Forms.ComboBox();
 			this.groupCadastro = new System.Windows.Forms.GroupBox();
+			this.btnCadastrarCNH = new System.Windows.Forms.Button();
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			this.groupCadastro.SuspendLayout();
 			this.SuspendLayout();
@@ -53,7 +54,7 @@
 			// btnSalvar
 			// 
 			this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.btnSalvar.Location = new System.Drawing.Point(122, 287);
+			this.btnSalvar.Location = new System.Drawing.Point(89, 334);
 			this.btnSalvar.Name = "btnSalvar";
 			this.btnSalvar.Size = new System.Drawing.Size(105, 40);
 			this.btnSalvar.TabIndex = 8;
@@ -64,7 +65,7 @@
 			// lblNomeUsuario
 			// 
 			this.lblNomeUsuario.AutoSize = true;
-			this.lblNomeUsuario.Location = new System.Drawing.Point(33, 167);
+			this.lblNomeUsuario.Location = new System.Drawing.Point(12, 166);
 			this.lblNomeUsuario.Name = "lblNomeUsuario";
 			this.lblNomeUsuario.Size = new System.Drawing.Size(89, 13);
 			this.lblNomeUsuario.TabIndex = 1;
@@ -73,7 +74,7 @@
 			// 
 			// txtNome
 			// 
-			this.txtNome.Location = new System.Drawing.Point(35, 65);
+			this.txtNome.Location = new System.Drawing.Point(15, 64);
 			this.txtNome.Name = "txtNome";
 			this.txtNome.Size = new System.Drawing.Size(266, 20);
 			this.txtNome.TabIndex = 1;
@@ -81,7 +82,7 @@
 			// lblSenha
 			// 
 			this.lblSenha.AutoSize = true;
-			this.lblSenha.Location = new System.Drawing.Point(33, 206);
+			this.lblSenha.Location = new System.Drawing.Point(13, 206);
 			this.lblSenha.Name = "lblSenha";
 			this.lblSenha.Size = new System.Drawing.Size(38, 13);
 			this.lblSenha.TabIndex = 3;
@@ -90,7 +91,7 @@
 			// lblConfirmaSenha
 			// 
 			this.lblConfirmaSenha.AutoSize = true;
-			this.lblConfirmaSenha.Location = new System.Drawing.Point(32, 245);
+			this.lblConfirmaSenha.Location = new System.Drawing.Point(12, 245);
 			this.lblConfirmaSenha.Name = "lblConfirmaSenha";
 			this.lblConfirmaSenha.Size = new System.Drawing.Size(85, 13);
 			this.lblConfirmaSenha.TabIndex = 4;
@@ -98,7 +99,7 @@
 			// 
 			// TxtEmail
 			// 
-			this.TxtEmail.Location = new System.Drawing.Point(35, 104);
+			this.TxtEmail.Location = new System.Drawing.Point(15, 103);
 			this.TxtEmail.Name = "TxtEmail";
 			this.TxtEmail.Size = new System.Drawing.Size(266, 20);
 			this.TxtEmail.TabIndex = 2;
@@ -108,7 +109,7 @@
 			this.lblCadastrarNovoUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.lblCadastrarNovoUsuario.AutoSize = true;
 			this.lblCadastrarNovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCadastrarNovoUsuario.Location = new System.Drawing.Point(41, 16);
+			this.lblCadastrarNovoUsuario.Location = new System.Drawing.Point(29, 16);
 			this.lblCadastrarNovoUsuario.Name = "lblCadastrarNovoUsuario";
 			this.lblCadastrarNovoUsuario.Size = new System.Drawing.Size(242, 25);
 			this.lblCadastrarNovoUsuario.TabIndex = 7;
@@ -119,7 +120,7 @@
 			// lblNome
 			// 
 			this.lblNome.AutoSize = true;
-			this.lblNome.Location = new System.Drawing.Point(32, 49);
+			this.lblNome.Location = new System.Drawing.Point(12, 48);
 			this.lblNome.Name = "lblNome";
 			this.lblNome.Size = new System.Drawing.Size(35, 13);
 			this.lblNome.TabIndex = 8;
@@ -128,7 +129,7 @@
 			// lblCargo
 			// 
 			this.lblCargo.AutoSize = true;
-			this.lblCargo.Location = new System.Drawing.Point(33, 127);
+			this.lblCargo.Location = new System.Drawing.Point(12, 126);
 			this.lblCargo.Name = "lblCargo";
 			this.lblCargo.Size = new System.Drawing.Size(35, 13);
 			this.lblCargo.TabIndex = 9;
@@ -137,7 +138,7 @@
 			// lblNivelAcesso
 			// 
 			this.lblNivelAcesso.AutoSize = true;
-			this.lblNivelAcesso.Location = new System.Drawing.Point(177, 127);
+			this.lblNivelAcesso.Location = new System.Drawing.Point(156, 126);
 			this.lblNivelAcesso.Name = "lblNivelAcesso";
 			this.lblNivelAcesso.Size = new System.Drawing.Size(85, 13);
 			this.lblNivelAcesso.TabIndex = 10;
@@ -146,7 +147,7 @@
 			// lblEmail
 			// 
 			this.lblEmail.AutoSize = true;
-			this.lblEmail.Location = new System.Drawing.Point(32, 88);
+			this.lblEmail.Location = new System.Drawing.Point(12, 87);
 			this.lblEmail.Name = "lblEmail";
 			this.lblEmail.Size = new System.Drawing.Size(36, 13);
 			this.lblEmail.TabIndex = 11;
@@ -159,21 +160,21 @@
             "Usuário",
             "Supervisor",
             "Administrador"});
-			this.ComboNivelAcesso.Location = new System.Drawing.Point(180, 143);
+			this.ComboNivelAcesso.Location = new System.Drawing.Point(159, 142);
 			this.ComboNivelAcesso.Name = "ComboNivelAcesso";
 			this.ComboNivelAcesso.Size = new System.Drawing.Size(121, 21);
 			this.ComboNivelAcesso.TabIndex = 4;
 			// 
 			// txtUsuario
 			// 
-			this.txtUsuario.Location = new System.Drawing.Point(35, 183);
+			this.txtUsuario.Location = new System.Drawing.Point(15, 182);
 			this.txtUsuario.Name = "txtUsuario";
 			this.txtUsuario.Size = new System.Drawing.Size(266, 20);
 			this.txtUsuario.TabIndex = 5;
 			// 
 			// txtSenha
 			// 
-			this.txtSenha.Location = new System.Drawing.Point(35, 222);
+			this.txtSenha.Location = new System.Drawing.Point(15, 222);
 			this.txtSenha.Name = "txtSenha";
 			this.txtSenha.PasswordChar = '*';
 			this.txtSenha.Size = new System.Drawing.Size(266, 20);
@@ -181,7 +182,7 @@
 			// 
 			// txtConfirmaSenha
 			// 
-			this.txtConfirmaSenha.Location = new System.Drawing.Point(35, 261);
+			this.txtConfirmaSenha.Location = new System.Drawing.Point(15, 261);
 			this.txtConfirmaSenha.Name = "txtConfirmaSenha";
 			this.txtConfirmaSenha.PasswordChar = '*';
 			this.txtConfirmaSenha.Size = new System.Drawing.Size(266, 20);
@@ -190,13 +191,14 @@
 			// comboCargo
 			// 
 			this.comboCargo.FormattingEnabled = true;
-			this.comboCargo.Location = new System.Drawing.Point(35, 143);
+			this.comboCargo.Location = new System.Drawing.Point(14, 142);
 			this.comboCargo.Name = "comboCargo";
 			this.comboCargo.Size = new System.Drawing.Size(121, 21);
 			this.comboCargo.TabIndex = 12;
 			// 
 			// groupCadastro
 			// 
+			this.groupCadastro.Controls.Add(this.btnCadastrarCNH);
 			this.groupCadastro.Controls.Add(this.btnSalvar);
 			this.groupCadastro.Controls.Add(this.txtConfirmaSenha);
 			this.groupCadastro.Controls.Add(this.lblNome);
@@ -215,9 +217,20 @@
 			this.groupCadastro.Controls.Add(this.comboCargo);
 			this.groupCadastro.Location = new System.Drawing.Point(12, 12);
 			this.groupCadastro.Name = "groupCadastro";
-			this.groupCadastro.Size = new System.Drawing.Size(323, 348);
+			this.groupCadastro.Size = new System.Drawing.Size(310, 392);
 			this.groupCadastro.TabIndex = 13;
 			this.groupCadastro.TabStop = false;
+			this.groupCadastro.Enter += new System.EventHandler(this.groupCadastro_Enter);
+			// 
+			// btnCadastrarCNH
+			// 
+			this.btnCadastrarCNH.Location = new System.Drawing.Point(75, 287);
+			this.btnCadastrarCNH.Name = "btnCadastrarCNH";
+			this.btnCadastrarCNH.Size = new System.Drawing.Size(133, 40);
+			this.btnCadastrarCNH.TabIndex = 14;
+			this.btnCadastrarCNH.Text = "Cadastrar CNH";
+			this.btnCadastrarCNH.UseVisualStyleBackColor = true;
+			this.btnCadastrarCNH.Click += new System.EventHandler(this.btnCadastrarCNH_Click);
 			// 
 			// FormCadastrarUsuario
 			// 
@@ -225,7 +238,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(354, 372);
+			this.ClientSize = new System.Drawing.Size(343, 416);
 			this.Controls.Add(this.groupCadastro);
 			this.Cursor = System.Windows.Forms.Cursors.Default;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -259,5 +272,6 @@
 		private System.Windows.Forms.GroupBox groupCadastro;
 		private System.ComponentModel.BackgroundWorker backgroundWorker1;
 		private System.Windows.Forms.ComboBox comboCargo;
+		private System.Windows.Forms.Button btnCadastrarCNH;
 	}
 }

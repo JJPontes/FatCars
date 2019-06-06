@@ -240,7 +240,7 @@ namespace WindowsFormsApp1
 		private void consultarEditarEstoqueDePeçasToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Views.Desktop.FormControleEstoque controleEstoque = new Views.Desktop.FormControleEstoque();
-			controleEstoque.TabCotroleEstoque.SelectTab(2);
+			controleEstoque.TabCotroleEstoque.SelectTab(0);
 			controleEstoque.MdiParent = this;
 			controleEstoque.Show();
 		}
@@ -280,6 +280,21 @@ namespace WindowsFormsApp1
 			buscaLocacao.ControlBox = false;
 			buscaLocacao.MdiParent = this;
 			buscaLocacao.Show();
+		}
+
+		private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormCadastrarFuncionario cadastrarFuncionario = new Views.Desktop.FormCadastrarFuncionario();
+			cadastrarFuncionario.MdiParent = this;
+			cadastrarFuncionario.Show();
+
+		}
+
+		private void despesasToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormCadastrarDespesa cadastrarDespesa = new Views.Desktop.FormCadastrarDespesa();
+			cadastrarDespesa.MdiParent = this;
+			cadastrarDespesa.Show();
 		}
 	}
 	}

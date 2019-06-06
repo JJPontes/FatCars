@@ -31,6 +31,12 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormControleEstoque));
 			this.TabCotroleEstoque = new System.Windows.Forms.TabControl();
 			this.tabCadEntradas = new System.Windows.Forms.TabPage();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.textBox5 = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +51,12 @@
 			this.textBox8 = new System.Windows.Forms.TextBox();
 			this.label12 = new System.Windows.Forms.Label();
 			this.tabCadSaidas = new System.Windows.Forms.TabPage();
+			this.dataGridView4 = new System.Windows.Forms.DataGridView();
+			this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
@@ -58,44 +70,32 @@
 			this.label7 = new System.Windows.Forms.Label();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
-			this.tabBusca = new System.Windows.Forms.TabPage();
-			this.label13 = new System.Windows.Forms.Label();
-			this.textBox9 = new System.Windows.Forms.TextBox();
-			this.btnBuscar = new System.Windows.Forms.Button();
-			this.label14 = new System.Windows.Forms.Label();
-			this.comboPesquisa = new System.Windows.Forms.ComboBox();
+			this.tabConsultaEstoque = new System.Windows.Forms.TabPage();
 			this.dataGridView3 = new System.Windows.Forms.DataGridView();
 			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridView4 = new System.Windows.Forms.DataGridView();
-			this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.comboPesquisa = new System.Windows.Forms.ComboBox();
+			this.label14 = new System.Windows.Forms.Label();
+			this.btnBuscar = new System.Windows.Forms.Button();
+			this.textBox9 = new System.Windows.Forms.TextBox();
+			this.label13 = new System.Windows.Forms.Label();
 			this.TabCotroleEstoque.SuspendLayout();
 			this.tabCadEntradas.SuspendLayout();
-			this.tabCadSaidas.SuspendLayout();
-			this.tabBusca.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			this.tabCadSaidas.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+			this.tabConsultaEstoque.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// TabCotroleEstoque
 			// 
+			this.TabCotroleEstoque.Controls.Add(this.tabConsultaEstoque);
 			this.TabCotroleEstoque.Controls.Add(this.tabCadEntradas);
 			this.TabCotroleEstoque.Controls.Add(this.tabCadSaidas);
-			this.TabCotroleEstoque.Controls.Add(this.tabBusca);
 			this.TabCotroleEstoque.Location = new System.Drawing.Point(12, 12);
 			this.TabCotroleEstoque.Name = "TabCotroleEstoque";
 			this.TabCotroleEstoque.SelectedIndex = 0;
@@ -125,6 +125,45 @@
 			this.tabCadEntradas.Size = new System.Drawing.Size(661, 469);
 			this.tabCadEntradas.TabIndex = 0;
 			this.tabCadEntradas.Text = "Cadastro de entradas";
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+			this.dataGridView1.Location = new System.Drawing.Point(54, 229);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(547, 181);
+			this.dataGridView1.TabIndex = 69;
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.HeaderText = "Código";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.HeaderText = "Peça";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this.dataGridViewTextBoxColumn3.HeaderText = "Descrição";
+			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this.dataGridViewTextBoxColumn4.HeaderText = "Valor";
+			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+			// 
+			// dataGridViewTextBoxColumn5
+			// 
+			this.dataGridViewTextBoxColumn5.HeaderText = "Data adição";
+			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
 			// 
 			// textBox5
 			// 
@@ -260,6 +299,45 @@
 			this.tabCadSaidas.TabIndex = 1;
 			this.tabCadSaidas.Text = "Cadastro de saídas";
 			// 
+			// dataGridView4
+			// 
+			this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+			this.dataGridView4.Location = new System.Drawing.Point(56, 229);
+			this.dataGridView4.Name = "dataGridView4";
+			this.dataGridView4.Size = new System.Drawing.Size(547, 181);
+			this.dataGridView4.TabIndex = 55;
+			// 
+			// dataGridViewTextBoxColumn9
+			// 
+			this.dataGridViewTextBoxColumn9.HeaderText = "Código";
+			this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+			// 
+			// dataGridViewTextBoxColumn10
+			// 
+			this.dataGridViewTextBoxColumn10.HeaderText = "Peça";
+			this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+			// 
+			// dataGridViewTextBoxColumn11
+			// 
+			this.dataGridViewTextBoxColumn11.HeaderText = "Descrição";
+			this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+			// 
+			// dataGridViewTextBoxColumn12
+			// 
+			this.dataGridViewTextBoxColumn12.HeaderText = "Valor";
+			this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+			// 
+			// dataGridViewTextBoxColumn13
+			// 
+			this.dataGridViewTextBoxColumn13.HeaderText = "Data adição";
+			this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+			// 
 			// textBox4
 			// 
 			this.textBox4.Location = new System.Drawing.Point(84, 101);
@@ -370,67 +448,21 @@
 			this.label8.TabIndex = 41;
 			this.label8.Text = "Nome da peça";
 			// 
-			// tabBusca
+			// tabConsultaEstoque
 			// 
-			this.tabBusca.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.tabBusca.Controls.Add(this.dataGridView3);
-			this.tabBusca.Controls.Add(this.comboPesquisa);
-			this.tabBusca.Controls.Add(this.label14);
-			this.tabBusca.Controls.Add(this.btnBuscar);
-			this.tabBusca.Controls.Add(this.textBox9);
-			this.tabBusca.Controls.Add(this.label13);
-			this.tabBusca.Location = new System.Drawing.Point(4, 22);
-			this.tabBusca.Name = "tabBusca";
-			this.tabBusca.Padding = new System.Windows.Forms.Padding(3);
-			this.tabBusca.Size = new System.Drawing.Size(661, 469);
-			this.tabBusca.TabIndex = 2;
-			this.tabBusca.Text = "Consulta de estoque";
-			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.Location = new System.Drawing.Point(81, 21);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(32, 13);
-			this.label13.TabIndex = 0;
-			this.label13.Text = "Filtro:";
-			this.label13.Click += new System.EventHandler(this.label13_Click);
-			// 
-			// textBox9
-			// 
-			this.textBox9.Location = new System.Drawing.Point(236, 37);
-			this.textBox9.Name = "textBox9";
-			this.textBox9.Size = new System.Drawing.Size(167, 20);
-			this.textBox9.TabIndex = 1;
-			// 
-			// btnBuscar
-			// 
-			this.btnBuscar.Location = new System.Drawing.Point(421, 34);
-			this.btnBuscar.Name = "btnBuscar";
-			this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-			this.btnBuscar.TabIndex = 2;
-			this.btnBuscar.Text = "Buscar...";
-			this.btnBuscar.UseVisualStyleBackColor = true;
-			// 
-			// label14
-			// 
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(233, 21);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(53, 13);
-			this.label14.TabIndex = 3;
-			this.label14.Text = "Pesquisa:";
-			// 
-			// comboPesquisa
-			// 
-			this.comboPesquisa.FormattingEnabled = true;
-			this.comboPesquisa.Items.AddRange(new object[] {
-            "Peça",
-            "Código"});
-			this.comboPesquisa.Location = new System.Drawing.Point(84, 37);
-			this.comboPesquisa.Name = "comboPesquisa";
-			this.comboPesquisa.Size = new System.Drawing.Size(137, 21);
-			this.comboPesquisa.TabIndex = 4;
+			this.tabConsultaEstoque.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.tabConsultaEstoque.Controls.Add(this.dataGridView3);
+			this.tabConsultaEstoque.Controls.Add(this.comboPesquisa);
+			this.tabConsultaEstoque.Controls.Add(this.label14);
+			this.tabConsultaEstoque.Controls.Add(this.btnBuscar);
+			this.tabConsultaEstoque.Controls.Add(this.textBox9);
+			this.tabConsultaEstoque.Controls.Add(this.label13);
+			this.tabConsultaEstoque.Location = new System.Drawing.Point(4, 22);
+			this.tabConsultaEstoque.Name = "tabConsultaEstoque";
+			this.tabConsultaEstoque.Padding = new System.Windows.Forms.Padding(3);
+			this.tabConsultaEstoque.Size = new System.Drawing.Size(661, 469);
+			this.tabConsultaEstoque.TabIndex = 2;
+			this.tabConsultaEstoque.Text = "Consulta de estoque";
 			// 
 			// dataGridView3
 			// 
@@ -471,83 +503,51 @@
 			this.Column5.HeaderText = "Data adição";
 			this.Column5.Name = "Column5";
 			// 
-			// dataGridView4
+			// comboPesquisa
 			// 
-			this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
-			this.dataGridView4.Location = new System.Drawing.Point(56, 229);
-			this.dataGridView4.Name = "dataGridView4";
-			this.dataGridView4.Size = new System.Drawing.Size(547, 181);
-			this.dataGridView4.TabIndex = 55;
+			this.comboPesquisa.FormattingEnabled = true;
+			this.comboPesquisa.Items.AddRange(new object[] {
+            "Peça",
+            "Código"});
+			this.comboPesquisa.Location = new System.Drawing.Point(84, 37);
+			this.comboPesquisa.Name = "comboPesquisa";
+			this.comboPesquisa.Size = new System.Drawing.Size(137, 21);
+			this.comboPesquisa.TabIndex = 4;
 			// 
-			// dataGridViewTextBoxColumn9
+			// label14
 			// 
-			this.dataGridViewTextBoxColumn9.HeaderText = "Código";
-			this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(233, 21);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(53, 13);
+			this.label14.TabIndex = 3;
+			this.label14.Text = "Pesquisa:";
 			// 
-			// dataGridViewTextBoxColumn10
+			// btnBuscar
 			// 
-			this.dataGridViewTextBoxColumn10.HeaderText = "Peça";
-			this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+			this.btnBuscar.Location = new System.Drawing.Point(421, 34);
+			this.btnBuscar.Name = "btnBuscar";
+			this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+			this.btnBuscar.TabIndex = 2;
+			this.btnBuscar.Text = "Buscar...";
+			this.btnBuscar.UseVisualStyleBackColor = true;
 			// 
-			// dataGridViewTextBoxColumn11
+			// textBox9
 			// 
-			this.dataGridViewTextBoxColumn11.HeaderText = "Descrição";
-			this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+			this.textBox9.Location = new System.Drawing.Point(236, 37);
+			this.textBox9.Name = "textBox9";
+			this.textBox9.Size = new System.Drawing.Size(167, 20);
+			this.textBox9.TabIndex = 1;
 			// 
-			// dataGridViewTextBoxColumn12
+			// label13
 			// 
-			this.dataGridViewTextBoxColumn12.HeaderText = "Valor";
-			this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-			// 
-			// dataGridViewTextBoxColumn13
-			// 
-			this.dataGridViewTextBoxColumn13.HeaderText = "Data adição";
-			this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-			// 
-			// dataGridView1
-			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-			this.dataGridView1.Location = new System.Drawing.Point(54, 229);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(547, 181);
-			this.dataGridView1.TabIndex = 69;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.HeaderText = "Código";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.HeaderText = "Peça";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.HeaderText = "Descrição";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			// 
-			// dataGridViewTextBoxColumn4
-			// 
-			this.dataGridViewTextBoxColumn4.HeaderText = "Valor";
-			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-			// 
-			// dataGridViewTextBoxColumn5
-			// 
-			this.dataGridViewTextBoxColumn5.HeaderText = "Data adição";
-			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+			this.label13.AutoSize = true;
+			this.label13.Location = new System.Drawing.Point(81, 21);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(32, 13);
+			this.label13.TabIndex = 0;
+			this.label13.Text = "Filtro:";
+			this.label13.Click += new System.EventHandler(this.label13_Click);
 			// 
 			// FormControleEstoque
 			// 
@@ -562,13 +562,13 @@
 			this.TabCotroleEstoque.ResumeLayout(false);
 			this.tabCadEntradas.ResumeLayout(false);
 			this.tabCadEntradas.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.tabCadSaidas.ResumeLayout(false);
 			this.tabCadSaidas.PerformLayout();
-			this.tabBusca.ResumeLayout(false);
-			this.tabBusca.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			this.tabConsultaEstoque.ResumeLayout(false);
+			this.tabConsultaEstoque.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -602,7 +602,7 @@
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TabPage tabBusca;
+		private System.Windows.Forms.TabPage tabConsultaEstoque;
 		private System.Windows.Forms.Button btnBuscar;
 		private System.Windows.Forms.TextBox textBox9;
 		private System.Windows.Forms.Label label13;

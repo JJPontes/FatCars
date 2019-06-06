@@ -67,5 +67,18 @@ namespace WindowsFormsApp1
 		private void button1_Click(object sender, EventArgs e)
 		{
 		}
+
+		private void groupCadastro_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnCadastrarCNH_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormCadastrarMotorista cadastrarMotorista = new Views.Desktop.FormCadastrarMotorista();
+			cadastrarMotorista.ControlBox = true;
+			cadastrarMotorista.Show();
+		
+		}
 	}
 }

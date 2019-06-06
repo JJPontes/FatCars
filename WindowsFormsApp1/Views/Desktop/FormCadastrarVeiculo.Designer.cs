@@ -140,6 +140,25 @@
 			this.label21 = new System.Windows.Forms.Label();
 			this.label22 = new System.Windows.Forms.Label();
 			this.label23 = new System.Windows.Forms.Label();
+			this.tabObrigacoes = new System.Windows.Forms.TabPage();
+			this.label24 = new System.Windows.Forms.Label();
+			this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+			this.label25 = new System.Windows.Forms.Label();
+			this.textBox9 = new System.Windows.Forms.TextBox();
+			this.label26 = new System.Windows.Forms.Label();
+			this.textBox10 = new System.Windows.Forms.TextBox();
+			this.button7 = new System.Windows.Forms.Button();
+			this.button8 = new System.Windows.Forms.Button();
+			this.comboBox3 = new System.Windows.Forms.ComboBox();
+			this.label27 = new System.Windows.Forms.Label();
+			this.groupBox10 = new System.Windows.Forms.GroupBox();
+			this.dataGridView4 = new System.Windows.Forms.DataGridView();
+			this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.label28 = new System.Windows.Forms.Label();
+			this.lblValorTotalObrigacoes = new System.Windows.Forms.Label();
 			this.TabCadastroVeiculos.SuspendLayout();
 			this.tabInformacoes.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -160,6 +179,9 @@
 			this.groupBox8.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
 			this.groupBox9.SuspendLayout();
+			this.tabObrigacoes.SuspendLayout();
+			this.groupBox10.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// TabCadastroVeiculos
@@ -168,6 +190,7 @@
 			this.TabCadastroVeiculos.Controls.Add(this.tabAbastecimentos);
 			this.TabCadastroVeiculos.Controls.Add(this.tabManutencao);
 			this.TabCadastroVeiculos.Controls.Add(this.tabSinistros);
+			this.TabCadastroVeiculos.Controls.Add(this.tabObrigacoes);
 			this.TabCadastroVeiculos.Location = new System.Drawing.Point(12, 12);
 			this.TabCadastroVeiculos.Name = "TabCadastroVeiculos";
 			this.TabCadastroVeiculos.SelectedIndex = 0;
@@ -230,7 +253,7 @@
 			// 
 			// btnLocalizar
 			// 
-			this.btnLocalizar.Location = new System.Drawing.Point(614, 178);
+			this.btnLocalizar.Location = new System.Drawing.Point(630, 195);
 			this.btnLocalizar.Name = "btnLocalizar";
 			this.btnLocalizar.Size = new System.Drawing.Size(105, 40);
 			this.btnLocalizar.TabIndex = 77;
@@ -597,7 +620,7 @@
 			// 
 			// btnSalvar
 			// 
-			this.btnSalvar.Location = new System.Drawing.Point(614, 233);
+			this.btnSalvar.Location = new System.Drawing.Point(630, 250);
 			this.btnSalvar.Name = "btnSalvar";
 			this.btnSalvar.Size = new System.Drawing.Size(105, 40);
 			this.btnSalvar.TabIndex = 52;
@@ -1282,6 +1305,176 @@
 			this.label23.TabIndex = 5;
 			this.label23.Text = "Descrição";
 			// 
+			// tabObrigacoes
+			// 
+			this.tabObrigacoes.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.tabObrigacoes.Controls.Add(this.lblValorTotalObrigacoes);
+			this.tabObrigacoes.Controls.Add(this.label28);
+			this.tabObrigacoes.Controls.Add(this.groupBox10);
+			this.tabObrigacoes.Controls.Add(this.label27);
+			this.tabObrigacoes.Controls.Add(this.comboBox3);
+			this.tabObrigacoes.Controls.Add(this.button8);
+			this.tabObrigacoes.Controls.Add(this.button7);
+			this.tabObrigacoes.Controls.Add(this.textBox10);
+			this.tabObrigacoes.Controls.Add(this.label26);
+			this.tabObrigacoes.Controls.Add(this.textBox9);
+			this.tabObrigacoes.Controls.Add(this.label25);
+			this.tabObrigacoes.Controls.Add(this.maskedTextBox4);
+			this.tabObrigacoes.Controls.Add(this.label24);
+			this.tabObrigacoes.Location = new System.Drawing.Point(4, 22);
+			this.tabObrigacoes.Name = "tabObrigacoes";
+			this.tabObrigacoes.Size = new System.Drawing.Size(752, 354);
+			this.tabObrigacoes.TabIndex = 4;
+			this.tabObrigacoes.Text = "Obrigações Financeiras";
+			// 
+			// label24
+			// 
+			this.label24.AutoSize = true;
+			this.label24.Location = new System.Drawing.Point(10, 16);
+			this.label24.Name = "label24";
+			this.label24.Size = new System.Drawing.Size(33, 13);
+			this.label24.TabIndex = 0;
+			this.label24.Text = "Data:";
+			// 
+			// maskedTextBox4
+			// 
+			this.maskedTextBox4.Location = new System.Drawing.Point(13, 32);
+			this.maskedTextBox4.Mask = "00/00/0000";
+			this.maskedTextBox4.Name = "maskedTextBox4";
+			this.maskedTextBox4.Size = new System.Drawing.Size(83, 20);
+			this.maskedTextBox4.TabIndex = 1;
+			this.maskedTextBox4.ValidatingType = typeof(System.DateTime);
+			// 
+			// label25
+			// 
+			this.label25.AutoSize = true;
+			this.label25.Location = new System.Drawing.Point(99, 16);
+			this.label25.Name = "label25";
+			this.label25.Size = new System.Drawing.Size(31, 13);
+			this.label25.TabIndex = 2;
+			this.label25.Text = "Tipo:";
+			// 
+			// textBox9
+			// 
+			this.textBox9.Location = new System.Drawing.Point(13, 72);
+			this.textBox9.Name = "textBox9";
+			this.textBox9.Size = new System.Drawing.Size(470, 20);
+			this.textBox9.TabIndex = 3;
+			// 
+			// label26
+			// 
+			this.label26.AutoSize = true;
+			this.label26.Location = new System.Drawing.Point(522, 16);
+			this.label26.Name = "label26";
+			this.label26.Size = new System.Drawing.Size(34, 13);
+			this.label26.TabIndex = 4;
+			this.label26.Text = "Valor:";
+			// 
+			// textBox10
+			// 
+			this.textBox10.Location = new System.Drawing.Point(525, 31);
+			this.textBox10.Name = "textBox10";
+			this.textBox10.Size = new System.Drawing.Size(87, 20);
+			this.textBox10.TabIndex = 5;
+			// 
+			// button7
+			// 
+			this.button7.Location = new System.Drawing.Point(618, 31);
+			this.button7.Name = "button7";
+			this.button7.Size = new System.Drawing.Size(75, 21);
+			this.button7.TabIndex = 6;
+			this.button7.Text = "Adicionar";
+			this.button7.UseVisualStyleBackColor = true;
+			// 
+			// button8
+			// 
+			this.button8.Location = new System.Drawing.Point(489, 31);
+			this.button8.Name = "button8";
+			this.button8.Size = new System.Drawing.Size(26, 21);
+			this.button8.TabIndex = 7;
+			this.button8.Text = "+";
+			this.button8.UseVisualStyleBackColor = true;
+			// 
+			// comboBox3
+			// 
+			this.comboBox3.FormattingEnabled = true;
+			this.comboBox3.Location = new System.Drawing.Point(102, 30);
+			this.comboBox3.Name = "comboBox3";
+			this.comboBox3.Size = new System.Drawing.Size(381, 21);
+			this.comboBox3.TabIndex = 8;
+			// 
+			// label27
+			// 
+			this.label27.AutoSize = true;
+			this.label27.Location = new System.Drawing.Point(12, 56);
+			this.label27.Name = "label27";
+			this.label27.Size = new System.Drawing.Size(58, 13);
+			this.label27.TabIndex = 9;
+			this.label27.Text = "Descrição:";
+			// 
+			// groupBox10
+			// 
+			this.groupBox10.Controls.Add(this.dataGridView4);
+			this.groupBox10.Location = new System.Drawing.Point(13, 107);
+			this.groupBox10.Name = "groupBox10";
+			this.groupBox10.Size = new System.Drawing.Size(680, 189);
+			this.groupBox10.TabIndex = 10;
+			this.groupBox10.TabStop = false;
+			this.groupBox10.Text = "Obrigações Registradas:";
+			// 
+			// dataGridView4
+			// 
+			this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10});
+			this.dataGridView4.Location = new System.Drawing.Point(6, 19);
+			this.dataGridView4.Name = "dataGridView4";
+			this.dataGridView4.Size = new System.Drawing.Size(652, 150);
+			this.dataGridView4.TabIndex = 0;
+			// 
+			// Column7
+			// 
+			this.Column7.HeaderText = "Vencimento";
+			this.Column7.Name = "Column7";
+			// 
+			// Column8
+			// 
+			this.Column8.HeaderText = "Tipo";
+			this.Column8.Name = "Column8";
+			// 
+			// Column9
+			// 
+			this.Column9.HeaderText = "Descrição";
+			this.Column9.Name = "Column9";
+			this.Column9.Width = 300;
+			// 
+			// Column10
+			// 
+			this.Column10.HeaderText = "Valor";
+			this.Column10.Name = "Column10";
+			// 
+			// label28
+			// 
+			this.label28.AutoSize = true;
+			this.label28.Location = new System.Drawing.Point(474, 309);
+			this.label28.Name = "label28";
+			this.label28.Size = new System.Drawing.Size(138, 13);
+			this.label28.TabIndex = 11;
+			this.label28.Text = "Valor Total das Obrigações:";
+			// 
+			// lblValorTotalObrigacoes
+			// 
+			this.lblValorTotalObrigacoes.AutoSize = true;
+			this.lblValorTotalObrigacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblValorTotalObrigacoes.Location = new System.Drawing.Point(618, 305);
+			this.lblValorTotalObrigacoes.Name = "lblValorTotalObrigacoes";
+			this.lblValorTotalObrigacoes.Size = new System.Drawing.Size(59, 18);
+			this.lblValorTotalObrigacoes.TabIndex = 12;
+			this.lblValorTotalObrigacoes.Text = "R$ 0,00";
+			// 
 			// FormCadastrarNovoVeiculo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1322,6 +1515,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
 			this.groupBox9.ResumeLayout(false);
 			this.groupBox9.PerformLayout();
+			this.tabObrigacoes.ResumeLayout(false);
+			this.tabObrigacoes.PerformLayout();
+			this.groupBox10.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1438,5 +1635,24 @@
 		private System.Windows.Forms.Label label21;
 		private System.Windows.Forms.Label label22;
 		private System.Windows.Forms.Label label23;
+		private System.Windows.Forms.TabPage tabObrigacoes;
+		private System.Windows.Forms.Button button7;
+		private System.Windows.Forms.TextBox textBox10;
+		private System.Windows.Forms.Label label26;
+		private System.Windows.Forms.TextBox textBox9;
+		private System.Windows.Forms.Label label25;
+		private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+		private System.Windows.Forms.Label label24;
+		private System.Windows.Forms.Label lblValorTotalObrigacoes;
+		private System.Windows.Forms.Label label28;
+		private System.Windows.Forms.GroupBox groupBox10;
+		private System.Windows.Forms.DataGridView dataGridView4;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+		private System.Windows.Forms.Label label27;
+		private System.Windows.Forms.ComboBox comboBox3;
+		private System.Windows.Forms.Button button8;
 	}
 }

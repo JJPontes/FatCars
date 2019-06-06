@@ -46,29 +46,31 @@
 			this.radioButton15 = new System.Windows.Forms.RadioButton();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.radioButton16 = new System.Windows.Forms.RadioButton();
-			this.radioButton17 = new System.Windows.Forms.RadioButton();
 			this.radioButton18 = new System.Windows.Forms.RadioButton();
+			this.radioButton17 = new System.Windows.Forms.RadioButton();
+			this.radioButton16 = new System.Windows.Forms.RadioButton();
 			this.radioButton19 = new System.Windows.Forms.RadioButton();
 			this.radioButton20 = new System.Windows.Forms.RadioButton();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.radioButton21 = new System.Windows.Forms.RadioButton();
+			this.radioButton27 = new System.Windows.Forms.RadioButton();
 			this.radioButton22 = new System.Windows.Forms.RadioButton();
+			this.radioButton21 = new System.Windows.Forms.RadioButton();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.radioButton23 = new System.Windows.Forms.RadioButton();
 			this.radioButton24 = new System.Windows.Forms.RadioButton();
 			this.radioButton25 = new System.Windows.Forms.RadioButton();
 			this.groupBox7 = new System.Windows.Forms.GroupBox();
 			this.radioButton26 = new System.Windows.Forms.RadioButton();
+			this.radioButton28 = new System.Windows.Forms.RadioButton();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -180,7 +182,7 @@
 			// radioButton10
 			// 
 			this.radioButton10.AutoSize = true;
-			this.radioButton10.Location = new System.Drawing.Point(6, 101);
+			this.radioButton10.Location = new System.Drawing.Point(6, 339);
 			this.radioButton10.Name = "radioButton10";
 			this.radioButton10.Size = new System.Drawing.Size(162, 17);
 			this.radioButton10.TabIndex = 9;
@@ -246,6 +248,7 @@
 			// groupBox1
 			// 
 			this.groupBox1.Controls.Add(this.radioButton15);
+			this.groupBox1.Controls.Add(this.radioButton10);
 			this.groupBox1.Controls.Add(this.radioButton1);
 			this.groupBox1.Controls.Add(this.radioButton11);
 			this.groupBox1.Controls.Add(this.radioButton2);
@@ -261,7 +264,7 @@
 			this.groupBox1.Controls.Add(this.radioButton6);
 			this.groupBox1.Location = new System.Drawing.Point(12, 12);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(229, 355);
+			this.groupBox1.Size = new System.Drawing.Size(229, 379);
 			this.groupBox1.TabIndex = 15;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Controle de Frota";
@@ -271,34 +274,12 @@
 			this.groupBox2.Controls.Add(this.radioButton18);
 			this.groupBox2.Controls.Add(this.radioButton17);
 			this.groupBox2.Controls.Add(this.radioButton16);
-			this.groupBox2.Location = new System.Drawing.Point(260, 151);
+			this.groupBox2.Location = new System.Drawing.Point(260, 121);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(200, 90);
+			this.groupBox2.Size = new System.Drawing.Size(209, 90);
 			this.groupBox2.TabIndex = 16;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Estoque";
-			// 
-			// radioButton16
-			// 
-			this.radioButton16.AutoSize = true;
-			this.radioButton16.Location = new System.Drawing.Point(6, 19);
-			this.radioButton16.Name = "radioButton16";
-			this.radioButton16.Size = new System.Drawing.Size(178, 17);
-			this.radioButton16.TabIndex = 1;
-			this.radioButton16.TabStop = true;
-			this.radioButton16.Text = "Listagem de estoque - SIMPLES";
-			this.radioButton16.UseVisualStyleBackColor = true;
-			// 
-			// radioButton17
-			// 
-			this.radioButton17.AutoSize = true;
-			this.radioButton17.Location = new System.Drawing.Point(6, 42);
-			this.radioButton17.Name = "radioButton17";
-			this.radioButton17.Size = new System.Drawing.Size(190, 17);
-			this.radioButton17.TabIndex = 2;
-			this.radioButton17.TabStop = true;
-			this.radioButton17.Text = "Listagem de estoque - COMPLETA";
-			this.radioButton17.UseVisualStyleBackColor = true;
 			// 
 			// radioButton18
 			// 
@@ -310,6 +291,28 @@
 			this.radioButton18.TabStop = true;
 			this.radioButton18.Text = "Listagem de Pneus em uso";
 			this.radioButton18.UseVisualStyleBackColor = true;
+			// 
+			// radioButton17
+			// 
+			this.radioButton17.AutoSize = true;
+			this.radioButton17.Location = new System.Drawing.Point(6, 39);
+			this.radioButton17.Name = "radioButton17";
+			this.radioButton17.Size = new System.Drawing.Size(190, 17);
+			this.radioButton17.TabIndex = 2;
+			this.radioButton17.TabStop = true;
+			this.radioButton17.Text = "Listagem de estoque - COMPLETA";
+			this.radioButton17.UseVisualStyleBackColor = true;
+			// 
+			// radioButton16
+			// 
+			this.radioButton16.AutoSize = true;
+			this.radioButton16.Location = new System.Drawing.Point(6, 19);
+			this.radioButton16.Name = "radioButton16";
+			this.radioButton16.Size = new System.Drawing.Size(178, 17);
+			this.radioButton16.TabIndex = 1;
+			this.radioButton16.TabStop = true;
+			this.radioButton16.Text = "Listagem de estoque - SIMPLES";
+			this.radioButton16.UseVisualStyleBackColor = true;
 			// 
 			// radioButton19
 			// 
@@ -335,27 +338,29 @@
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.radioButton28);
+			this.groupBox3.Controls.Add(this.radioButton27);
 			this.groupBox3.Controls.Add(this.radioButton22);
 			this.groupBox3.Controls.Add(this.radioButton20);
 			this.groupBox3.Controls.Add(this.radioButton21);
 			this.groupBox3.Controls.Add(this.radioButton19);
-			this.groupBox3.Location = new System.Drawing.Point(260, 247);
+			this.groupBox3.Location = new System.Drawing.Point(260, 217);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(200, 120);
+			this.groupBox3.Size = new System.Drawing.Size(209, 174);
 			this.groupBox3.TabIndex = 17;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Relatórios Gerenciais";
 			// 
-			// radioButton21
+			// radioButton27
 			// 
-			this.radioButton21.AutoSize = true;
-			this.radioButton21.Location = new System.Drawing.Point(6, 69);
-			this.radioButton21.Name = "radioButton21";
-			this.radioButton21.Size = new System.Drawing.Size(170, 17);
-			this.radioButton21.TabIndex = 6;
-			this.radioButton21.TabStop = true;
-			this.radioButton21.Text = "Resumo de locações por carro";
-			this.radioButton21.UseVisualStyleBackColor = true;
+			this.radioButton27.AutoSize = true;
+			this.radioButton27.Location = new System.Drawing.Point(6, 115);
+			this.radioButton27.Name = "radioButton27";
+			this.radioButton27.Size = new System.Drawing.Size(199, 17);
+			this.radioButton27.TabIndex = 8;
+			this.radioButton27.TabStop = true;
+			this.radioButton27.Text = "Resumo de gastos com Funcionários";
+			this.radioButton27.UseVisualStyleBackColor = true;
 			// 
 			// radioButton22
 			// 
@@ -368,6 +373,17 @@
 			this.radioButton22.Text = "Resumo de locações por período";
 			this.radioButton22.UseVisualStyleBackColor = true;
 			// 
+			// radioButton21
+			// 
+			this.radioButton21.AutoSize = true;
+			this.radioButton21.Location = new System.Drawing.Point(6, 69);
+			this.radioButton21.Name = "radioButton21";
+			this.radioButton21.Size = new System.Drawing.Size(170, 17);
+			this.radioButton21.TabIndex = 6;
+			this.radioButton21.TabStop = true;
+			this.radioButton21.Text = "Resumo de locações por carro";
+			this.radioButton21.UseVisualStyleBackColor = true;
+			// 
 			// groupBox4
 			// 
 			this.groupBox4.Controls.Add(this.comboBox1);
@@ -378,6 +394,14 @@
 			this.groupBox4.TabIndex = 18;
 			this.groupBox4.TabStop = false;
 			this.groupBox4.Text = "Pesquisa por placa:";
+			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(9, 37);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(121, 21);
+			this.comboBox1.TabIndex = 1;
 			// 
 			// label1
 			// 
@@ -391,26 +415,18 @@
 			// groupBox5
 			// 
 			this.groupBox5.Controls.Add(this.textBox1);
-			this.groupBox5.Location = new System.Drawing.Point(492, 92);
+			this.groupBox5.Location = new System.Drawing.Point(492, 98);
 			this.groupBox5.Name = "groupBox5";
-			this.groupBox5.Size = new System.Drawing.Size(200, 52);
+			this.groupBox5.Size = new System.Drawing.Size(245, 52);
 			this.groupBox5.TabIndex = 1;
 			this.groupBox5.TabStop = false;
 			this.groupBox5.Text = "Pesquisa por:";
-			// 
-			// comboBox1
-			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(9, 37);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 21);
-			this.comboBox1.TabIndex = 1;
 			// 
 			// textBox1
 			// 
 			this.textBox1.Location = new System.Drawing.Point(7, 20);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(182, 20);
+			this.textBox1.Size = new System.Drawing.Size(229, 20);
 			this.textBox1.TabIndex = 0;
 			// 
 			// groupBox6
@@ -426,23 +442,12 @@
 			this.groupBox6.TabStop = false;
 			this.groupBox6.Text = "Pesquisa por período:";
 			// 
-			// label2
+			// dateTimePicker2
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(9, 23);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(24, 13);
-			this.label2.TabIndex = 0;
-			this.label2.Text = "De:";
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(9, 61);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(17, 13);
-			this.label3.TabIndex = 1;
-			this.label3.Text = "A:";
+			this.dateTimePicker2.Location = new System.Drawing.Point(9, 77);
+			this.dateTimePicker2.Name = "dateTimePicker2";
+			this.dateTimePicker2.Size = new System.Drawing.Size(227, 20);
+			this.dateTimePicker2.TabIndex = 3;
 			// 
 			// dateTimePicker1
 			// 
@@ -451,12 +456,23 @@
 			this.dateTimePicker1.Size = new System.Drawing.Size(227, 20);
 			this.dateTimePicker1.TabIndex = 2;
 			// 
-			// dateTimePicker2
+			// label3
 			// 
-			this.dateTimePicker2.Location = new System.Drawing.Point(9, 77);
-			this.dateTimePicker2.Name = "dateTimePicker2";
-			this.dateTimePicker2.Size = new System.Drawing.Size(227, 20);
-			this.dateTimePicker2.TabIndex = 3;
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(9, 61);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(26, 13);
+			this.label3.TabIndex = 1;
+			this.label3.Text = "Até:";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(9, 23);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(24, 13);
+			this.label2.TabIndex = 0;
+			this.label2.Text = "De:";
 			// 
 			// radioButton23
 			// 
@@ -494,13 +510,12 @@
 			// groupBox7
 			// 
 			this.groupBox7.Controls.Add(this.radioButton24);
-			this.groupBox7.Controls.Add(this.radioButton10);
 			this.groupBox7.Controls.Add(this.radioButton26);
 			this.groupBox7.Controls.Add(this.radioButton23);
 			this.groupBox7.Controls.Add(this.radioButton25);
 			this.groupBox7.Location = new System.Drawing.Point(260, 12);
 			this.groupBox7.Name = "groupBox7";
-			this.groupBox7.Size = new System.Drawing.Size(200, 132);
+			this.groupBox7.Size = new System.Drawing.Size(209, 103);
 			this.groupBox7.TabIndex = 21;
 			this.groupBox7.TabStop = false;
 			this.groupBox7.Text = "Controle de Frota";
@@ -515,6 +530,17 @@
 			this.radioButton26.TabStop = true;
 			this.radioButton26.Text = "Listagem de sinistros geral";
 			this.radioButton26.UseVisualStyleBackColor = true;
+			// 
+			// radioButton28
+			// 
+			this.radioButton28.AutoSize = true;
+			this.radioButton28.Location = new System.Drawing.Point(6, 138);
+			this.radioButton28.Name = "radioButton28";
+			this.radioButton28.Size = new System.Drawing.Size(127, 17);
+			this.radioButton28.TabIndex = 9;
+			this.radioButton28.TabStop = true;
+			this.radioButton28.Text = "Resumo de despesas";
+			this.radioButton28.UseVisualStyleBackColor = true;
 			// 
 			// FormRelatorios
 			// 
@@ -591,5 +617,7 @@
 		private System.Windows.Forms.RadioButton radioButton25;
 		private System.Windows.Forms.GroupBox groupBox7;
 		private System.Windows.Forms.RadioButton radioButton26;
+		private System.Windows.Forms.RadioButton radioButton27;
+		private System.Windows.Forms.RadioButton radioButton28;
 	}
 }

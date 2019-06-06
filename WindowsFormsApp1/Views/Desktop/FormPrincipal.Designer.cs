@@ -43,6 +43,7 @@
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarNovoVeículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.monitorarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.estoqueToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.controleDePneusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +64,7 @@
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarNovoCarroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.despesasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -163,7 +165,9 @@
 			// 
 			this.cadastrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarClienteToolStripMenuItem,
-            this.cadastrarNovoVeículoToolStripMenuItem});
+            this.cadastrarNovoVeículoToolStripMenuItem,
+            this.funcionáriosToolStripMenuItem,
+            this.despesasToolStripMenuItem});
 			this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
 			this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
 			this.cadastrarToolStripMenuItem.Text = "Cadastros";
@@ -172,16 +176,23 @@
 			// cadastrarClienteToolStripMenuItem
 			// 
 			this.cadastrarClienteToolStripMenuItem.Name = "cadastrarClienteToolStripMenuItem";
-			this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+			this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.cadastrarClienteToolStripMenuItem.Text = "Clientes...";
 			this.cadastrarClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClienteToolStripMenuItem_Click);
 			// 
 			// cadastrarNovoVeículoToolStripMenuItem
 			// 
 			this.cadastrarNovoVeículoToolStripMenuItem.Name = "cadastrarNovoVeículoToolStripMenuItem";
-			this.cadastrarNovoVeículoToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+			this.cadastrarNovoVeículoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.cadastrarNovoVeículoToolStripMenuItem.Text = "Veículos...";
 			this.cadastrarNovoVeículoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoVeículoToolStripMenuItem_Click);
+			// 
+			// funcionáriosToolStripMenuItem
+			// 
+			this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
+			this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.funcionáriosToolStripMenuItem.Text = "Funcionários...";
+			this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
 			// 
 			// monitorarToolStripMenuItem
 			// 
@@ -335,6 +346,13 @@
 			this.cadastrarNovoCarroToolStripMenuItem.Text = "Cadastrar novo veículo...";
 			this.cadastrarNovoCarroToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoCarroToolStripMenuItem_Click);
 			// 
+			// despesasToolStripMenuItem
+			// 
+			this.despesasToolStripMenuItem.Name = "despesasToolStripMenuItem";
+			this.despesasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.despesasToolStripMenuItem.Text = "Despesas...";
+			this.despesasToolStripMenuItem.Click += new System.EventHandler(this.despesasToolStripMenuItem_Click);
+			// 
 			// FormPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,6 +411,8 @@
 		private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem controleDePreçosToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem consultarEditarMotoristasToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem despesasToolStripMenuItem;
 	}
 }
 

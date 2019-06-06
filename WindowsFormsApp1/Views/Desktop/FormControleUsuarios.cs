@@ -29,5 +29,13 @@ namespace WindowsFormsApp1.Views.Desktop
 			this.Hide();
 
 		}
+
+		private void btnCadastrarCNH_Click(object sender, EventArgs e)
+		{
+			Views.Desktop.FormCadastrarMotorista cadastrarMotorista = new Views.Desktop.FormCadastrarMotorista();
+			cadastrarMotorista.ControlBox = true;
+			cadastrarMotorista.Show();
+
+		}
 	}
 }

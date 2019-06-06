@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -54,8 +47,8 @@ namespace WindowsFormsApp1
 		{
 			if (Saida <= Entrada)
 			{
-				MessageBox.Show("Favor Entrar com as datas corretamente");
 				checkSegRoubo.Checked = false;
+				MessageBox.Show("Favor entrar com as datas corretamente.");
 			}
 			else
 			{
@@ -86,8 +79,8 @@ namespace WindowsFormsApp1
 		{
 			if (Saida <= Entrada)
 			{
-				MessageBox.Show("Favor Entrar com as datas corretamente");
 				checkSegTerceiros.Checked = false;
+				MessageBox.Show("Favor entrar com as datas corretamente.");
 			}
 			else
 			{
