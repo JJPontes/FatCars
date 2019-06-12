@@ -575,8 +575,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="\\Mac\Google Drive\pim\FatCars-master\Fatcars.Classes\Classes.csproj">
-      <Project>{e21ad0b0-cb7d-4c8b-bd15-f5a03b09dfa9}</Project>
+    <ProjectReference Include="..\Classes\Classes.csproj">
+      <Project>{81d8b0e0-9b30-4a15-8d1e-b66b46f214fd}</Project>
       <Name>Classes</Name>
     </ProjectReference>
   </ItemGroup>
